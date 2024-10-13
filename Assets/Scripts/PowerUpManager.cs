@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class PowerupManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static PowerupManager Instance { get; private set; }
     void Start()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);  
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame

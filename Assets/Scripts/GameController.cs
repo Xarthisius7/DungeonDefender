@@ -43,7 +43,6 @@ public class GameController : MonoBehaviour
         InitGame();
 
 
-
     }
 
     void Update()
@@ -83,7 +82,7 @@ public class GameController : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        //uiManager.ShowPauseMenu(); 
+        UIManager.Instance.ShowPauseScreen();
         Debug.Log("Game Paused.");
     }
 
@@ -94,7 +93,7 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1;
         Debug.Log("Game Resumed.");
-        //uiManager.HidePauseMenu();  
+        UIManager.Instance.ClosePauseScreen();
     }
 
 
