@@ -8,6 +8,7 @@ public class TowerScript : MonoBehaviour
     // and if it takes enough damage the game ends
 
     public float towerHealth = 15f; // Tower's health
+    public GameOverScript GameOver;
 
     // Function to take damage from the enemy
     public void TakeDamage(float damage)
@@ -25,6 +26,7 @@ public class TowerScript : MonoBehaviour
     void EndGame()
     {
         Debug.Log("Game Over! The tower has been destroyed.");
+        GameOver.Setup("Tower Destroyed");
         // Reload the current scene, or show a game over screen
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
