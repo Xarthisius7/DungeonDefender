@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] public float playerHealth = 20;
 
+    public GameOverScript GameOver;
+
 
     void Start()
     {
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
         {
             playerHealth = 0;
             Debug.Log("Player Is Dead!");
+            GameOver.Setup("You Died");
         }
 
         Debug.Log("Player takes damage: the new health is " + playerHealth );

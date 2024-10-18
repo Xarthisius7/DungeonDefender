@@ -8,20 +8,19 @@ public class SampleEnemy : MonoBehaviour
     public float moveSpeed = 3f;
     public float enemyAttackDamage = 3f;
 
-    private Rigidbody2D rb;
-    private Animator animator;
+    protected Rigidbody2D rb;
+    protected Animator animator;
 
-    private bool isAlive = true;
+    protected bool isAlive = true;
+    protected const string animatorDead = "Dead";
 
-    private const string animatorDead = "Dead";
-
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         // check if the game is paused.
         if (Time.timeScale == 0)
@@ -30,17 +29,21 @@ public class SampleEnemy : MonoBehaviour
 
         if (isAlive)
         {
-            Vector2 direction = (target.position - transform.position).normalized;
-
-            //rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
-            //Directly set the enemy's position - but won't collde with environment obsticles. can be used later.
-
-            rb.velocity = direction * moveSpeed;
+            MoveTowardsTarget();
 
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected void MoveTowardsTarget(){
+        Vector2 direction = (target.position - transform.position).normalized;
+
+        //rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+        //Directly set the enemy's position - but won't collde with environment obsticles. can be used later.
+
+        rb.velocity = direction * moveSpeed;
+    }
+
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
@@ -70,10 +73,10 @@ public class SampleEnemy : MonoBehaviour
         EffectsManager.Instance.PlaySFX(2);
 
         //remove the gameobject after finishing playing the animation.
-        Invoke("DestorySelf", 2f);
+        Invoke("DestorySelf", 1f);
     }
 
-    void DestorySelf()
+    public void DestorySelf()
     {
         Destroy(gameObject);
     }
