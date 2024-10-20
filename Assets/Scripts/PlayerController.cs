@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
+    // public PlayerController Instance { get; private set; }
 
-    [SerializeField] public float playerHealth = 20;
+    public float playerHealth;
 
     public GameOverScript GameOver;
 
@@ -16,7 +17,7 @@ public class PlayerController : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;  
-            DontDestroyOnLoad(gameObject);  
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
             playerHealth = 0;
             Debug.Log("Player Is Dead!");
             GameOver.Setup("You Died");
+
+            // GameOverScript.Instance.Setup("You Died");
         }
 
         Debug.Log("Player takes damage: the new health is " + playerHealth );

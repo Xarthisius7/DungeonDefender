@@ -19,7 +19,6 @@ public class PlayerAction : MonoBehaviour
     public float defaultFireSpeed;
     public float timeBetweenFiring;
 
-
     private void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();

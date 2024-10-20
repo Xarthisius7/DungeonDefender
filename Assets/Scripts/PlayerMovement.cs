@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
     private float isShooting;
 
 
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

@@ -14,6 +14,7 @@ public class SampleEnemy : MonoBehaviour
     protected bool isAlive = true;
     protected const string animatorDead = "Dead";
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -55,6 +56,7 @@ public class SampleEnemy : MonoBehaviour
             Debug.Log("Enemy Attacked player.");
             rb.velocity = Vector2.zero;
             PlayerController.Instance.takesDamage(enemyAttackDamage);
+            // player.takesDamage(enemyAttackDamage);
 
             Death();
 

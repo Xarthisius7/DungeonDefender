@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerEnemy : SampleEnemy
 { 
     public float enemyAttackRange = 1.5f;
-    public float enemyAttackCooldown = 2f;
+    public float enemyAttackCooldown = 3f;
     public float attackCooldownTimer = 0f;
     bool isAttacking = false;
 
@@ -28,6 +28,7 @@ public class TowerEnemy : SampleEnemy
         {
             if (attackCooldownTimer <= 0f)
             {
+                Debug.Log("ATTACK");
                 Attack();
             }
             // Attack();

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// The GameController class manages the overall game flow, including
@@ -18,7 +19,8 @@ public class GameController : MonoBehaviour
     [SerializeField] public UIManager uiManager;
     [SerializeField] public EffectsManager effectsManager;
 
-    public static GameController Instance { get; private set; }
+    // public static GameController Instance { get; private set; }
+    public GameController Instance { get; private set; }
 
     // Game states
     public enum GameState { MainMenu, Exploration, Defense, GameOver }
@@ -26,7 +28,6 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-
         if (Instance == null)
         {
             Instance = this;
@@ -136,5 +137,11 @@ public class GameController : MonoBehaviour
         currentState = GameState.GameOver;
         //uiManager.ShowGameOverScreen();
         //effectsManager.PlayGameOverSound();
+    }
+
+    public void RestartGame(){
+        Destroy(gameObject);
+        Destroy(effectsManager);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
