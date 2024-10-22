@@ -9,6 +9,7 @@ public class TrapItemScriptableObj : ItemScriptableObject
 
     public override bool use()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Place Trap");
+        return true;
     }
 }

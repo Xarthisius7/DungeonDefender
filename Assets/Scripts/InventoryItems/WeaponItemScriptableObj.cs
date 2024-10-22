@@ -9,8 +9,15 @@ public class WeaponItemScriptableObj : ItemScriptableObject
     public int attackPower;
     public int attackSpeed;
 
+    private void OnEnable()
+    {
+        maxStack = 1;
+    }
+
+    //Using a weapon will equip it
     public override bool use()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Equip Weapon");
+        return true;
     }
 }
