@@ -919,11 +919,11 @@ GameObject:
   - component: {fileID: 1234881346}
   - component: {fileID: 1234881355}
   - component: {fileID: 1234881353}
-  - component: {fileID: 1234881352}
   - component: {fileID: 1234881351}
   - component: {fileID: 1234881350}
   - component: {fileID: 1234881349}
   - component: {fileID: 1234881348}
+  - component: {fileID: 1234881356}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -948,7 +948,7 @@ MonoBehaviour:
   enemyManager: {fileID: 1234881353}
   baseDefenseManager: {fileID: 1234881355}
   powerUpManager: {fileID: 1234881349}
-  itemManager: {fileID: 1234881352}
+  itemManager: {fileID: 0}
   uiManager: {fileID: 1234881348}
   effectsManager: {fileID: 1310182790}
 --- !u!4 &1234881347
@@ -1015,20 +1015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b5ea89204ed8c4ab8c1b1feed9498b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1234881352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234881345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa0ac3d642cd9b4389154003ef41bf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equippedWeapon: {fileID: 0}
-  InventorySlotPrefab: {fileID: 0}
 --- !u!114 &1234881353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1053,6 +1039,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f2f755e35d64049a2e812ec2bfc373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1234881356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234881345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa0ac3d642cd9b4389154003ef41bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equippedWeapon: {fileID: 0}
+  InventorySlotPrefab: {fileID: 3074873224388506606, guid: a743ab5819adf534f8f93dc3df028bc0, type: 3}
+  ItemPrefab: {fileID: 5945877252149359653, guid: 03ca1a1e8f5e9674881fdc755823f7b1, type: 3}
+  equippedSlotOffset: 100
+  triesItemsAdd:
+  - {fileID: 11400000, guid: 8a14719ba50432847b47f6e275d973f7, type: 2}
+  - {fileID: 11400000, guid: d33bd5ba7642d4f4db52fbdfc10d6f04, type: 2}
+  - {fileID: 11400000, guid: d33bd5ba7642d4f4db52fbdfc10d6f04, type: 2}
+  - {fileID: 11400000, guid: 8a14719ba50432847b47f6e275d973f7, type: 2}
+  - {fileID: 11400000, guid: 8a14719ba50432847b47f6e275d973f7, type: 2}
+  - {fileID: 11400000, guid: 8a14719ba50432847b47f6e275d973f7, type: 2}
+  - {fileID: 11400000, guid: 8a14719ba50432847b47f6e275d973f7, type: 2}
+  slotSprite: {fileID: 21300000, guid: f314e141f41f21640a9e34a0ff22a7f8, type: 3}
+  slotSelectedSprite: {fileID: 21300000, guid: 45219e6e59fed654e9fa7788a0f2bdcd, type: 3}
 --- !u!1 &1258259964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1314,6 @@ GameObject:
   - component: {fileID: 1337518200}
   - component: {fileID: 1337518203}
   - component: {fileID: 1337518202}
-  - component: {fileID: 1337518201}
   m_Layer: 5
   m_Name: InventoryPanel
   m_TagString: Untagged
@@ -1329,20 +1340,6 @@ RectTransform:
   m_AnchoredPosition: {x: -546, y: -90}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1337518201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337518199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa0ac3d642cd9b4389154003ef41bf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equippedWeapon: {fileID: 0}
-  InventorySlotPrefab: {fileID: 3074873224388506606, guid: a743ab5819adf534f8f93dc3df028bc0, type: 3}
 --- !u!114 &1337518202
 MonoBehaviour:
   m_ObjectHideFlags: 0
