@@ -55,8 +55,12 @@ public class SampleEnemy : MonoBehaviour
         {
             Debug.Log("Enemy Attacked player.");
             rb.velocity = Vector2.zero;
+<<<<<<< HEAD
             PlayerController.Instance.takesDamage(enemyAttackDamage);
             // player.takesDamage(enemyAttackDamage);
+=======
+            PlayerController.Instance.PlayerTakesDamage(enemyAttackDamage);
+>>>>>>> master
 
             Death();
 

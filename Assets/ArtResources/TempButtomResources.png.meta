@@ -1,0 +1,910 @@
+fileFormatVersion: 2
+guid: 42484d068017cb949a0c7b0c5822ef3c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TempButtomResources_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1366
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc15f0af02061d4ab5d5396382a069a
+      internalID: -754429934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1366
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a396a32fa0f1f4c860ebfb1ce7b8a0
+      internalID: -1992313189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_2
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1366
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3afcec88d9233b468e0608c4eae6d0f
+      internalID: -927791696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_3
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1366
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfd5843c7677194eb985c601126ad4d
+      internalID: -1797597359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_4
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 1366
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83b829b8d89f0c41bad208da519bdeb
+      internalID: -301580088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_5
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 1366
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b358179a6203c84449e198b2866609d4
+      internalID: -1698939211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1093
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3700726e6d172154bb2135c298bc0bf0
+      internalID: 972716215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_7
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1093
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b18fdd81fd7e047ae44ab22fac8fbf
+      internalID: -2005292829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_8
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1093
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32713ff8f8f95794898c1dbe165f9004
+      internalID: 753443217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_9
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 1093
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ae98e23451caa4b9ca4b6b05c923e1
+      internalID: 1536780700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_10
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 1093
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee946ea6e1138b648b047380e438c6b1
+      internalID: -1079619874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_11
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1093
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4b857c557767f4a924e2d3a4b3c587
+      internalID: -403060676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 820
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f340f7ea5b1467443bd47648a2085592
+      internalID: 2081523827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_13
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 820
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fd40bb781ed624582bfc36427b9df0
+      internalID: -1325965011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_14
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 820
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f44b2d304d60846b87287a0b673c25
+      internalID: -1166249009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_15
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 820
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e173eb097c4db40a850d049bab4a6d
+      internalID: 407365919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_16
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 820
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7ddb83f99258841bee32ed609da220
+      internalID: -325168137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_17
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 820
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251450cd5d444594c8b6dddbff70c28c
+      internalID: 2084783244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 546
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc0ed5aa270c1f498afa6ccf41eba5b
+      internalID: 1870899872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_19
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 546
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fdf7da212923e4aa49b527607bceed
+      internalID: -1459708951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_20
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 546
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1a714ec181a514ca479bb2df696d49
+      internalID: -326280058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_21
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 546
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58672d7b036b31148bb5016d2fd76388
+      internalID: 511327667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_22
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 546
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1e29b44d7fce8419623aa604905d7d
+      internalID: -1803310496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_23
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 546
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98348903987a62343afb19151daf0aeb
+      internalID: 1799876594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 273
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d1f8487d87d0b419e05d1aff8841c7
+      internalID: -1688142553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 273
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc608520e4ca0724d936ca26c876559a
+      internalID: 1483701511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_26
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 273
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de719d3cf7284be42892494d4a092e53
+      internalID: -746233240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_27
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 273
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc69f1d22325fc641abccfa23052eefd
+      internalID: 1130718383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_28
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 273
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f276a032b7ae8048b9d22c3a0f78517
+      internalID: -141924813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_29
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 273
+        width: 224
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452ae9e1cbf99a040b537bb7387a3a04
+      internalID: -1132712053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bab1314584d05a4497e29fb14a4273a
+      internalID: -1781588827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_31
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 0
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a31410fe716efd4e864bb8c9a1e5e9f
+      internalID: 2060351820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_32
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 223
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d716aa14271439419f3071a9fe25107
+      internalID: -1597618208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_33
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 97
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225471ecceed0d844a9569cc643bdd06
+      internalID: 970227700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TempButtomResources_34
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 4
+        width: 587
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a105fce1ecced4c9f502b700c31a6e
+      internalID: 612426957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TempButtomResources_0: -754429934
+      TempButtomResources_1: -1992313189
+      TempButtomResources_10: -1079619874
+      TempButtomResources_11: -403060676
+      TempButtomResources_12: 2081523827
+      TempButtomResources_13: -1325965011
+      TempButtomResources_14: -1166249009
+      TempButtomResources_15: 407365919
+      TempButtomResources_16: -325168137
+      TempButtomResources_17: 2084783244
+      TempButtomResources_18: 1870899872
+      TempButtomResources_19: -1459708951
+      TempButtomResources_2: -927791696
+      TempButtomResources_20: -326280058
+      TempButtomResources_21: 511327667
+      TempButtomResources_22: -1803310496
+      TempButtomResources_23: 1799876594
+      TempButtomResources_24: -1688142553
+      TempButtomResources_25: 1483701511
+      TempButtomResources_26: -746233240
+      TempButtomResources_27: 1130718383
+      TempButtomResources_28: -141924813
+      TempButtomResources_29: -1132712053
+      TempButtomResources_3: -1797597359
+      TempButtomResources_30: -1781588827
+      TempButtomResources_31: 2060351820
+      TempButtomResources_32: -1597618208
+      TempButtomResources_33: 970227700
+      TempButtomResources_34: 612426957
+      TempButtomResources_4: -301580088
+      TempButtomResources_5: -1698939211
+      TempButtomResources_6: 972716215
+      TempButtomResources_7: -2005292829
+      TempButtomResources_8: 753443217
+      TempButtomResources_9: 1536780700
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

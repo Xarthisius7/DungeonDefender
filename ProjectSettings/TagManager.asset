@@ -44,15 +44,33 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Void
+    uniqueID: 1291014605
+    locked: 0
   - name: Background
     uniqueID: 1425109853
-    locked: 0
-  - name: PlayerAndEnemy
-    uniqueID: 2459139517
     locked: 0
   - name: Obstacles
     uniqueID: 2502571363
     locked: 0
-  - name: ForeGround
+  - name: Player
+    uniqueID: 2459139517
+    locked: 0
+  - name: Enemy
     uniqueID: 523264789
+    locked: 0
+  - name: Foreground
+    uniqueID: 1946801379
+    locked: 0
+  - name: InGameInteraction
+    uniqueID: 2404736665
+    locked: 0
+  - name: InGameUI
+    uniqueID: 2842116535
+    locked: 0
+  - name: MajorCutScenes
+    uniqueID: 1285277137
+    locked: 0
+  - name: GameMenuUI
+    uniqueID: 1539830267
     locked: 0
