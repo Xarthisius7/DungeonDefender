@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Player Stamina£º" + currentPlayerStamina);
+        //Debug.Log("Player Stamina£º" + currentPlayerStamina);
     }
 
     public bool TryUseStamiaToDash()
