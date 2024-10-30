@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
+    // public PlayerController Instance { get; private set; }
+
 
     [SerializeField] public float defaultPlayerMaxHealth = 20;
     [SerializeField] public float defaultPlayerMaxStamina = 100;
@@ -16,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
 
     [SerializeField] public float defaultPlayerShootSpeed = 0.7f;
+
+    [SerializeField] public GameController controller;
 
 
     private float currentPMaxHealth;
@@ -36,7 +40,7 @@ public class PlayerController : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;  
-            DontDestroyOnLoad(gameObject);  
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -57,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("Player Stamina£º" + currentPlayerStamina);
+        //Debug.Log("Player Staminaï¿½ï¿½" + currentPlayerStamina);
     }
 
     public bool TryUseStamiaToDash()
@@ -107,6 +111,11 @@ public class PlayerController : MonoBehaviour
         {
             currentPlayerHealth = 0;
             Debug.Log("Player Is Dead!");
+
+            controller.GameOver();
+
+            // GameOver.Setup("You Died");
+            // GameOverScript.Instance.Setup("You Died");
         }
 
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// The GameController class manages the overall game flow, including
@@ -17,16 +18,18 @@ public class GameController : MonoBehaviour
     [SerializeField] public ItemManager itemManager;
     [SerializeField] public UIManager uiManager;
     [SerializeField] public EffectsManager effectsManager;
+    [SerializeField] public GameOverScript GameOverScreen;
 
-    public static GameController Instance { get; private set; }
+    // public static GameController Instance { get; private set; }
+    public GameController Instance { get; private set; }
 
     // Game states
-    public enum GameState { MainMenu, Exploration, Defense, GameOver }
+    public enum GameState {MainMenu, Exploration, Defense, GameOver }
     private GameState currentState;
+
 
     void Start()
     {
-
         if (Instance == null)
         {
             Instance = this;
@@ -91,9 +94,11 @@ public class GameController : MonoBehaviour
     /// </summary>
     public void ResumeGame()
     {
-        Time.timeScale = 1;
-        Debug.Log("Game Resumed.");
-        UIManager.Instance.ClosePauseScreen();
+        if (currentState != GameState.GameOver){
+            Time.timeScale = 1;
+            Debug.Log("Game Resumed.");
+            UIManager.Instance.ClosePauseScreen();
+        }
     }
 
 
@@ -135,6 +140,16 @@ public class GameController : MonoBehaviour
     {
         currentState = GameState.GameOver;
         //uiManager.ShowGameOverScreen();
+        Debug.Log("Game Over! The tower has been destroyed.");
+        GameOverScreen.Setup("Tower Destroyed");
+        PauseGame();
         //effectsManager.PlayGameOverSound();
+    }
+
+    public void RestartGame(){
+        Destroy(gameObject);
+        Destroy(effectsManager);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
