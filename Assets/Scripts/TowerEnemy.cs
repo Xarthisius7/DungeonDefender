@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TowerEnemy : SampleEnemy
 { 
-    public float enemyAttackRange = 1.5f;
-    public float enemyAttackCooldown = 3f;
-    public float attackCooldownTimer = 0f;
-    bool isAttacking = false;
+    [SerializeField] public float enemyAttackRange = 1.5f;
+    [SerializeField] public float enemyAttackCooldown = 3f;
+    private float attackCooldownTimer = 0f;
+    private bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +19,9 @@ public class TowerEnemy : SampleEnemy
     // Update is called once per frame
     void Update()
     {
-
         if (!isAttacking){
                 MoveTowardsTarget();
         }
-
         if (Vector2.Distance(transform.position, target.position) <= enemyAttackRange)
         {
             if (attackCooldownTimer <= 0f)
@@ -31,13 +29,11 @@ public class TowerEnemy : SampleEnemy
                 Debug.Log("ATTACK");
                 Attack();
             }
-            // Attack();
         }
         attackCooldownTimer -= Time.deltaTime;
     } 
 
-
-    // Attack the tower
+    // Attack the tower/crystal
     void Attack()
     {
         isAttacking = true;
@@ -54,7 +50,6 @@ public class TowerEnemy : SampleEnemy
         
         // Reset cooldown
         attackCooldownTimer = enemyAttackCooldown;
-
     }
 
     // Apply damage to the tower after the attack animation
@@ -65,10 +60,6 @@ public class TowerEnemy : SampleEnemy
         {
             tower.TakeDamage(enemyAttackDamage);
         }
-
         isAttacking = false;  // Reset attack state
-
-        // Decrease attack cooldown over time
-        // attackCooldownTimer -= Time.deltaTime;
     }
 }

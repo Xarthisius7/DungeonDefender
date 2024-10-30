@@ -5,25 +5,15 @@ using UnityEngine.UI;
 
 public class GameOverScript : MonoBehaviour
 {
-    // public static GameOverScript Instance { get; private set; }
-    public Text losingText;
-    
-    // void Start()
-    // {
-    //     if (Instance == null)
-    //     {
-    //         Instance = this;
-    //         DontDestroyOnLoad(gameObject);
-    //     }
-    //     else
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
+    [SerializeField] public Text losingText;
 
-
-
+    // Setup/enable the game over screen
     public void Setup(string losingCondition){
+        gameObject.SetActive(true);
+        losingText.text = losingCondition;
+    }
+    // set the game over screen to inactive
+    public void remove(string losingCondition){
         gameObject.SetActive(true);
         losingText.text = losingCondition;
     }

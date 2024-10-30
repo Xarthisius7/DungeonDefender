@@ -7,11 +7,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance { get; private set; }
     // public PlayerController Instance { get; private set; }
 
-<<<<<<< HEAD
-    public float playerHealth;
 
-    public GameOverScript GameOver;
-=======
     [SerializeField] public float defaultPlayerMaxHealth = 20;
     [SerializeField] public float defaultPlayerMaxStamina = 100;
     [SerializeField] public float defaultPlayerAttack = 5; // the damage dualt by player.
@@ -22,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
 
     [SerializeField] public float defaultPlayerShootSpeed = 0.7f;
+
+    [SerializeField] public GameController controller;
 
 
     private float currentPMaxHealth;
@@ -35,7 +33,6 @@ public class PlayerController : MonoBehaviour
     private float currentDashStaminaCost;
 
     private float currentPlayerShootSpeed;
->>>>>>> master
 
 
     void Start()
@@ -64,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log("Player Stamina£º" + currentPlayerStamina);
+        //Debug.Log("Player Staminaï¿½ï¿½" + currentPlayerStamina);
     }
 
     public bool TryUseStamiaToDash()
@@ -114,8 +111,10 @@ public class PlayerController : MonoBehaviour
         {
             currentPlayerHealth = 0;
             Debug.Log("Player Is Dead!");
-            GameOver.Setup("You Died");
 
+            controller.GameOver();
+
+            // GameOver.Setup("You Died");
             // GameOverScript.Instance.Setup("You Died");
         }
 

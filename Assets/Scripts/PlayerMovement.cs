@@ -41,8 +41,6 @@ public class PlayerMovement : MonoBehaviour
     private float inputDashing;
 
 
-<<<<<<< HEAD
-=======
     private float currentMoveSpeed = 2f;
     //current movespeed of the player. can be effected by his actions.
 
@@ -57,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
     private float staminaRegenDelayTimer = 0f; // the counter of the stamina regen cooldown after shooting
 
 
->>>>>>> master
     private void Awake()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
