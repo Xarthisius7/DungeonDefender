@@ -7,10 +7,12 @@ public class InputManager : MonoBehaviour
 {
     public static Vector2 Movement;
     public static float IsShooting;
+    public static float IsDashing;
 
     private PlayerInput _playerInput;
     private InputAction _moveAction;
     private InputAction _shootAction;
+    private InputAction _dashAction;
 
 
     //Class that manage the input. 
@@ -21,11 +23,13 @@ public class InputManager : MonoBehaviour
 
         _moveAction = _playerInput.actions["Move"];
         _shootAction = _playerInput.actions["Shooting"];
+        _dashAction = _playerInput.actions["Dash"];
     }
 
     private void Update()
     {
         Movement = _moveAction.ReadValue<Vector2>();
         IsShooting = _shootAction.ReadValue<float>();
+        IsDashing = _dashAction.ReadValue<float>();
     }
 }
