@@ -23,7 +23,6 @@ public class PlayerAction : MonoBehaviour
     private float timeBetweenFiring;
 
 
-
     private void Start()
     {
         timeBetweenFiring = defaultFireSpeed;
