@@ -13,7 +13,8 @@ public class ConsumableItemScriptableObj : ItemScriptableObject
 
     public override bool use()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Use Consumable");
+        return true;
     }
 
     public enum BuffType

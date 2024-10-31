@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Animations/Enemy/SampleEnemy.meta
 guid: fcfc8c7d31438e34d8e0c233d0bb4e7b
+========
+<<<<<<< HEAD
+guid: 5469f22d0a7394a5896f6a249d595298
+=======
+guid: 3684ac16a3b5e3242b746f6bb7f59360
+>>>>>>> master
+>>>>>>>> dc81f34052bc98b4e3aa05cfa65dc9f9771b8ccd:Assets/Scripts/InventoryItems.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

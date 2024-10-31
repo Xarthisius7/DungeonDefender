@@ -3,7 +3,12 @@ guid: 6aa0ac3d642cd9b4389154003ef41bf9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - equippedWeapon: {instanceID: 0}
+  - InventorySlotPrefab: {fileID: 3074873224388506606, guid: a743ab5819adf534f8f93dc3df028bc0, type: 3}
+  - ItemPrefab: {fileID: 5945877252149359653, guid: 03ca1a1e8f5e9674881fdc755823f7b1, type: 3}
+  - slotSprite: {instanceID: 0}
+  - slotSelectedSprite: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

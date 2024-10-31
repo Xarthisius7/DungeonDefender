@@ -6,6 +6,7 @@ using UnityEngine;
 public abstract class ItemScriptableObject : ScriptableObject
 {
     public Sprite sprite;
+    public int maxStack = 1;
 
     public abstract bool use();
 }
