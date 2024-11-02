@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using static GameController;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
+
+
+    [SerializeField] Image HealthBar;
+    [SerializeField] Image StaminaBar;
 
 
     void Start()
@@ -56,14 +61,14 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void UpdateHealth(float health)
+    public void UpdateHealth(float percantange)
     {
-        
+        HealthBar.fillAmount = percantange;
     }
 
-    public void UpdateStamina(float Stamina)
+    public void UpdateStamina(float percantange)
     {
-
+        StaminaBar.fillAmount = percantange;
     }
 
 

@@ -62,6 +62,9 @@ TagManager:
   - name: Foreground
     uniqueID: 1946801379
     locked: 0
+  - name: Darkness
+    uniqueID: 2265795937
+    locked: 0
   - name: InGameInteraction
     uniqueID: 2404736665
     locked: 0

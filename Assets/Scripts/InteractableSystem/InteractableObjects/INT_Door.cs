@@ -18,5 +18,13 @@ public class INT_Door : MonoBehaviour, IInteractable
         // TODO: DOOR opening events
 
         animator.SetBool(playAnimation, true);
+
+
+        InteractionTrigger interactionTrigger = GetComponent<InteractionTrigger>();
+        if (interactionTrigger != null)
+        {
+            // Call the DisableButton() method
+            interactionTrigger.DisableButton();
+        }
     }
 }

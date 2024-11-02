@@ -8,6 +8,14 @@ public class INT_Chest : MonoBehaviour, IInteractable
         Debug.Log("You opened the chest!");
         // TODO: Chest opening events
 
-        gameObject.GetComponent<SpriteRenderer>().sprite = openedSprite; 
+        gameObject.GetComponent<SpriteRenderer>().sprite = openedSprite;
+
+
+        InteractionTrigger interactionTrigger = GetComponent<InteractionTrigger>();
+        if (interactionTrigger != null)
+        {
+            // Call the DisableButton() method
+            interactionTrigger.DisableButton();
+        }
     }
 }
