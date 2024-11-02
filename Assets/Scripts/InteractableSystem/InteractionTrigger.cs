@@ -53,11 +53,16 @@ public class InteractionTrigger : MonoBehaviour
     public void OnButtonClick()
     {
         hasBeenUsed = true;
-        interactionButton.SetActive(false);
 
         if (currentInteractable != null)
         {
             currentInteractable.OnInteraction();
         }
+    }
+
+
+    public void DisableButton()
+    {
+        interactionButton.SetActive(false);
     }
 }
