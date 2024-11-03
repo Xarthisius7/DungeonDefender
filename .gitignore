@@ -18,3 +18,4 @@ MemoryCaptures/
 *.pidb.meta
 *.svd.meta
 *.pdb.meta
+*.suo
