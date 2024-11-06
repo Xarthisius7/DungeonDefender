@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class SampleEnemy : MonoBehaviour
 {
     public Transform target;  // Target location
+    protected NavMeshAgent agent;
+
     public float moveSpeed = 3f;
     public float enemyAttackDamage = 3f;
+
+    public float lockOnDistance = 10f;
+    bool hasLockedOn = false;
 
     protected Rigidbody2D rb;
     protected Animator animator;
@@ -14,11 +20,14 @@ public class SampleEnemy : MonoBehaviour
     protected bool isAlive = true;
     protected const string animatorDead = "Dead";
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     void FixedUpdate()
@@ -27,21 +36,21 @@ public class SampleEnemy : MonoBehaviour
         if (Time.timeScale == 0)
             return;
 
-
         if (isAlive)
         {
             MoveTowardsTarget();
-
         }
+        if (!isAlive)
+            agent.SetDestination(transform.position);
     }
 
-    protected void MoveTowardsTarget(){
-        Vector2 direction = (target.position - transform.position).normalized;
-
-        //rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
-        //Directly set the enemy's position - but won't collde with environment obsticles. can be used later.
-
-        rb.velocity = direction * moveSpeed;
+    protected virtual void MoveTowardsTarget(){
+        float distanceToPlayer = Vector2.Distance(transform.position, target.position);
+        if (distanceToPlayer <= lockOnDistance)
+            hasLockedOn = true;
+        
+        if (hasLockedOn)
+            agent.SetDestination(target.position);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
@@ -69,6 +78,7 @@ public class SampleEnemy : MonoBehaviour
     {
         animator.SetBool(animatorDead, true);
         isAlive = false;
+
         rb.velocity = Vector2.zero;
         EffectsManager.Instance.PlaySFX(2);
 

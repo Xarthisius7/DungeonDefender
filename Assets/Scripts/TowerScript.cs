@@ -8,8 +8,36 @@ public class TowerScript : MonoBehaviour
     // and if it takes enough damage the game ends
 
     [SerializeField] public float towerHealth; // Tower's health
-    // [SerializeField] public GameOverScript GameOverScreen;
     [SerializeField] public GameController controller;
+    [SerializeField] private Transform player;
+    [SerializeField] private GameObject InteractKey;
+
+    bool isActive = false;
+    float distanceToPlayer;
+
+    void Update(){
+        if(!isActive){
+            // Display the 'E' key when the user gets close to tower
+            // To indicate to the useer that they can activate it
+            DisplayKey();
+        }
+        
+        if (isActive){
+            // Tower was activated so start waves
+            Debug.Log("Crystal was activated");
+        }
+    }
+
+    void DisplayKey(){
+        distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distanceToPlayer <= 2){
+            InteractKey.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+                isActive = true;  
+        }
+        else
+            InteractKey.SetActive(false);
+    }
 
     // Function to take damage from the enemy
     public void TakeDamage(float damage)
@@ -19,16 +47,9 @@ public class TowerScript : MonoBehaviour
 
         if (towerHealth <= 0)
         {
-
             //EndGame();
             controller.GameOver();
 
         }
     }
-    // End the game when the tower's health reaches 0
-    // void EndGame()
-    // {
-    //     Debug.Log("Game Over! The tower has been destroyed.");
-    //     GameOver.Setup("Tower Destroyed");
-    // }
 }

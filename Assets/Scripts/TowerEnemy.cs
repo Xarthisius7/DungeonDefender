@@ -1,19 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class TowerEnemy : SampleEnemy
 { 
     [SerializeField] public float enemyAttackRange = 1.5f;
     [SerializeField] public float enemyAttackCooldown = 3f;
+
+    [SerializeField] public Transform player;
+
+
     private float attackCooldownTimer = 0f;
     private bool isAttacking = false;
+
+    float distanceToPlayer;
+    float distanceToCrystal;    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
     }
 
     // Update is called once per frame
@@ -31,6 +43,9 @@ public class TowerEnemy : SampleEnemy
             }
         }
         attackCooldownTimer -= Time.deltaTime;
+
+        if (!isAlive)
+            agent.SetDestination(transform.position);
     } 
 
     // Attack the tower/crystal
@@ -61,5 +76,16 @@ public class TowerEnemy : SampleEnemy
             tower.TakeDamage(enemyAttackDamage);
         }
         isAttacking = false;  // Reset attack state
+    }
+
+    // Override of MoveTowardsTarget from SampleEnemy
+    protected override void MoveTowardsTarget(){
+        distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        distanceToCrystal = Vector2.Distance(transform.position, target.position);
+
+        if (distanceToPlayer < distanceToCrystal)
+            agent.SetDestination(player.position);
+        else
+            agent.SetDestination(target.position);
     }
 }
