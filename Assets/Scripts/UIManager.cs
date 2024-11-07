@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image HealthBar;
     [SerializeField] Image StaminaBar;
 
+    [SerializeField] float fillSpeed;
+
 
     void Start()
     {
@@ -61,9 +63,10 @@ public class UIManager : MonoBehaviour
 
     }
 
-    public void UpdateHealth(float percantange)
+    public void UpdateHealth(float targetPercentage)
     {
-        HealthBar.fillAmount = percantange;
+        StopCoroutine("SmoothHealthChange");
+        StartCoroutine(SmoothHealthChange(targetPercentage));
     }
 
     public void UpdateStamina(float percantange)
@@ -71,5 +74,23 @@ public class UIManager : MonoBehaviour
         StaminaBar.fillAmount = percantange;
     }
 
+    private IEnumerator SmoothHealthChange(float targetPercentage)
+    {
+        float initialPercentage = HealthBar.fillAmount;
+        float elapsedTime = 0f;
+        float duration = Mathf.Abs(targetPercentage - initialPercentage) / fillSpeed;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / duration;
+            // Apply cubic easing for ease-in and ease-out
+            t = t * t * (3f - 2f * t);
+            HealthBar.fillAmount = Mathf.Lerp(initialPercentage, targetPercentage, t);
+            yield return null;
+        }
+
+        HealthBar.fillAmount = targetPercentage;
+    }
 
 }
