@@ -31,7 +31,7 @@ public class PlayerAction : MonoBehaviour
         lineRenderer.endWidth = 0.02f;
         lineRenderer.positionCount = 2;
 
-        lineRenderer.sortingLayerName = "ForeGround"; 
+        lineRenderer.sortingLayerName = "InGameUI"; 
         lineRenderer.sortingOrder = 10; 
     }
     public void Shoot(Vector3 mousePos)

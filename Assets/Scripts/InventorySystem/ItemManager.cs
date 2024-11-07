@@ -100,7 +100,7 @@ public class ItemManager : MonoBehaviour
         LoadAllItems();
 
         AddItemsById(1, 5);
-        AddItemsById(2, 1);
+        AddItemsById(2, 10);
         AddItemsById(1, 3);
         AddItemsById(3, 1);
         AddItemsById(2, 1);
@@ -108,7 +108,6 @@ public class ItemManager : MonoBehaviour
         AddItemsById(4, 1);
 
         CreateDroppedItem(2, 3);
-        CreateDroppedItem(4, 1);
 
     }
 
@@ -116,7 +115,7 @@ public class ItemManager : MonoBehaviour
     // Loading All the items from Prefabs/Items 
     private void LoadAllItems()
     {
-        string path = "Assets/Prefabs/Items";
+        string path = "Assets/Resources/Prefabs/Items";
         string[] assetGUIDs = AssetDatabase.FindAssets("t:ItemScriptableObject", new[] { path });
 
         allItems.Clear();
