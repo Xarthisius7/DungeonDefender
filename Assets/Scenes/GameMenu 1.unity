@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9fd325932549194b921294735a05d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScene: SampleScene_TG_PauseImp
+  gameScene: ActualGame
 --- !u!4 &1295111725
 Transform:
   m_ObjectHideFlags: 0

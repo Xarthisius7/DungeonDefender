@@ -52,7 +52,7 @@ public class SceneGameManager : MonoBehaviour
         }
 
         // Assuming "BattleScene" is the name of the battle scene
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameMenu");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameMenu 1");
 
         // Wait until the scene is fully loaded
         while (!asyncLoad.isDone)

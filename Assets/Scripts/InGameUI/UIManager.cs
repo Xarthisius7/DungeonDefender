@@ -45,11 +45,29 @@ public class UIManager : MonoBehaviour
 
     public void ShowPauseScreen()
     {
+        PauseMenu pauseMenu = FindAnyObjectByType<PauseMenu>();
 
+        if(pauseMenu != null)
+        {
+            pauseMenu.ShowPauseScreen();
+        }
+        else
+        {
+            Debug.LogWarning("No pause screen Found");
+        }
     }
     public void ClosePauseScreen()
     {
+        PauseMenu pauseMenu = FindAnyObjectByType<PauseMenu>();
 
+        if (pauseMenu != null)
+        {
+            pauseMenu.ClosePauseScreen();
+        }
+        else
+        {
+            Debug.LogWarning("No pause screen Found");
+        }
     }
 
 
