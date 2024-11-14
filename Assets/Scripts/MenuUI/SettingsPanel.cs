@@ -9,7 +9,8 @@ public class SettingsPanel : MonoBehaviour
 
     [SerializeField] private Button settingsButton; // The button that opens the settings panel
     [SerializeField] private Button closeButton; // The button that closes the settings panel
-    [SerializeField] private Slider volumeSlider; // The slider that controls the volume
+    [SerializeField] private Slider soundfxSlider; // The slider that controls the volume
+    [SerializeField] private Slider musicSlider; // The slider that controls the volume
 
     private SceneGameManager sceneGameManager; // Reference to the SceneGameManager
 
@@ -33,8 +34,11 @@ public class SettingsPanel : MonoBehaviour
         // Set up the slider's initial value and listener
         if (sceneGameManager != null)
         {
-            volumeSlider.value = sceneGameManager.GameVolume; // Set the slider to the current volume
-            volumeSlider.onValueChanged.AddListener(UpdateVolume); // Listen for value changes
+            soundfxSlider.value = sceneGameManager.GameFXVolume; // Set the slider to the current volume
+            soundfxSlider.onValueChanged.AddListener(UpdateFXVolume); // Listen for value changes
+
+            musicSlider.value = sceneGameManager.GameMusicVolume; // Set the slider to the current volume
+            musicSlider.onValueChanged.AddListener(UpdateMusicVolume); // Listen for value changes
         }
     }
 
@@ -52,11 +56,19 @@ public class SettingsPanel : MonoBehaviour
         settingsPanelCanvasGroup.blocksRaycasts = false;
     }
 
-    private void UpdateVolume(float value)
+    private void UpdateFXVolume(float value)
     {
         if (sceneGameManager != null)
         {
-            sceneGameManager.GameVolume = value; // Update the volume variable in the SceneGameManager
+            sceneGameManager.GameFXVolume = value; // Update the volume variable in the SceneGameManager
+        }
+    }
+
+    private void UpdateMusicVolume(float value)
+    {
+        if (sceneGameManager != null)
+        {
+            sceneGameManager.GameMusicVolume = value; // Update the volume variable in the SceneGameManager
         }
     }
 }

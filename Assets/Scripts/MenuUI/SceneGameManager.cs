@@ -11,7 +11,8 @@ public class SceneGameManager : MonoBehaviour
     public event EventHandler LevelStarted;
     public event EventHandler MenuEnter;
 
-    public float GameVolume = 1.0f;
+    public float GameFXVolume = 1.0f;
+    public float GameMusicVolume = 1.0f;
 
     [SerializeField] string gameScene;
 
