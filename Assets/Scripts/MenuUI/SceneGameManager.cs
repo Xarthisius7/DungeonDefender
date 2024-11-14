@@ -11,6 +11,8 @@ public class SceneGameManager : MonoBehaviour
     public event EventHandler LevelStarted;
     public event EventHandler MenuEnter;
 
+    public float GameVolume = 1.0f;
+
     [SerializeField] string gameScene;
 
     private void Awake()
