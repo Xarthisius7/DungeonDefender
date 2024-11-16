@@ -9,6 +9,7 @@ public class InteractionTrigger : MonoBehaviour
     private IInteractable currentInteractable;
     public float interactionDistance = 2.0f; // Interaction distance.
     private Transform playerTransform;
+    public float defaultScale = 1f;
 
     private bool hasBeenUsed = false;
 
@@ -27,6 +28,7 @@ public class InteractionTrigger : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         // Create the interaction button, default set to inactive.
         interactionButton = Instantiate(interactionButtonPrefab, transform);
+        interactionButton.transform.localScale = new Vector3(defaultScale, defaultScale, defaultScale);
         interactionButton.SetActive(false); 
 
         var interactionButtonScript = interactionButton.GetComponent<InteractionButton>();

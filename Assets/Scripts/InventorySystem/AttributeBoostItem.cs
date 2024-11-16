@@ -3,13 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class AttributeBoost
-{
-    public string attributeName; // Attribute name
-    public int boostValue;       // Boost value 
-}
-
 
 // Attribute boost item, non-consumable, non-stackable, Generally can be equiped. (weapons with stats)
 [CreateAssetMenu(fileName = "AttributeBoostItem", menuName = "ScriptableObjects/AttributeBoostItem")]

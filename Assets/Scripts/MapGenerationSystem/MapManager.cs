@@ -11,6 +11,7 @@ public class GridCell
     public List<dir> connectedDir = new List<dir>();
     public GameObject roomObject = null;
     public string roomFeature = "";
+    public int Level = 1;
 
     public bool isMainRoom = false;
 
@@ -40,6 +41,7 @@ public class MapManager : MonoBehaviour
     private GridCell[,] grid;
     [SerializeField] float spitChance = 0.2f;
     [SerializeField] int directionLength = 8;
+    [SerializeField] int AreaIncreasement = 3;
 
     int currentDirectionRemain = 0;
 
@@ -148,7 +150,211 @@ public class MapManager : MonoBehaviour
         if(grid[centerX-1, centerY].hasRoom) grid[centerX, centerY].connectedDir.Add(dir.L);
         if(grid[centerX+1, centerY].hasRoom) grid[centerX, centerY].connectedDir.Add(dir.R);
 
+        for (int x = 0; x < gridSize; x++)
+        {
+            for (int y = 0; y < gridSize; y++)
+            {
+                if (grid[x, y].hasRoom)
+                {
+                    grid[x, y].Level = 3;
+                }
+            }
+        }
+
+        GridCell area2Start = GetNextStart(centerX, centerY,3);
+        Debug.Log("Area2 Start:" + area2Start.x + "," + area2Start.y );
+        Debug.Log("Area2 DIR: " + area2Start.roomFeature );
+
+        directionLength += AreaIncreasement;
+
+        for (int i = 0; i < 4; i++)
+        {
+            currentDirectionRemain = directionLength;
+            GenerateSingleRoom(area2Start.x, area2Start.y, directions[i]);
+        }
+
+
+        for (int x = 0; x < gridSize; x++)
+        {
+            for (int y = 0; y < gridSize; y++)
+            {
+                if (grid[x, y].hasRoom && grid[x, y].Level!=3)
+                {
+                    grid[x, y].Level = 2;
+                }
+            }
+        }
+
+
+
+        GridCell area3Start = LocateFinalArea(area2Start.x, area2Start.x, 2,StringToDir(area2Start.roomFeature));
+        Debug.Log("Area3 Start:" + area3Start.x + "," + area3Start.y);
+
+        directionLength += AreaIncreasement;
+
+        for (int i = 0; i < 4; i++)
+        {
+            currentDirectionRemain = directionLength;
+            GenerateSingleRoom(area3Start.x, area3Start.y, directions[i]);
+        }
+
+
     }
+
+
+
+
+
+    public GridCell GetNextStart(int centerx, int centery, int targetLevel)
+    {
+        GridCell farthestRoom = null;
+        float maxDistance = -1f;
+        dir chosenDir = dir.U;
+
+        // Traverse through all cells in the grid
+        for (int x = 0; x < gridSize; x++)
+        {
+            for (int y = 0; y < gridSize; y++)
+            {
+                GridCell cell = grid[x, y];
+                if (cell.hasRoom && cell.roomFeature == "DEADEND" && cell.Level == targetLevel)
+                {
+                    float distance = Mathf.Sqrt(Mathf.Pow(x - centerx, 2) + Mathf.Pow(y - centery, 2));
+
+                    if (distance > maxDistance)
+                    {
+                        maxDistance = distance;
+                        farthestRoom = cell;
+
+                        // Determine relative direction from centerx, centery
+                        if (x <= centerx && y <= centery)
+                        {
+                            // Bottom Left
+                            chosenDir = (centerx - x > centery - y) ? dir.L : (centerx - x < centery - y) ? dir.B : (Random.value > 0.5f ? dir.L : dir.B);
+                        }
+                        else if (x <= centerx && y >= centery)
+                        {
+                            // Top Left
+                            chosenDir = (centerx - x > y - centery) ? dir.L : (centerx - x < y - centery) ? dir.U : (Random.value > 0.5f ? dir.L : dir.U);
+                        }
+                        else if (x >= centerx && y <= centery)
+                        {
+                            // Bottom Right
+                            chosenDir = (x - centerx > centery - y) ? dir.R : (x - centerx < centery - y) ? dir.B : (Random.value > 0.5f ? dir.R : dir.B);
+                        }
+                        else if (x >= centerx && y >= centery)
+                        {
+                            // Top Right
+                            chosenDir = (x - centerx > y - centery) ? dir.R : (x - centerx < y - centery) ? dir.U : (Random.value > 0.5f ? dir.R : dir.U);
+                        }
+                    }
+                }
+            }
+        }
+
+        if (farthestRoom != null)
+        {
+            farthestRoom.roomFeature = chosenDir.ToString();
+        }
+
+        return farthestRoom;
+    }
+
+    public GridCell LocateFinalArea(int centerx, int centery, int targetLevel, dir UnavailableDir)
+    {
+        GridCell farthestRoom = null;
+        float maxDistance = -1f;
+
+        // Traverse through all cells in the grid
+        for (int x = 0; x < gridSize; x++)
+        {
+            for (int y = 0; y < gridSize; y++)
+            {
+                GridCell cell = grid[x, y];
+                if (cell.hasRoom && cell.roomFeature == "DEADEND" && cell.Level == targetLevel)
+                {
+                    // Determine the direction from centerx, centery to x, y
+                    if (!IsDirectionUnavailable(centerx, centery, x, y, UnavailableDir))
+                    {
+                        float distance = Mathf.Sqrt(Mathf.Pow(x - centerx, 2) + Mathf.Pow(y - centery, 2));
+
+                        if (distance > maxDistance)
+                        {
+                            maxDistance = distance;
+                            farthestRoom = cell;
+                        }
+                    }
+                }
+            }
+        }
+
+        return farthestRoom;
+    }
+
+    private bool IsDirectionUnavailable(int centerx, int centery, int x, int y, dir unavailableDir)
+    {
+        switch (unavailableDir)
+        {
+            case dir.R:
+                return x > centerx;
+            case dir.L:
+                return x > centerx;
+            case dir.U:
+                return y < centery;
+            case dir.B:
+                return y > centery;
+            default:
+                return false;
+        }
+    }
+
+    public dir StringToDir(string direction)
+    {
+        return (dir)System.Enum.Parse(typeof(dir), direction);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     void GenerateSingleRoom(int x, int y, dir fromDir)
     {
@@ -256,7 +462,7 @@ public class MapManager : MonoBehaviour
                         totalDeadends++;
                     }
                     GameObject room = LoadRoomType(roomType);
-                    Vector3 position = new Vector3((x - centerX) * 8.4f, (y-centerY) * 9.0f, 0);
+                    Vector3 position = new Vector3((x - centerX) * 8.0f, (y-centerY) * 9.0f, 0);
                     grid[x, y].roomObject = Instantiate(room, position, Quaternion.identity);
                     grid[x, y].roomObject.transform.SetParent(transform);
                     grid[x, y].roomObject.name = $"{x}_{y}_{grid[x, y].roomFeature}_{roomType}";

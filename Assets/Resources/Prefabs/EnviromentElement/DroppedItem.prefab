@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa0f4450f9d74541a348f1ff55bba74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionButtonPrefab: {fileID: 5038416192502120241, guid: 808a8f2868300aa469aa75bd29e7ea2a, type: 3}
+  interactionButtonPrefab: {fileID: 5038416192502120241, guid: b8485b301aa918a4488b9380599c8629, type: 3}
   interactionDistance: 1
+  defaultScale: 5
 --- !u!114 &4073570606335826943
 MonoBehaviour:
   m_ObjectHideFlags: 0

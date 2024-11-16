@@ -7,6 +7,10 @@ TagManager:
   - Obstacle
   - Bullet
   - Enemy
+  - BreakableObject
+  - Mud
+  - Spike
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - GroundEffect
   - 
   - 
   - 

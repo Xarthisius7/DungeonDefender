@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
 
-    [SerializeField] private float moveSpeed = 2f;
 
     [SerializeField] private float dashDistance = 0.5f;
     [SerializeField] private float dashDuration = 0.07f;
@@ -55,15 +54,23 @@ public class PlayerMovement : MonoBehaviour
     private float staminaRegenDelayTimer = 0f; // the counter of the stamina regen cooldown after shooting
 
 
+    private float fireDamageCooldown = 0f;
+    private float spikeDamageCooldown = 0f;
+
+
     private void Awake()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        currentMoveSpeed = moveSpeed;
+        Invoke("DelayInitStats", 0.1f);
     }
 
+    private void DelayInitStats()
+    {
+        currentMoveSpeed = PowerupManager.instance.GetAttributeValue("Speed");
+    }
     void Update()
     {
         movement.Set(InputManager.Movement.x, InputManager.Movement.y);
@@ -76,12 +83,19 @@ public class PlayerMovement : MonoBehaviour
             // If player is shooting, his movement speed is reduced.
             if (isShooting > 0)
             {
-                currentMoveSpeed = moveSpeed * shootingSpeedReduction;
+                currentMoveSpeed = PowerupManager.instance.GetAttributeValue("Speed") * shootingSpeedReduction;
             } else
             {
-                currentMoveSpeed = moveSpeed;
+                currentMoveSpeed = PowerupManager.instance.GetAttributeValue("Speed");
             }
+
+            CheckGroundEffect();
+            if (fireDamageCooldown > 0) fireDamageCooldown -= Time.deltaTime;
+            if (spikeDamageCooldown > 0) spikeDamageCooldown -= Time.deltaTime;
+
             rb.velocity = movement * currentMoveSpeed;
+
+
 
             // handle the dash cooldown
             if (!canDash)
@@ -154,6 +168,69 @@ public class PlayerMovement : MonoBehaviour
 
         PassiveStaminaRegen();
     }
+
+
+    void CheckGroundEffect()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, LayerMask.GetMask("GroundEffect"));
+
+        if (hit.collider != null)
+        {
+            string groundTag = hit.collider.tag;
+
+            switch (groundTag)
+            {
+                case "Mud":
+                    currentMoveSpeed *= 0.30f; 
+                    break;
+
+                case "Spike":
+                    if (spikeDamageCooldown <= 0f)
+                    {
+                        PlayerController.Instance.PlayerTakesPercentDamage(0.15f);
+                        spikeDamageCooldown = 3f; 
+                    }
+
+                    Animator spikeAnimator = hit.collider.GetComponent<Animator>();
+                    if (spikeAnimator != null)
+                    {
+                        spikeAnimator.SetTrigger("Activate"); 
+                    }
+
+                    break;
+
+                case "Fire":
+                    if (fireDamageCooldown <= 0f)
+                    {
+                        StartCoroutine(ApplyFireDamage(0.01f, 6f)); // 1% damage for 6 second
+                        fireDamageCooldown = 1f;
+                    }
+                    break;
+
+                default:
+                    // »Ö¸´Ä¬ÈÏ×´Ì¬
+                    break;
+            }
+        }
+    }
+
+    IEnumerator ApplyFireDamage(float damagePerSecond, float duration)
+    {
+        float timer = 0f;
+        while (timer < duration)
+        {
+            PlayerController.Instance.PlayerTakesPercentDamage(damagePerSecond);
+            timer += 1f;
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
+
+
+
+
+
+
     private void PassiveStaminaRegen()
     {
         if ( isShooting <= 0)

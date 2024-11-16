@@ -45,10 +45,30 @@ public class BulletController : MonoBehaviour
             // Desctory the bullet gameobject
             Destroy(gameObject);
         }
-        if (collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Player"))
         {
             //prevent it collde with player.
+        } else if (collision.gameObject.CompareTag("BreakableObject"))
+        {
+            float attackValue = PowerupManager.instance.GetAttributeValue("Attack");
+
+            // Set damage based on threshold levels
+            int damage = 1; // default
+            if (attackValue > 100)
+            {
+                damage = 4;
+            }
+            else if (attackValue > 40)
+            {
+                damage = 2;
+            }
+
+            // Apply damage as an integer
+            collision.gameObject.GetComponent<INT_Breakable>()
+                .TakeDamage(damage);
+            Destroy(gameObject);
         }
+
         else
         {
 

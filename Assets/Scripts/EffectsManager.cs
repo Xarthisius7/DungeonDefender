@@ -43,6 +43,15 @@ public class EffectsManager : MonoBehaviour
             sfxSource.PlayOneShot(sfxClips[clipIndex]);
         }
     }
+    public void PlaySFX(int clipIndex, float volume = 1.0f)
+    {
+        if (clipIndex >= 0 && clipIndex < sfxClips.Length)
+        {
+            // Ensure volume is clamped between 0.0 and 1.0
+            volume = Mathf.Clamp(volume, 0.0f, 1.0f);
+            sfxSource.PlayOneShot(sfxClips[clipIndex], volume);
+        }
+    }
 
     public void StopBackgroundMusic()
     {

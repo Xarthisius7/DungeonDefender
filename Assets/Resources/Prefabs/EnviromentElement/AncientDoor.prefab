@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1792395933
-  m_SortingLayer: 3
+  m_SortingLayerID: 1946801379
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -667000601, guid: 25204da87630ce74880bc80bce4e33c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionButtonPrefab: {fileID: 5038416192502120241, guid: 808a8f2868300aa469aa75bd29e7ea2a, type: 3}
   interactionDistance: 1.5
+  defaultScale: 1
 --- !u!114 &4975558653040074475
 MonoBehaviour:
   m_ObjectHideFlags: 0
