@@ -19,6 +19,9 @@ public class MinimapGenerator : MonoBehaviour
     public Transform playerTransform;  // Player transform to track position
     public float minimapScale = 0.1f;  // Scale factor to convert player movement to minimap movement
 
+    private GameObject[,] mapPiecesGenerated;
+
+
     private void Update()
     {
         UpdateMinimap();
@@ -33,9 +36,13 @@ public class MinimapGenerator : MonoBehaviour
         }
     }
 
-    public void GenerateMinimap(GridCell[,] grid, int gridSize)
+    public GameObject[,] GenerateMinimap(GridCell[,] grid, int gridSize)
     {
         int halfGridSize = gridSize / 2;
+
+        int rows = grid.GetLength(0);
+        int cols = grid.GetLength(1);
+        mapPiecesGenerated = new GameObject[rows, cols];
 
         for (int x = 0; x < gridSize; x++)
         {
@@ -82,9 +89,14 @@ public class MinimapGenerator : MonoBehaviour
                             }
                         }
                     }
+
+                    mapPiecesGenerated[x,y] = mapPiece;
+
+
                 }
             }
         }
+        return mapPiecesGenerated;
     }
 
     private int GetSpriteIndex(string actualDir)

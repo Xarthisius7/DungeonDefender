@@ -13,6 +13,9 @@ public class InputManager : MonoBehaviour
     public static float IsDropingItem;
     public static Vector2 scrollValue;
 
+    public static float IsPausingGame;
+
+
     private PlayerInput _playerInput;
     private InputAction _moveAction;
     private InputAction _shootAction;
@@ -21,6 +24,8 @@ public class InputManager : MonoBehaviour
 
     private InputAction _useItemAction;
     private InputAction _dropItemAction;
+
+    private InputAction _pauseGameAction;
 
 
 
@@ -41,6 +46,8 @@ public class InputManager : MonoBehaviour
         _dropItemAction = _playerInput.actions["DropItem"];
 
         _scrollAction = _playerInput.actions["Scroll"];
+
+        _pauseGameAction = _playerInput.actions["PauseGame"];
     }
 
     private void Update()
@@ -55,7 +62,8 @@ public class InputManager : MonoBehaviour
         scrollValue = _scrollAction.ReadValue<Vector2>();
 
 
+        IsPausingGame = _pauseGameAction.ReadValue<float>();
 
-     
+
     }
 }

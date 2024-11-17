@@ -24,6 +24,46 @@ public class UIManager : MonoBehaviour
 
     public GameObject PowerupMenuPanel; // The menu panel to activate/deactivate
 
+    public TextMeshProUGUI[] subtitleTexts;
+    public float displayTime = 2.5f; 
+    public float fadeDuration = 1f; 
+
+    private Queue<string> messageQueue = new Queue<string>(); //Ingame message display
+    private Coroutine[] fadeCoroutines;
+
+
+    public GameObject OpenItemMenu; // Menu object to show/hide
+    public GameObject[] itemSlots; // Array of UI elements for the 3 item slots
+    private List<int> offeredOptions = new List<int>(); // List to store the IDs of offered Powerups
+
+    public void OpenItemMenuFunc(Powerup p1, Powerup p2, Powerup p3)
+    {
+        // Store the Powerup data in an array for easy iteration
+        Powerup[] powerups = { p1, p2, p3 };
+
+        // Iterate through each Powerup and assign its data to the UI elements
+        for (int i = 0; i < powerups.Length; i++)
+        {
+            Image icon = itemSlots[i].transform.Find("Icon").GetComponent<Image>();
+            icon.sprite = powerups[i].sprite;
+
+            TextMeshProUGUI description = itemSlots[i].transform.Find("Description").GetComponent<TextMeshProUGUI>();
+            description.text = powerups[i].description;
+
+            offeredOptions.Add(powerups[i].id);
+        }
+
+        // Set the menu object to active to make it visible
+        OpenItemMenu.SetActive(true);
+    }
+
+    public void CloseItemMenu()
+    {
+        OpenItemMenu.SetActive(false);
+    }
+
+
+
 
     void Start()
     {
@@ -37,14 +77,103 @@ public class UIManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        fadeCoroutines = new Coroutine[subtitleTexts.Length];
+        ClearAllSubtitles();
 
 
     }
+    public void ClickButton1()
+    {
+        ChooseOption(1);
+    }
+    public void ClickButton2()
+    {
+        ChooseOption(1);
+    }
+    public void ClickButton3()
+    {
+        ChooseOption(1);
+    }
+
+    public void ChooseOption(int i)
+    {
+        PowerupManager.instance.GivePowerup(offeredOptions[i]);
+        offeredOptions.Clear();
+        CloseItemMenu();
+    }
+
+    public void ShowMessage(string message)
+    {
+        //add message to queue.
+        messageQueue.Enqueue(message);
+        if (messageQueue.Count > subtitleTexts.Length)
+        {
+            messageQueue.Dequeue(); 
+        }
+        UpdateSubtitles();
+    }
+
+    private void UpdateSubtitles()
+    {
+        for (int i = 0; i < fadeCoroutines.Length; i++)
+        {
+            if (fadeCoroutines[i] != null)
+            {
+                StopCoroutine(fadeCoroutines[i]);
+            }
+        }
+
+        string[] messages = messageQueue.ToArray();
+        ClearAllSubtitles();
+
+        for (int i = 0; i < messages.Length; i++)
+        {
+            int index = subtitleTexts.Length - messages.Length + i;
+            subtitleTexts[index].text = messages[i];
+            fadeCoroutines[index] = StartCoroutine(FadeOutSubtitle(subtitleTexts[index], displayTime, fadeDuration));
+        }
+    }
+
+    private IEnumerator FadeOutSubtitle(TextMeshProUGUI text, float delay, float duration)
+    {
+        //fade out the subtitle after a amount of time.
+        yield return new WaitForSeconds(delay);
+
+        float elapsedTime = 0f;
+        Color originalColor = text.color;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / duration);
+            text.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+            yield return null;
+        }
+
+        text.text = "";
+        messageQueue.Dequeue();
+        messageQueue.Dequeue();
+        messageQueue.Dequeue();
+        UpdateSubtitles();
+    }
+
+    private void ClearAllSubtitles()
+    {
+        foreach (TextMeshProUGUI text in subtitleTexts)
+        {
+            text.text = "";
+            text.color = new Color(text.color.r, text.color.g, text.color.b, 1f);
+        }
+    }
+
 
     void Update()
     {
         
     }
+
+
+
     public void OpenAttrubuteMenu()
     {
         // Update attribute values in the UI

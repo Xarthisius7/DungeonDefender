@@ -55,6 +55,32 @@ public class MapManager : MonoBehaviour
     private System.Random random;
 
     [SerializeField] MinimapGenerator miniGen;
+    [SerializeField] Transform MapGenerationTransform;
+
+    public int StartRoomX = 0;
+    public int StartRoomY = 0;
+
+    public GridCell[,] CreateMap()
+    {
+        //Generate the entire map, and return the girds to GameController.
+        GenerateMainArea();
+
+        //Assign each area's room type
+        AssignRoomsTypes(1);
+        AssignRoomsTypes(2);
+        AssignRoomsTypes(3);
+
+        //actually create the room
+        InstantiateRooms();
+
+        return grid;
+    }
+
+    public GameObject[,] MakeMiniMap()
+    {
+        //generate minimap
+        return miniGen.GenerateMinimap(grid, gridSize);
+    }
 
 
     void Start()
@@ -111,15 +137,8 @@ public class MapManager : MonoBehaviour
 
         grid = new GridCell[gridSize, gridSize];
         InitializeGrid();
-        GenerateMainArea();
 
-        AssignRoomsTypes(1);
-        AssignRoomsTypes(2);
-        AssignRoomsTypes(3);
 
-        InstantiateRooms();
-
-        miniGen.GenerateMinimap(grid, gridSize);
     }
 
 
@@ -141,6 +160,9 @@ public class MapManager : MonoBehaviour
         grid[centerX, centerY].hasRoom = true;
         grid[centerX, centerY].isMainRoom = true;
         grid[centerX, centerY].roomFeature = "BASEROOM";
+
+        //set the center room's x and y, so game controller knows.
+        StartRoomX = centerX; StartRoomY = centerY;
 
         // Generating the First Area.
         // Randomly select 3 directions to generate branches
@@ -575,17 +597,11 @@ public class MapManager : MonoBehaviour
 
 
 
-
-
-
-
-
-
                     if (room != null)
                     {
                         Vector3 position = new Vector3((x - centerX) * 8.0f, (y - centerY) * 9.0f, 0);
                         grid[x, y].roomObject = Instantiate(room, position, Quaternion.identity);
-                        grid[x, y].roomObject.transform.SetParent(transform);
+                        grid[x, y].roomObject.transform.SetParent(MapGenerationTransform);
                         grid[x, y].roomObject.name = $"{x}_{y}_{grid[x, y].roomFeature}_{roomType}";
 
                         totalRoomsGenerated++;

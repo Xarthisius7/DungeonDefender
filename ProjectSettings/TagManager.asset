@@ -11,6 +11,9 @@ TagManager:
   - Mud
   - Spike
   - Fire
+  - MapPiecesList
+  - ExploreLight
+  - EnemieSpawnPoint
   layers:
   - Default
   - TransparentFX

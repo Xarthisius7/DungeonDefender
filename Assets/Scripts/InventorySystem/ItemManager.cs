@@ -99,15 +99,15 @@ public class ItemManager : MonoBehaviour
 
         LoadAllItems();
 
-        AddItemsById(1, 5);
-        AddItemsById(2, 10);
-        AddItemsById(1, 3);
-        AddItemsById(3, 1);
-        AddItemsById(2, 1);
-        AddItemsById(3, 4);
-        AddItemsById(4, 1);
+        //AddItemsById(1, 5);
+        //AddItemsById(2, 10);
+        //AddItemsById(1, 3);
+        //AddItemsById(3, 1);
+        //AddItemsById(2, 1);
+        //AddItemsById(3, 4);
+        //AddItemsById(4, 1);
 
-        CreateDroppedItem(2, 3);
+        //CreateDroppedItem(2, 3);
 
     }
 
@@ -306,8 +306,13 @@ public class ItemManager : MonoBehaviour
 
     public void CreateDroppedItem(int id, int amount)
     {
-        // Instantiate the dropped item at the player's position
-        GameObject droppedItem = Instantiate(droppedItemPrefab, playerTransform.position, Quaternion.identity);
+        CreateDroppedItem(id, amount, playerTransform);
+    }
+
+    public void CreateDroppedItem(int id, int amount, Transform spawnTransform)
+    {
+        // Instantiate the dropped item at the specified transform's position
+        GameObject droppedItem = Instantiate(droppedItemPrefab, spawnTransform.position, Quaternion.identity);
 
         // Find the INT_DroppedItem component on the instantiated object
         INT_DroppedItem itemScript = droppedItem.GetComponent<INT_DroppedItem>();
@@ -316,7 +321,6 @@ public class ItemManager : MonoBehaviour
         if (itemScript != null)
         {
             // Call the setItem method with id and amount as parameters
-
             ItemScriptableObject itemTemplate = allItems.FirstOrDefault(i => i.id == id);
             if (itemTemplate == null)
             {
@@ -544,6 +548,9 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameController.Instance.IsPaused) return;
+
+
         Vector2 scrollValue = InputManager.scrollValue;
         float UseKeyDown = InputManager.IsUsingItem;
         float DropKeyDown = InputManager.IsDropingItem;

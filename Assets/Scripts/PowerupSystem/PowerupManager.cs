@@ -35,15 +35,20 @@ public class PowerupManager : MonoBehaviour
             InitializeAttributes();
             LoadAllPowerups();
 
-            GivePowerup(1);
-            GivePowerup(1);
-            GivePowerup(3);
-            GivePowerup(6);
-            GivePowerup(7);
-            GivePowerup(8);
-            GivePowerup(15);
+            //GivePowerup(6);
+            //GivePowerup(7);
+            //GivePowerup(8);
+
+
+            //GivePowerup(1);
+            //GivePowerup(3);
+            //GivePowerup(6);
+            //GivePowerup(7);
+            //GivePowerup(8);
+            //GivePowerup(15);
 
             //Invoke("tempOpenStatMenu", 1f);
+            //Invoke("tempOpenCHooseMenu", 1.5f);
 
 
         }
@@ -56,11 +61,19 @@ public class PowerupManager : MonoBehaviour
 
 
     }
+    
 
+    //TODO: To be deleted. only for testing.
     public void tempOpenStatMenu()
     {
         UIManager.Instance.OpenAttrubuteMenu();
     }
+    public void tempOpenCHooseMenu()
+    {
+        UIManager.Instance.OpenItemMenuFunc(LoadPowerup(6), LoadPowerup(7), LoadPowerup(8));
+    }
+
+
 
     // Load all Powerups from the Resources folder
     public void LoadAllPowerups()
@@ -101,6 +114,7 @@ public class PowerupManager : MonoBehaviour
                 ownedPowerups.Add(powerup);
             }
             UpdatePowerups();
+            UIManager.Instance.ShowMessage("You obtained a Powerup: " + powerup.name);
         }
     }
 

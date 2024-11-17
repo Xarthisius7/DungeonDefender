@@ -73,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (GameController.Instance.IsPaused) return;
+
         movement.Set(InputManager.Movement.x, InputManager.Movement.y);
         isShooting = InputManager.IsShooting;
 
