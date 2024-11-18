@@ -35,20 +35,9 @@ public class PowerupManager : MonoBehaviour
             InitializeAttributes();
             LoadAllPowerups();
 
-            //GivePowerup(6);
-            //GivePowerup(7);
-            //GivePowerup(8);
-
-
-            //GivePowerup(1);
-            //GivePowerup(3);
-            //GivePowerup(6);
-            //GivePowerup(7);
-            //GivePowerup(8);
-            //GivePowerup(15);
 
             //Invoke("tempOpenStatMenu", 1f);
-            //Invoke("tempOpenCHooseMenu", 1.5f);
+            Invoke("tempOpenCHooseMenu", 1.5f);
 
 
         }
@@ -66,6 +55,8 @@ public class PowerupManager : MonoBehaviour
     //TODO: To be deleted. only for testing.
     public void tempOpenStatMenu()
     {
+        GivePowerup(6);
+        GivePowerup(7);
         UIManager.Instance.OpenAttrubuteMenu();
     }
     public void tempOpenCHooseMenu()
@@ -80,6 +71,7 @@ public class PowerupManager : MonoBehaviour
     {
         Powerup[] loadedPowerups = Resources.LoadAll<Powerup>("Prefabs/Powerups");
         allPowerups.AddRange(loadedPowerups);
+        Debug.Log("A total of " + loadedPowerups.Length + " Powerup has been loaded. ");
     }
 
     // Reset all powerups and attributes to their base values
@@ -113,8 +105,9 @@ public class PowerupManager : MonoBehaviour
             {
                 ownedPowerups.Add(powerup);
             }
+            UIManager.Instance.ShowMessage("} - You obtained a Powerup: " + powerup.name+" - {");
+            //TODO: Add sfx for obtaining Powerup
             UpdatePowerups();
-            UIManager.Instance.ShowMessage("You obtained a Powerup: " + powerup.name);
         }
     }
 

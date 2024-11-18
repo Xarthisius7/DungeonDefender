@@ -99,7 +99,7 @@ public class ItemManager : MonoBehaviour
 
         LoadAllItems();
 
-        //AddItemsById(1, 5);
+        AddItemsById(1, 5);
         //AddItemsById(2, 10);
         //AddItemsById(1, 3);
         //AddItemsById(3, 1);
