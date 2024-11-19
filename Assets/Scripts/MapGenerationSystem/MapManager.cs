@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Linq;
+using UnityEngine.AI;
+using NavMeshPlus.Components;
 
 
 public class GridCell
@@ -26,9 +28,6 @@ public enum dir
 {
     U, B, L, R
 }
-
-
-
 
 
 public class MapManager : MonoBehaviour
@@ -60,6 +59,8 @@ public class MapManager : MonoBehaviour
     public int StartRoomX = 0;
     public int StartRoomY = 0;
 
+    public NavMeshSurface NavMesh;
+
     public GridCell[,] CreateMap()
     {
         //Generate the entire map, and return the girds to GameController.
@@ -72,6 +73,9 @@ public class MapManager : MonoBehaviour
 
         //actually create the room
         InstantiateRooms();
+
+        // Build our navmesh
+        NavMesh.BuildNavMesh();
 
         return grid;
     }
@@ -88,13 +92,12 @@ public class MapManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-
         if (useSeed == false)
         {
             seed = UnityEngine.Random.Range(0, int.MaxValue);
@@ -137,8 +140,6 @@ public class MapManager : MonoBehaviour
 
         grid = new GridCell[gridSize, gridSize];
         InitializeGrid();
-
-
     }
 
 
@@ -617,7 +618,7 @@ public class MapManager : MonoBehaviour
         Debug.Log("There's a total of: " + totalTreasureRoomsGenerated + " Treasure room in the map.");
         Debug.Log("There's a total of: " + totalHighDIffRoomsGenerated + " High Difficulty room in the map.");
         Debug.Log("There's a total of: " + totalTrapRoomsGenerated + " Trap room  in the map.");
-        Debug.Log("Map Generation is using seed£º" + seed);
+        Debug.Log("Map Generation is using seedï¿½ï¿½" + seed);
     }
 
     void ShuffleList<T>(List<T> list)

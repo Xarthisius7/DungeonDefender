@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 7253115588520639733}
   - component: {fileID: 5953627972475804164}
   - component: {fileID: 5567347027076252822}
+  - component: {fileID: 3207728670407253345}
   m_Layer: 0
   m_Name: FloorLayer
   m_TagString: Untagged
@@ -1096,6 +1097,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &3207728670407253345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298728889994064796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &2316782211468886149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1212,7 @@ MonoBehaviour:
   - {x: -1.0217243, y: -4.2380385, z: 0}
   m_ShapePathHash: -708870396
   m_Mesh: {fileID: 0}
-  m_InstanceId: 117270
+  m_InstanceId: 261152
   m_LocalBounds:
     m_Center: {x: 0.002948761, y: 0.47184467, z: 0}
     m_Extent: {x: 4.2501163, y: 4.709883, z: 0}
@@ -1211,6 +1228,7 @@ GameObject:
   - component: {fileID: 5480142500053754188}
   - component: {fileID: 59217351990726247}
   - component: {fileID: 746659246119602534}
+  - component: {fileID: 1347671562065480326}
   m_Layer: 0
   m_Name: ObstaclesLayer
   m_TagString: Obstacle
@@ -1972,6 +1990,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1347671562065480326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839784546105395942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &8942273517764786913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2032,7 +2066,7 @@ MonoBehaviour:
   - {x: 4.2496223, y: -4.251964, z: 0}
   m_ShapePathHash: 29463145
   m_Mesh: {fileID: 0}
-  m_InstanceId: 117276
+  m_InstanceId: 261158
   m_LocalBounds:
     m_Center: {x: 2.6352158, y: -2.6328545, z: 0}
     m_Extent: {x: 1.6144063, y: 1.6197513, z: 0}

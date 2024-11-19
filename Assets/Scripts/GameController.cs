@@ -260,7 +260,7 @@ public class GameController : MonoBehaviour
 
                         float targetIntensity = light2D.intensity;
 
-                        // set the intensity to 0£¬and slowly towards the target value.
+                        // set the intensity to 0ï¿½ï¿½and slowly towards the target value.
                         light2D.intensity = 0;
                         StartCoroutine(GraduallyIncreaseIntensity(light2D, targetIntensity, 10f));
                     }
