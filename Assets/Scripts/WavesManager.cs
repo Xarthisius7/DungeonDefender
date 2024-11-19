@@ -4,83 +4,130 @@ using UnityEngine;
 
 public class WavesManager : MonoBehaviour
 {
-    public GameObject ennemyPrefab;
-    public List<GameObject> spawnPoints;
-    public int nb_ennemies_at_start = 2;
-    public int nb_waves = 5;
-    public float waves_duration = 5.0f;
+    [System.Serializable]
+    public class EnemyType
+    {
+        public GameObject enemyPrefab;
+        public float spawnChance = 100;
+    }
 
-    private int nb_ennemies;
-    private float timer;
+    [System.Serializable]
+    public class Wave
+    {
+        public List<EnemyType> enemyTypes;
+        public int baseEnemyCount;
+        public float spawnInterval;
+        public float waveDuration;
+    }
+
+    [Header("Wave Configuration")]
+    public List<Wave> waves;
+    public List<Transform> spawnPoints;
+    public float timeBetweenWaves = 5.0f;
+
+    private int currentWaveIndex = 0;
+    private int nbEnemies = 0;
+    private float waveTimer;
+    private bool wavesEnded = false;
+    private bool isSpawning = false;
+
+    private Transform enemiesTarget;
 
     void Start()
     {
-        nb_ennemies = nb_ennemies_at_start;
-    }
-
-    void UpdateTimer()
-    {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0.0f)
+        if (waves.Count > 0)
         {
-            UpdateWave();
+            StartCoroutine(StartNextWave());
         }
+        enemiesTarget = transform;
     }
 
-    float ResetTimer()
-    {
-        timer = waves_duration;
-        return timer;
-    }
-
-    int UpdateNbEnnemies()
-    {
-        nb_ennemies = (int)((float)nb_ennemies * 1.5f);
-        return nb_ennemies;
-    }
-
-    void UpdateWave()
-    {
-        if (nb_waves > 0)
-        {
-            nb_waves--;
-            CreateWave(UpdateNbEnnemies(), ResetTimer());
-        }
-        else
-        {
-            FinishTowerDefense();
-        }
-    }
-
-    void CreateWave(int nb_ennemies, float timer)
-    {
-        foreach (GameObject spawn_point in spawnPoints)
-        {
-            for (int i = 0; i < nb_ennemies / spawnPoints.Count; ++i)
-            {
-                GameObject ennemy = Instantiate(ennemyPrefab, spawn_point.transform.position, Quaternion.identity);
-                ennemy.transform.parent = transform;
-                ennemy.SetActive(true);
-            }
-        }
-        for(int i = 0; i < nb_ennemies % spawnPoints.Count; ++i)
-        {
-            GameObject ennemy = Instantiate(ennemyPrefab, spawnPoints[Random.Range(0, spawnPoints.Count)].transform.position, Quaternion.identity);
-            ennemy.transform.parent = transform;
-            ennemy.SetActive(true);
-        }
-        ResetTimer();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        UpdateTimer();
+        if (isSpawning)
+        {
+            waveTimer -= Time.deltaTime;
+            if (waveTimer <= 0)
+            {
+                isSpawning = false;
+                if (currentWaveIndex < waves.Count - 1)
+                {
+                    currentWaveIndex++;
+                    StartCoroutine(StartNextWave());
+                }
+                else if (wavesEnded)
+                {
+                    FinishWaves();
+                }
+            }
+        }
     }
 
-    void FinishTowerDefense()
+    IEnumerator StartNextWave()
     {
-        Debug.Log("Waves end");
+        wavesEnded = false;
+        Wave currentWave = waves[currentWaveIndex];
+        Debug.Log(currentWaveIndex);
+        nbEnemies = currentWave.baseEnemyCount;
+        waveTimer = currentWave.waveDuration;
+        isSpawning = true;
+
+        yield return new WaitForSeconds(timeBetweenWaves);
+        Debug.Log(isSpawning);
+        while (nbEnemies > 0 && isSpawning)
+        {
+            SpawnEnemy(currentWave);
+            yield return new WaitForSeconds(currentWave.spawnInterval);
+        }
+
+        wavesEnded = true;
+    }
+
+    void SpawnEnemy(Wave wave)
+    {
+        if (wave.enemyTypes.Count == 0)
+        {
+            return;
+        }
+
+        float totalChance = 0;
+        foreach (var enemyType in wave.enemyTypes)
+        {
+            totalChance += enemyType.spawnChance;
+        }
+
+        float randomValue = Random.Range(0, totalChance);
+        float cumulativeChance = 0;
+        EnemyType selectedEnemy = wave.enemyTypes[0];
+
+        foreach (var enemyType in wave.enemyTypes)
+        {
+            cumulativeChance += enemyType.spawnChance;
+            if (randomValue <= cumulativeChance)
+            {
+                selectedEnemy = enemyType;
+                break;
+            }
+        }
+
+        Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+
+        GameObject enemy = Instantiate(selectedEnemy.enemyPrefab, spawnPoint.position, Quaternion.identity);
+        enemy.transform.parent = transform;
+        enemy.SetActive(true);
+
+        SampleEnemy enemyComponent = enemy.GetComponent<SampleEnemy>();
+        if (enemyComponent != null)
+        {
+            enemyComponent.Initialize(enemiesTarget);
+        }
+
+        nbEnemies--;
+    }
+
+    void FinishWaves()
+    {
+        Debug.Log("Cristal activated!");
+        // Ajoutez ici des actions à effectuer une fois toutes les vagues terminées.
     }
 }

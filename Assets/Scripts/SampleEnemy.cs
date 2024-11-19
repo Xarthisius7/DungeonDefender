@@ -35,6 +35,11 @@ public class SampleEnemy : MonoBehaviour
         }
     }
 
+    public void Initialize(Transform enemyTarget)
+    {
+        this.target = enemyTarget;
+    }
+
     protected void MoveTowardsTarget(){
         Vector2 direction = (target.position - transform.position).normalized;
 
