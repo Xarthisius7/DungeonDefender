@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using NavMeshPlus.Components;
 
 public class BulletController : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class BulletController : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
+    private NavMeshSurface NavMesh;
+    private bool destroyedSomething = false;
 
     void Start()
     {
@@ -32,7 +36,6 @@ public class BulletController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-
         //trigger the event: check the hit gameobject's type.
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -64,8 +67,14 @@ public class BulletController : MonoBehaviour
             }
 
             // Apply damage as an integer
-            collision.gameObject.GetComponent<INT_Breakable>()
-                .TakeDamage(damage);
+            destroyedSomething = collision.gameObject.GetComponent<INT_Breakable>().TakeDamage(damage);
+
+            if (destroyedSomething){
+                //NavMesh = GameObject.Find("NavMeshTesting").GetComponent<NavMeshSurface>();
+                NavMesh = GameObject.Find("NavMesh").GetComponent<NavMeshSurface>();
+                NavMesh.BuildNavMesh(); 
+            }
+
             Destroy(gameObject);
         }
 

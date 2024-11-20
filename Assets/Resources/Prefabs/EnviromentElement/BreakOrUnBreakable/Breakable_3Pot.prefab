@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2086996464569756177}
   - component: {fileID: 7230592722454389864}
   - component: {fileID: 2875134884963910912}
-  - component: {fileID: 7366969397273210226}
   - component: {fileID: 705296191009462140}
   - component: {fileID: 1433977974632501495}
+  - component: {fileID: 2375745736078196712}
   m_Layer: 0
   m_Name: Breakable_3Pot
   m_TagString: BreakableObject
@@ -133,22 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4068584, y: 1.0073974}
   m_EdgeRadius: 0
---- !u!114 &7366969397273210226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759269659963324111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!114 &705296191009462140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,3 +204,19 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &2375745736078196712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759269659963324111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
