@@ -30,6 +30,12 @@ public class SampleEnemy : MonoBehaviour
         agent.updateUpAxis = false;
     }
 
+
+    public void Initialize(Transform enemyTarget)
+    {
+        this.target = enemyTarget;
+    }
+
     void FixedUpdate()
     {
         // check if the game is paused.
