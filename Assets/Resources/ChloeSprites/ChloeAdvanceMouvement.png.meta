@@ -1,0 +1,3590 @@
+fileFormatVersion: 2
+guid: 9678e2585e0ed0149af4ba0d89acbe44
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 90
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3648
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e469cd8794ddcb84abca9ca1a64cf7c6
+      internalID: -55757025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3648
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ec6e37a80162543a3b26a6370287f4
+      internalID: 172137344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3648
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe3a477156d8fc4ba2f0effe98be508
+      internalID: 1396246580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3648
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1570147c1d1abd346bf3d07da572324a
+      internalID: -1644715464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3648
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358bf9413400af443bd52803df6881e5
+      internalID: 1417852566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3648
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca18a5e544a22941bcc396ff3bae9e4
+      internalID: -216974887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3648
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32058ce136da444996d3fac8f85ccc6
+      internalID: 1968414815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3584
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97450d92bdf50494984e6c8dc6fcaeed
+      internalID: 2085257935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3584
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f0a542fe8a0ca4d85ae804b5a42c49
+      internalID: 1578863951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3584
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe38753ab09e701479230fa42704ab6d
+      internalID: -404767135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3584
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ba859655b33d64992b48173ba9f6f3
+      internalID: 1171199168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3584
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363507de522149b4f83fbdb4faacca22
+      internalID: -1655354338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3584
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae89e7323cb405e4cabca4783ea6d1b3
+      internalID: 892487150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3584
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b553dc2c6b8c94bb8cdd5b02d246fe
+      internalID: 1482597315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3520
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0015d971f76d64ba19f55433a785d8
+      internalID: -95667834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3520
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e32215e1c07754f9ea318d4aa1a230
+      internalID: 719273143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3520
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112f0cc15de05e749b16fcfdc9db8887
+      internalID: -997395711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3520
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc19496e096a5854fa2517c3b9d5173e
+      internalID: 113507609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3520
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6981ff35b571b0642b7582b8e4d5ad92
+      internalID: -925850791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3520
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ab33e697fe8b44cb3c15ac4df379cf
+      internalID: -1097407365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_21
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3520
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49be45f0be12d2f4eb127432e0174ffd
+      internalID: 143298167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3456
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a67170a90e8bda49bbb28c683e920c7
+      internalID: -1453398802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3456
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89fc962d05b6be46a10cb94ffdb99d5
+      internalID: -688059526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3456
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f95a0bb66fbe754fb64e3f65c426d85
+      internalID: 564356132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3456
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832665f24f15f764b83f80f8e51537e9
+      internalID: 988316821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3456
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ae225671f6d6943bf97ae5e4ea20fe
+      internalID: 536962929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3456
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6898a9fb27ea67b4b8672d3eb9506416
+      internalID: -745053120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3456
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06b9f844d0eb104aadb33e293baacf2
+      internalID: 1772345385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c1abbe0f7c94e42919cd85b5cce756
+      internalID: -1675112837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_62
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83eea1b525dec664baa1bf34bbc73066
+      internalID: -485468242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_63
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff270b7971e8bc4a8e3a16755acebde
+      internalID: 1558304968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_64
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c72b22efdec424dac89c7565f03a7a
+      internalID: -581705522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_65
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266a95369bbfb2a4e95300ef22f779a3
+      internalID: 543140999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_66
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0267001a35162b4183626a1350a6e8a
+      internalID: 156676141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_67
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80ee38219aa5834bb9d4f0052fc6c81
+      internalID: 997395388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_68
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ad76a02fecb104886c36ecc0acb78a
+      internalID: -1570865344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_69
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03a840eb05f14848936457dcdc50583
+      internalID: -1747840559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc447b70ba1e18a499101d298166e9ea
+      internalID: 1198055295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_71
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc66b09dcffc3441b9c38b6f352eb3c
+      internalID: -1724718042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_72
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc5afbb2a72a0d4c9c641f91f4d6f07
+      internalID: 1304541049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_73
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1a8996d823ebe42b0c365c3b08c2ed
+      internalID: -1894151988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_74
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873777c7401acdc409423b39299d2f7f
+      internalID: -976625570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_75
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76790b6d21244124181f113ce44e3304
+      internalID: 177937610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_76
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6a63ba41b473f418222f9fd0ea1fb2
+      internalID: 1981301945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_77
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b1edff61a87624fbeb76d351905393
+      internalID: -1750752285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_78
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfc910c6818f354c953adb85924286c
+      internalID: 1534930684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_79
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d37111962425dc44965a32238a12018
+      internalID: 1420841782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_80
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee50269a0f2324448be155080607b4be
+      internalID: -1118362498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_81
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecf6fce347774c428c81f20b3c1b1df
+      internalID: 396714623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_82
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0008714c6c996324aa927c1c7c767424
+      internalID: 1589738643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_83
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea174fa7fd4cd47499bca48b1d838741
+      internalID: -629491795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_84
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4b7a72f51c0384e934354298ab8430
+      internalID: -129903838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_85
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc54fc4d17e73747acb182895572712
+      internalID: 179361954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_86
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b457d5c36d4546b4f85e6e30135d3f47
+      internalID: 843458931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_87
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ff240049eb538419eb4257a5112ee6
+      internalID: 908767638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bfa7b8d7ddf284a8728378dfc447ba
+      internalID: 1160677943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f06a8d74cd6890544b32261ed8ed0683
+      internalID: -26133258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_90
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59d051fa0733404984a7c6f8eb37f2c
+      internalID: -858016268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_91
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b0564e623dc5e42808d2c9e6a76e3b
+      internalID: 361484957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b520d5e6c0dfad1448ab363cb41cd64e
+      internalID: 1993984156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_93
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7a171d9f208d04995ddc3dfe5dda9b
+      internalID: -203660492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_94
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947ddcf5ca51f1d4ebb9222bd58cc993
+      internalID: 643834466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_95
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb4a42393aaab4428010979f5a2b7d8
+      internalID: -59090267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_96
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97be7756202021a40aa2b99f8c2fdecd
+      internalID: 642375639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_174
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de617813cd64dd24291296965f51365b
+      internalID: 1220717330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_175
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cda99ac716ac4e4a8443e4f6b20f8e4
+      internalID: -1901883181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_176
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24704f2e93285eb49afb2620546ae391
+      internalID: -253633517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_178
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00328e7d8ee689b4cbdf27bc0a4657f8
+      internalID: -1139071932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_179
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24d09a58fc97a24bb564c127a44c499
+      internalID: -29877212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_202
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1984
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fdf81f850e051e498d0e97e8b0d7af9
+      internalID: -1687148486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_203
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1984
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b442ae04ba71e724dbe8d28fa63ca8e7
+      internalID: 1209135871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_204
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1984
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3be1d655b03032408f3a85efc687c7e
+      internalID: -435217479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_205
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1984
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fd15332036cf34b97914c6b481b37f
+      internalID: -1685388830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_206
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1984
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f62bfbcf1318d4bad11bd5e0283108
+      internalID: -1409559798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_207
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b22f57a8842bc041a89e0f5e38703e2
+      internalID: 738115291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_208
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1920
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bdee83449acf446aec548c4de0eacc
+      internalID: -235190858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_209
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1920
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991214d815367ba4cb548af0ae38df0c
+      internalID: 1268492722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_210
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1920
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8e9a62aaa238e4987792ba4eee60ac
+      internalID: 87260709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_211
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1920
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b44218d78c65648bb03d0c5154f705
+      internalID: -2134298802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_212
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1856
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ee57503f51da442b871e829ff5a825
+      internalID: 372579189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_213
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1856
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77e3fb5cb17a2a4bbef99146464aa2f
+      internalID: 1092244266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_214
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1856
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9427dfb2e30684e81592e1379e2d49
+      internalID: 551000653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_215
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1856
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d434d14f3fe2d94eb4c27be96a05ff9
+      internalID: 1406541008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_216
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1856
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cbb2477893daa46aee87c8079e69d2
+      internalID: 1631171325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_217
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5246e704d239769479930e7a4fc15f96
+      internalID: 1745687227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_218
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555e9d522f9cd3f48bb138efddec2c47
+      internalID: -2145611346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_219
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f274b83ac7bb0a408a8b7bfd4fef59c
+      internalID: -1773139943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_220
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6332e955440d94549af75b39ae857964
+      internalID: -1174584523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_221
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1792
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ebf65b1e27a9b4d936685a85443a87
+      internalID: -1776510886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_223
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de795c31a15fef47a3b09d378aff461
+      internalID: 962841058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_224
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e220c5003200fe242b0962e52282f4ec
+      internalID: -1382215611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_225
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02b343e74a813a428d039b8cf11382f
+      internalID: 366900315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_226
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cf34fd83cf38942b00e69151af4cb5
+      internalID: 1238708723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_227
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785fa83ef785c5d47958efa9e8b1fb38
+      internalID: 1182505065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_228
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1728
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb1c6acc59c36e4b9992b2ed1682c65
+      internalID: -1548547929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_229
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccbc59f5c965094f9cc36d848d003e2
+      internalID: -37831274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_230
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50889a36763d6a149ad70b72ba9768b5
+      internalID: -997483216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_231
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a40964cc72bea444a427ea461b5ded3
+      internalID: -614094978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_232
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66283916884fee741b16dda4987a22a8
+      internalID: -929709478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_233
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec67511bc297b3a4688bcadd34bc1561
+      internalID: 1766912327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_234
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1664
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0b07cffc2c13040abb942b3109ac43
+      internalID: -1056489771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_235
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd87d9c16394584fa95bc2877b827a8
+      internalID: 1201672638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_236
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f652ce18dfb3549bbfcf2a3a0237aa
+      internalID: 1453779127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_237
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfd9a212b35a9842b980617ba154928
+      internalID: 763266241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_238
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37539027611d2c34b8d80f5ca03bc66f
+      internalID: 2106802308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_239
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecad8d206c44ef4eb73c791583236c8
+      internalID: 1575830447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_240
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1600
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9873f9b30fb67469213eaa158c7174
+      internalID: 481340432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_241
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ac03b3bb55cd14b9810af91cf8ffe4
+      internalID: 519646791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_242
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe8718b3538a28429ff9d8085834995
+      internalID: -27164707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_243
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab906a06dee957741b535f7bdb8392c9
+      internalID: -370467833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_244
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74693348c1bf48b4a9040960d0c9be6f
+      internalID: 513845696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_245
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e3b8d79f52f534eb636adeaaff64d1
+      internalID: 980728991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_246
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1536
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6655bf9022d47740aa1d176a0180487
+      internalID: -44826952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_247
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb55569ef0102440bbf799082bd944b
+      internalID: -2084092848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_248
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f546a08a70e50cd42af2044679af51ed
+      internalID: 1988539961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_249
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da458c6c9e20e045ad24bdf00ea68d5
+      internalID: 1057944456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_250
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb86beafaac24542aa0e22db41ef27f
+      internalID: 1024884839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_251
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe69a3562112774095cb96698154218
+      internalID: 332619267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_252
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6be2d72f36bfc4d928b01f441179ad
+      internalID: 358717355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_253
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af64c884c2a4dc4981cc23517872b5f
+      internalID: -649364515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_254
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148d64adfa5295c458749c9fe1a982bf
+      internalID: -477357587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_255
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4929b52a174002499d8b4c4478f23b2
+      internalID: 1647521493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_256
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef19acc1f2b04c4291a3bb515984a27
+      internalID: 1060884036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_257
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40708da3f92c7f45994bcc79d342981
+      internalID: 707098781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_258
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2eb07585634dca4f98e1ffa16b30fac
+      internalID: -1078045914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_259
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef1d269f325edc47a292a5f7cb16aa1
+      internalID: -2145600855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_260
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33d1d866e93ab340a8db85de5e19156
+      internalID: -349279901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_261
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde5bf5fce060af49ad07c298a2589c7
+      internalID: 1707231566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_262
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab03225c1e853d4cb07f22e18b6b4b8
+      internalID: 406757830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_263
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196e40898bbb8d24aa1a4f09a2885057
+      internalID: -1240267483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_264
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0da2c6b9e2c5024a94f4030e476db4f
+      internalID: -157330212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_265
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73c56370f730b043a8968a8fb6a9ec1
+      internalID: -268867445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_266
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3782a4d5f1c95464882e34c05ac32f7d
+      internalID: 1156143109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_267
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c78c8ec8303ee45a7416acd4dc7840
+      internalID: 1341549262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_268
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eb1be615f22314083e6d22ce946e76
+      internalID: 355907752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_269
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603bdf5c479168941886d1bff2c3d404
+      internalID: -394974088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_270
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a6e47b633cee244a8191c379045135
+      internalID: 90952328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_271
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e1370630d41834fa5ff7503dec92b8
+      internalID: -521173918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_272
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8249d2ecb7d83364b962a09e50405910
+      internalID: 1737602905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_273
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc4cae33a15fe54d9852ef2c4e00c68
+      internalID: -1654972532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_274
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad76f958d72dccd4cb650fde5851c117
+      internalID: 1732681238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_275
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d161fe7904bfc643ae3e0d77d6f3a5d
+      internalID: 114067907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_276
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae6d3b1b0c105947a34a1006af2cada
+      internalID: -2020441906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_277
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16aef0f626e824d4e8a8f13178b7fcde
+      internalID: -376427666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_278
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc93e17a0e8842a49bdecf16c65a8d59
+      internalID: 1604446896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAdvanceMouvement_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f6c964c57b38f4aaa9a38d6374e447
+      internalID: -492675803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChloeAdvanceMouvement_0: -55757025
+      ChloeAdvanceMouvement_1: 172137344
+      ChloeAdvanceMouvement_10: -404767135
+      ChloeAdvanceMouvement_100: 1391983350
+      ChloeAdvanceMouvement_101: 648566582
+      ChloeAdvanceMouvement_102: -1840822377
+      ChloeAdvanceMouvement_103: -1662239567
+      ChloeAdvanceMouvement_104: -1794240667
+      ChloeAdvanceMouvement_105: 2140444706
+      ChloeAdvanceMouvement_106: 232805283
+      ChloeAdvanceMouvement_107: 1836897988
+      ChloeAdvanceMouvement_108: -147021336
+      ChloeAdvanceMouvement_109: -509541283
+      ChloeAdvanceMouvement_11: 1171199168
+      ChloeAdvanceMouvement_110: -1160228432
+      ChloeAdvanceMouvement_111: -2091691462
+      ChloeAdvanceMouvement_112: -1675387058
+      ChloeAdvanceMouvement_113: 262690116
+      ChloeAdvanceMouvement_114: -1328261472
+      ChloeAdvanceMouvement_115: 599045063
+      ChloeAdvanceMouvement_116: -239091351
+      ChloeAdvanceMouvement_117: -1953828289
+      ChloeAdvanceMouvement_118: -1431577710
+      ChloeAdvanceMouvement_119: 1028092663
+      ChloeAdvanceMouvement_12: -1655354338
+      ChloeAdvanceMouvement_120: 2025111962
+      ChloeAdvanceMouvement_121: 292195671
+      ChloeAdvanceMouvement_122: -1842101658
+      ChloeAdvanceMouvement_123: -544170617
+      ChloeAdvanceMouvement_124: -1971450355
+      ChloeAdvanceMouvement_125: -620922545
+      ChloeAdvanceMouvement_126: 22465
+      ChloeAdvanceMouvement_127: 1506581997
+      ChloeAdvanceMouvement_128: 721403121
+      ChloeAdvanceMouvement_129: -1428225960
+      ChloeAdvanceMouvement_13: 892487150
+      ChloeAdvanceMouvement_130: -11559180
+      ChloeAdvanceMouvement_131: 706812159
+      ChloeAdvanceMouvement_132: 166477546
+      ChloeAdvanceMouvement_133: 1531816552
+      ChloeAdvanceMouvement_134: 596929677
+      ChloeAdvanceMouvement_135: -1404690150
+      ChloeAdvanceMouvement_136: -1827977321
+      ChloeAdvanceMouvement_137: 80495759
+      ChloeAdvanceMouvement_138: 2105228235
+      ChloeAdvanceMouvement_139: -2091153415
+      ChloeAdvanceMouvement_14: 1482597315
+      ChloeAdvanceMouvement_140: -1097558797
+      ChloeAdvanceMouvement_141: -483729900
+      ChloeAdvanceMouvement_142: -582615770
+      ChloeAdvanceMouvement_143: -748916657
+      ChloeAdvanceMouvement_144: -1222034923
+      ChloeAdvanceMouvement_145: 1789247551
+      ChloeAdvanceMouvement_146: -80435790
+      ChloeAdvanceMouvement_147: -173178335
+      ChloeAdvanceMouvement_148: 886836075
+      ChloeAdvanceMouvement_149: 2061506081
+      ChloeAdvanceMouvement_15: -95667834
+      ChloeAdvanceMouvement_150: -1935105998
+      ChloeAdvanceMouvement_151: -1980630675
+      ChloeAdvanceMouvement_152: 621017575
+      ChloeAdvanceMouvement_153: -1846556788
+      ChloeAdvanceMouvement_154: -1396886050
+      ChloeAdvanceMouvement_155: 11022172
+      ChloeAdvanceMouvement_156: -195307403
+      ChloeAdvanceMouvement_157: -470147558
+      ChloeAdvanceMouvement_158: 1199338512
+      ChloeAdvanceMouvement_159: -1207717746
+      ChloeAdvanceMouvement_16: 719273143
+      ChloeAdvanceMouvement_160: -80008949
+      ChloeAdvanceMouvement_161: -350883689
+      ChloeAdvanceMouvement_162: 1059066932
+      ChloeAdvanceMouvement_163: -2086904186
+      ChloeAdvanceMouvement_164: 1420402966
+      ChloeAdvanceMouvement_165: 471797705
+      ChloeAdvanceMouvement_166: -706973955
+      ChloeAdvanceMouvement_167: -413092877
+      ChloeAdvanceMouvement_168: -639461336
+      ChloeAdvanceMouvement_169: 1558768252
+      ChloeAdvanceMouvement_17: -997395711
+      ChloeAdvanceMouvement_170: 1343528446
+      ChloeAdvanceMouvement_171: 464126804
+      ChloeAdvanceMouvement_172: 2141437142
+      ChloeAdvanceMouvement_173: -366685424
+      ChloeAdvanceMouvement_174: 1220717330
+      ChloeAdvanceMouvement_175: -1901883181
+      ChloeAdvanceMouvement_176: -253633517
+      ChloeAdvanceMouvement_177: 91828495
+      ChloeAdvanceMouvement_178: -1139071932
+      ChloeAdvanceMouvement_179: -29877212
+      ChloeAdvanceMouvement_18: 113507609
+      ChloeAdvanceMouvement_180: 429398358
+      ChloeAdvanceMouvement_181: -1051998304
+      ChloeAdvanceMouvement_182: -237297609
+      ChloeAdvanceMouvement_183: 714189785
+      ChloeAdvanceMouvement_184: -740681714
+      ChloeAdvanceMouvement_185: 1513088271
+      ChloeAdvanceMouvement_186: 199344180
+      ChloeAdvanceMouvement_187: -1194194118
+      ChloeAdvanceMouvement_188: -210210597
+      ChloeAdvanceMouvement_189: -1797741815
+      ChloeAdvanceMouvement_19: -925850791
+      ChloeAdvanceMouvement_190: -66138322
+      ChloeAdvanceMouvement_191: -84762670
+      ChloeAdvanceMouvement_192: -1039588609
+      ChloeAdvanceMouvement_193: 1135748193
+      ChloeAdvanceMouvement_194: -1539957024
+      ChloeAdvanceMouvement_195: -1268446435
+      ChloeAdvanceMouvement_196: -721732589
+      ChloeAdvanceMouvement_197: 1264994966
+      ChloeAdvanceMouvement_198: 1504712609
+      ChloeAdvanceMouvement_199: -1311190902
+      ChloeAdvanceMouvement_2: 1396246580
+      ChloeAdvanceMouvement_20: -1097407365
+      ChloeAdvanceMouvement_200: -1335268169
+      ChloeAdvanceMouvement_201: 1250188680
+      ChloeAdvanceMouvement_202: -1687148486
+      ChloeAdvanceMouvement_203: 1209135871
+      ChloeAdvanceMouvement_204: -435217479
+      ChloeAdvanceMouvement_205: -1685388830
+      ChloeAdvanceMouvement_206: -1409559798
+      ChloeAdvanceMouvement_207: 738115291
+      ChloeAdvanceMouvement_208: -235190858
+      ChloeAdvanceMouvement_209: 1268492722
+      ChloeAdvanceMouvement_21: 143298167
+      ChloeAdvanceMouvement_210: 87260709
+      ChloeAdvanceMouvement_211: -2134298802
+      ChloeAdvanceMouvement_212: 372579189
+      ChloeAdvanceMouvement_213: 1092244266
+      ChloeAdvanceMouvement_214: 551000653
+      ChloeAdvanceMouvement_215: 1406541008
+      ChloeAdvanceMouvement_216: 1631171325
+      ChloeAdvanceMouvement_217: 1745687227
+      ChloeAdvanceMouvement_218: -2145611346
+      ChloeAdvanceMouvement_219: -1773139943
+      ChloeAdvanceMouvement_22: -1453398802
+      ChloeAdvanceMouvement_220: -1174584523
+      ChloeAdvanceMouvement_221: -1776510886
+      ChloeAdvanceMouvement_222: -408658526
+      ChloeAdvanceMouvement_223: 962841058
+      ChloeAdvanceMouvement_224: -1382215611
+      ChloeAdvanceMouvement_225: 366900315
+      ChloeAdvanceMouvement_226: 1238708723
+      ChloeAdvanceMouvement_227: 1182505065
+      ChloeAdvanceMouvement_228: -1548547929
+      ChloeAdvanceMouvement_229: -37831274
+      ChloeAdvanceMouvement_23: -688059526
+      ChloeAdvanceMouvement_230: -997483216
+      ChloeAdvanceMouvement_231: -614094978
+      ChloeAdvanceMouvement_232: -929709478
+      ChloeAdvanceMouvement_233: 1766912327
+      ChloeAdvanceMouvement_234: -1056489771
+      ChloeAdvanceMouvement_235: 1201672638
+      ChloeAdvanceMouvement_236: 1453779127
+      ChloeAdvanceMouvement_237: 763266241
+      ChloeAdvanceMouvement_238: 2106802308
+      ChloeAdvanceMouvement_239: 1575830447
+      ChloeAdvanceMouvement_24: 564356132
+      ChloeAdvanceMouvement_240: 481340432
+      ChloeAdvanceMouvement_241: 519646791
+      ChloeAdvanceMouvement_242: -27164707
+      ChloeAdvanceMouvement_243: -370467833
+      ChloeAdvanceMouvement_244: 513845696
+      ChloeAdvanceMouvement_245: 980728991
+      ChloeAdvanceMouvement_246: -44826952
+      ChloeAdvanceMouvement_247: -2084092848
+      ChloeAdvanceMouvement_248: 1988539961
+      ChloeAdvanceMouvement_249: 1057944456
+      ChloeAdvanceMouvement_25: 988316821
+      ChloeAdvanceMouvement_250: 1024884839
+      ChloeAdvanceMouvement_251: 332619267
+      ChloeAdvanceMouvement_252: 358717355
+      ChloeAdvanceMouvement_253: -649364515
+      ChloeAdvanceMouvement_254: -477357587
+      ChloeAdvanceMouvement_255: 1647521493
+      ChloeAdvanceMouvement_256: 1060884036
+      ChloeAdvanceMouvement_257: 707098781
+      ChloeAdvanceMouvement_258: -1078045914
+      ChloeAdvanceMouvement_259: -2145600855
+      ChloeAdvanceMouvement_26: 536962929
+      ChloeAdvanceMouvement_260: -349279901
+      ChloeAdvanceMouvement_261: 1707231566
+      ChloeAdvanceMouvement_262: 406757830
+      ChloeAdvanceMouvement_263: -1240267483
+      ChloeAdvanceMouvement_264: -157330212
+      ChloeAdvanceMouvement_265: -268867445
+      ChloeAdvanceMouvement_266: 1156143109
+      ChloeAdvanceMouvement_267: 1341549262
+      ChloeAdvanceMouvement_268: 355907752
+      ChloeAdvanceMouvement_269: -394974088
+      ChloeAdvanceMouvement_27: -745053120
+      ChloeAdvanceMouvement_270: 90952328
+      ChloeAdvanceMouvement_271: -521173918
+      ChloeAdvanceMouvement_272: 1737602905
+      ChloeAdvanceMouvement_273: -1654972532
+      ChloeAdvanceMouvement_274: 1732681238
+      ChloeAdvanceMouvement_275: 114067907
+      ChloeAdvanceMouvement_276: -2020441906
+      ChloeAdvanceMouvement_277: -376427666
+      ChloeAdvanceMouvement_278: 1604446896
+      ChloeAdvanceMouvement_279: 1125960227
+      ChloeAdvanceMouvement_28: 1772345385
+      ChloeAdvanceMouvement_280: 1197094901
+      ChloeAdvanceMouvement_281: 633395386
+      ChloeAdvanceMouvement_282: 1736175558
+      ChloeAdvanceMouvement_283: 113336413
+      ChloeAdvanceMouvement_284: 1319891157
+      ChloeAdvanceMouvement_285: 273136091
+      ChloeAdvanceMouvement_286: 1385824735
+      ChloeAdvanceMouvement_287: 438975526
+      ChloeAdvanceMouvement_288: 816693961
+      ChloeAdvanceMouvement_289: -20648227
+      ChloeAdvanceMouvement_29: 1675977491
+      ChloeAdvanceMouvement_290: -1096788887
+      ChloeAdvanceMouvement_291: 1099759279
+      ChloeAdvanceMouvement_292: -2024745748
+      ChloeAdvanceMouvement_293: 836694279
+      ChloeAdvanceMouvement_294: 227939939
+      ChloeAdvanceMouvement_295: 1109796390
+      ChloeAdvanceMouvement_296: -989150440
+      ChloeAdvanceMouvement_297: 1478477437
+      ChloeAdvanceMouvement_298: 2048566931
+      ChloeAdvanceMouvement_299: -1833308925
+      ChloeAdvanceMouvement_3: -1644715464
+      ChloeAdvanceMouvement_30: -1281559270
+      ChloeAdvanceMouvement_300: 1427045043
+      ChloeAdvanceMouvement_301: -1453801873
+      ChloeAdvanceMouvement_302: 399610034
+      ChloeAdvanceMouvement_303: 1547270944
+      ChloeAdvanceMouvement_304: 1237929404
+      ChloeAdvanceMouvement_305: 149126896
+      ChloeAdvanceMouvement_306: -743981275
+      ChloeAdvanceMouvement_307: -1248470982
+      ChloeAdvanceMouvement_308: 802489633
+      ChloeAdvanceMouvement_309: 1551367371
+      ChloeAdvanceMouvement_31: -1449995136
+      ChloeAdvanceMouvement_310: -1001345499
+      ChloeAdvanceMouvement_311: -637195738
+      ChloeAdvanceMouvement_312: 1921685606
+      ChloeAdvanceMouvement_313: 718809028
+      ChloeAdvanceMouvement_314: 842373470
+      ChloeAdvanceMouvement_315: 337162823
+      ChloeAdvanceMouvement_316: 608528671
+      ChloeAdvanceMouvement_317: 1707842966
+      ChloeAdvanceMouvement_318: 1239055049
+      ChloeAdvanceMouvement_319: -1367041504
+      ChloeAdvanceMouvement_32: -749729565
+      ChloeAdvanceMouvement_320: -1123384952
+      ChloeAdvanceMouvement_321: -2075962312
+      ChloeAdvanceMouvement_322: -788679383
+      ChloeAdvanceMouvement_323: 1796359056
+      ChloeAdvanceMouvement_324: 77037400
+      ChloeAdvanceMouvement_325: -397564715
+      ChloeAdvanceMouvement_326: -1790454490
+      ChloeAdvanceMouvement_327: 658331896
+      ChloeAdvanceMouvement_328: 366843883
+      ChloeAdvanceMouvement_329: 1766593267
+      ChloeAdvanceMouvement_33: -1573963047
+      ChloeAdvanceMouvement_330: 813480302
+      ChloeAdvanceMouvement_331: 2112355885
+      ChloeAdvanceMouvement_332: 1527533365
+      ChloeAdvanceMouvement_333: 90904695
+      ChloeAdvanceMouvement_334: -79874740
+      ChloeAdvanceMouvement_335: 1192061693
+      ChloeAdvanceMouvement_336: 1386862332
+      ChloeAdvanceMouvement_337: 1349848272
+      ChloeAdvanceMouvement_338: 810474876
+      ChloeAdvanceMouvement_339: -1603846028
+      ChloeAdvanceMouvement_34: -912612761
+      ChloeAdvanceMouvement_340: -1353345014
+      ChloeAdvanceMouvement_341: -1368261521
+      ChloeAdvanceMouvement_342: -2000908698
+      ChloeAdvanceMouvement_343: 213787198
+      ChloeAdvanceMouvement_344: 304560530
+      ChloeAdvanceMouvement_345: 124492803
+      ChloeAdvanceMouvement_346: 1933632133
+      ChloeAdvanceMouvement_347: 1498214903
+      ChloeAdvanceMouvement_348: -683351962
+      ChloeAdvanceMouvement_349: -2111469213
+      ChloeAdvanceMouvement_35: -241983992
+      ChloeAdvanceMouvement_350: -1538923218
+      ChloeAdvanceMouvement_351: 713847169
+      ChloeAdvanceMouvement_352: -1098774231
+      ChloeAdvanceMouvement_353: -515407736
+      ChloeAdvanceMouvement_354: -931746229
+      ChloeAdvanceMouvement_355: 1196470638
+      ChloeAdvanceMouvement_356: 1529497481
+      ChloeAdvanceMouvement_357: -492651125
+      ChloeAdvanceMouvement_358: 37132395
+      ChloeAdvanceMouvement_359: -390613236
+      ChloeAdvanceMouvement_36: -1798601477
+      ChloeAdvanceMouvement_360: -1923420399
+      ChloeAdvanceMouvement_361: 1455552891
+      ChloeAdvanceMouvement_362: -1277276296
+      ChloeAdvanceMouvement_363: -155903497
+      ChloeAdvanceMouvement_364: 1296412415
+      ChloeAdvanceMouvement_365: -1074699930
+      ChloeAdvanceMouvement_366: 1485117135
+      ChloeAdvanceMouvement_367: -425823613
+      ChloeAdvanceMouvement_368: 549611214
+      ChloeAdvanceMouvement_369: -645787915
+      ChloeAdvanceMouvement_37: -206134374
+      ChloeAdvanceMouvement_370: -1259397269
+      ChloeAdvanceMouvement_371: -1613918662
+      ChloeAdvanceMouvement_372: 573450014
+      ChloeAdvanceMouvement_373: -1669859875
+      ChloeAdvanceMouvement_374: -1929116078
+      ChloeAdvanceMouvement_375: -1802562144
+      ChloeAdvanceMouvement_376: -1310624406
+      ChloeAdvanceMouvement_377: -1749438439
+      ChloeAdvanceMouvement_378: 623426297
+      ChloeAdvanceMouvement_379: -1287748175
+      ChloeAdvanceMouvement_38: -1237631223
+      ChloeAdvanceMouvement_380: -420934532
+      ChloeAdvanceMouvement_381: -2113800670
+      ChloeAdvanceMouvement_382: -1751020897
+      ChloeAdvanceMouvement_383: -796085980
+      ChloeAdvanceMouvement_384: -483531695
+      ChloeAdvanceMouvement_385: 1813472869
+      ChloeAdvanceMouvement_386: 1103303142
+      ChloeAdvanceMouvement_387: -635313501
+      ChloeAdvanceMouvement_388: 813275443
+      ChloeAdvanceMouvement_389: 1097759577
+      ChloeAdvanceMouvement_39: 55331843
+      ChloeAdvanceMouvement_390: -1070557626
+      ChloeAdvanceMouvement_391: -515642798
+      ChloeAdvanceMouvement_392: 118700135
+      ChloeAdvanceMouvement_393: 249334256
+      ChloeAdvanceMouvement_394: 990960422
+      ChloeAdvanceMouvement_395: 2052760599
+      ChloeAdvanceMouvement_396: -1976850451
+      ChloeAdvanceMouvement_4: 1417852566
+      ChloeAdvanceMouvement_40: -540545328
+      ChloeAdvanceMouvement_41: 1929503964
+      ChloeAdvanceMouvement_42: 1261057363
+      ChloeAdvanceMouvement_43: -1116109801
+      ChloeAdvanceMouvement_44: 382790625
+      ChloeAdvanceMouvement_45: -588274441
+      ChloeAdvanceMouvement_46: 1549357200
+      ChloeAdvanceMouvement_47: -1760919369
+      ChloeAdvanceMouvement_48: -365258455
+      ChloeAdvanceMouvement_49: 1931539786
+      ChloeAdvanceMouvement_5: -216974887
+      ChloeAdvanceMouvement_50: 11940980
+      ChloeAdvanceMouvement_51: -114506459
+      ChloeAdvanceMouvement_52: 656816692
+      ChloeAdvanceMouvement_53: 1087526660
+      ChloeAdvanceMouvement_54: 376768232
+      ChloeAdvanceMouvement_55: -1324833296
+      ChloeAdvanceMouvement_56: 1807342167
+      ChloeAdvanceMouvement_57: -2034477612
+      ChloeAdvanceMouvement_58: 1545551596
+      ChloeAdvanceMouvement_59: 688145474
+      ChloeAdvanceMouvement_6: 1968414815
+      ChloeAdvanceMouvement_60: 138395267
+      ChloeAdvanceMouvement_61: -1675112837
+      ChloeAdvanceMouvement_62: -485468242
+      ChloeAdvanceMouvement_63: 1558304968
+      ChloeAdvanceMouvement_64: -581705522
+      ChloeAdvanceMouvement_65: 543140999
+      ChloeAdvanceMouvement_66: 156676141
+      ChloeAdvanceMouvement_67: 997395388
+      ChloeAdvanceMouvement_68: -1570865344
+      ChloeAdvanceMouvement_69: -1747840559
+      ChloeAdvanceMouvement_7: -492675803
+      ChloeAdvanceMouvement_70: 1198055295
+      ChloeAdvanceMouvement_71: -1724718042
+      ChloeAdvanceMouvement_72: 1304541049
+      ChloeAdvanceMouvement_73: -1894151988
+      ChloeAdvanceMouvement_74: -976625570
+      ChloeAdvanceMouvement_75: 177937610
+      ChloeAdvanceMouvement_76: 1981301945
+      ChloeAdvanceMouvement_77: -1750752285
+      ChloeAdvanceMouvement_78: 1534930684
+      ChloeAdvanceMouvement_79: 1420841782
+      ChloeAdvanceMouvement_8: 2085257935
+      ChloeAdvanceMouvement_80: -1118362498
+      ChloeAdvanceMouvement_81: 396714623
+      ChloeAdvanceMouvement_82: 1589738643
+      ChloeAdvanceMouvement_83: -629491795
+      ChloeAdvanceMouvement_84: -129903838
+      ChloeAdvanceMouvement_85: 179361954
+      ChloeAdvanceMouvement_86: 843458931
+      ChloeAdvanceMouvement_87: 908767638
+      ChloeAdvanceMouvement_88: 1160677943
+      ChloeAdvanceMouvement_89: -26133258
+      ChloeAdvanceMouvement_9: 1578863951
+      ChloeAdvanceMouvement_90: -858016268
+      ChloeAdvanceMouvement_91: 361484957
+      ChloeAdvanceMouvement_92: 1993984156
+      ChloeAdvanceMouvement_93: -203660492
+      ChloeAdvanceMouvement_94: 643834466
+      ChloeAdvanceMouvement_95: -59090267
+      ChloeAdvanceMouvement_96: 642375639
+      ChloeAdvanceMouvement_97: -1092464731
+      ChloeAdvanceMouvement_98: -1619113933
+      ChloeAdvanceMouvement_99: 62672416
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

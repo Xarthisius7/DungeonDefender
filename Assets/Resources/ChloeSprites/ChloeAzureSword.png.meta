@@ -1,0 +1,1925 @@
+fileFormatVersion: 2
+guid: 499d2804fec0dd547bb9bfcdafdf9285
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 90
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChloeAzureSword_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab15149982b088840a81f9872f713d0d
+      internalID: -1676051080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d030dc7cd4263ed469d6e24047dd8575
+      internalID: 727052270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_64
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd08f587f005a3c46af10fabe19e8d4d
+      internalID: 455548838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d452c066cb04d2b4fa0120eea97b9cfb
+      internalID: -2001615748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_66
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4b7426a32c8b343b6f1d2cd7da7be4
+      internalID: 783918418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_67
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82da6df6f24efe64e9d26fef60b303c8
+      internalID: 522076711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_68
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c95597c3d10b6449c81b4e09e0e953
+      internalID: 1990912020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_69
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eca6168b4ecae4f9f28d0d63ef3f85
+      internalID: 1336229064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_70
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3136
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfa4d107a143a545924370747d3b0a0
+      internalID: -1649807115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0495646b5c5b0ed4cb67794f7c35840e
+      internalID: -1161357666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_72
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c704de90742aa50409af95f1e4f44d1f
+      internalID: 1802648797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_73
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d340797dbcb19e4ea5b0896b61edda3
+      internalID: 1911329022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_74
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6ab81068c7ddc4a9739b47230315d6
+      internalID: 1501410376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_75
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8c50d83a1db9946a8285397cefd32b
+      internalID: -118024852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_76
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cef1ff75486bc74f8a384be8e4d8021
+      internalID: -916246565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_77
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32140f8cce8c4d47a6da52ac3194b24
+      internalID: -1609415348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_78
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a5c6a3e539ebb479206ca9c13c5db1
+      internalID: -1093345685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_79
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3072
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775fdad8488a1714ab4edd2d65ed4afc
+      internalID: 2136480883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50dd3cc25c78ed4c850823416ceda92
+      internalID: -311128387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_81
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c640d47d6ba6d1429ef09443d05927e
+      internalID: 1247068964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_82
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20a82192aedd57498b6b2782089eff2
+      internalID: -740127861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_83
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b47b23508765be4a9240d0d914402dd
+      internalID: -466752130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_84
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1c411c886be96499c82da531362f36
+      internalID: -595789068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_85
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead3e4835ad98184db5fe9f349594efd
+      internalID: -357250186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_86
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00edaa4a073286f4f9429d740bbe66c5
+      internalID: 227295571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_87
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7778ce369db9ae40a2bcf097791b85d
+      internalID: -100508422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_88
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3008
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5aae86287e0de41be9e07f40bd2835
+      internalID: -803634414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be6cf73c62c90444bfd1e15912b8ec0
+      internalID: -1803486566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_90
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f84886b4cb5bfa479c7b9c4b5f6825f
+      internalID: -74927767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_91
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e4534729772ef4c8ec0849accb6161
+      internalID: 271639547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_92
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 937e81122e987fb49b025ea35bdaebc3
+      internalID: -1252284209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_93
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582237cd0390ca24c8f09c28b19811a0
+      internalID: -321773466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_94
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef96f9da8df12240a42dd729e3b8552
+      internalID: -88323019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_95
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2288c4ad6fa16ff43afcc82f2f890c17
+      internalID: 1164834817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_96
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04d8c0647d082b4eb924e37546bb421
+      internalID: -543871045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_97
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2944
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9265c88eef13545a3be86829723428
+      internalID: -650124512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_174
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc1e16ba2f25fb4296f0d36ffd2bef7
+      internalID: -1811812511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_175
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8404aac100e34a74fab2b5225b2e3ada
+      internalID: -819356466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_176
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd4e7097a56a8f49a2facb8e9b684c6
+      internalID: -928784322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_177
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd4bd0fba450374ea0a46841e2ebd1a
+      internalID: -1161484869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_178
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e307de6dd7370cd4da44ffc301f3fcde
+      internalID: 868227866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_179
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2368
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c2f2127eb347948adcc2a28d4d2bf6
+      internalID: 665680158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_361
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 608
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fe2b925be3a1b4b9ac731fa5f397f4
+      internalID: 1425661629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_363
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 609
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4afdcb9f5201614792825249f718b15
+      internalID: -1719996151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_364
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 608
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1df30a976b2ae4a9372bb2ea413321
+      internalID: -1449034101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_366
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 608
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416659296c10c964f83d5045d11e10ff
+      internalID: 1373815756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_368
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 609
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f549bf7640ba1654bbc2d0e8802b2a46
+      internalID: -741142504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_370
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 610
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb491443b719cbd48b7d27eacc5026be
+      internalID: 768804944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_373
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 417
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327b2c352f3e74945bf86ba3fcfdc615
+      internalID: -2082332421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_374
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 417
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b218808c84c433d4ba226b6790b20fa8
+      internalID: 114878809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_375
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 417
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2109a1aa844bd64a80e2b8a07c07148
+      internalID: -2011269089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_376
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 417
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c039da903a7534a949c09999d43b76
+      internalID: -1904075176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_379
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 417
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce7e0b8a8d0a5740a42d1223f6c0a26
+      internalID: 1169409527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_381
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 417
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff0a27c9722cd1499225a59b691263b
+      internalID: 460403688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_384
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 225
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516a8cec97b5bbd49909c4827e7142a9
+      internalID: -347630982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_386
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 225
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10d0aed9870c3144aef5e1041abe6e6
+      internalID: 1532152171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_387
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 225
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b724649ee5585a744b13c2ef8405decb
+      internalID: 1283935821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_389
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 225
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc3f1a47cb3224438bc0b7caef9d5c3
+      internalID: -1243292060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_391
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 225
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2076d9217c8ccf043ad5541e07b80357
+      internalID: -164391390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_392
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 225
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523cb5f2d4e1a9d4b977e00e58417de0
+      internalID: 1733324670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_400
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 32
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9490ccabb76e8d241bb8201dde025451
+      internalID: -2045123082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_402
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 32
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5f8d61e73969c4ba867a7c8a5017a6
+      internalID: 1759096872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_403
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 32
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c770c8c99dde1d646acc2c300b6eccfb
+      internalID: 1384601211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_405
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 32
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e39936d16098040bb159576d1f0bac
+      internalID: -1004703996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_406
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 32
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3fd9568d13f7341aac69d65f96fbda
+      internalID: -686896259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeAzureSword_409
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 32
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba71f7308d3f4ef45a3f94d9985774e5
+      internalID: 245471071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChloeAzureSword_0: 1889396971
+      ChloeAzureSword_1: 584570943
+      ChloeAzureSword_10: -1365659192
+      ChloeAzureSword_100: -1664989119
+      ChloeAzureSword_101: -1872636987
+      ChloeAzureSword_102: 1897323789
+      ChloeAzureSword_103: 1040859150
+      ChloeAzureSword_104: -2132461898
+      ChloeAzureSword_105: 251176522
+      ChloeAzureSword_106: -371483278
+      ChloeAzureSword_107: 2057518125
+      ChloeAzureSword_108: -1144639949
+      ChloeAzureSword_109: 237028314
+      ChloeAzureSword_11: 1213557768
+      ChloeAzureSword_110: 1701972638
+      ChloeAzureSword_111: 1775519116
+      ChloeAzureSword_112: 116997481
+      ChloeAzureSword_113: 337888933
+      ChloeAzureSword_114: 1136590725
+      ChloeAzureSword_115: 1410913016
+      ChloeAzureSword_116: -1229457699
+      ChloeAzureSword_117: -439779501
+      ChloeAzureSword_118: -303886425
+      ChloeAzureSword_119: 983731936
+      ChloeAzureSword_12: 276300923
+      ChloeAzureSword_120: -1366087089
+      ChloeAzureSword_121: 1119870979
+      ChloeAzureSword_122: -27332956
+      ChloeAzureSword_123: -325439745
+      ChloeAzureSword_124: -977277763
+      ChloeAzureSword_125: 768142758
+      ChloeAzureSword_126: -481373454
+      ChloeAzureSword_127: -636504997
+      ChloeAzureSword_128: -1085540600
+      ChloeAzureSword_129: -1780622987
+      ChloeAzureSword_13: -172574816
+      ChloeAzureSword_130: 338796245
+      ChloeAzureSword_131: 1298953840
+      ChloeAzureSword_132: -928528023
+      ChloeAzureSword_133: 1099847548
+      ChloeAzureSword_134: -1088822594
+      ChloeAzureSword_135: -160626515
+      ChloeAzureSword_136: 1865454768
+      ChloeAzureSword_137: -1565960735
+      ChloeAzureSword_138: -1016529186
+      ChloeAzureSword_139: 496393396
+      ChloeAzureSword_14: -33767899
+      ChloeAzureSword_140: 631897910
+      ChloeAzureSword_141: 1057483381
+      ChloeAzureSword_142: -140633026
+      ChloeAzureSword_143: 827089597
+      ChloeAzureSword_144: -245638752
+      ChloeAzureSword_145: 1444970975
+      ChloeAzureSword_146: -736736917
+      ChloeAzureSword_147: -1553588201
+      ChloeAzureSword_148: 334537855
+      ChloeAzureSword_149: -2087686682
+      ChloeAzureSword_15: -552099355
+      ChloeAzureSword_150: -1258249023
+      ChloeAzureSword_151: -810406612
+      ChloeAzureSword_152: 247669338
+      ChloeAzureSword_153: -1922175218
+      ChloeAzureSword_154: 1754172231
+      ChloeAzureSword_155: 1079022415
+      ChloeAzureSword_156: -364399601
+      ChloeAzureSword_157: 587899170
+      ChloeAzureSword_158: 1588857204
+      ChloeAzureSword_159: -440715453
+      ChloeAzureSword_16: -1306818774
+      ChloeAzureSword_160: -1726975472
+      ChloeAzureSword_161: 606781827
+      ChloeAzureSword_162: 588676361
+      ChloeAzureSword_163: 1120432458
+      ChloeAzureSword_164: -2062422912
+      ChloeAzureSword_165: -970201657
+      ChloeAzureSword_166: -543236019
+      ChloeAzureSword_167: 271412615
+      ChloeAzureSword_168: -1581046078
+      ChloeAzureSword_169: 1460201726
+      ChloeAzureSword_17: -349427673
+      ChloeAzureSword_170: 1223542385
+      ChloeAzureSword_171: -1622458421
+      ChloeAzureSword_172: 610808750
+      ChloeAzureSword_173: -1306506009
+      ChloeAzureSword_174: -1811812511
+      ChloeAzureSword_175: -819356466
+      ChloeAzureSword_176: -928784322
+      ChloeAzureSword_177: -1161484869
+      ChloeAzureSword_178: 868227866
+      ChloeAzureSword_179: 665680158
+      ChloeAzureSword_18: 1582216007
+      ChloeAzureSword_180: 2107180036
+      ChloeAzureSword_181: -770970341
+      ChloeAzureSword_182: -823420622
+      ChloeAzureSword_183: -1192371364
+      ChloeAzureSword_184: -2020613315
+      ChloeAzureSword_185: -2029490135
+      ChloeAzureSword_186: -315016358
+      ChloeAzureSword_187: -649690872
+      ChloeAzureSword_188: 608916632
+      ChloeAzureSword_189: 1369692046
+      ChloeAzureSword_19: -1949272033
+      ChloeAzureSword_190: 957811893
+      ChloeAzureSword_191: 186835352
+      ChloeAzureSword_192: 36596849
+      ChloeAzureSword_193: -2020046863
+      ChloeAzureSword_194: 1308458712
+      ChloeAzureSword_195: 1579284138
+      ChloeAzureSword_196: 1887221415
+      ChloeAzureSword_197: -721297857
+      ChloeAzureSword_198: 342775668
+      ChloeAzureSword_199: 634448734
+      ChloeAzureSword_2: -1094014475
+      ChloeAzureSword_20: 1513562390
+      ChloeAzureSword_200: -1280215951
+      ChloeAzureSword_201: 1499888734
+      ChloeAzureSword_202: 764347023
+      ChloeAzureSword_203: -939587774
+      ChloeAzureSword_204: 540736927
+      ChloeAzureSword_205: -1862682463
+      ChloeAzureSword_206: 1863798852
+      ChloeAzureSword_207: -1608620272
+      ChloeAzureSword_208: -1540619868
+      ChloeAzureSword_209: -1042089353
+      ChloeAzureSword_21: -1587283823
+      ChloeAzureSword_210: 46489101
+      ChloeAzureSword_211: -1022288532
+      ChloeAzureSword_212: 1368353249
+      ChloeAzureSword_213: -772883406
+      ChloeAzureSword_214: 738059146
+      ChloeAzureSword_215: -1540822492
+      ChloeAzureSword_216: 1126703542
+      ChloeAzureSword_217: -888130192
+      ChloeAzureSword_218: -2067428216
+      ChloeAzureSword_219: -1942246822
+      ChloeAzureSword_22: 341471104
+      ChloeAzureSword_220: 2085055077
+      ChloeAzureSword_221: -1907508229
+      ChloeAzureSword_222: 1294733581
+      ChloeAzureSword_223: -1373649137
+      ChloeAzureSword_224: 722228272
+      ChloeAzureSword_225: -1070048768
+      ChloeAzureSword_226: 318538320
+      ChloeAzureSword_227: 1783262467
+      ChloeAzureSword_228: 794887553
+      ChloeAzureSword_229: 1609798933
+      ChloeAzureSword_23: 1534853629
+      ChloeAzureSword_230: -582734809
+      ChloeAzureSword_231: 252000263
+      ChloeAzureSword_232: 1872535874
+      ChloeAzureSword_233: -1878176782
+      ChloeAzureSword_234: -219603871
+      ChloeAzureSword_235: -1715735061
+      ChloeAzureSword_236: -945823487
+      ChloeAzureSword_237: -1822107168
+      ChloeAzureSword_238: -954422519
+      ChloeAzureSword_239: 2068688604
+      ChloeAzureSword_24: -1554046482
+      ChloeAzureSword_240: 506386806
+      ChloeAzureSword_241: -1455265982
+      ChloeAzureSword_242: 1368076474
+      ChloeAzureSword_243: 1601054981
+      ChloeAzureSword_244: -1617713947
+      ChloeAzureSword_245: -1998283434
+      ChloeAzureSword_246: -65309035
+      ChloeAzureSword_247: -1174717379
+      ChloeAzureSword_248: -969759617
+      ChloeAzureSword_249: 57125178
+      ChloeAzureSword_25: -1377301567
+      ChloeAzureSword_250: -524881300
+      ChloeAzureSword_251: -954267529
+      ChloeAzureSword_252: 241399522
+      ChloeAzureSword_253: -1174681197
+      ChloeAzureSword_254: 1685573337
+      ChloeAzureSword_255: 2039441501
+      ChloeAzureSword_256: -40059229
+      ChloeAzureSword_257: -1397385270
+      ChloeAzureSword_258: 1685511547
+      ChloeAzureSword_259: -321388189
+      ChloeAzureSword_26: 1858252068
+      ChloeAzureSword_260: 33465773
+      ChloeAzureSword_261: -2133791777
+      ChloeAzureSword_262: 1790839688
+      ChloeAzureSword_263: 1560219172
+      ChloeAzureSword_264: 743759300
+      ChloeAzureSword_265: 1239404946
+      ChloeAzureSword_266: -1873087522
+      ChloeAzureSword_267: 1317434714
+      ChloeAzureSword_268: 759811117
+      ChloeAzureSword_269: 1859004325
+      ChloeAzureSword_27: 885933170
+      ChloeAzureSword_270: -2056325696
+      ChloeAzureSword_271: 1253757613
+      ChloeAzureSword_272: -1433733904
+      ChloeAzureSword_273: -940508441
+      ChloeAzureSword_274: -1815825781
+      ChloeAzureSword_275: 1058335688
+      ChloeAzureSword_276: -1533386422
+      ChloeAzureSword_277: -323300694
+      ChloeAzureSword_278: -510818504
+      ChloeAzureSword_279: -727093942
+      ChloeAzureSword_28: 309356911
+      ChloeAzureSword_280: 2004513579
+      ChloeAzureSword_281: 1627405781
+      ChloeAzureSword_282: 1448640657
+      ChloeAzureSword_283: 1168722371
+      ChloeAzureSword_284: -2020697800
+      ChloeAzureSword_285: -681601834
+      ChloeAzureSword_286: 521393661
+      ChloeAzureSword_287: 49737563
+      ChloeAzureSword_288: 1068279733
+      ChloeAzureSword_289: -2075361141
+      ChloeAzureSword_29: 315922847
+      ChloeAzureSword_290: -1040271609
+      ChloeAzureSword_291: 1851130505
+      ChloeAzureSword_292: 2069320647
+      ChloeAzureSword_293: 614904521
+      ChloeAzureSword_294: -1236064135
+      ChloeAzureSword_295: -1426933381
+      ChloeAzureSword_296: 1299129092
+      ChloeAzureSword_297: -377252887
+      ChloeAzureSword_298: -207186580
+      ChloeAzureSword_299: 627610509
+      ChloeAzureSword_3: 1083637634
+      ChloeAzureSword_30: 1687109613
+      ChloeAzureSword_300: 1106554207
+      ChloeAzureSword_301: -1439666740
+      ChloeAzureSword_302: -553165763
+      ChloeAzureSword_303: -2008400749
+      ChloeAzureSword_304: 1192462733
+      ChloeAzureSword_305: -579224672
+      ChloeAzureSword_306: 1467544389
+      ChloeAzureSword_307: 1116718932
+      ChloeAzureSword_308: -320240365
+      ChloeAzureSword_309: 895185131
+      ChloeAzureSword_31: 2014766975
+      ChloeAzureSword_310: 520170355
+      ChloeAzureSword_311: 2009965123
+      ChloeAzureSword_312: -1948164706
+      ChloeAzureSword_313: 442304054
+      ChloeAzureSword_314: -1433758568
+      ChloeAzureSword_315: 1221593711
+      ChloeAzureSword_316: -2135382596
+      ChloeAzureSword_317: 1690237014
+      ChloeAzureSword_318: -1201136338
+      ChloeAzureSword_319: 1340561667
+      ChloeAzureSword_32: 1795014003
+      ChloeAzureSword_320: 1179752587
+      ChloeAzureSword_321: -2006518160
+      ChloeAzureSword_322: -232502726
+      ChloeAzureSword_323: -415305594
+      ChloeAzureSword_324: 1331241556
+      ChloeAzureSword_325: 286331348
+      ChloeAzureSword_326: -1632388934
+      ChloeAzureSword_327: 1576003747
+      ChloeAzureSword_328: -937122650
+      ChloeAzureSword_329: -290797502
+      ChloeAzureSword_33: -430587587
+      ChloeAzureSword_330: -784302546
+      ChloeAzureSword_331: 1889969868
+      ChloeAzureSword_332: 1266633613
+      ChloeAzureSword_333: 1626171547
+      ChloeAzureSword_334: 695839956
+      ChloeAzureSword_335: 767884690
+      ChloeAzureSword_336: 824361856
+      ChloeAzureSword_337: -1062451057
+      ChloeAzureSword_338: -1719891893
+      ChloeAzureSword_339: 131713030
+      ChloeAzureSword_34: -1350387403
+      ChloeAzureSword_340: -1226295541
+      ChloeAzureSword_341: -1446539415
+      ChloeAzureSword_342: -545252984
+      ChloeAzureSword_343: -724243797
+      ChloeAzureSword_344: -1292830036
+      ChloeAzureSword_345: -1934202566
+      ChloeAzureSword_346: -443939132
+      ChloeAzureSword_347: -327623317
+      ChloeAzureSword_348: 196465729
+      ChloeAzureSword_349: 1547543861
+      ChloeAzureSword_35: 448153084
+      ChloeAzureSword_350: -1100134524
+      ChloeAzureSword_351: 1916320626
+      ChloeAzureSword_352: 1739618971
+      ChloeAzureSword_353: 504238006
+      ChloeAzureSword_354: 1824551501
+      ChloeAzureSword_355: -1024637335
+      ChloeAzureSword_356: 675456105
+      ChloeAzureSword_357: -1673329570
+      ChloeAzureSword_358: -1452673594
+      ChloeAzureSword_359: -1642077438
+      ChloeAzureSword_36: 557085504
+      ChloeAzureSword_360: -1786946983
+      ChloeAzureSword_361: 1425661629
+      ChloeAzureSword_362: -684648689
+      ChloeAzureSword_363: -1719996151
+      ChloeAzureSword_364: -1449034101
+      ChloeAzureSword_365: -2007772287
+      ChloeAzureSword_366: 1373815756
+      ChloeAzureSword_367: 254389133
+      ChloeAzureSword_368: -741142504
+      ChloeAzureSword_369: 1648905312
+      ChloeAzureSword_37: 56200895
+      ChloeAzureSword_370: 768804944
+      ChloeAzureSword_371: -269742884
+      ChloeAzureSword_372: -442625358
+      ChloeAzureSword_373: -2082332421
+      ChloeAzureSword_374: 114878809
+      ChloeAzureSword_375: -2011269089
+      ChloeAzureSword_376: -1904075176
+      ChloeAzureSword_377: 668012712
+      ChloeAzureSword_378: 1267133682
+      ChloeAzureSword_379: 1169409527
+      ChloeAzureSword_38: 1799490705
+      ChloeAzureSword_380: 1374141549
+      ChloeAzureSword_381: 460403688
+      ChloeAzureSword_382: -578935763
+      ChloeAzureSword_383: 1268369791
+      ChloeAzureSword_384: -347630982
+      ChloeAzureSword_385: 2140245589
+      ChloeAzureSword_386: 1532152171
+      ChloeAzureSword_387: 1283935821
+      ChloeAzureSword_388: 896722239
+      ChloeAzureSword_389: -1243292060
+      ChloeAzureSword_39: -519672656
+      ChloeAzureSword_390: -1785214312
+      ChloeAzureSword_391: -164391390
+      ChloeAzureSword_392: 1733324670
+      ChloeAzureSword_393: -1359510748
+      ChloeAzureSword_394: -404483371
+      ChloeAzureSword_395: -1823637260
+      ChloeAzureSword_396: -1737840445
+      ChloeAzureSword_397: 1302430892
+      ChloeAzureSword_398: 1567979773
+      ChloeAzureSword_399: -2061114606
+      ChloeAzureSword_4: -102318076
+      ChloeAzureSword_40: -1054145258
+      ChloeAzureSword_400: -2045123082
+      ChloeAzureSword_401: 1273976492
+      ChloeAzureSword_402: 1759096872
+      ChloeAzureSword_403: 1384601211
+      ChloeAzureSword_404: 1557258713
+      ChloeAzureSword_405: -1004703996
+      ChloeAzureSword_406: -686896259
+      ChloeAzureSword_407: 150029548
+      ChloeAzureSword_408: -1868940284
+      ChloeAzureSword_409: 245471071
+      ChloeAzureSword_41: -826748584
+      ChloeAzureSword_410: 88083184
+      ChloeAzureSword_411: -1129221789
+      ChloeAzureSword_42: -1446720739
+      ChloeAzureSword_43: 1454362217
+      ChloeAzureSword_44: 1253560230
+      ChloeAzureSword_45: -754531147
+      ChloeAzureSword_46: 724280538
+      ChloeAzureSword_47: 630751800
+      ChloeAzureSword_48: 435371203
+      ChloeAzureSword_49: -342951514
+      ChloeAzureSword_5: -1940616102
+      ChloeAzureSword_50: -1561557600
+      ChloeAzureSword_51: -729753783
+      ChloeAzureSword_52: -100126077
+      ChloeAzureSword_53: 291087400
+      ChloeAzureSword_54: -1451784762
+      ChloeAzureSword_55: 578586115
+      ChloeAzureSword_56: -1986962559
+      ChloeAzureSword_57: -946760128
+      ChloeAzureSword_58: 1940140390
+      ChloeAzureSword_59: -287449352
+      ChloeAzureSword_6: -824325822
+      ChloeAzureSword_60: 186804160
+      ChloeAzureSword_61: 803062303
+      ChloeAzureSword_62: -1676051080
+      ChloeAzureSword_63: 727052270
+      ChloeAzureSword_64: 455548838
+      ChloeAzureSword_65: -2001615748
+      ChloeAzureSword_66: 783918418
+      ChloeAzureSword_67: 522076711
+      ChloeAzureSword_68: 1990912020
+      ChloeAzureSword_69: 1336229064
+      ChloeAzureSword_7: 1181498844
+      ChloeAzureSword_70: -1649807115
+      ChloeAzureSword_71: -1161357666
+      ChloeAzureSword_72: 1802648797
+      ChloeAzureSword_73: 1911329022
+      ChloeAzureSword_74: 1501410376
+      ChloeAzureSword_75: -118024852
+      ChloeAzureSword_76: -916246565
+      ChloeAzureSword_77: -1609415348
+      ChloeAzureSword_78: -1093345685
+      ChloeAzureSword_79: 2136480883
+      ChloeAzureSword_8: -1881272904
+      ChloeAzureSword_80: -311128387
+      ChloeAzureSword_81: 1247068964
+      ChloeAzureSword_82: -740127861
+      ChloeAzureSword_83: -466752130
+      ChloeAzureSword_84: -595789068
+      ChloeAzureSword_85: -357250186
+      ChloeAzureSword_86: 227295571
+      ChloeAzureSword_87: -100508422
+      ChloeAzureSword_88: -803634414
+      ChloeAzureSword_89: -1803486566
+      ChloeAzureSword_9: -1836306432
+      ChloeAzureSword_90: -74927767
+      ChloeAzureSword_91: 271639547
+      ChloeAzureSword_92: -1252284209
+      ChloeAzureSword_93: -321773466
+      ChloeAzureSword_94: -88323019
+      ChloeAzureSword_95: 1164834817
+      ChloeAzureSword_96: -543871045
+      ChloeAzureSword_97: -650124512
+      ChloeAzureSword_98: -2125628257
+      ChloeAzureSword_99: 788809068
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

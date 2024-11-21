@@ -1,0 +1,2011 @@
+fileFormatVersion: 2
+guid: bf9cbcb3cbb381f429408fa8cafd6cf2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 90
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2a867aad507cd49ab20e1d11bebd4d
+      internalID: -1637566366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291e6dc26855120498a9660cfcfad58b
+      internalID: 109656510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430bc3e6a3074d84bb54ee7e1685987c
+      internalID: 2143395192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db792b3fc0fb17f45a82080cf87ac02a
+      internalID: -556394453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404ec9bcccd1a8445bd3002d5af4e988
+      internalID: 1341373548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0c29375d0cbf0428afcf54f141d669
+      internalID: 1998567860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8910b0f181e7df4daac0a17ec1dce43
+      internalID: 612903953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92b4986abbe08a4d96790cca50a090c
+      internalID: -1340746264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3131
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcc7d4ed7a6bc841a819ac611144678
+      internalID: -828610720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98b5687a971c654ca3da10ce998effe
+      internalID: 876761258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b108e2ecc024c554fbb1cd417957a81d
+      internalID: -1430229377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf144f3648304824787a887330057393
+      internalID: 1228280032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccb488d77a73594fa7b3a695e17c497
+      internalID: -761478671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2848d7d4e5d1054bbb7700fc024e438
+      internalID: 939052523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3d6778a70004c4fbd786c4bff2f981
+      internalID: 91755838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161d4b921f64eb843b5e909712a8f0ba
+      internalID: -2133990286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d052f78aa0a4c840bde986b993662e1
+      internalID: -1103869146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3067
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95a85b5f1c69a942b6f205fe74fe0cf
+      internalID: -158494497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8494a74a605a24894d9dd2de8c7c25
+      internalID: 145391110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff33b7d83686fc46b45ac79f3ec46ec
+      internalID: -2061437926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100f013c75c58c646bea718b49cbce29
+      internalID: 863327168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900d5fe8464f4794d890ae7b98a78c2f
+      internalID: 1554018969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ddedbede9f5904680f2762fd0d892e
+      internalID: 922059410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59208b37b1697cf4c9cdbb81ebc65a95
+      internalID: -1727287240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_24
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973da5b16975f834bbbebb6eaeb1cc3c
+      internalID: 1874440790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_25
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1464b5055ef3ef24d96ca90b18be30f1
+      internalID: -1483915376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_26
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 3003
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1efffb7f573224bbe2f3f54cf5bf04
+      internalID: 1850370853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe05278edebc17a4fa53b0e04a6dfbeb
+      internalID: 1736414369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7579e1ddb8fd7418405011bb73dfac
+      internalID: -258701350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a12b46f863c6b343b45d2cc033804c0
+      internalID: 1268585833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec6c48d0adfbbd4e98c89cce5ebdd0a
+      internalID: 361571394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d786c386da674408910261451c2c7c
+      internalID: 202124785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d3b9de0ac8bad469ca8afc93e37a63
+      internalID: 1902213598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_33
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a519c33a38b1cf44b9e4aec09640a398
+      internalID: -407248281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_34
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bd543775618c74d8f4503be0f1813b
+      internalID: -1585368364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2939
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97f9399964ca8c4ea07629710154004
+      internalID: 1366617756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2363
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e481d52c7cf00da4fb3b727c8eb8de81
+      internalID: 906937522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_113
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2363
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7375292d92967348850e944ee089839
+      internalID: 1060889381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_114
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2363
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7958cee8c6c73419e828f0b67b0ab7
+      internalID: -598868790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_115
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2363
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fbf9130dcf1b745a64500cfed1467e
+      internalID: -627875590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_116
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2363
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc3fc8fae67d064794ae8eb8562991c
+      internalID: -1246176157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_117
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2363
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62969e6b29c24d74d9de3e9e71675c7b
+      internalID: -25604086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_292
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39f47bd3a9088b4fb39a3654999ceab
+      internalID: 1414230371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_293
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973b4bab8d10bda45b8e0ab16c614ba8
+      internalID: 81912250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_294
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324c06ea556ff9242a11ae68c1827ef4
+      internalID: 1093199284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_295
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47187f06ffe3102458c369cb8dca324d
+      internalID: 329911882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_296
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f470908f5314cd47b9e97422599e7ed
+      internalID: 1797351034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_297
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707395acc1e7a2f41847fba67d3b8d1e
+      internalID: -48308091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_298
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e0f89cb9511344f9d58e4e48af374c
+      internalID: 1702072920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_299
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 635
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eff2b226465e784b9a632d661ab56db
+      internalID: 2904370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_300
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c755eb6f657746b448b9724963f04bf7
+      internalID: -1981432856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_301
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76da8d10e3024d74d9d7edbbac755d0a
+      internalID: 1556460518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_302
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc1b9f257701e047a2d856681a3cf92
+      internalID: -688305194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_303
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a826520165a8b22488de18428cd06dea
+      internalID: 882404500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_305
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4035b79171ab1c47852eaa528fed901
+      internalID: -2120842705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_307
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b650c203625e60488edc2c31ed31088
+      internalID: 530518806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_309
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3910ecdb7281f24498e215cd240f4fcd
+      internalID: -438400377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_310
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 443
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb14e34fc08ed040b18cb9ecf72967a
+      internalID: 1241200490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_311
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296dba4eaff69f344bdf2ae444521862
+      internalID: -804212272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_312
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf0642ee5101f44e885e50701c3b855
+      internalID: -1635077957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_313
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bfcf71d860ca114299fc0e16d1569db
+      internalID: -1302810124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_314
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4692916e73f982843bfeb1b741ce54a4
+      internalID: 1767543920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_315
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2c8ed2c0251dc40a89c357dc459045
+      internalID: 1122253841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_316
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933bcea075e21e74b87f1d9046be13a1
+      internalID: 1385882089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_317
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b3006ab3173fa4f80886b56cd0b700
+      internalID: -2023314837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_318
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 251
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520286d87369d3146a5a57d55fa3e5b2
+      internalID: 2072114029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_319
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5792d9cc950da6469cc7dc586006758
+      internalID: 1661868565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_320
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5158ad2507723f5438474c5d9291ca40
+      internalID: 423209407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_321
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d354ac6bdb44c948a602df6ec7cf449
+      internalID: -692063009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_322
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242df514e098fae45bb0618dfa536417
+      internalID: -1206852590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_323
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a01c8ce61479549862d47f8dfdc619
+      internalID: 1433364244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_325
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a36e493927b8644e81028864ae2e03f
+      internalID: 1114486640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_327
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa693ebec9ca83c4dafff73a4113f4f3
+      internalID: 1735542939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeCrystalStaff_329
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 59
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 149a90764bb546d4189e4e61d69a6e99
+      internalID: 1221102265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChloeCrystalStaff_0: -1637566366
+      ChloeCrystalStaff_1: 109656510
+      ChloeCrystalStaff_10: -1430229377
+      ChloeCrystalStaff_100: -1722774352
+      ChloeCrystalStaff_101: -2138221780
+      ChloeCrystalStaff_102: -1358776705
+      ChloeCrystalStaff_103: -149733840
+      ChloeCrystalStaff_104: -1789469593
+      ChloeCrystalStaff_105: -1982038912
+      ChloeCrystalStaff_106: 1407842360
+      ChloeCrystalStaff_107: 288898692
+      ChloeCrystalStaff_108: 1876812009
+      ChloeCrystalStaff_109: 764963747
+      ChloeCrystalStaff_11: 1228280032
+      ChloeCrystalStaff_110: 109266820
+      ChloeCrystalStaff_111: 2002986466
+      ChloeCrystalStaff_112: 906937522
+      ChloeCrystalStaff_113: 1060889381
+      ChloeCrystalStaff_114: -598868790
+      ChloeCrystalStaff_115: -627875590
+      ChloeCrystalStaff_116: -1246176157
+      ChloeCrystalStaff_117: -25604086
+      ChloeCrystalStaff_118: 156475185
+      ChloeCrystalStaff_119: 1586316017
+      ChloeCrystalStaff_12: -761478671
+      ChloeCrystalStaff_120: 962042535
+      ChloeCrystalStaff_121: 1770547132
+      ChloeCrystalStaff_122: 1013262048
+      ChloeCrystalStaff_123: -457211877
+      ChloeCrystalStaff_124: 1949448099
+      ChloeCrystalStaff_125: 1709299746
+      ChloeCrystalStaff_126: 257361817
+      ChloeCrystalStaff_127: -212996407
+      ChloeCrystalStaff_128: 1952891130
+      ChloeCrystalStaff_129: 1977585078
+      ChloeCrystalStaff_13: 939052523
+      ChloeCrystalStaff_130: -2040924385
+      ChloeCrystalStaff_131: -1089922939
+      ChloeCrystalStaff_132: -133896801
+      ChloeCrystalStaff_133: 753510801
+      ChloeCrystalStaff_134: -1419067760
+      ChloeCrystalStaff_135: 15659924
+      ChloeCrystalStaff_136: -1270722776
+      ChloeCrystalStaff_137: 1541291493
+      ChloeCrystalStaff_138: -1447017854
+      ChloeCrystalStaff_139: 945035428
+      ChloeCrystalStaff_14: 91755838
+      ChloeCrystalStaff_140: -680796324
+      ChloeCrystalStaff_141: -381833441
+      ChloeCrystalStaff_142: -1127982108
+      ChloeCrystalStaff_143: 862884535
+      ChloeCrystalStaff_144: -103381573
+      ChloeCrystalStaff_145: -1924068388
+      ChloeCrystalStaff_146: -84262024
+      ChloeCrystalStaff_147: 1263937757
+      ChloeCrystalStaff_148: -1956952993
+      ChloeCrystalStaff_149: 1558221390
+      ChloeCrystalStaff_15: -2133990286
+      ChloeCrystalStaff_150: 2022128220
+      ChloeCrystalStaff_151: 474664526
+      ChloeCrystalStaff_152: 1225088040
+      ChloeCrystalStaff_153: 2062352167
+      ChloeCrystalStaff_154: 325459046
+      ChloeCrystalStaff_155: 1278160414
+      ChloeCrystalStaff_156: 796768197
+      ChloeCrystalStaff_157: -312748883
+      ChloeCrystalStaff_158: -1706716474
+      ChloeCrystalStaff_159: -1228747591
+      ChloeCrystalStaff_16: -1103869146
+      ChloeCrystalStaff_160: -1172154731
+      ChloeCrystalStaff_161: 490145649
+      ChloeCrystalStaff_162: 1045319035
+      ChloeCrystalStaff_163: 466422098
+      ChloeCrystalStaff_164: -2034049785
+      ChloeCrystalStaff_165: 1138403402
+      ChloeCrystalStaff_166: 1737649314
+      ChloeCrystalStaff_167: -423408528
+      ChloeCrystalStaff_168: 2097053598
+      ChloeCrystalStaff_169: 572903553
+      ChloeCrystalStaff_17: -158494497
+      ChloeCrystalStaff_170: -1728122199
+      ChloeCrystalStaff_171: 136165014
+      ChloeCrystalStaff_172: -40661826
+      ChloeCrystalStaff_173: 1996010132
+      ChloeCrystalStaff_174: 497673299
+      ChloeCrystalStaff_175: -322667073
+      ChloeCrystalStaff_176: -345035095
+      ChloeCrystalStaff_177: -1183699106
+      ChloeCrystalStaff_178: -1053992796
+      ChloeCrystalStaff_179: 1527120868
+      ChloeCrystalStaff_18: 145391110
+      ChloeCrystalStaff_180: -847357832
+      ChloeCrystalStaff_181: 498154932
+      ChloeCrystalStaff_182: -1901685631
+      ChloeCrystalStaff_183: -1411659651
+      ChloeCrystalStaff_184: 1416379038
+      ChloeCrystalStaff_185: 800785705
+      ChloeCrystalStaff_186: -1353863181
+      ChloeCrystalStaff_187: 870376178
+      ChloeCrystalStaff_188: -234782810
+      ChloeCrystalStaff_189: -1112114331
+      ChloeCrystalStaff_19: -2061437926
+      ChloeCrystalStaff_190: 1701847213
+      ChloeCrystalStaff_191: -1980352302
+      ChloeCrystalStaff_192: -1412155768
+      ChloeCrystalStaff_193: -1267584947
+      ChloeCrystalStaff_194: 1408265847
+      ChloeCrystalStaff_195: -1655292447
+      ChloeCrystalStaff_196: -331005197
+      ChloeCrystalStaff_197: -514908704
+      ChloeCrystalStaff_198: -1254739482
+      ChloeCrystalStaff_199: -1258801017
+      ChloeCrystalStaff_2: 2143395192
+      ChloeCrystalStaff_20: 863327168
+      ChloeCrystalStaff_200: 337974311
+      ChloeCrystalStaff_201: 552052021
+      ChloeCrystalStaff_202: -581539120
+      ChloeCrystalStaff_203: -1142829985
+      ChloeCrystalStaff_204: -1762945203
+      ChloeCrystalStaff_205: -1831106086
+      ChloeCrystalStaff_206: 1265786748
+      ChloeCrystalStaff_207: -410018351
+      ChloeCrystalStaff_208: 1655645642
+      ChloeCrystalStaff_209: -1367089034
+      ChloeCrystalStaff_21: 1554018969
+      ChloeCrystalStaff_210: -1806792071
+      ChloeCrystalStaff_211: -1374337055
+      ChloeCrystalStaff_212: 970760930
+      ChloeCrystalStaff_213: 1138719658
+      ChloeCrystalStaff_214: -786452888
+      ChloeCrystalStaff_215: 1640293482
+      ChloeCrystalStaff_216: -252994505
+      ChloeCrystalStaff_217: -988435716
+      ChloeCrystalStaff_218: 53917602
+      ChloeCrystalStaff_219: -725209663
+      ChloeCrystalStaff_22: 922059410
+      ChloeCrystalStaff_220: -1028370792
+      ChloeCrystalStaff_221: -1691282864
+      ChloeCrystalStaff_222: 533838332
+      ChloeCrystalStaff_223: 1770400916
+      ChloeCrystalStaff_224: 45556102
+      ChloeCrystalStaff_225: 1101607571
+      ChloeCrystalStaff_226: 1477119589
+      ChloeCrystalStaff_227: 983858733
+      ChloeCrystalStaff_228: 1950812681
+      ChloeCrystalStaff_229: -102216286
+      ChloeCrystalStaff_23: -1727287240
+      ChloeCrystalStaff_230: 1939273112
+      ChloeCrystalStaff_231: -387433066
+      ChloeCrystalStaff_232: 519979347
+      ChloeCrystalStaff_233: -771621580
+      ChloeCrystalStaff_234: -990071246
+      ChloeCrystalStaff_235: -1399044256
+      ChloeCrystalStaff_236: 168088687
+      ChloeCrystalStaff_237: 1372917462
+      ChloeCrystalStaff_238: -325975785
+      ChloeCrystalStaff_239: 2010801598
+      ChloeCrystalStaff_24: 1874440790
+      ChloeCrystalStaff_240: -225855104
+      ChloeCrystalStaff_241: -683356777
+      ChloeCrystalStaff_242: 954933755
+      ChloeCrystalStaff_243: -1389618409
+      ChloeCrystalStaff_244: -751608843
+      ChloeCrystalStaff_245: -988807423
+      ChloeCrystalStaff_246: -1427181436
+      ChloeCrystalStaff_247: 1108710675
+      ChloeCrystalStaff_248: -2045578063
+      ChloeCrystalStaff_249: -797635859
+      ChloeCrystalStaff_25: -1483915376
+      ChloeCrystalStaff_250: -24840043
+      ChloeCrystalStaff_251: -337428037
+      ChloeCrystalStaff_252: -1891735490
+      ChloeCrystalStaff_253: 1206349364
+      ChloeCrystalStaff_254: 1018527132
+      ChloeCrystalStaff_255: -2061041529
+      ChloeCrystalStaff_256: 1250558442
+      ChloeCrystalStaff_257: 310713453
+      ChloeCrystalStaff_258: 983724084
+      ChloeCrystalStaff_259: -834060331
+      ChloeCrystalStaff_26: 1850370853
+      ChloeCrystalStaff_260: 1471054046
+      ChloeCrystalStaff_261: 1370349109
+      ChloeCrystalStaff_262: 1602097914
+      ChloeCrystalStaff_263: 1401047767
+      ChloeCrystalStaff_264: 266711393
+      ChloeCrystalStaff_265: 1259883533
+      ChloeCrystalStaff_266: -624533150
+      ChloeCrystalStaff_267: -1196432037
+      ChloeCrystalStaff_268: -2127348021
+      ChloeCrystalStaff_269: 1077507485
+      ChloeCrystalStaff_27: 1736414369
+      ChloeCrystalStaff_270: 1941456626
+      ChloeCrystalStaff_271: 1554494064
+      ChloeCrystalStaff_272: -1543638680
+      ChloeCrystalStaff_273: -1941566646
+      ChloeCrystalStaff_274: -1716178631
+      ChloeCrystalStaff_275: 399462509
+      ChloeCrystalStaff_276: 129304349
+      ChloeCrystalStaff_277: -2131774037
+      ChloeCrystalStaff_278: -222872655
+      ChloeCrystalStaff_279: -467242852
+      ChloeCrystalStaff_28: -258701350
+      ChloeCrystalStaff_280: -1303136810
+      ChloeCrystalStaff_281: -1556818730
+      ChloeCrystalStaff_282: -914202742
+      ChloeCrystalStaff_283: -2087586520
+      ChloeCrystalStaff_284: -1474496989
+      ChloeCrystalStaff_285: 385089142
+      ChloeCrystalStaff_286: 786188623
+      ChloeCrystalStaff_287: 493038358
+      ChloeCrystalStaff_288: 570623133
+      ChloeCrystalStaff_289: 721577703
+      ChloeCrystalStaff_29: 1268585833
+      ChloeCrystalStaff_290: 72095954
+      ChloeCrystalStaff_291: 760010245
+      ChloeCrystalStaff_292: 1414230371
+      ChloeCrystalStaff_293: 81912250
+      ChloeCrystalStaff_294: 1093199284
+      ChloeCrystalStaff_295: 329911882
+      ChloeCrystalStaff_296: 1797351034
+      ChloeCrystalStaff_297: -48308091
+      ChloeCrystalStaff_298: 1702072920
+      ChloeCrystalStaff_299: 2904370
+      ChloeCrystalStaff_3: -556394453
+      ChloeCrystalStaff_30: 361571394
+      ChloeCrystalStaff_300: -1981432856
+      ChloeCrystalStaff_301: 1556460518
+      ChloeCrystalStaff_302: -688305194
+      ChloeCrystalStaff_303: 882404500
+      ChloeCrystalStaff_304: -600672959
+      ChloeCrystalStaff_305: -2120842705
+      ChloeCrystalStaff_306: 1507527336
+      ChloeCrystalStaff_307: 530518806
+      ChloeCrystalStaff_308: 461112751
+      ChloeCrystalStaff_309: -438400377
+      ChloeCrystalStaff_31: 202124785
+      ChloeCrystalStaff_310: 1241200490
+      ChloeCrystalStaff_311: -804212272
+      ChloeCrystalStaff_312: -1635077957
+      ChloeCrystalStaff_313: -1302810124
+      ChloeCrystalStaff_314: 1767543920
+      ChloeCrystalStaff_315: 1122253841
+      ChloeCrystalStaff_316: 1385882089
+      ChloeCrystalStaff_317: -2023314837
+      ChloeCrystalStaff_318: 2072114029
+      ChloeCrystalStaff_319: 1661868565
+      ChloeCrystalStaff_32: 1902213598
+      ChloeCrystalStaff_320: 423209407
+      ChloeCrystalStaff_321: -692063009
+      ChloeCrystalStaff_322: -1206852590
+      ChloeCrystalStaff_323: 1433364244
+      ChloeCrystalStaff_324: 1036112254
+      ChloeCrystalStaff_325: 1114486640
+      ChloeCrystalStaff_326: -1533644439
+      ChloeCrystalStaff_327: 1735542939
+      ChloeCrystalStaff_328: 921919675
+      ChloeCrystalStaff_329: 1221102265
+      ChloeCrystalStaff_33: -407248281
+      ChloeCrystalStaff_34: -1585368364
+      ChloeCrystalStaff_35: 1366617756
+      ChloeCrystalStaff_36: -264613835
+      ChloeCrystalStaff_37: -1827008644
+      ChloeCrystalStaff_38: -766767399
+      ChloeCrystalStaff_39: 1015877834
+      ChloeCrystalStaff_4: 1341373548
+      ChloeCrystalStaff_40: -534175091
+      ChloeCrystalStaff_41: 1252594113
+      ChloeCrystalStaff_42: 1570072125
+      ChloeCrystalStaff_43: 744780360
+      ChloeCrystalStaff_44: 35113786
+      ChloeCrystalStaff_45: 1232832869
+      ChloeCrystalStaff_46: -269140295
+      ChloeCrystalStaff_47: -1355294642
+      ChloeCrystalStaff_48: -2017319540
+      ChloeCrystalStaff_49: 1151784544
+      ChloeCrystalStaff_5: 1998567860
+      ChloeCrystalStaff_50: -480867614
+      ChloeCrystalStaff_51: -1963543633
+      ChloeCrystalStaff_52: -110778399
+      ChloeCrystalStaff_53: 1399964248
+      ChloeCrystalStaff_54: 1186148561
+      ChloeCrystalStaff_55: -2033580356
+      ChloeCrystalStaff_56: 80815801
+      ChloeCrystalStaff_57: -2021497555
+      ChloeCrystalStaff_58: -731775457
+      ChloeCrystalStaff_59: 936251469
+      ChloeCrystalStaff_6: 612903953
+      ChloeCrystalStaff_60: -946266183
+      ChloeCrystalStaff_61: -336350028
+      ChloeCrystalStaff_62: -454728325
+      ChloeCrystalStaff_63: 629880137
+      ChloeCrystalStaff_64: 181634565
+      ChloeCrystalStaff_65: 1272411128
+      ChloeCrystalStaff_66: -86688304
+      ChloeCrystalStaff_67: 550813123
+      ChloeCrystalStaff_68: 380392898
+      ChloeCrystalStaff_69: 884837947
+      ChloeCrystalStaff_7: -1340746264
+      ChloeCrystalStaff_70: -805581384
+      ChloeCrystalStaff_71: -1902536625
+      ChloeCrystalStaff_72: -1510080706
+      ChloeCrystalStaff_73: -526587174
+      ChloeCrystalStaff_74: -707362519
+      ChloeCrystalStaff_75: -748524847
+      ChloeCrystalStaff_76: -1137485483
+      ChloeCrystalStaff_77: -1406629050
+      ChloeCrystalStaff_78: 725782747
+      ChloeCrystalStaff_79: 1098348266
+      ChloeCrystalStaff_8: -828610720
+      ChloeCrystalStaff_80: -2067980908
+      ChloeCrystalStaff_81: 1653502765
+      ChloeCrystalStaff_82: 1048916735
+      ChloeCrystalStaff_83: 1290509070
+      ChloeCrystalStaff_84: 2122080593
+      ChloeCrystalStaff_85: 281964731
+      ChloeCrystalStaff_86: -1894405374
+      ChloeCrystalStaff_87: 1994194965
+      ChloeCrystalStaff_88: -1038945877
+      ChloeCrystalStaff_89: 561191597
+      ChloeCrystalStaff_9: 876761258
+      ChloeCrystalStaff_90: 2018309739
+      ChloeCrystalStaff_91: 2078234913
+      ChloeCrystalStaff_92: -848607735
+      ChloeCrystalStaff_93: 1418355059
+      ChloeCrystalStaff_94: 773629315
+      ChloeCrystalStaff_95: -406603182
+      ChloeCrystalStaff_96: -1643419793
+      ChloeCrystalStaff_97: -918079360
+      ChloeCrystalStaff_98: 96071705
+      ChloeCrystalStaff_99: -2131920905
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2477 @@
+fileFormatVersion: 2
+guid: 05531074123619549ab7bde548ff7f2c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 90
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c396e31d7fe404ab8a9dbc5fc5ad53
+      internalID: 551338693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5049f23002762429ad98967989a04c
+      internalID: 1159491019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7df565800592d4c9e73227caa2fd46
+      internalID: -762977350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf7abf6db27b6241a7cfcfc3212d0f9
+      internalID: -924570388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2c48d27ed34214e86e89439d475433
+      internalID: -1606074878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738b2d2f23986124c80f1a02254eea12
+      internalID: -796404025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97dbd27478bcc314e8eb1f71c7c43cef
+      internalID: 1894922712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f58c73ec5a147243974b46d1138d7d1
+      internalID: 1363293053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4fc50c0c88deb47a8fe4905dc69b53
+      internalID: -120297476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1259b7b7d81303e43ae22709fdb6e3e2
+      internalID: -563966472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625381397a6339443937eb26e44cc441
+      internalID: -762559968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa1583eba79f4d48b2173627a7d3a3c
+      internalID: 270282396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2394
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e754e163e9b9c0b43a13d359fd89751f
+      internalID: -1866904160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7df4dc9e9c0ac43b5f760275b32c10
+      internalID: 344803492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d86e05082d52047bbc5a1668df87e1
+      internalID: 2070441216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c9c7312b57c86468c45235fae2a203
+      internalID: -1238371671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd9056f88326664c8fe350012a6647f
+      internalID: 1473668952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 688703f23a438754abee2197536d4aaf
+      internalID: 1295588770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe46a503ad716c41b141e1f6650e2c8
+      internalID: -1105271659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f16ef814af14dc4abef2cc4f8565d1c
+      internalID: 2002025137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_20
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccae38157a53f4c4398a020fb0af1fea
+      internalID: -1510798153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc983ccd9cbc4254e8d2868684c1676e
+      internalID: -1172207909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_22
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7d17fe5cc70a5478a0adec592e935f
+      internalID: -671920122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107daa744ebd51c4492779cbcff9a6b6
+      internalID: 39839793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_24
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c32b1463ca0d4c4e8d08608c48a4955
+      internalID: -584889976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_25
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2330
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bb8b8236169a149b2a3278d5846213
+      internalID: -451042563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a03b5fd5d23104482ffd4f415b9287
+      internalID: 1952437401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01afb9e3e2a5c9f45a4d39478495cb96
+      internalID: -1680225873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9b48791f890444886e31f3b16f53a4
+      internalID: 1194105065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886dc6f428c831d43b3e411d8d358ba6
+      internalID: 317827269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e2548159fcfa14599f9b7c87175ae4
+      internalID: 744258023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_31
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692e4cce631c57c438b614a233dfe109
+      internalID: 847563836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ff5cbf5bd0dd942a23408155e09592
+      internalID: 1595822857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1091e06cb7bf0914ca9e47c6d07cad7a
+      internalID: 2062450599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc94a0fe00427f44b369a39f060800c
+      internalID: 807980636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_35
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553058a35fbb03f42abc3ddfe0feeda6
+      internalID: 69756656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_36
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf773a868b7edb4cbcb9400a1c7bacc
+      internalID: -53864026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_37
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b375413275b0c3f4ab1b4fd2b8bdcac9
+      internalID: -1697781375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2266
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756b8fe4c97803c4f9f75ee60b707f34
+      internalID: -1587447628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fc3830176e9674b93fcd6924c068b7
+      internalID: -1489793190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a25cb4492052a2428ed0557cdf68b78
+      internalID: -1531591838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396ad2824932f3746afc8cbd97c21714
+      internalID: -944585900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_42
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad3f6556678a2c48bf1d0399d91acda
+      internalID: -646611373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_43
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9f284a3e1ae704983d87dec90b0b29
+      internalID: -897012836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb38ee7cde399b34fa06a7ad83946302
+      internalID: -946621331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_45
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e638243aace6ce48b022e8b1f240346
+      internalID: 589865131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_46
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad24c591f27f2694b9cfbaa7dbc024cf
+      internalID: -1116267353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_47
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92b444fb9f253549986eb03b3156ac3
+      internalID: -1673421989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_48
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c10b2a329214541b8234e4e310e500
+      internalID: -2030378058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_49
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae050352c8b60cc43a8d470057df097e
+      internalID: -2026186684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_50
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd392e3452d198418f4fe53b0a44a2d
+      internalID: -908423067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_51
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2202
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49113b146f46da4190a9f557d862165
+      internalID: 612361570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2138
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f29ce5dd23edd46947d0bb30410334
+      internalID: -573923245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2138
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64182d8ab3710624c93624da4f2fdac1
+      internalID: 1124391997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_54
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 2138
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99831a05486c5174db42bf189cd252a1
+      internalID: 317120505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2138
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfca1916104f4b54aa9fc583f31a5b31
+      internalID: -917310571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 2138
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68beffe5bab6cb4aa01957dc91b6cfa
+      internalID: 1908427729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 2138
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4752dc71807a760469e1dbb0b1a13e42
+      internalID: 319155321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_232
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409c8772a0eeace4c874332a80167841
+      internalID: -424581974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_234
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e86c28864a8ed44e9144a892182f6f6
+      internalID: 505412517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_236
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589f9ca2c862d964dac4f5ee71c1d112
+      internalID: -1725276317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_238
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7fd8f1fd7c6fd44b00ab51a105be7a
+      internalID: 453851452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_240
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafd7b8b5fe38524b9b51ec6b8ff0326
+      internalID: 610438432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_242
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4bd39eee1716e44b8ed74c8c3a9fd3
+      internalID: 1411106936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_244
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e10156b1babc24fb50e22d023fecf3
+      internalID: 55419799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_246
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000dff651efa86945a1c1ee0344a2115
+      internalID: 143278571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_248
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 442
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e277aaaf6be3b1c48805eac2e3de0c1d
+      internalID: -608784394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_268
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886879dcd1f3a6041a804014250a6d10
+      internalID: -1997510078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_270
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9b2d0d689fd1e4994c5b399eb223c4
+      internalID: 921547903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_272
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee6dc787910b8a429d870067a2bfe32
+      internalID: 1818121597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_274
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1481a23f2de20408e69e13fdf53d20
+      internalID: -1598939968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_276
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f285fcd297b354abca1c0c27b3c7f9
+      internalID: 1398861025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_278
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de91e53470d184045b663fb3ad0c3750
+      internalID: 254719741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_280
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6235cc4b3a7194b988de1e6b41c944
+      internalID: -197775019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_282
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07dc323c98878e343b1e2c40811dc212
+      internalID: -132390970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_284
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 314
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417e347e59881f44d963710349b4532c
+      internalID: -1802394412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_304
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 187
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad7e7167199994408d6af9249312551
+      internalID: -1153531170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_306
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656eae4440275774d885db63d77904f6
+      internalID: -1972721810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_308
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da8834b119af474fb88e18393e84b54
+      internalID: 151929214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_310
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0727c1360d174d84e9cdd7c24d7c9324
+      internalID: -2097271118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_312
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5552335986d677547b1917a50958965d
+      internalID: -229040966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_314
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b9a898f82ac4e4f8d4cba254ebeb69
+      internalID: -1770293712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_316
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f657a055da7324e985d927a2a93f5d
+      internalID: 1821882007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_318
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 186
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475b631faa3dbcf4b889a80ec1729a57
+      internalID: -1681438779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_320
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 187
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ca1fc65b6eeae43867809244db184d
+      internalID: -875968067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_340
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1dbd1a1a74af884b88274e0c2a415eb
+      internalID: 1324614967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_342
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d472e1e56cc8da045b39f5fb7105baa1
+      internalID: 1528211913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_344
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2c0aa30fb244f44a697afdf92d4740
+      internalID: -1021197101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_346
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba7515d905e53340a81a931d8afafc3
+      internalID: -1089024798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_348
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86328b7de0640a499b852f663438e3d
+      internalID: -1673484604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_350
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c384f47edfb9034da90426695cc8c0f
+      internalID: -1227608036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_352
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a351f4c742d38148a4f2f4a26d964eb
+      internalID: -2122965665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_354
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32236f3d5064703469c24133a7cf4a97
+      internalID: 1817872422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChloeGreatBow - Copy_356
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 58
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9a796efad70df48a0e5819760222e4
+      internalID: -889512678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ChloeGreatBow - Copy_0: 551338693
+      ChloeGreatBow - Copy_1: 1159491019
+      ChloeGreatBow - Copy_10: -762559968
+      ChloeGreatBow - Copy_100: -610428221
+      ChloeGreatBow - Copy_101: 600513824
+      ChloeGreatBow - Copy_102: 2059727285
+      ChloeGreatBow - Copy_103: -1093917771
+      ChloeGreatBow - Copy_104: -927908446
+      ChloeGreatBow - Copy_105: 1465520854
+      ChloeGreatBow - Copy_106: 866731096
+      ChloeGreatBow - Copy_107: -884423208
+      ChloeGreatBow - Copy_108: -876440591
+      ChloeGreatBow - Copy_109: -1669432475
+      ChloeGreatBow - Copy_11: 270282396
+      ChloeGreatBow - Copy_110: 595529853
+      ChloeGreatBow - Copy_111: -1806273447
+      ChloeGreatBow - Copy_112: -1565397819
+      ChloeGreatBow - Copy_113: 1749911562
+      ChloeGreatBow - Copy_114: 1698034623
+      ChloeGreatBow - Copy_115: -315809648
+      ChloeGreatBow - Copy_116: -5837764
+      ChloeGreatBow - Copy_117: 1668397316
+      ChloeGreatBow - Copy_118: 882830394
+      ChloeGreatBow - Copy_119: 45577378
+      ChloeGreatBow - Copy_12: -1866904160
+      ChloeGreatBow - Copy_120: 1968724068
+      ChloeGreatBow - Copy_121: 2079052924
+      ChloeGreatBow - Copy_122: 2080116729
+      ChloeGreatBow - Copy_123: 1152835522
+      ChloeGreatBow - Copy_124: -1701837802
+      ChloeGreatBow - Copy_125: 1426060788
+      ChloeGreatBow - Copy_126: 773125537
+      ChloeGreatBow - Copy_127: 233474610
+      ChloeGreatBow - Copy_128: 287692520
+      ChloeGreatBow - Copy_129: -2060146229
+      ChloeGreatBow - Copy_13: 344803492
+      ChloeGreatBow - Copy_130: 588780491
+      ChloeGreatBow - Copy_131: 1775275452
+      ChloeGreatBow - Copy_132: -759656122
+      ChloeGreatBow - Copy_133: -1230804161
+      ChloeGreatBow - Copy_134: 1622636258
+      ChloeGreatBow - Copy_135: -2091488556
+      ChloeGreatBow - Copy_136: -2070531510
+      ChloeGreatBow - Copy_137: 746554575
+      ChloeGreatBow - Copy_138: 158436294
+      ChloeGreatBow - Copy_139: -1984050733
+      ChloeGreatBow - Copy_14: 2070441216
+      ChloeGreatBow - Copy_140: 904899507
+      ChloeGreatBow - Copy_141: -852934836
+      ChloeGreatBow - Copy_142: 1748366934
+      ChloeGreatBow - Copy_143: 1573517909
+      ChloeGreatBow - Copy_144: 1077760572
+      ChloeGreatBow - Copy_145: 1818932786
+      ChloeGreatBow - Copy_146: 1826426576
+      ChloeGreatBow - Copy_147: -251304394
+      ChloeGreatBow - Copy_148: -676308622
+      ChloeGreatBow - Copy_149: 1169574291
+      ChloeGreatBow - Copy_15: -1238371671
+      ChloeGreatBow - Copy_150: -87358569
+      ChloeGreatBow - Copy_151: 1961055222
+      ChloeGreatBow - Copy_152: 1330466228
+      ChloeGreatBow - Copy_153: -1833428845
+      ChloeGreatBow - Copy_154: 1214729129
+      ChloeGreatBow - Copy_155: -691357187
+      ChloeGreatBow - Copy_156: -509414901
+      ChloeGreatBow - Copy_157: -724846051
+      ChloeGreatBow - Copy_158: 770165934
+      ChloeGreatBow - Copy_159: -194939367
+      ChloeGreatBow - Copy_16: 1473668952
+      ChloeGreatBow - Copy_160: 1008868734
+      ChloeGreatBow - Copy_161: 40304814
+      ChloeGreatBow - Copy_162: -1874196628
+      ChloeGreatBow - Copy_163: -1140755638
+      ChloeGreatBow - Copy_164: -24710680
+      ChloeGreatBow - Copy_165: -966663351
+      ChloeGreatBow - Copy_166: -69042574
+      ChloeGreatBow - Copy_167: 469837438
+      ChloeGreatBow - Copy_168: 2084803888
+      ChloeGreatBow - Copy_169: 93928059
+      ChloeGreatBow - Copy_17: 1295588770
+      ChloeGreatBow - Copy_170: -195232784
+      ChloeGreatBow - Copy_171: 162242920
+      ChloeGreatBow - Copy_172: 1086336087
+      ChloeGreatBow - Copy_173: 45683978
+      ChloeGreatBow - Copy_174: 349044420
+      ChloeGreatBow - Copy_175: 1278399432
+      ChloeGreatBow - Copy_176: -1024325747
+      ChloeGreatBow - Copy_177: -622708659
+      ChloeGreatBow - Copy_178: -2007692991
+      ChloeGreatBow - Copy_179: -244888614
+      ChloeGreatBow - Copy_18: -1105271659
+      ChloeGreatBow - Copy_180: 2092020981
+      ChloeGreatBow - Copy_181: -1776675418
+      ChloeGreatBow - Copy_182: 938920126
+      ChloeGreatBow - Copy_183: 1911332235
+      ChloeGreatBow - Copy_184: -1701332370
+      ChloeGreatBow - Copy_185: 712541927
+      ChloeGreatBow - Copy_186: 329516156
+      ChloeGreatBow - Copy_187: 636620027
+      ChloeGreatBow - Copy_188: -1519309098
+      ChloeGreatBow - Copy_189: 871280444
+      ChloeGreatBow - Copy_19: 2002025137
+      ChloeGreatBow - Copy_190: -232656827
+      ChloeGreatBow - Copy_191: -854394582
+      ChloeGreatBow - Copy_192: 633789154
+      ChloeGreatBow - Copy_193: -106147151
+      ChloeGreatBow - Copy_194: -306108765
+      ChloeGreatBow - Copy_195: -762125584
+      ChloeGreatBow - Copy_196: 1026505252
+      ChloeGreatBow - Copy_197: 1679343474
+      ChloeGreatBow - Copy_198: 1577864421
+      ChloeGreatBow - Copy_199: -708242348
+      ChloeGreatBow - Copy_2: -762977350
+      ChloeGreatBow - Copy_20: -1510798153
+      ChloeGreatBow - Copy_200: 1315062404
+      ChloeGreatBow - Copy_201: 370032821
+      ChloeGreatBow - Copy_202: 510930508
+      ChloeGreatBow - Copy_203: -249525527
+      ChloeGreatBow - Copy_204: -197521884
+      ChloeGreatBow - Copy_205: 344419784
+      ChloeGreatBow - Copy_206: -1929948436
+      ChloeGreatBow - Copy_207: -712972960
+      ChloeGreatBow - Copy_208: -939194430
+      ChloeGreatBow - Copy_209: 1558911346
+      ChloeGreatBow - Copy_21: -1172207909
+      ChloeGreatBow - Copy_210: -776885939
+      ChloeGreatBow - Copy_211: 584827018
+      ChloeGreatBow - Copy_212: 717289194
+      ChloeGreatBow - Copy_213: -678314750
+      ChloeGreatBow - Copy_214: 1738778618
+      ChloeGreatBow - Copy_215: 1011536380
+      ChloeGreatBow - Copy_216: -221947767
+      ChloeGreatBow - Copy_217: -1730232326
+      ChloeGreatBow - Copy_218: -1170143011
+      ChloeGreatBow - Copy_219: 1209154266
+      ChloeGreatBow - Copy_22: -671920122
+      ChloeGreatBow - Copy_220: -69884236
+      ChloeGreatBow - Copy_221: 1776495884
+      ChloeGreatBow - Copy_222: 324051617
+      ChloeGreatBow - Copy_223: -2076543237
+      ChloeGreatBow - Copy_224: -1470881059
+      ChloeGreatBow - Copy_225: 1228529040
+      ChloeGreatBow - Copy_226: -502387099
+      ChloeGreatBow - Copy_227: 836394977
+      ChloeGreatBow - Copy_228: 102570081
+      ChloeGreatBow - Copy_229: -1719014914
+      ChloeGreatBow - Copy_23: 39839793
+      ChloeGreatBow - Copy_230: -1781627883
+      ChloeGreatBow - Copy_231: 1476900055
+      ChloeGreatBow - Copy_232: -424581974
+      ChloeGreatBow - Copy_233: -670714987
+      ChloeGreatBow - Copy_234: 505412517
+      ChloeGreatBow - Copy_235: 1633727244
+      ChloeGreatBow - Copy_236: -1725276317
+      ChloeGreatBow - Copy_237: 380658926
+      ChloeGreatBow - Copy_238: 453851452
+      ChloeGreatBow - Copy_239: 886362352
+      ChloeGreatBow - Copy_24: -584889976
+      ChloeGreatBow - Copy_240: 610438432
+      ChloeGreatBow - Copy_241: 1024541399
+      ChloeGreatBow - Copy_242: 1411106936
+      ChloeGreatBow - Copy_243: 1479106143
+      ChloeGreatBow - Copy_244: 55419799
+      ChloeGreatBow - Copy_245: 1952973434
+      ChloeGreatBow - Copy_246: 143278571
+      ChloeGreatBow - Copy_247: 464592534
+      ChloeGreatBow - Copy_248: -608784394
+      ChloeGreatBow - Copy_249: 602039103
+      ChloeGreatBow - Copy_25: -451042563
+      ChloeGreatBow - Copy_250: -1391608903
+      ChloeGreatBow - Copy_251: 399199363
+      ChloeGreatBow - Copy_252: 2019431843
+      ChloeGreatBow - Copy_253: -314284034
+      ChloeGreatBow - Copy_254: -1366240503
+      ChloeGreatBow - Copy_255: 468690655
+      ChloeGreatBow - Copy_256: -1998383812
+      ChloeGreatBow - Copy_257: -653322989
+      ChloeGreatBow - Copy_258: -775328814
+      ChloeGreatBow - Copy_259: -320915147
+      ChloeGreatBow - Copy_26: 1952437401
+      ChloeGreatBow - Copy_260: -1745168731
+      ChloeGreatBow - Copy_261: -1225082822
+      ChloeGreatBow - Copy_262: -516462399
+      ChloeGreatBow - Copy_263: 1864256772
+      ChloeGreatBow - Copy_264: 757242152
+      ChloeGreatBow - Copy_265: 1106317123
+      ChloeGreatBow - Copy_266: 1070570431
+      ChloeGreatBow - Copy_267: 1379199064
+      ChloeGreatBow - Copy_268: -1997510078
+      ChloeGreatBow - Copy_269: -39662621
+      ChloeGreatBow - Copy_27: -1680225873
+      ChloeGreatBow - Copy_270: 921547903
+      ChloeGreatBow - Copy_271: 765084256
+      ChloeGreatBow - Copy_272: 1818121597
+      ChloeGreatBow - Copy_273: -2114361615
+      ChloeGreatBow - Copy_274: -1598939968
+      ChloeGreatBow - Copy_275: -922269481
+      ChloeGreatBow - Copy_276: 1398861025
+      ChloeGreatBow - Copy_277: 469362154
+      ChloeGreatBow - Copy_278: 254719741
+      ChloeGreatBow - Copy_279: 1863773820
+      ChloeGreatBow - Copy_28: 1194105065
+      ChloeGreatBow - Copy_280: -197775019
+      ChloeGreatBow - Copy_281: 2135939144
+      ChloeGreatBow - Copy_282: -132390970
+      ChloeGreatBow - Copy_283: -1965487408
+      ChloeGreatBow - Copy_284: -1802394412
+      ChloeGreatBow - Copy_285: 442756837
+      ChloeGreatBow - Copy_286: 491922414
+      ChloeGreatBow - Copy_287: -669780373
+      ChloeGreatBow - Copy_288: 314420639
+      ChloeGreatBow - Copy_289: -1125170531
+      ChloeGreatBow - Copy_29: 317827269
+      ChloeGreatBow - Copy_290: -1423261813
+      ChloeGreatBow - Copy_291: -521853090
+      ChloeGreatBow - Copy_292: -462286367
+      ChloeGreatBow - Copy_293: -629117528
+      ChloeGreatBow - Copy_294: -877405035
+      ChloeGreatBow - Copy_295: 291474320
+      ChloeGreatBow - Copy_296: 476740243
+      ChloeGreatBow - Copy_297: 1375197045
+      ChloeGreatBow - Copy_298: -381752210
+      ChloeGreatBow - Copy_299: 2013729814
+      ChloeGreatBow - Copy_3: -924570388
+      ChloeGreatBow - Copy_30: 744258023
+      ChloeGreatBow - Copy_300: 1399558105
+      ChloeGreatBow - Copy_301: -207077228
+      ChloeGreatBow - Copy_302: 1527292538
+      ChloeGreatBow - Copy_303: 356007893
+      ChloeGreatBow - Copy_304: -1153531170
+      ChloeGreatBow - Copy_305: -1440501157
+      ChloeGreatBow - Copy_306: -1972721810
+      ChloeGreatBow - Copy_307: -1534466315
+      ChloeGreatBow - Copy_308: 151929214
+      ChloeGreatBow - Copy_309: -1575774058
+      ChloeGreatBow - Copy_31: 847563836
+      ChloeGreatBow - Copy_310: -2097271118
+      ChloeGreatBow - Copy_311: 273644151
+      ChloeGreatBow - Copy_312: -229040966
+      ChloeGreatBow - Copy_313: 1182644725
+      ChloeGreatBow - Copy_314: -1770293712
+      ChloeGreatBow - Copy_315: -67687822
+      ChloeGreatBow - Copy_316: 1821882007
+      ChloeGreatBow - Copy_317: -1142649860
+      ChloeGreatBow - Copy_318: -1681438779
+      ChloeGreatBow - Copy_319: -1820466995
+      ChloeGreatBow - Copy_32: 1595822857
+      ChloeGreatBow - Copy_320: -875968067
+      ChloeGreatBow - Copy_321: 1593833361
+      ChloeGreatBow - Copy_322: -1342562136
+      ChloeGreatBow - Copy_323: 1678507340
+      ChloeGreatBow - Copy_324: -1585365588
+      ChloeGreatBow - Copy_325: -489872864
+      ChloeGreatBow - Copy_326: 1893589644
+      ChloeGreatBow - Copy_327: -1082072702
+      ChloeGreatBow - Copy_328: -893280158
+      ChloeGreatBow - Copy_329: -1577522728
+      ChloeGreatBow - Copy_33: 2062450599
+      ChloeGreatBow - Copy_330: 1515889186
+      ChloeGreatBow - Copy_331: 1603922716
+      ChloeGreatBow - Copy_332: 1900234234
+      ChloeGreatBow - Copy_333: -1982749381
+      ChloeGreatBow - Copy_334: 295940786
+      ChloeGreatBow - Copy_335: -556461388
+      ChloeGreatBow - Copy_336: -396325838
+      ChloeGreatBow - Copy_337: -685612242
+      ChloeGreatBow - Copy_338: -1511534949
+      ChloeGreatBow - Copy_339: 899174791
+      ChloeGreatBow - Copy_34: 807980636
+      ChloeGreatBow - Copy_340: 1324614967
+      ChloeGreatBow - Copy_341: 1067096599
+      ChloeGreatBow - Copy_342: 1528211913
+      ChloeGreatBow - Copy_343: 743035963
+      ChloeGreatBow - Copy_344: -1021197101
+      ChloeGreatBow - Copy_345: -1769377185
+      ChloeGreatBow - Copy_346: -1089024798
+      ChloeGreatBow - Copy_347: -372151543
+      ChloeGreatBow - Copy_348: -1673484604
+      ChloeGreatBow - Copy_349: 1608627215
+      ChloeGreatBow - Copy_35: 69756656
+      ChloeGreatBow - Copy_350: -1227608036
+      ChloeGreatBow - Copy_351: -1945924180
+      ChloeGreatBow - Copy_352: -2122965665
+      ChloeGreatBow - Copy_353: 1694326225
+      ChloeGreatBow - Copy_354: 1817872422
+      ChloeGreatBow - Copy_355: -1003319108
+      ChloeGreatBow - Copy_356: -889512678
+      ChloeGreatBow - Copy_357: -722957280
+      ChloeGreatBow - Copy_358: -1327876230
+      ChloeGreatBow - Copy_359: -952500179
+      ChloeGreatBow - Copy_36: -53864026
+      ChloeGreatBow - Copy_360: 1254968985
+      ChloeGreatBow - Copy_361: 1599182956
+      ChloeGreatBow - Copy_362: 2100649567
+      ChloeGreatBow - Copy_363: 1526550938
+      ChloeGreatBow - Copy_364: 163088963
+      ChloeGreatBow - Copy_365: -360643039
+      ChloeGreatBow - Copy_366: 1446749174
+      ChloeGreatBow - Copy_367: 291069352
+      ChloeGreatBow - Copy_368: -840013141
+      ChloeGreatBow - Copy_369: 807519971
+      ChloeGreatBow - Copy_37: -1697781375
+      ChloeGreatBow - Copy_370: -1341935462
+      ChloeGreatBow - Copy_371: -2119927863
+      ChloeGreatBow - Copy_372: -273133829
+      ChloeGreatBow - Copy_373: -182110916
+      ChloeGreatBow - Copy_374: 734247051
+      ChloeGreatBow - Copy_375: -1412781843
+      ChloeGreatBow - Copy_38: -1587447628
+      ChloeGreatBow - Copy_39: -1489793190
+      ChloeGreatBow - Copy_4: -1606074878
+      ChloeGreatBow - Copy_40: -1531591838
+      ChloeGreatBow - Copy_41: -944585900
+      ChloeGreatBow - Copy_42: -646611373
+      ChloeGreatBow - Copy_43: -897012836
+      ChloeGreatBow - Copy_44: -946621331
+      ChloeGreatBow - Copy_45: 589865131
+      ChloeGreatBow - Copy_46: -1116267353
+      ChloeGreatBow - Copy_47: -1673421989
+      ChloeGreatBow - Copy_48: -2030378058
+      ChloeGreatBow - Copy_49: -2026186684
+      ChloeGreatBow - Copy_5: -796404025
+      ChloeGreatBow - Copy_50: -908423067
+      ChloeGreatBow - Copy_51: 612361570
+      ChloeGreatBow - Copy_52: -573923245
+      ChloeGreatBow - Copy_53: 1124391997
+      ChloeGreatBow - Copy_54: 317120505
+      ChloeGreatBow - Copy_55: -917310571
+      ChloeGreatBow - Copy_56: 1908427729
+      ChloeGreatBow - Copy_57: 319155321
+      ChloeGreatBow - Copy_58: 187592061
+      ChloeGreatBow - Copy_59: -617147200
+      ChloeGreatBow - Copy_6: 1894922712
+      ChloeGreatBow - Copy_60: 1175355567
+      ChloeGreatBow - Copy_61: 829081429
+      ChloeGreatBow - Copy_62: 1810226515
+      ChloeGreatBow - Copy_63: -686290504
+      ChloeGreatBow - Copy_64: 2089830933
+      ChloeGreatBow - Copy_65: -947611174
+      ChloeGreatBow - Copy_66: 1886761661
+      ChloeGreatBow - Copy_67: 1213987952
+      ChloeGreatBow - Copy_68: -2056268627
+      ChloeGreatBow - Copy_69: 1624792963
+      ChloeGreatBow - Copy_7: 1363293053
+      ChloeGreatBow - Copy_70: 1970274722
+      ChloeGreatBow - Copy_71: 1545754897
+      ChloeGreatBow - Copy_72: -127334825
+      ChloeGreatBow - Copy_73: -378983763
+      ChloeGreatBow - Copy_74: 836122898
+      ChloeGreatBow - Copy_75: 1575832739
+      ChloeGreatBow - Copy_76: -1477361439
+      ChloeGreatBow - Copy_77: 1826974768
+      ChloeGreatBow - Copy_78: 631618276
+      ChloeGreatBow - Copy_79: 129759925
+      ChloeGreatBow - Copy_8: -120297476
+      ChloeGreatBow - Copy_80: 1394656648
+      ChloeGreatBow - Copy_81: 1244741117
+      ChloeGreatBow - Copy_82: -1004756259
+      ChloeGreatBow - Copy_83: -765358724
+      ChloeGreatBow - Copy_84: 1301548926
+      ChloeGreatBow - Copy_85: -1415782903
+      ChloeGreatBow - Copy_86: 1130928816
+      ChloeGreatBow - Copy_87: 1434665716
+      ChloeGreatBow - Copy_88: 1284599668
+      ChloeGreatBow - Copy_89: 516233638
+      ChloeGreatBow - Copy_9: -563966472
+      ChloeGreatBow - Copy_90: 377725526
+      ChloeGreatBow - Copy_91: -822441240
+      ChloeGreatBow - Copy_92: -1922467809
+      ChloeGreatBow - Copy_93: -1141513193
+      ChloeGreatBow - Copy_94: -1048103313
+      ChloeGreatBow - Copy_95: -918004197
+      ChloeGreatBow - Copy_96: 1276854258
+      ChloeGreatBow - Copy_97: -589195091
+      ChloeGreatBow - Copy_98: 759417436
+      ChloeGreatBow - Copy_99: 1185627178
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
