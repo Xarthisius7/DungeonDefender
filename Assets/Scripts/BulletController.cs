@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using NavMeshPlus.Components;
 
 public class BulletController : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class BulletController : MonoBehaviour
     private Camera mainCam;
     private Rigidbody2D rb;
     public float force;
+    private NavMeshSurface NavMesh;
+    private bool destroyedSomething = false;
 
     void Start()
     {
@@ -17,6 +21,7 @@ public class BulletController : MonoBehaviour
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - transform.position;
         Vector3 rotation = transform.position - mousePos;
+        NavMesh = GameObject.Find("NavMesh").GetComponent<NavMeshSurface>();
 
         //set the velocity of bullet  - and normalized, where we get a 1; then * by force, 
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
@@ -64,8 +69,15 @@ public class BulletController : MonoBehaviour
             }
 
             // Apply damage as an integer
-            collision.gameObject.GetComponent<INT_Breakable>()
-                .TakeDamage(damage);
+            destroyedSomething = collision.gameObject.GetComponent<INT_Breakable>().TakeDamage(damage);
+
+            if (destroyedSomething)
+            {
+                NavMesh.BuildNavMesh();
+            }
+                
+            
+
             Destroy(gameObject);
         }
 
