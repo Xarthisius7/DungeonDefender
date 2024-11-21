@@ -16,11 +16,11 @@ public class PowerupManager : MonoBehaviour
     {
         { "Attack", 10 },
         { "AttackSpeed", 1 },
-        { "Speed", 1.3f },
+        { "Speed", 1.1f },
         { "Defense", 5 },
         { "MaxHealth", 100 },
         { "MaxStamina", 100 },
-        { "StaminaRegenSpeed", 20 }
+        { "StaminaRegenSpeed", 15 }
     };
 
     private Dictionary<string, float> currentAttributes;
@@ -37,7 +37,7 @@ public class PowerupManager : MonoBehaviour
 
 
             //Invoke("tempOpenStatMenu", 1f);
-            Invoke("tempOpenCHooseMenu", 1.5f);
+            //Invoke("tempOpenCHooseMenu", 1.5f);
 
 
         }

@@ -624,7 +624,7 @@ public class MapManager : MonoBehaviour
         Debug.Log("There's a total of: " + totalTreasureRoomsGenerated + " Treasure room in the map.");
         Debug.Log("There's a total of: " + totalHighDIffRoomsGenerated + " High Difficulty room in the map.");
         Debug.Log("There's a total of: " + totalTrapRoomsGenerated + " Trap room  in the map.");
-        Debug.Log("Map Generation is using seed��" + seed);
+        Debug.Log("Map Generation is using seed:" + seed);
     }
 
     void ShuffleList<T>(List<T> list)

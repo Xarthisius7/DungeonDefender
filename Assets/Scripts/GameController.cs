@@ -53,8 +53,8 @@ public class GameController : MonoBehaviour
     //the count 3 crystal player needs to defend.
 
 
-    private int centerX = 0; 
-    private int centerY = 0; 
+    private int centerX = 0;
+    private int centerY = 0;
     private Transform mapCenter;
 
 
@@ -69,7 +69,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
 
 
@@ -77,6 +77,17 @@ public class GameController : MonoBehaviour
 
 
     }
+
+    public void CloseAllMenu()
+    {
+        // Close all menu - stats menu, pause menu, powerup choosing menu, etc. 
+        // Call this before opening any menu.
+        //TODO: Add Pause Screen menu, etc
+
+        UIManager.Instance.ChooseOption(1);//powerup choosing menu
+        UIManager.Instance.CloseAttrubuteMenu();//Stats menu
+    }
+
 
     // Initialize game logic, link managers, set up the map
     private void InitGame()
@@ -126,8 +137,24 @@ public class GameController : MonoBehaviour
         // Initialize UI and other systems
         //uiManager.ShowMainMenu();
         //effectsManager.PlayBackgroundMusic();
+
+
+        Invoke("GameInitDelayTerms", 0.1f);
+
+
     }
 
+
+    private void GameInitDelayTerms()
+    {
+        //things that happens after game start. 
+
+        ItemManager.Instance.AddItemsById(16, 1);
+        ItemManager.Instance.AddItemsById(19, 3);
+        ItemManager.Instance.AddItemsById(20, 3);
+
+
+    }
 
 
     void Update()
@@ -160,7 +187,7 @@ public class GameController : MonoBehaviour
     public void StartDefenceAWave(int number)
     {
         //MUST BE CALLED when player start defencing. 
-        
+
         //TODO:
         //change BGM.
     }
@@ -168,7 +195,7 @@ public class GameController : MonoBehaviour
     public int PlayerFinishedDefense()
     {
         TowerDefensed++;
-        Debug.Log("Player just finished a defense. a total of :"+TowerDefensed +"has been defensed.");
+        Debug.Log("Player just finished a defense. a total of :" + TowerDefensed + "has been defensed.");
         //TODO: implement further event. e.g Give a random powerup.
 
         //TODO: update UI to display the game progress: how many crystal has been defensed.
@@ -179,7 +206,7 @@ public class GameController : MonoBehaviour
     public bool TryToActivatedExitRoom()
     {
         // Final room's activiation - check if the game goal is done.
-        if(TowerDefensed >= 3)
+        if (TowerDefensed >= 3)
         {
             //TODO : trigger Ending
             Debug.Log("Player try to activate the final crystal's exit - to escape the room. result is: true");
@@ -225,22 +252,23 @@ public class GameController : MonoBehaviour
         int playerRoomX = centerX + diffX;
         int playerRoomY = centerY + diffY;
 
-        if(hasVisited[playerRoomX, playerRoomY].hasVisited==1)
+        if (hasVisited[playerRoomX, playerRoomY].hasVisited == 1)
         {
             hasVisited[playerRoomX, playerRoomY].hasVisited = 2;
             //If that room havn't been visited: trigger roon enter event. 
             //1. Spawn enemies. TODO
 
             Debug.Log("First visited room: X = " + playerRoomX + ", Y = " + playerRoomY);
-            Debug.Log("Spawning enemies in it!" );
+            Debug.Log("Spawning enemies in it!");
 
-        } else if((hasVisited[playerRoomX, playerRoomY].hasVisited==2) && !hasVisited[playerRoomX, playerRoomY].hasLightUped )
+        }
+        else if ((hasVisited[playerRoomX, playerRoomY].hasVisited == 2) && !hasVisited[playerRoomX, playerRoomY].hasLightUped)
         {
             //if the room has been visited by havn't been light up, test the distance,
             //if is within the range of 3, light up the room and mini map.
             Transform currentRoomTransform = grid[playerRoomX, playerRoomY].roomObject.transform;
             float distanceToRoomCenter = Vector3.Distance(playerTransform.position, currentRoomTransform.position);
-            if(distanceToRoomCenter < 3f)
+            if (distanceToRoomCenter < 3f)
             {
                 hasVisited[playerRoomX, playerRoomY].hasLightUped = true;
                 mapPiecesToToggle[playerRoomX, playerRoomY].SetActive(true);
@@ -333,7 +361,8 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void RestartGame(){
+    public void RestartGame()
+    {
 
         //TODO: restart game function
     }

@@ -12,7 +12,6 @@ public class InteractionButton : MonoBehaviour
 
         if (Vector2.Distance(mousePosition, transform.position) <= clickRadius)
         {
-            Debug.Log("Player Clicked the button£¡£¡");
             interactionTrigger?.OnButtonClick();
         }
     }

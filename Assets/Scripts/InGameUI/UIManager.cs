@@ -25,8 +25,8 @@ public class UIManager : MonoBehaviour
     public GameObject PowerupMenuPanel; // The menu panel to activate/deactivate
 
     public TextMeshProUGUI[] subtitleTexts;
-    public float displayTime = 2.5f; 
-    public float fadeDuration = 1f; 
+    public float displayTime = 2.5f;
+    public float fadeDuration = 1f;
 
     private Queue<string> messageQueue = new Queue<string>(); //Ingame message display
     private Coroutine[] fadeCoroutines;
@@ -38,6 +38,9 @@ public class UIManager : MonoBehaviour
 
     public void OpenItemMenuFunc(Powerup p1, Powerup p2, Powerup p3)
     {
+
+        GameController.Instance.CloseAllMenu();
+        EffectsManager.Instance.PlaySFX(13);
         // Store the Powerup data in an array for easy iteration
         Powerup[] powerups = { p1, p2, p3 };
 
@@ -71,7 +74,7 @@ public class UIManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -97,8 +100,15 @@ public class UIManager : MonoBehaviour
 
     public void ChooseOption(int i)
     {
+        if (offeredOptions.Count == 0)
+        {
+            CloseItemMenu();
+            return;
+        }
         PowerupManager.instance.GivePowerup(offeredOptions[i]);
         offeredOptions.Clear();
+        EffectsManager.Instance.PlaySFX(12);
+        GameController.Instance.ResumeGame();
         CloseItemMenu();
     }
 
@@ -108,7 +118,7 @@ public class UIManager : MonoBehaviour
         messageQueue.Enqueue(message);
         if (messageQueue.Count > subtitleTexts.Length)
         {
-            messageQueue.Dequeue(); 
+            messageQueue.Dequeue();
         }
         UpdateSubtitles();
     }
@@ -151,9 +161,10 @@ public class UIManager : MonoBehaviour
         }
 
         text.text = "";
-        messageQueue.Dequeue();
-        // messageQueue.Dequeue();
-        // messageQueue.Dequeue();
+        while (messageQueue.Count > 0)
+        {
+            messageQueue.Dequeue();
+        }
         UpdateSubtitles();
     }
 
@@ -169,16 +180,17 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
 
 
     public void OpenAttrubuteMenu()
     {
+        GameController.Instance.CloseAllMenu();
         // Update attribute values in the UI
         UpdateAttributesDisplay();
-        
+
         // Display magic powerups
         DisplayMagicPowerups();
 
@@ -254,7 +266,7 @@ public class UIManager : MonoBehaviour
     {
         PauseMenu pauseMenu = FindAnyObjectByType<PauseMenu>();
 
-        if(pauseMenu != null)
+        if (pauseMenu != null)
         {
             pauseMenu.ShowPauseScreen();
         }
