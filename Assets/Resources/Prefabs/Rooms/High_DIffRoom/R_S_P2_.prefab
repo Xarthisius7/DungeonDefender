@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3977676078216087123}
   - component: {fileID: 4642359538517010110}
   - component: {fileID: 5166052577732003529}
+  - component: {fileID: 8754220996790377460}
   m_Layer: 0
   m_Name: ObstaclesLayer
   m_TagString: Obstacle
@@ -794,6 +795,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &8754220996790377460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937698104228461905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1 &4924366817745661644
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +822,7 @@ GameObject:
   - component: {fileID: 630406960383918748}
   - component: {fileID: 3122778832026425445}
   - component: {fileID: 504157115424458904}
+  - component: {fileID: 7717665979772598425}
   m_Layer: 0
   m_Name: FloorLayer
   m_TagString: Untagged
@@ -1842,6 +1860,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &7717665979772598425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924366817745661644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5628393458475496533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +1945,7 @@ MonoBehaviour:
   - {x: 4.242759, y: -4.244139, z: 0}
   m_ShapePathHash: 1582970851
   m_Mesh: {fileID: 0}
-  m_InstanceId: 118784
+  m_InstanceId: 244500
   m_LocalBounds:
     m_Center: {x: 0.002521515, y: 0.46879435, z: 0}
     m_Extent: {x: 4.249689, y: 4.7129335, z: 0}

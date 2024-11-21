@@ -18,15 +18,15 @@ public class INT_Breakable : MonoBehaviour, IInteractable
         hits = maxHits;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-    public void TakeDamage(int damage)
+    public bool TakeDamage(int damage)
     {
         hits -= damage;
 
         if (hits <= 0)
         {
             EffectsManager.Instance.PlaySFX(breakSound);
-
             Destroy(gameObject);
+            return true;
         }
         else
         {
@@ -53,6 +53,7 @@ public class INT_Breakable : MonoBehaviour, IInteractable
                 }
             }
             EffectsManager.Instance.PlaySFX(hitSound);
+            return false;
         }
 
     }
