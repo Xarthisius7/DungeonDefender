@@ -152,8 +152,8 @@ public class UIManager : MonoBehaviour
 
         text.text = "";
         messageQueue.Dequeue();
-        messageQueue.Dequeue();
-        messageQueue.Dequeue();
+        // messageQueue.Dequeue();
+        // messageQueue.Dequeue();
         UpdateSubtitles();
     }
 

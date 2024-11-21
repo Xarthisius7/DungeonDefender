@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3280539711292378190}
   - component: {fileID: 7239670208169073770}
   - component: {fileID: 8355141837498833015}
+  - component: {fileID: 3184668080912010351}
   m_Layer: 0
   m_Name: FloorLayer
   m_TagString: Untagged
@@ -1102,6 +1103,22 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!114 &3184668080912010351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6953812119919182063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_IgnoreFromBuild: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &7223153128588061787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,7 +1181,7 @@ MonoBehaviour:
   - {x: -4.237637, y: -4.2421546, z: 0}
   m_ShapePathHash: -1369389917
   m_Mesh: {fileID: 0}
-  m_InstanceId: 125270
+  m_InstanceId: 247752
   m_LocalBounds:
     m_Center: {x: -2.6314437, y: -2.628948, z: 0}
     m_Extent: {x: 1.6130908, y: 1.614155, z: 0}
@@ -1230,7 +1247,7 @@ MonoBehaviour:
   - {x: 4.2496223, y: -4.251964, z: 0}
   m_ShapePathHash: -1966933634
   m_Mesh: {fileID: 0}
-  m_InstanceId: 125272
+  m_InstanceId: 247754
   m_LocalBounds:
     m_Center: {x: 2.6310859, y: 0.46807814, z: 0}
     m_Extent: {x: 1.6185365, y: 4.720684, z: 0}
@@ -1294,7 +1311,7 @@ MonoBehaviour:
   - {x: -4.2446194, y: 5.18533, z: 0}
   m_ShapePathHash: -258500577
   m_Mesh: {fileID: 0}
-  m_InstanceId: 125306
+  m_InstanceId: 247792
   m_LocalBounds:
     m_Center: {x: -2.6360807, y: 3.1000798, z: 0}
     m_Extent: {x: 1.6165714, y: 2.0885305, z: 0}
@@ -1357,6 +1374,7 @@ GameObject:
   - component: {fileID: 6928393368973034489}
   - component: {fileID: 1832037632944843771}
   - component: {fileID: 1362669631937340896}
+  - component: {fileID: 3092511119288275078}
   m_Layer: 0
   m_Name: ObstaclesLayer
   m_TagString: Obstacle
@@ -2079,6 +2097,22 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &3092511119288275078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9155007905266211496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &4535843874029050617
 PrefabInstance:
   m_ObjectHideFlags: 0
