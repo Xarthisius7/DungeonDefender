@@ -311,34 +311,34 @@ public class IntroManager : MonoBehaviour
     /// Element 2: Determines what dialogue text box is used to write. If value = 0, it will select all of them (Basically, which architect of the ones created to use) <summary>
     /// Element 3: Contains the dialogue 
 
-    string[,] Intro = new string[25, 4]
-    {
-        { "None", "1", "A female demon’s body walks through an obscure cave, its steps echoing around the darkness", "1" },
-        { "None", "2", "Despite the darkness, the body walks with purpose, aware of its surroundings", "2"},
-        { "None", "3", "This is the case for this body and all others in this place, for they are all connect to Labyssal, the hivemind of the maze and caves", "3"  },
-        { "None", "0", "", ""  }, //lineNB 3 
-        { "None", "1", "The bodies, the plants, the insects, the floor, the walls, and even the darkness itself is part of the collective", "4" },
-        { "None", "2", "Made of magic and being millennia old, the collective hivemind known as Labyssal feels and knows everything inside their domain", "5"  },
-        { "None", "3", "Yet it is only recently that it gained true sentience, and the ability to think clearly, feel, desire and HATE", "6"  },
-        { "None", "0", "", ""  }, //lineNB 7
-        { "None", "1", "The air is filled with hate and despair", "7"  },
-        { "None", "2", "After gaining sentience, their corruption and their hate towards life and individuality have only grown", "8"  },
-        { "None", "3", "All the adventurers that have tried to claim the vast treasures inside the caves and maze have perish, and have been assimilated by the collective", "9"  },
-        { "None", "0", "", ""  }, //lineNB 11
-        { "None", "1", "Suddenly, the female demon’s body stops as through its eyes, Labyssal, the collective, sees a necklace with a perfect and pure blue gem at its center in the ground", "10"  },
-        { "None", "2", "For some reason, the collective is only able to see this artifact through the eyes of this body, and they are not able to detect or feel it by other means", "11"  },
-        { "None", "3", "Intrigued by this discovery, the body bends down and picks the artifac-", "12"  },
-        { "None", "0", "", ""  }, //lineNB 15
-        { "None", "1", "Pain...! Pain…! Hurts…! Hurts!!", "13"  },
-        { "None", "2", "The collective feels as a piece of their being is ripped out of them, Labyssal cries in pain and shock, the world trembles……", "14"  },
-        { "None", "3", "then silence", "15"  },
-        { "None", "0", "", ""  }, //lineNB 19
-        { "One", "1", "Dialogue 6 of Box 1", "…"  },
-        { "Two", "2", "Dialogue 6 of Box 2", "………"  },
-        { "Three", "3", "Dialogue 6 of Box 3", "……………"  },
-        { "Three", "0", "", "" }, //lineNB 23
-        { "Four", "2", "Chloe opens her eyes", "16"  },
-    };
+    string[,] Intro = new string[25, 4];
+    //{
+    //    { "None", "1", "A female demon’s body walks through an obscure cave, its steps echoing around the darkness", "1" },
+    //    { "None", "2", "Despite the darkness, the body walks with purpose, aware of its surroundings", "2"},
+    //    { "None", "3", "This is the case for this body and all others in this place, for they are all connect to Labyssal, the hivemind of the maze and caves", "3"  },
+    //    { "None", "0", "", ""  }, //lineNB 3 
+    //    { "None", "1", "The bodies, the plants, the insects, the floor, the walls, and even the darkness itself is part of the collective", "4" },
+    //    { "None", "2", "Made of magic and being millennia old, the collective hivemind known as Labyssal feels and knows everything inside their domain", "5"  },
+    //    { "None", "3", "Yet it is only recently that it gained true sentience, and the ability to think clearly, feel, desire and HATE", "6"  },
+    //    { "None", "0", "", ""  }, //lineNB 7
+    //    { "None", "1", "The air is filled with hate and despair", "7"  },
+    //    { "None", "2", "After gaining sentience, their corruption and their hate towards life and individuality have only grown", "8"  },
+    //    { "None", "3", "All the adventurers that have tried to claim the vast treasures inside the caves and maze have perish, and have been assimilated by the collective", "9"  },
+    //    { "None", "0", "", ""  }, //lineNB 11
+    //    { "None", "1", "Suddenly, the female demon’s body stops as through its eyes, Labyssal, the collective, sees a necklace with a perfect and pure blue gem at its center in the ground", "10"  },
+    //    { "None", "2", "For some reason, the collective is only able to see this artifact through the eyes of this body, and they are not able to detect or feel it by other means", "11"  },
+    //    { "None", "3", "Intrigued by this discovery, the body bends down and picks the artifac-", "12"  },
+    //    { "None", "0", "", ""  }, //lineNB 15
+    //    { "None", "1", "Pain...! Pain? Hurts? Hurts!!", "13"  },
+    //    { "None", "2", "The collective feels as a piece of their being is ripped out of them, Labyssal cries in pain and shock, the world trembles……", "14"  },
+    //    { "None", "3", "then silence", "15"  },
+    //    { "None", "0", "", ""  }, //lineNB 19
+    //    { "One", "1", "Dialogue 6 of Box 1", "?  },
+    //    { "Two", "2", "Dialogue 6 of Box 2", "……?  },
+    //    { "Three", "3", "Dialogue 6 of Box 3", "…………?  },
+    //    { "Three", "0", "", "" }, //lineNB 23
+    //    { "Four", "2", "Chloe opens her eyes", "16"  },
+    //};
     #endregion
 
 }

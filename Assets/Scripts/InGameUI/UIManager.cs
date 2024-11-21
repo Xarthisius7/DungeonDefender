@@ -38,6 +38,9 @@ public class UIManager : MonoBehaviour
 
     public void OpenItemMenuFunc(Powerup p1, Powerup p2, Powerup p3)
     {
+
+        GameController.Instance.CloseAllMenu();
+        EffectsManager.Instance.PlaySFX(13);
         // Store the Powerup data in an array for easy iteration
         Powerup[] powerups = { p1, p2, p3 };
 
@@ -97,8 +100,15 @@ public class UIManager : MonoBehaviour
 
     public void ChooseOption(int i)
     {
+        if(offeredOptions.Count == 0)
+        {
+            CloseItemMenu();
+            return;
+        }
         PowerupManager.instance.GivePowerup(offeredOptions[i]);
         offeredOptions.Clear();
+        EffectsManager.Instance.PlaySFX(12);
+        GameController.Instance.ResumeGame();
         CloseItemMenu();
     }
 
@@ -151,9 +161,10 @@ public class UIManager : MonoBehaviour
         }
 
         text.text = "";
-        messageQueue.Dequeue();
-        messageQueue.Dequeue();
-        messageQueue.Dequeue();
+        while (messageQueue.Count > 0)
+        {
+            messageQueue.Dequeue();
+        }
         UpdateSubtitles();
     }
 
@@ -176,6 +187,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenAttrubuteMenu()
     {
+        GameController.Instance.CloseAllMenu();
         // Update attribute values in the UI
         UpdateAttributesDisplay();
         

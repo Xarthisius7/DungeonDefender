@@ -78,6 +78,17 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void CloseAllMenu()
+    {
+        // Close all menu - stats menu, pause menu, powerup choosing menu, etc. 
+        // Call this before opening any menu.
+        //TODO: Add Pause Screen menu, etc
+
+        UIManager.Instance.ChooseOption(1);//powerup choosing menu
+        UIManager.Instance.CloseAttrubuteMenu();//Stats menu
+    }
+
+
     // Initialize game logic, link managers, set up the map
     private void InitGame()
     {
@@ -126,8 +137,24 @@ public class GameController : MonoBehaviour
         // Initialize UI and other systems
         //uiManager.ShowMainMenu();
         //effectsManager.PlayBackgroundMusic();
+
+
+        Invoke("GameInitDelayTerms", 0.1f);
+
+
     }
 
+
+    private void GameInitDelayTerms()
+    {
+        //things that happens after game start. 
+
+        ItemManager.Instance.AddItemsById(16, 1);
+        ItemManager.Instance.AddItemsById(19, 3);
+        ItemManager.Instance.AddItemsById(20, 3);
+
+
+    }
 
 
     void Update()
