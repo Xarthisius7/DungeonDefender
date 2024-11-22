@@ -211,7 +211,7 @@ MonoBehaviour:
   - {x: 0.23626105, y: -0.2337895, z: 0}
   m_ShapePathHash: -746702046
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1516210
+  m_InstanceId: 202634
   m_LocalBounds:
     m_Center: {x: -0.00011026859, y: -0.075640395, z: 0}
     m_Extent: {x: 0.23728716, y: 0.16213045, z: 0}
@@ -262,9 +262,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.6
   m_Color: {r: 0.41869882, g: 0.9150943, b: 0.4661111, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000cd51f34c5d73f15463352a95bd7d93921563301fe3d40974614d0d87995e558fb74167a9d1c59b4cfbf1c75b
@@ -285,8 +285,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.1
-  m_PointLightOuterRadius: 1.7
+  m_PointLightInnerRadius: 0.4
+  m_PointLightOuterRadius: 1.5
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
