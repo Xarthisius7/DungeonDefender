@@ -245,16 +245,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
-
-
-
     public void BroadCast(string message)
     {
         // broadCast a message on screen
@@ -275,6 +265,7 @@ public class UIManager : MonoBehaviour
             Debug.LogWarning("No pause screen Found");
         }
     }
+
     public void ClosePauseScreen()
     {
         PauseMenu pauseMenu = FindAnyObjectByType<PauseMenu>();
