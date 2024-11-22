@@ -57,6 +57,8 @@ public class GameController : MonoBehaviour
     private int centerY = 0;
     private Transform mapCenter;
 
+    bool hasPaused = false;
+
 
     public static GameController Instance { get; private set; }
 
@@ -162,8 +164,10 @@ public class GameController : MonoBehaviour
 
         float pauseKeyDown = InputManager.IsPausingGame;
 
+        
+
         // Pause & Resume Game Using Escape Key
-        if (pauseKeyDown > 0 && IsGameRunning)
+        if (pauseKeyDown > 0 && IsGameRunning && !hasPaused)
         {
             if (Time.timeScale == 1)
             {
@@ -174,6 +178,11 @@ public class GameController : MonoBehaviour
                 ResumeGame();
             }
         }
+
+        if (pauseKeyDown > 0)
+            hasPaused = true;
+        else
+            hasPaused = false;
 
         if (!IsPaused)
         {
@@ -337,12 +346,21 @@ public class GameController : MonoBehaviour
 
     public void ResumeGame()
     {
-        //Resume the game.
-        Time.timeScale = 1;
-        IsPaused = false;
-        Debug.Log("Game Resumed.");
+        SettingsPanel settings = FindAnyObjectByType<SettingsPanel>();
 
-        UIManager.Instance.ClosePauseScreen();
+        if (settings != null && settings.open)
+        {
+            settings.CloseSettingsPanel();
+        }
+
+        else
+        {
+            //Resume the game.
+            Time.timeScale = 1;
+            IsPaused = false;
+            Debug.Log("Game Resumed.");
+            UIManager.Instance.ClosePauseScreen();
+        }
     }
 
 
