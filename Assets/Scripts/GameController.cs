@@ -267,9 +267,32 @@ public class GameController : MonoBehaviour
             //If that room havn't been visited: trigger roon enter event. 
             //1. Spawn enemies. TODO
 
+            List<Transform> spawnPoints = new List<Transform>(); // stores all the spawns points
+            Transform[] allChildren = grid[playerRoomX, playerRoomY].roomObject.GetComponentsInChildren<Transform>();
+            foreach (Transform child in allChildren)
+            {
+                string childName = child.gameObject.name;
+
+                if (childName.Contains("EnemySpawnPoint") ||
+                    childName.Contains("ShowEnemySpawnPoint") ||
+                    childName.Contains("ShowEnemySpawnPointLlight"))
+                {
+                    spawnPoints.Add(child); // find by name.
+                }
+            }
+            Debug.Log($"Found {spawnPoints.Count} spawn points.");
+
             GameObject enemy1 = EnemyManager.Instance.GetRandomEnemy();
-            EnemyManager.Instance.SummonEenemy(enemy1, 
-                grid[playerRoomX, playerRoomY].roomObject.transform, 1);
+            foreach (Transform spawnPoint in spawnPoints)
+            {
+                spawnPoint.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, 0);
+                EnemyManager.Instance.SummonEenemy(enemy1, spawnPoint, 1);
+            }
+
+
+
+            //EnemyManager.Instance.SummonEenemy(enemy1, 
+            //    grid[playerRoomX, playerRoomY].roomObject.transform, 1);
 
 
 

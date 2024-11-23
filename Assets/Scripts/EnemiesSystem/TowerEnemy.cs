@@ -103,20 +103,20 @@ public class TowerEnemy : SampleEnemy
 
     // Override of MoveTowardsTarget from SampleEnemy
     protected override void MoveTowardsTarget(){
-        //gameObject.GetComponent<NavMeshAgent>().isStopped = false;
-        //distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        //distanceToCrystal = Vector2.Distance(transform.position, target.position);
+        gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        distanceToCrystal = Vector2.Distance(transform.position, target.position);
 
-        //if (distanceToPlayer < distanceToCrystal){
-        //    currentTargetTransform = player;
-        //    agent.SetDestination(player.position);
-        //}
-        //else{
-        //    currentTargetTransform = target;
-        //    agent.SetDestination(target.position);
-        //}
-        //flipSprite();
-        //animator.SetBool("Walk", true);
+        if (distanceToPlayer < distanceToCrystal){
+            currentTargetTransform = player;
+            agent.SetDestination(player.position);
+        }
+        else{
+            currentTargetTransform = target;
+            agent.SetDestination(target.position);
+        }
+        flipSprite();
+        animator.SetBool("Walk", true);
     }
 
 

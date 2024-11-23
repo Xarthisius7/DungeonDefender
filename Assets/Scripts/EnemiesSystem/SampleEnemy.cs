@@ -69,8 +69,8 @@ public class SampleEnemy : MonoBehaviour
         if (distanceToPlayer <= lockOnDistance)
             hasLockedOn = true;
         
-        //if (hasLockedOn)
-        //    agent.SetDestination(target.position);
+        if (hasLockedOn)
+            agent.SetDestination(target.position);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
