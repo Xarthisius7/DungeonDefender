@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Hood of Lurking Shadows
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21301586, guid: 4e799e9a72d583c4ebba9f2e35c2a5f4, type: 3}
+  id: 44
+  itemName: Hood of Lurking Shadows
+  itemDescription: A hood steeped in darkness, allowing its wearer to vanish into
+    the shadows with ease.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Speed
+    boostValue: 20%
+  - attributeName: MaxStamina
+    boostValue: 100

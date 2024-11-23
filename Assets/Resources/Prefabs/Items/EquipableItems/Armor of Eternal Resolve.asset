@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Armor of Eternal Resolve
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21301262, guid: 4e799e9a72d583c4ebba9f2e35c2a5f4, type: 3}
+  id: 39
+  itemName: Armor of Eternal Resolve
+  itemDescription: This legendary armor bolsters the wearer's determination, turning
+    even the most fragile into an unyielding force.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Defense
+    boostValue: 20
+  - attributeName: MaxHealth
+    boostValue: 300
+  - attributeName: Attack
+    boostValue: 5

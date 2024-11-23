@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Hood of Phantom Agility
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21301670, guid: 4e799e9a72d583c4ebba9f2e35c2a5f4, type: 3}
   id: 34
   itemName: Hood of Phantom Agility
-  itemDescription: This hood allows its wearer to catch up with the wind.
+  itemDescription: Woven with ethereal threads, this hood enhances your swiftness
+    and stamina, perfect for evading foes.
   consumable: 0
   maxStack: 1
   attributeBoosts:
   - attributeName: Speed
-    boostValue: 25%
+    boostValue: 10%
+  - attributeName: MaxStamina
+    boostValue: 50

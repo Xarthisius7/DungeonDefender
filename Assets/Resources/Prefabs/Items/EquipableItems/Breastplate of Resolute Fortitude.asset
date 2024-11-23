@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Breastplate of Resolute Fortitude
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21300000, guid: 5657b3090b1de2348800b90ee8774111, type: 3}
+  id: 36
+  itemName: Breastplate of Resolute Fortitude
+  itemDescription: A stalwart defense against even the most savage attacks, inspiring
+    unwavering determination.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Defense
+    boostValue: 15
+  - attributeName: MaxHealth
+    boostValue: 150
+  - attributeName: StaminaRegenSpeed
+    boostValue: 150

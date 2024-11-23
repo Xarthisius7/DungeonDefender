@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Armor of Undying Resolve
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21301322, guid: 4e799e9a72d583c4ebba9f2e35c2a5f4, type: 3}
+  id: 49
+  itemName: Armor of Undying Resolve
+  itemDescription: Worn by heroes of legend, this armor is imbued with the spirit
+    of unyielding courage, standing tall against all odds.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Defense
+    boostValue: 30
+  - attributeName: MaxHealth
+    boostValue: 400
+  - attributeName: Attack
+    boostValue: 10

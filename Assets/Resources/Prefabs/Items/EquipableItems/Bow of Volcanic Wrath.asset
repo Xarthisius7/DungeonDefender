@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Bow of Volcanic Wrath
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21300000, guid: 15673a21ea6ea104490142a51096f448, type: 3}
+  id: 45
+  itemName: Bow of Volcanic Wrath
+  itemDescription: "Forged in the heart of a volcano, this bow\u2019s arrows ignite
+    with every shot, unleashing fiery destruction."
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Attack
+    boostValue: 25
+  - attributeName: AttackSpeed
+    boostValue: 5%
+  - attributeName: MaxStamina
+    boostValue: 50

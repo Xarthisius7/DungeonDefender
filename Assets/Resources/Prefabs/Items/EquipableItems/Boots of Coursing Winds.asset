@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Boots of Coursing Winds
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21300000, guid: 721e10c5b1fe0c64a8b605f3f4a6ec4c, type: 3}
+  id: 38
+  itemName: Boots of Coursing Winds
+  itemDescription: These enchanted boots carry you forward as swiftly as the wind,
+    leaving enemies in your wake.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Speed
+    boostValue: 15%
+  - attributeName: StaminaRegenSpeed
+    boostValue: 5%

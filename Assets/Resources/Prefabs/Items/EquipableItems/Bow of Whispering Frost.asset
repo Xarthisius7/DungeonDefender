@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Bow of Whispering Frost
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21300000, guid: eab53a4c2a8867841bd5873bf2adfb1c, type: 3}
+  id: 41
+  itemName: Bow of Whispering Frost
+  itemDescription: This icy bow slows the air around it, enabling fast yet deadly
+    precision.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Attack
+    boostValue: 15
+  - attributeName: AttackSpeed
+    boostValue: 15%
+  - attributeName: Speed
+    boostValue: 5%

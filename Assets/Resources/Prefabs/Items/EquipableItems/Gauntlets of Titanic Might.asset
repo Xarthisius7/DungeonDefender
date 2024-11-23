@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Gauntlets of Titanic Might
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21300000, guid: eefc141e13c57ca47afecfb07e22014e, type: 3}
+  id: 43
+  itemName: Gauntlets of Titanic Might
+  itemDescription: Massive gauntlets infused with ancient power, empowering your
+    blows with unstoppable force.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Attack
+    boostValue: 30
+  - attributeName: StaminaRegenSpeed
+    boostValue: 10%

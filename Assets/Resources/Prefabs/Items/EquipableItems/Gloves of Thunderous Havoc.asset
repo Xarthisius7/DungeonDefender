@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Gloves of Thunderous Havoc
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21300000, guid: eaa01c89039fb084899b0f7ff00dd1ab, type: 3}
+  id: 47
+  itemName: Gloves of Thunderous Havoc
+  itemDescription: Enchanted with storm energy, these gloves amplify your attacks,
+    delivering a deafening roar with each strike.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: Attack
+    boostValue: 20
+  - attributeName: AttackSpeed
+    boostValue: 20%

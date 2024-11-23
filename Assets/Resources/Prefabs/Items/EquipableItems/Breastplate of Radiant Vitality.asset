@@ -12,10 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
   m_Name: Breastplate of Radiant Vitality
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  id: -1
-  itemName: 
-  itemDescription: 
+  sprite: {fileID: 21300000, guid: 59818863257967048be7a669a9c3045e, type: 3}
+  id: 46
+  itemName: Breastplate of Radiant Vitality
+  itemDescription: A gleaming breastplate that glows with life, fortifying its wearer
+    against harm.
   consumable: 0
   maxStack: 1
-  attributeBoosts: []
+  attributeBoosts:
+  - attributeName: MaxHealth
+    boostValue: 300
+  - attributeName: Defense
+    boostValue: 10
+  - attributeName: StaminaRegenSpeed
+    boostValue: 10%
