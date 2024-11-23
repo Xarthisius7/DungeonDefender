@@ -79,7 +79,7 @@ public class MapManager : MonoBehaviour
 
         // Build our Navmesh
         NavMesh.BuildNavMesh();
-
+       Debug.Log("navmesh¥Û–°------£∫" + NavMesh.size);
         return grid;
     }
 

@@ -45,8 +45,10 @@ public class SampleEnemy : MonoBehaviour
         {
             MoveTowardsTarget();
         }
-        if (!isAlive)
-            agent.SetDestination(transform.position);
+        //
+        //
+        //if (!isAlive)
+            //agent.SetDestination(transform.position);
     }
 
     public virtual void SetDifficulty(float difficulty){
@@ -56,8 +58,6 @@ public class SampleEnemy : MonoBehaviour
         health *= difficulty;
         if (difficulty != 1f)
             moveSpeed  += 0.2f;
-        Debug.Log(agent);
-        Debug.Log(moveSpeed);
         agent.speed = moveSpeed;
 
         enemyAttackDamage *= difficulty;
@@ -69,8 +69,8 @@ public class SampleEnemy : MonoBehaviour
         if (distanceToPlayer <= lockOnDistance)
             hasLockedOn = true;
         
-        if (hasLockedOn)
-            agent.SetDestination(target.position);
+        //if (hasLockedOn)
+        //    agent.SetDestination(target.position);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
@@ -98,12 +98,11 @@ public class SampleEnemy : MonoBehaviour
             Death();
         }
         else{
-            Debug.Log("Take DAMAGE!");
+            Debug.Log("TODO : ENemyTake DAMAGE!");
             animator.SetBool("TakeDamage", true);
             //animator.SetTrigger("TrTakeDamage");
             //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
             //animator.SetBool("TakeDamage", false);
-            Debug.Log("TAKES DAMAGE");
         }
         // if (isAlive) { Death(); }
     }

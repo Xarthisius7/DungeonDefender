@@ -2752,7 +2752,6 @@ GameObject:
   - component: {fileID: 1234881347}
   - component: {fileID: 1234881346}
   - component: {fileID: 1234881355}
-  - component: {fileID: 1234881353}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2792,21 +2791,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1234881353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234881345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc1de32beca4a4d4da62b50d2e12a799, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemies: []
-  spawn: {fileID: 0}
-  crystals: []
 --- !u!114 &1234881355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3293,8 +3277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSize: 40
   spitChance: 0.2
-  directionLength: 5
-  AreaIncreasement: 10
+  directionLength: 3
+  AreaIncreasement: 4
   useSeed: 0
   seed: 361121798
   miniGen: {fileID: 1438046201}

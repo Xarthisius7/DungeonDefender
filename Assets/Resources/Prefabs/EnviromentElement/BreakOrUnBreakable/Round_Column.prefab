@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_OverrideArea: 1
   m_Area: 1
-  m_IgnoreFromBuild: 0
+  m_IgnoreFromBuild: 1
   m_AffectedAgents: ffffffff
 --- !u!1 &1278868834423139166
 GameObject:
@@ -200,13 +200,17 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000cd51f34c5d73f15463352a95bd7d93921563301fe3d40974614d0d87995e558fb74167a9d1c59b4cfbf1c75b
   m_ShapePath:
-  - {x: -0.102182806, y: -0.2366935, z: 0}
-  - {x: -0.102022104, y: 0.17848596, z: 0}
-  - {x: 0.10523215, y: 0.17679441, z: 0}
-  - {x: 0.10247485, y: -0.23548049, z: 0}
-  m_ShapePathHash: -718622312
+  - {x: -0.054067433, y: -0.23516604, z: 0}
+  - {x: -0.09983083, y: -0.18958001, z: 0}
+  - {x: -0.10064683, y: 0.12897608, z: 0}
+  - {x: -0.056825913, y: 0.17432044, z: 0}
+  - {x: 0.058917202, y: 0.17512731, z: 0}
+  - {x: 0.103361785, y: 0.12878814, z: 0}
+  - {x: 0.09950426, y: -0.1872888, z: 0}
+  - {x: 0.059705645, y: -0.2316618, z: 0}
+  m_ShapePathHash: 1318164713
   m_Mesh: {fileID: 0}
-  m_InstanceId: -585564
+  m_InstanceId: 216232
   m_LocalBounds:
-    m_Center: {x: 0.0015246719, y: -0.02910377, z: 0}
-    m_Extent: {x: 0.10370748, y: 0.20758973, z: 0}
+    m_Center: {x: 0.0013574734, y: -0.030019373, z: 0}
+    m_Extent: {x: 0.102004305, y: 0.20514667, z: 0}

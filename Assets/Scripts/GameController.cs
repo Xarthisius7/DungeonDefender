@@ -267,6 +267,12 @@ public class GameController : MonoBehaviour
             //If that room havn't been visited: trigger roon enter event. 
             //1. Spawn enemies. TODO
 
+            GameObject enemy1 = EnemyManager.Instance.GetRandomEnemy();
+            EnemyManager.Instance.SummonEenemy(enemy1, 
+                grid[playerRoomX, playerRoomY].roomObject.transform, 1);
+
+
+
             Debug.Log("First visited room: X = " + playerRoomX + ", Y = " + playerRoomY);
             Debug.Log("Spawning enemies in it!");
 

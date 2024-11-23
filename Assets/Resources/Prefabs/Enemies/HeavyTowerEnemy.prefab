@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 100711938502089715}
   - component: {fileID: 7490643021533447716}
   - component: {fileID: 2077231068299720849}
+  - component: {fileID: 7872639747879932663}
   m_Layer: 0
   m_Name: EnemySprite
   m_TagString: Enemy
@@ -157,6 +158,7 @@ MonoBehaviour:
   enemyAttackRange: 2
   enemyAttackCooldown: 5
   player: {fileID: 0}
+  TowerEnemySpeed: 1
 --- !u!195 &7490643021533447716
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -224,6 +226,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48027515, y: 0.5567056}
   m_EdgeRadius: 0
+--- !u!114 &7872639747879932663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395607852630094517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 1
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5268845211517257307
 GameObject:
   m_ObjectHideFlags: 0
