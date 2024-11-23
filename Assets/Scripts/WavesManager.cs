@@ -46,7 +46,7 @@ public class WavesManager : MonoBehaviour
         InitSpawPoints();
         if (waves.Count > 0)
         {
-            StartCoroutine(StartNextWave());
+          ////////////²ÝÄãÂè StartCoroutine(StartNextWave());
         }
         spriteRenderer = GetComponent<SpriteRenderer>();
         defaultSprite = spriteRenderer.sprite;
@@ -166,7 +166,9 @@ public class WavesManager : MonoBehaviour
         SampleEnemy enemyComponent = enemy.GetComponentInChildren<SampleEnemy>();
         if (enemyComponent != null)
         {
-            enemyComponent.Initialize(enemiesTarget);
+
+            Debug.Log("TODO: WaveManager- enemyComponent.Initialize(enemiesTarget");
+            //enemyComponent.Initialize(enemiesTarget);
         }
         else
         {

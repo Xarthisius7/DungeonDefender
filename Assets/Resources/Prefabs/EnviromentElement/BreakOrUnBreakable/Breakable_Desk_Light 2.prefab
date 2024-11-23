@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2fe44b80f2c040a812258310e2249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamagedSprite1: {fileID: 21300000, guid: 7c7c5a7f7a0999c45b6188c478be703f, type: 2}
-  DamagedSprite2: {fileID: 21300000, guid: 4925d8a4136759d458c785f79766268b, type: 2}
-  maxHits: 6
+  DamagedSprite1: {fileID: 0}
+  DamagedSprite2: {fileID: 0}
+  maxHits: 2
   hitSound: 0
   breakSound: 0
 --- !u!114 &-4109104667153246775
@@ -334,13 +334,13 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000cd51f34c5d73f15463352a95bd7d93921563301fe3d40974614d0d87995e558fb74167a9d1c59b4cfbf1c75b
   m_ShapePath:
-  - {x: -0.102182806, y: -0.2366935, z: 0}
-  - {x: -0.102022104, y: 0.17848596, z: 0}
-  - {x: 0.10523215, y: 0.17679441, z: 0}
-  - {x: 0.10247485, y: -0.23548049, z: 0}
-  m_ShapePathHash: -718622312
+  - {x: -0.1151617, y: -0.12125101, z: 0}
+  - {x: -0.11420473, y: 0.119447075, z: 0}
+  - {x: 0.1163368, y: 0.11761467, z: 0}
+  - {x: 0.11870921, y: -0.119134136, z: 0}
+  m_ShapePathHash: -1451727597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 206552
+  m_InstanceId: 298232
   m_LocalBounds:
-    m_Center: {x: 0.0015246719, y: -0.02910377, z: 0}
-    m_Extent: {x: 0.10370748, y: 0.20758973, z: 0}
+    m_Center: {x: 0.0017737523, y: -0.0009019673, z: 0}
+    m_Extent: {x: 0.116935454, y: 0.12034904, z: 0}

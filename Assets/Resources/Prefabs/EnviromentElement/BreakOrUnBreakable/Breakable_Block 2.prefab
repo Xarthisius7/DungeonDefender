@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2fe44b80f2c040a812258310e2249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamagedSprite1: {fileID: 21300000, guid: 59a2e9683addb64499654d2cacdb46eb, type: 2}
-  DamagedSprite2: {fileID: 21300000, guid: fe14407a45e201b48acf0cfec3db8a89, type: 2}
-  maxHits: 6
+  DamagedSprite1: {fileID: 0}
+  DamagedSprite2: {fileID: 0}
+  maxHits: 1
   hitSound: 0
   breakSound: 0

@@ -65,7 +65,10 @@ public class UIManager : MonoBehaviour
         OpenItemMenu.SetActive(false);
     }
 
-
+    public void popsUpDamage(float damage, Transform tf)
+    {
+        //TODO: show the damage player dult at given transform.
+    }
 
 
     void Start()

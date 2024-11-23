@@ -14,6 +14,8 @@ public class BulletController : MonoBehaviour
     private NavMeshSurface NavMesh;
     private bool destroyedSomething = false;
 
+    public float damage = 10;
+
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -44,10 +46,12 @@ public class BulletController : MonoBehaviour
             //collision.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
             //collision.gameObject.GetComponent<AIChase>().destorySelf();
 
-            collision.gameObject.GetComponent<SampleEnemy>().takeBulletDamage();
+            //StartCoroutine(collision.gameObject.GetComponent<SampleEnemy>().takeBulletDamage(damage));
+            //StopCoroutine(collision.gameObject.GetComponent<SampleEnemy>().takeBulletDamage(damage));
+            collision.gameObject.GetComponent<SampleEnemy>().takeBulletDamage(damage);
 
             rb.velocity = Vector2.zero;
-            // Desctory the bullet gameobject
+            // Desctory the bullet gameobject //TODO: to be changed
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Player"))

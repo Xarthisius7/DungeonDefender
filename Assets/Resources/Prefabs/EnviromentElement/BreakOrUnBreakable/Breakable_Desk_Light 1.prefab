@@ -163,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e2fe44b80f2c040a812258310e2249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamagedSprite1: {fileID: 21300000, guid: 7c7c5a7f7a0999c45b6188c478be703f, type: 2}
-  DamagedSprite2: {fileID: 21300000, guid: 4925d8a4136759d458c785f79766268b, type: 2}
-  maxHits: 6
+  DamagedSprite1: {fileID: 0}
+  DamagedSprite2: {fileID: 0}
+  maxHits: 2
   hitSound: 0
   breakSound: 0
 --- !u!114 &-4109104667153246775
