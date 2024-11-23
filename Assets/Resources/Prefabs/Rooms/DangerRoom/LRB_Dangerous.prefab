@@ -62,7 +62,7 @@ MonoBehaviour:
   - {x: -4.2448864, y: 5.1848035, z: 0}
   m_ShapePathHash: 2123235709
   m_Mesh: {fileID: 0}
-  m_InstanceId: 173432
+  m_InstanceId: 230388
   m_LocalBounds:
     m_Center: {x: -0.010491848, y: 3.0969994, z: 0}
     m_Extent: {x: 4.247316, y: 2.087804, z: 0}
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   - {x: -4.237637, y: -4.2421546, z: 0}
   m_ShapePathHash: -1369389917
   m_Mesh: {fileID: 0}
-  m_InstanceId: 173418
+  m_InstanceId: 230374
   m_LocalBounds:
     m_Center: {x: -2.6314437, y: -2.628948, z: 0}
     m_Extent: {x: 1.6130908, y: 1.614155, z: 0}
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   - {x: 4.2496223, y: -4.251964, z: 0}
   m_ShapePathHash: 29463145
   m_Mesh: {fileID: 0}
-  m_InstanceId: 173408
+  m_InstanceId: 230364
   m_LocalBounds:
     m_Center: {x: 2.6352158, y: -2.6328545, z: 0}
     m_Extent: {x: 1.6144063, y: 1.6197513, z: 0}
@@ -2427,7 +2427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2086996464569756177, guid: 7f72f27ff3f115848b18946ec7fa4889, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2086996464569756177, guid: 7f72f27ff3f115848b18946ec7fa4889, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2583,7 +2583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7104565337111979026, guid: 09f512f84530740439c730e8b21b885e, type: 3}
       propertyPath: m_InstanceId
-      value: -407660
+      value: -2017246
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

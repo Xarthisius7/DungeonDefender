@@ -1182,6 +1182,26 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -4, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -3, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: -2, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -1207,6 +1227,26 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 41
       m_TileSpriteIndex: 41
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -4, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -3, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1327,6 +1367,16 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 26
       m_TileSpriteIndex: 26
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 21
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1686,8 +1736,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 5
+    m_Data: {fileID: 11400000, guid: fd3577211695db445963581f006e3ebd, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: dbe7ced14f62b044694600a1e03e18af, type: 2}
   - m_RefCount: 1
@@ -1775,8 +1825,8 @@ Tilemap:
     m_Data: {fileID: 441785943, guid: 76553bc4e2d59c54bb33b14c34387fdb, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 5
+    m_Data: {fileID: -27969873, guid: 76553bc4e2d59c54bb33b14c34387fdb, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -644517851, guid: 76553bc4e2d59c54bb33b14c34387fdb, type: 3}
   - m_RefCount: 1
@@ -1822,7 +1872,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 1813858740, guid: 76553bc4e2d59c54bb33b14c34387fdb, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 55
+  - m_RefCount: 60
     m_Data:
       e00: 1
       e01: 0
@@ -1841,7 +1891,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 55
+  - m_RefCount: 60
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -2092,7 +2142,7 @@ MonoBehaviour:
   - {x: -4.2469716, y: 1.0152675, z: 0}
   m_ShapePathHash: -1144342714
   m_Mesh: {fileID: 0}
-  m_InstanceId: 146776
+  m_InstanceId: 216032
   m_LocalBounds:
     m_Center: {x: -0.00515604, y: 0.46490097, z: 0}
     m_Extent: {x: 4.2498097, y: 4.7168274, z: 0}
@@ -2156,7 +2206,7 @@ MonoBehaviour:
   - {x: -1.0172449, y: -4.2408853, z: 0}
   m_ShapePathHash: 1100479475
   m_Mesh: {fileID: 0}
-  m_InstanceId: 146774
+  m_InstanceId: 216030
   m_LocalBounds:
     m_Center: {x: -2.6322365, y: -2.6340785, z: 0}
     m_Extent: {x: 1.6149917, y: 1.6113834, z: 0}
@@ -2462,7 +2512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7104565337111979026, guid: fe33fb45063ff6c47ab54dd7cfac6fcd, type: 3}
       propertyPath: m_InstanceId
-      value: -99204
+      value: -583838
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
