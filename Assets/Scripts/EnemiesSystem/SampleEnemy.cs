@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class SampleEnemy : MonoBehaviour
 {
-    public Transform target;  // Target location
+    public Transform target;  // Target/Player location
     protected NavMeshAgent agent;
 
-    public float moveSpeed = 3f;
+    public float health = 10;
+    public float moveSpeed = 1.5f;
     public float enemyAttackDamage = 3f;
 
     public float lockOnDistance = 10f;
@@ -26,6 +27,7 @@ public class SampleEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
 
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = moveSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
     }
@@ -42,6 +44,21 @@ public class SampleEnemy : MonoBehaviour
         }
         if (!isAlive)
             agent.SetDestination(transform.position);
+    }
+
+    public virtual void SetDifficulty(float difficulty){
+        if (agent == null)
+            Start();
+            
+        health *= difficulty;
+        if (difficulty != 1f)
+            moveSpeed  += 0.2f;
+        Debug.Log(agent);
+        Debug.Log(moveSpeed);
+        agent.speed = moveSpeed;
+
+        enemyAttackDamage *= difficulty;
+        lockOnDistance += difficulty;
     }
 
     protected virtual void MoveTowardsTarget(){
@@ -70,12 +87,26 @@ public class SampleEnemy : MonoBehaviour
         }
     }
 
-    public void takeBulletDamage()
+    //public IEnumerator takeBulletDamage(float damage)
+    public void takeBulletDamage(float damage)
     {
-        if (isAlive) { Death(); }
+        health -= damage;
+        if (health <= 0){
+            Death();
+        }
+        else{
+            Debug.Log("Take DAMAGE!");
+            animator.SetBool("TakeDamage", true);
+            //animator.SetTrigger("TrTakeDamage");
+            //yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+            //animator.SetBool("TakeDamage", false);
+            Debug.Log("TAKES DAMAGE");
+        }
+        // if (isAlive) { Death(); }
     }
     public void Death()
     {
+
         animator.SetBool(animatorDead, true);
         isAlive = false;
 
@@ -83,11 +114,36 @@ public class SampleEnemy : MonoBehaviour
         EffectsManager.Instance.PlaySFX(2);
 
         //remove the gameobject after finishing playing the animation.
-        Invoke("DestorySelf", 1f);
+        Invoke("DestorySelf", 1.5f);
+    }
+
+    public void SetTarget(Transform target){
+        this.target = target;
+    }
+    public virtual void SetTower(Transform closestCrystal){
+        this.target = closestCrystal;
+    }
+    public virtual void SetPlayer(Transform player){
+        Debug.Log("Used for Dynamic binding and does not contain anything");
     }
 
     public void DestorySelf()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject);
+    }
+
+    protected void ResetTakeDamage(){
+        animator.SetBool("TakeDamage", false);
+    }
+
+    protected void ResetDeath(){
+        animator.SetBool("Dead", false);
+    }
+    protected void ResetAttack(){
+        animator.SetBool("Attack", false);
+    }
+    protected void ResetWalk(){
+        animator.SetBool("Walk", false);
     }
 }
