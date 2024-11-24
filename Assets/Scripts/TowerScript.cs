@@ -10,7 +10,7 @@ public class TowerScript : MonoBehaviour
     [SerializeField] public float towerHealth; // Tower's health
     [SerializeField] public GameController controller;
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject InteractKey;
+    //[SerializeField] private GameObject InteractKey;
 
     bool isActive = false;
     float distanceToPlayer;
@@ -31,12 +31,12 @@ public class TowerScript : MonoBehaviour
     void DisplayKey(){
         distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= 2){
-            InteractKey.SetActive(true);
+            //InteractKey.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
                 isActive = true;  
         }
-        else
-            InteractKey.SetActive(false);
+        //else
+            //InteractKey.SetActive(false);
     }
 
     // Function to take damage from the enemy

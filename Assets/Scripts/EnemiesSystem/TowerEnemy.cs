@@ -8,7 +8,7 @@ public class TowerEnemy : SampleEnemy
     [SerializeField] public float enemyAttackRange = 1.5f;
     [SerializeField] public float enemyAttackCooldown = 3f;
     [SerializeField] public Transform player;
-    [SerializeField] public float TowerEnemySpeed = 1f;
+    // [SerializeField] public float TowerEnemySpeed = 1f;
 
 
 
@@ -24,7 +24,8 @@ public class TowerEnemy : SampleEnemy
     // Start is called before the first frame update
     void Start()
     {
-        this.moveSpeed = TowerEnemySpeed;
+        // this.moveSpeed = TowerEnemySpeed;
+        currentTargetTransform = target;
 
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -35,15 +36,42 @@ public class TowerEnemy : SampleEnemy
         agent.updateUpAxis = false;
 
         sprite = GetComponent<SpriteRenderer>();
+
+        //StartCoroutine(CustomUpdate());
     }
 
     // Update is called once per frame
+    // IEnumerator CustomUpdate()
+    // {
+    //     yield return new WaitForSeconds(1);
+    //     if (!isAttacking && Vector2.Distance(transform.position, target.position) > enemyAttackRange){
+    //         MoveTowardsTarget();
+    //     }
+    //     if (Vector2.Distance(transform.position, target.position) <= enemyAttackRange)
+    //     {
+    //         if (attackCooldownTimer <= 0f)
+    //         {
+    //             //Debug.Log("ATTACK");
+    //             Attack();
+    //             //StartCoroutine(Attack());
+    //             //StopCoroutine(Attack());
+    //         }
+    //     }
+    //     attackCooldownTimer -= Time.deltaTime;
+
+    //     yield return new WaitForSeconds(2);
+
+    //     //if (!isAlive)
+    //     //    agent.SetDestination(transform.position);
+    // } 
+
+    // // Update is called once per frame
     void Update()
     {
-        if (!isAttacking && Vector2.Distance(transform.position, target.position) > enemyAttackRange){
+        if (!isAttacking){
             MoveTowardsTarget();
         }
-        if (Vector2.Distance(transform.position, target.position) <= enemyAttackRange)
+        if (Vector2.Distance(transform.position, currentTargetTransform.position) <= enemyAttackRange)
         {
             if (attackCooldownTimer <= 0f)
             {
@@ -55,8 +83,8 @@ public class TowerEnemy : SampleEnemy
         }
         attackCooldownTimer -= Time.deltaTime;
 
-        //if (!isAlive)
-        //    agent.SetDestination(transform.position);
+        if (!isAlive)
+           agent.SetDestination(transform.position);
     } 
 
     public override void SetDifficulty(float difficulty){
@@ -76,6 +104,7 @@ public class TowerEnemy : SampleEnemy
         if (animator != null)
         {
             //animator.SetTrigger("Attack");
+            Debug.Log("PLAY ATTACK ANIMATION");
             animator.SetBool("Walk", false);
             animator.SetBool("Attack", true);
             //animator.SetTrigger("TrAttack");
@@ -93,12 +122,22 @@ public class TowerEnemy : SampleEnemy
     // Apply damage to the tower after the attack animation
     void ApplyDamage()
     {
-        TowerScript tower = target.GetComponent<TowerScript>();
-        if (tower != null)
-        {
-            tower.TakeDamage(enemyAttackDamage);
+        // Apply damage to player or tower
+        // TowerScript tower = target.GetComponent<TowerScript>();
+        // if (tower != null)
+        // {
+        //     tower.TakeDamage(enemyAttackDamage);
+        // }
+        // isAttacking = false;  // Reset attack state
+
+        // Apply damage to tower/crystal
+        if (currentTargetTransform.gameObject.name == target.gameObject.name){
+            target.gameObject.GetComponent<TowerScript>().TakeDamage(enemyAttackDamage);
         }
-        isAttacking = false;  // Reset attack state
+        // apply damage to Player
+        else if (currentTargetTransform.gameObject.name == player.gameObject.name){
+            PlayerController.Instance.PlayerTakesDamage(enemyAttackDamage);
+        }
     }
 
     // Override of MoveTowardsTarget from SampleEnemy
@@ -115,12 +154,25 @@ public class TowerEnemy : SampleEnemy
             currentTargetTransform = target;
             agent.SetDestination(target.position);
         }
-        flipSprite();
+        flipSprite(currentTargetTransform);
         animator.SetBool("Walk", true);
     }
 
 
-    void flipSprite(){
+    // protected void flipSprite(){
+    //     Vector2 direction = transform.position - currentTargetTransform.position;
+
+    //     if (Vector2.Dot(direction, Vector2.left) < Vector2.Dot(direction, Vector2.right))
+    //     {
+    //         sprite.flipX = true;
+    //     }
+    //     else
+    //     {
+    //         sprite.flipX = false;
+    //     }
+    // }
+
+    protected override void flipSprite(Transform currentTargetTransform){
         Vector2 direction = transform.position - currentTargetTransform.position;
 
         if (Vector2.Dot(direction, Vector2.left) < Vector2.Dot(direction, Vector2.right))
@@ -133,11 +185,25 @@ public class TowerEnemy : SampleEnemy
         }
     }
 
+
+
+    // Simple override (for some reason if the parent method is set to private this is still inherited)
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Deal damage to player");
+        }
+    }
+
     public override void SetTower(Transform closestCrystal){
         this.target = closestCrystal;
     }
     public override void SetPlayer(Transform player){
         this.player = player;
+    }
+
+    private void wait(){
     }
 
 }

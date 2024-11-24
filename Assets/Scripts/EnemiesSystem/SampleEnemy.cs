@@ -5,6 +5,18 @@ using UnityEngine;
 
 public class SampleEnemy : MonoBehaviour
 {
+    [SerializeField]
+    public int HurtSFXID;
+    public int DeathSFXID;
+    public int AttackSFXID;
+
+
+    [SerializeField]
+    public int HurtSFXVolume = 1;
+    public int DeathSFXVolume = 1;
+    public int AttackSFXVolume = 1;
+
+
     public Transform target;  // Target/Player location
     protected NavMeshAgent agent;
 
@@ -22,6 +34,7 @@ public class SampleEnemy : MonoBehaviour
     protected bool isAlive = true;
     protected const string animatorDead = "Dead";
 
+    private SpriteRenderer sprite;
 
 
     void Start()
@@ -33,7 +46,30 @@ public class SampleEnemy : MonoBehaviour
         agent.speed = moveSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+
+        sprite = GetComponent<SpriteRenderer>();
+
+        //StartCoroutine(CustomUpdate());
     }
+
+    // IEnumerator CustomUpdate()
+    // {
+    //     yield return new WaitForSeconds(1);
+    //     // check if the game is paused.
+    //     // if (Time.timeScale == 0)
+    //     //     return;
+
+    //     if (isAlive)
+    //     {
+    //         MoveTowardsTarget();
+    //     }
+    //     //
+    //     //
+    //     if (!isAlive)
+    //         agent.SetDestination(transform.position);
+        
+    //     yield return new WaitForSeconds(2);
+    // }
 
     void FixedUpdate()
     {
@@ -47,8 +83,8 @@ public class SampleEnemy : MonoBehaviour
         }
         //
         //
-        //if (!isAlive)
-            //agent.SetDestination(transform.position);
+        if (!isAlive)
+            agent.SetDestination(transform.position);
     }
 
     public virtual void SetDifficulty(float difficulty){
@@ -73,20 +109,13 @@ public class SampleEnemy : MonoBehaviour
             agent.SetDestination(target.position);
     }
 
-    protected void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle"))
-        {
-            Debug.Log("Obstacle Collision Detected");
-            rb.velocity = Vector2.zero;
-        }
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Enemy Attacked player.");
-            rb.velocity = Vector2.zero;
             PlayerController.Instance.PlayerTakesDamage(enemyAttackDamage);
             Death();
-
         }
     }
 
@@ -112,11 +141,23 @@ public class SampleEnemy : MonoBehaviour
         animator.SetBool(animatorDead, true);
         isAlive = false;
 
-        rb.velocity = Vector2.zero;
         EffectsManager.Instance.PlaySFX(2);
 
         //remove the gameobject after finishing playing the animation.
         Invoke("DestorySelf", 1.5f);
+    }
+
+    protected virtual void flipSprite(Transform currentTargetTransform){
+        Vector2 direction = transform.position - currentTargetTransform.position;
+
+        if (Vector2.Dot(direction, Vector2.left) < Vector2.Dot(direction, Vector2.right))
+        {
+            sprite.flipX = true;
+        }
+        else
+        {
+            sprite.flipX = false;
+        }
     }
 
     public void SetTarget(Transform target){
@@ -131,8 +172,7 @@ public class SampleEnemy : MonoBehaviour
 
     public void DestorySelf()
     {
-        //Destroy(gameObject);
-        Destroy(gameObject.transform.parent.gameObject);
+        Destroy(gameObject);
     }
 
     protected void ResetTakeDamage(){

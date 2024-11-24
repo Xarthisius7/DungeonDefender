@@ -91,6 +91,7 @@ public class PlayerController : MonoBehaviour
     {
         // player taking damage from enemy - can trigger powerup events in future.
         currentPlayerHealth -= damage;
+        Debug.Log("CURRENT HEALTH IS: " + currentPlayerHealth);
         checkDeath();
         UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
