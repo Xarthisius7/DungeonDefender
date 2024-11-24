@@ -36,6 +36,42 @@ public class UIManager : MonoBehaviour
     public GameObject[] itemSlots; // Array of UI elements for the 3 item slots
     private List<int> offeredOptions = new List<int>(); // List to store the IDs of offered Powerups
 
+
+    public TextMeshProUGUI waveText;
+
+    public Image[] crystalImages; // crystal Defense progress 
+    public Sprite activeCrystalSprite;
+
+    public void UpdateCrystalsDisplay(int TowerDefensed)
+    {
+        for (int i = 0; i < crystalImages.Length; i++)
+        {
+            if (i < TowerDefensed)
+            {
+                crystalImages[i].sprite = activeCrystalSprite; 
+                crystalImages[i].enabled = true;
+            }
+        }
+    }
+
+    public void ShowDefenseWaveRemain(int wave, int totalWave, float time)
+    {
+        //Show the wave status when player is defencing.
+        StartCoroutine(UpdateWaveText(wave, totalWave, time));
+    }
+
+    private System.Collections.IEnumerator UpdateWaveText(int wave, int totalWave, float time)
+    {
+        while (time > 0)
+        {
+            waveText.text = $"Wave {wave}/{totalWave} Enemies are incoming... {Mathf.CeilToInt(time)}";
+            yield return new WaitForSeconds(1f);
+            time--;
+        }
+        waveText.text = "";
+    }
+
+
     public void OpenItemMenuFunc(Powerup p1, Powerup p2, Powerup p3)
     {
 

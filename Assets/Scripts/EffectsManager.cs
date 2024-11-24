@@ -14,6 +14,7 @@ public class EffectsManager : MonoBehaviour
 
     public float globalSFXVolume = 1.0f;  // Global SFX volume, range from 0 to 1
     public float backgroundMusicVolume = 1.0f;  // Background music volume, range from 0 to 1
+    public float fadeDuration = 1.5f; // Smooth out BGM duration
 
     private void Awake()
     {
@@ -57,6 +58,39 @@ public class EffectsManager : MonoBehaviour
             backgroundMusicSource.Play();
         }
     }
+
+    public void PlayBackgroundMusicSmooth(int clipIndex)
+    {
+        if (clipIndex >= 0 && clipIndex < musicClips.Length)
+        {
+            StartCoroutine(FadeOutAndPlayNewClip(clipIndex));
+        }
+    }
+    private System.Collections.IEnumerator FadeOutAndPlayNewClip(int clipIndex)
+    {
+        float startVolume = backgroundMusicSource.volume;
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        {
+            backgroundMusicSource.volume = Mathf.Lerp(startVolume, 0, t / fadeDuration);
+            yield return null;
+        }
+
+        backgroundMusicSource.Stop();
+
+        // Switch to new bgm
+        backgroundMusicSource.clip = musicClips[clipIndex];
+        backgroundMusicSource.Play();
+
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        {
+            backgroundMusicSource.volume = Mathf.Lerp(0, startVolume, t / fadeDuration);
+            yield return null;
+        }
+
+        // turning back the volume.
+        backgroundMusicSource.volume = startVolume;
+    }
+
 
     public void PauseBackgroundMusic()
     {

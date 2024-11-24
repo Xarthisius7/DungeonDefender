@@ -67,4 +67,8 @@ public class InteractionTrigger : MonoBehaviour
     {
         interactionButton.SetActive(false);
     }
+    public void ReDispalyButton()
+    {
+        interactionButton.SetActive(true);
+    }
 }

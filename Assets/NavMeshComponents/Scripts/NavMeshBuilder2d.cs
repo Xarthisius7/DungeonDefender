@@ -263,7 +263,7 @@ namespace NavMeshPlus.Extensions
             mesh = builder.GetMesh(collider);
             if (mesh == null)
             {
-                if (!builder.hideEditorLogs) Debug.Log($"{collider.name} mesh is null");
+                //if (!builder.hideEditorLogs) Debug.Log($"{collider.name} mesh is null");
                 return;
             }
 

@@ -16,27 +16,10 @@ public class TowerScript : MonoBehaviour
     float distanceToPlayer;
 
     void Update(){
-        if(!isActive){
-            // Display the 'E' key when the user gets close to tower
-            // To indicate to the useer that they can activate it
-            DisplayKey();
-        }
-        
         if (isActive){
             // Tower was activated so start waves
             Debug.Log("Crystal was activated");
         }
-    }
-
-    void DisplayKey(){
-        distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (distanceToPlayer <= 2){
-            InteractKey.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
-                isActive = true;  
-        }
-        else
-            InteractKey.SetActive(false);
     }
 
     // Function to take damage from the enemy

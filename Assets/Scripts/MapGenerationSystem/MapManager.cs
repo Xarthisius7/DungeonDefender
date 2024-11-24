@@ -78,9 +78,15 @@ public class MapManager : MonoBehaviour
         InstantiateRooms();
 
         // Build our Navmesh
-        NavMesh.BuildNavMesh();
-       Debug.Log("navmesh¥Û–°------£∫" + NavMesh.size);
+        UpdateNavMesh();
+
         return grid;
+    }
+
+    public void UpdateNavMesh()
+    {
+        NavMesh.BuildNavMesh();
+
     }
 
     public GameObject[,] MakeMiniMap()
@@ -92,6 +98,8 @@ public class MapManager : MonoBehaviour
 
     void Start()
     {
+
+
         if (Instance == null)
         {
             Instance = this;
@@ -115,6 +123,7 @@ public class MapManager : MonoBehaviour
         }
         random = new System.Random(seed);
 
+        NavMesh.hideEditorLogs = true;
 
         // All 15 different small room types
         roomTypePools = new Dictionary<string, List<GameObject>>();
@@ -611,6 +620,8 @@ public class MapManager : MonoBehaviour
                         grid[x, y].roomObject.transform.SetParent(MapGenerationTransform);
                         grid[x, y].roomObject.name = $"{x}_{y}_{grid[x, y].roomFeature}_{roomType}";
 
+                        ProcessRoomObject(grid[x, y].roomObject);
+
                         totalRoomsGenerated++;
                     }
                 }
@@ -626,6 +637,49 @@ public class MapManager : MonoBehaviour
         Debug.Log("There's a total of: " + totalTrapRoomsGenerated + " Trap room  in the map.");
         Debug.Log("Map Generation is using seed:" + seed);
     }
+
+
+    public void ProcessRoomObject(GameObject roomObject)
+    {
+        if (roomObject == null)
+        {
+            Debug.LogError("RoomObject is null!");
+            return;
+        }
+
+        // Find the child object named FloorLayer
+        Transform floorLayer = roomObject.transform.Find("FloorLayer");
+        if (floorLayer != null)
+        {
+            NavMeshModifier floorModifier = floorLayer.GetComponent<NavMeshModifier>();
+            if (floorModifier == null)
+            {
+                // If it doesn't have the component, add it and set Ignore From Build to true
+                floorModifier = floorLayer.gameObject.AddComponent<NavMeshModifier>();
+                floorModifier.ignoreFromBuild = true;
+            }
+        }
+        // Find the child object named ObstaclesLayer
+        Transform obstaclesLayer = roomObject.transform.Find("ObstaclesLayer");
+        if (obstaclesLayer != null)
+        {
+            NavMeshModifier obstaclesModifier = obstaclesLayer.GetComponent<NavMeshModifier>();
+            if (obstaclesModifier == null)
+            {
+                // If it doesn't have the component, add it, set Override Area to true, 
+                // and set the Area type to Not Walkable
+                obstaclesModifier = obstaclesLayer.gameObject.AddComponent<NavMeshModifier>();
+                obstaclesModifier.overrideArea = true;
+                obstaclesModifier.area = 1;
+            }
+        }
+    }
+
+
+
+
+
+
 
     void ShuffleList<T>(List<T> list)
     {

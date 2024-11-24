@@ -25,6 +25,7 @@ public class INT_Breakable : MonoBehaviour, IInteractable
         if (hits <= 0)
         {
             EffectsManager.Instance.PlaySFX(breakSound);
+            MapManager.Instance.UpdateNavMesh();
             Destroy(gameObject);
             return true;
         }

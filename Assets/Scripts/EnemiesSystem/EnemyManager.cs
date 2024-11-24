@@ -33,16 +33,19 @@ public class EnemyManager : MonoBehaviour
     }
 
 
+    public GameObject SummonEenemy(GameObject inputEnemy, Transform tf, float difficultyLevel)
+    {
+        return SummonEenemy(inputEnemy, tf, difficultyLevel, null);
+    }
 
 
 
-    public void SummonEenemy(GameObject inputEnemy, Transform tf, float difficultyLevel)
+    public GameObject SummonEenemy(GameObject inputEnemy, Transform tf, float difficultyLevel,Transform TowerTF)
     {
 
 
         GameObject enemyObj = Instantiate(inputEnemy,tf.position, Quaternion.identity);
 
-        enemyObj = enemyObj.transform.GetChild(0).gameObject;
         enemyObj.GetComponent<SampleEnemy>().SetDifficulty(difficultyLevel);
         enemyObj.GetComponent<SampleEnemy>().SetTarget(Player);
 
@@ -52,11 +55,13 @@ public class EnemyManager : MonoBehaviour
 
         if (foundComponent is TowerEnemy)
         {
-            //closestCrystal = getClosestTower(prefab.transform);
-            //foundComponent.SetTower(closestCrystal);
+            if (TowerTF != null)
+            {
+                foundComponent.SetTower(TowerTF);
+            }
             foundComponent.SetPlayer(Player);
         }
-
+        return enemyObj;
 
     }
 

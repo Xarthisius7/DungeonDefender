@@ -77,8 +77,6 @@ public class SampleEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Obstacle Collision Detected");
-            rb.velocity = Vector2.zero;
         }
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -131,8 +129,8 @@ public class SampleEnemy : MonoBehaviour
 
     public void DestorySelf()
     {
-        //Destroy(gameObject);
-        Destroy(gameObject.transform.parent.gameObject);
+        Destroy(gameObject);
+        //Destroy(gameObject.transform.parent.gameObject);
     }
 
     protected void ResetTakeDamage(){

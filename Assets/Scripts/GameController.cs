@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
     private GameObject[,] mapPiecesToToggle;
     private Transform MapPiecesTransform;
 
-    private int TowerDefensed = 0;
+    public int TowerDefensed = 0;
     //the count 3 crystal player needs to defend.
 
 
@@ -102,6 +102,7 @@ public class GameController : MonoBehaviour
         //TODO:  1. play a short CG / background story nerrator
 
 
+        EffectsManager.Instance.PlayBackgroundMusic(1);
 
         // 2. init the game and puase it
         grid = MapManager.Instance.CreateMap();
@@ -193,22 +194,21 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void StartDefenceAWave(int number)
+    public void StartDefenceAWave()
     {
         //MUST BE CALLED when player start defencing. 
 
         //TODO:
         //change BGM.
+        EffectsManager.Instance.PlayBackgroundMusic(4);
+
     }
 
     public int PlayerFinishedDefense()
     {
         TowerDefensed++;
-        Debug.Log("Player just finished a defense. a total of :" + TowerDefensed + "has been defensed.");
-        //TODO: implement further event. e.g Give a random powerup.
-
-        //TODO: update UI to display the game progress: how many crystal has been defensed.
-
+        UIManager.Instance.UpdateCrystalsDisplay(TowerDefensed);
+        EffectsManager.Instance.PlayBackgroundMusicSmooth(1);
         return TowerDefensed;
     }
 
@@ -280,24 +280,32 @@ public class GameController : MonoBehaviour
                     spawnPoints.Add(child); // find by name.
                 }
             }
-            Debug.Log($"Found {spawnPoints.Count} spawn points.");
 
             GameObject enemy1 = EnemyManager.Instance.GetRandomEnemy();
+            GameObject enemy2 = null;
+
+            // 50% chance spawning 2 types of enemy in a room
+            if (Random.value > 0.5f)
+            {
+                do
+                {
+                    enemy2 = EnemyManager.Instance.GetRandomEnemy();
+                } while (enemy2 == enemy1); 
+            }
+
+            bool useFirstEnemy = true; 
+
             foreach (Transform spawnPoint in spawnPoints)
             {
                 spawnPoint.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, 0);
-                EnemyManager.Instance.SummonEenemy(enemy1, spawnPoint, 1);
+
+                // switching between type1 and type2 if there's 2 type
+                GameObject enemyToSummon = (enemy2 != null && !useFirstEnemy) ? enemy2 : enemy1;
+                EnemyManager.Instance.SummonEenemy(enemyToSummon, spawnPoint, 1);
+
+                useFirstEnemy = !useFirstEnemy;
             }
 
-
-
-            //EnemyManager.Instance.SummonEenemy(enemy1, 
-            //    grid[playerRoomX, playerRoomY].roomObject.transform, 1);
-
-
-
-            Debug.Log("First visited room: X = " + playerRoomX + ", Y = " + playerRoomY);
-            Debug.Log("Spawning enemies in it!");
 
         }
         else if ((hasVisited[playerRoomX, playerRoomY].hasVisited == 2) && !hasVisited[playerRoomX, playerRoomY].hasLightUped)
@@ -333,7 +341,6 @@ public class GameController : MonoBehaviour
                 }
 
 
-                Debug.Log("Light up room: X = " + playerRoomX + ", Y = " + playerRoomY);
             }
 
         }

@@ -106,6 +106,7 @@ public class ItemManager : MonoBehaviour
             if (inventory[i].item.id == targetId)
             {
                 inventory[i].item = null;
+                UpdateInventoryDisplay();
                 return true;
             }
         }

@@ -10,6 +10,7 @@ public class INT_Chest : MonoBehaviour, IInteractable
     //2: large chest, unlocked
     //3: large chest, locked
     //4: spell chest(ability), locked.
+    //5: Story chest: trigger story. Give player 2 keys.
 
 
 
@@ -110,7 +111,21 @@ public class INT_Chest : MonoBehaviour, IInteractable
                     UIManager.Instance.ShowMessage("You dont have the Key!");
                 }
                 break;
+            case 5:
+                EffectsManager.Instance.PlaySFX(22);
+                InteractionTrigger interactionTrigger2 = GetComponent<InteractionTrigger>();
+                if (interactionTrigger2 != null)
+                {
+                    // Call the DisableButton() method
+                    interactionTrigger2.DisableButton();
+                }
+                ItemManager.Instance.AddItemsById(
+                    16, 2
+                    );
+                //TODO: Trigger the story Event
 
+
+                break;
             default:
                 Debug.LogWarning("Unknown chest type. Please check the 'type' variable.");
                 break;
