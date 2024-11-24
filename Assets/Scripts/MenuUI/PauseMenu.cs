@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private Button resumeButton;
     [SerializeField] private Button returnToMenuButton;
+    [SerializeField] private Button statsButton;
 
     void Awake()
     {
