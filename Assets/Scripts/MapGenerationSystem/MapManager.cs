@@ -78,7 +78,7 @@ public class MapManager : MonoBehaviour
         InstantiateRooms();
 
         // Build our Navmesh
-        //NavMesh.BuildNavMesh();
+        NavMesh.BuildNavMesh();
         Debug.Log("navmesh��С------��" + NavMesh.size);
         return grid;
     }
