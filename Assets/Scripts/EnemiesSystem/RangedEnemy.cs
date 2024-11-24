@@ -11,19 +11,19 @@ public class RangedEnemy : SampleEnemy
 
     public GameObject projectilePrefab;
     public GameObject bulletSpawnPoint;
-    public float projectileSpeed = 5f;
-    public float shootingCooldown = 2f;
+    public float projectileSpeed = 2.5f;
+    public float shootingCooldown = 3f;
 
     private float shootingTimer = 0f;
-    SpriteRenderer sprite;
+    // SpriteRenderer sprite;
     private float distanceToPlayer;
-    private NavMeshAgent agent;
+    // private NavMeshAgent agent;
 
     void Start(){
 
         animator = GetComponent<Animator>();
 
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         agent.speed = this.moveSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -34,6 +34,17 @@ public class RangedEnemy : SampleEnemy
 
     void FixedUpdate(){
         MoveAccordingToPlayer();
+    }
+
+    public override void SetDifficulty(float difficulty){
+        base.SetDifficulty(difficulty);
+        retreatSpeed *= difficulty;
+        projectileSpeed += 0.5f * difficulty;
+
+        if (difficulty > 1){
+            shootingCooldown -= 0.3f;
+        }
+
     }
 
     void MoveAccordingToPlayer(){

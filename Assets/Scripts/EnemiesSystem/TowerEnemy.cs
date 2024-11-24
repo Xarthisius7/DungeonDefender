@@ -5,21 +5,17 @@ using UnityEngine;
 
 public class TowerEnemy : SampleEnemy
 { 
-    [SerializeField] public float enemyAttackRange = 1.5f;
-    [SerializeField] public float enemyAttackCooldown = 3f;
     [SerializeField] public Transform player;
     // [SerializeField] public float TowerEnemySpeed = 1f;
 
-
-
-    private float attackCooldownTimer = 0f;
+    // private float attackCooldownTimer = 0f;
     private bool isAttacking = false;
-
     float distanceToPlayer;
     float distanceToCrystal;  
 
     Transform currentTargetTransform;  
-    private SpriteRenderer sprite;
+    // protected SpriteRenderer sprite;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +26,7 @@ public class TowerEnemy : SampleEnemy
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         agent.speed = moveSpeed;
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -66,7 +62,7 @@ public class TowerEnemy : SampleEnemy
     // } 
 
     // // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!isAttacking){
             MoveTowardsTarget();
@@ -89,7 +85,7 @@ public class TowerEnemy : SampleEnemy
 
     public override void SetDifficulty(float difficulty){
         base.SetDifficulty(difficulty);
-        enemyAttackCooldown /= difficulty;
+        attackCooldown /= difficulty;
     }
 
     // Attack the tower/crystal
@@ -116,7 +112,7 @@ public class TowerEnemy : SampleEnemy
         // Delay before applying damage to simulate attack hit timing
         Invoke("ApplyDamage", 1f);  // Adjust the delay to match your attack animation
         // Reset cooldown
-        attackCooldownTimer = enemyAttackCooldown;
+        attackCooldownTimer = attackCooldown;
     }
 
     // Apply damage to the tower after the attack animation
@@ -128,7 +124,7 @@ public class TowerEnemy : SampleEnemy
         // {
         //     tower.TakeDamage(enemyAttackDamage);
         // }
-        // isAttacking = false;  // Reset attack state
+        isAttacking = false;  // Reset attack state
 
         // Apply damage to tower/crystal
         if (currentTargetTransform.gameObject.name == target.gameObject.name){

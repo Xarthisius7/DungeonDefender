@@ -194,10 +194,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c102a2a82edfdc44afc6c7b183b5301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HurtSFXID: 0
+  DeathSFXID: 0
+  AttackSFXID: 0
+  HurtSFXVolume: 1
+  DeathSFXVolume: 1
+  AttackSFXVolume: 1
   target: {fileID: 0}
   health: 10
   moveSpeed: 1.3
-  enemyAttackDamage: 10
+  enemyAttackDamage: 35
+  enemyAttackRange: 1
+  attackCooldown: 2
   lockOnDistance: 10
 --- !u!195 &7199420959085470656
 NavMeshAgent:

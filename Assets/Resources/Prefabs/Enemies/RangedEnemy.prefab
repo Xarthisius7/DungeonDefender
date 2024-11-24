@@ -201,10 +201,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013864577, y: -0.32006073}
+  m_Offset: {x: -0.013864577, y: -0.028756142}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.2}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -212,7 +212,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.42806637, y: 0.3877697}
+  m_Size: {x: 0.42806637, y: 0.36553288}
   m_EdgeRadius: 0
 --- !u!114 &2996370033319688774
 MonoBehaviour:
@@ -226,10 +226,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a61de5baf774319b22a985a701c692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HurtSFXID: 0
+  DeathSFXID: 0
+  AttackSFXID: 0
+  HurtSFXVolume: 1
+  DeathSFXVolume: 1
+  AttackSFXVolume: 1
   target: {fileID: 0}
   health: 20
   moveSpeed: 1.2
   enemyAttackDamage: 25
+  enemyAttackRange: 1
+  attackCooldown: 2
   lockOnDistance: 10
   minDistance: 2
   maxDistance: 3
