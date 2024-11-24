@@ -375,11 +375,11 @@ public class GameController : MonoBehaviour
 
     public void ResumeGame()
     {
-        SettingsPanel settings = FindAnyObjectByType<SettingsPanel>();
+        PauseMenu pause = FindAnyObjectByType<PauseMenu>();
 
-        if (settings != null && settings.open)
+        if (pause != null && pause.isHidden)
         {
-            settings.CloseSettingsPanel();
+            pause.HidePauseScreen(false);
         }
 
         else
