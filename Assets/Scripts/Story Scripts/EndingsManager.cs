@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndingsManager : MonoBehaviour
 {
@@ -145,8 +146,9 @@ public class EndingsManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Space) && lineNB >= EndingA.Length / 4)
             {
-                Debug.Log("End of Intro");
+                Debug.Log("End of Ending A");
                 //We call function here to load scene
+                SceneManager.LoadScene(5);
             }
         }
         else if (isEndingB)
@@ -224,8 +226,9 @@ public class EndingsManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Space) && lineNB >= EndingB.Length / 4)
             {
-                Debug.Log("End of Intro");
+                Debug.Log("End of Ending B");
                 //We call function here to load scene
+                SceneManager.LoadScene(5);
             }
         }
         else if (isEndingC)
@@ -303,8 +306,9 @@ public class EndingsManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Space) && lineNB >= EndingC.Length / 4)
             {
-                Debug.Log("End of Intro");
+                Debug.Log("End of Ending C");
                 //We call function here to load scene
+                SceneManager.LoadScene(5);
             }
         }
         FadeOutSoundtrack(endSoundtrack);

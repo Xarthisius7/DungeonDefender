@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class INT_FInalEndingTrigger : MonoBehaviour, IInteractable
 {
@@ -12,20 +13,17 @@ public class INT_FInalEndingTrigger : MonoBehaviour, IInteractable
 
         if (nbLores < 8)
         {
-            //EndingA
-            return;
+            SceneManager.LoadScene(6);
         }
 
         else if (nbLores >= 8 && nbLores < 19)
         {
-            //EndingB
-            return;
+            SceneManager.LoadScene(7);
         }
 
         else
         {
-            //EndingC
-            return;
+            SceneManager.LoadScene(8);
         }
 
     }
