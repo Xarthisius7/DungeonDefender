@@ -1,14 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 using TMPro;
-using Unity.Burst.Intrinsics;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.PackageManager;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class VNSceneManager : MonoBehaviour
