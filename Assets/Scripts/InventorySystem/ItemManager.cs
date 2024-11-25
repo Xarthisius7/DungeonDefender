@@ -142,7 +142,7 @@ public class ItemManager : MonoBehaviour
 
 
     // Loading All the items from Prefabs/Items 
-    private void LoadAllItems()
+    /*private void LoadAllItems()
     {
         string path = "Assets/Resources/Prefabs/Items";
         string[] assetGUIDs = AssetDatabase.FindAssets("t:ItemScriptableObject", new[] { path });
@@ -159,6 +159,23 @@ public class ItemManager : MonoBehaviour
         }
         Debug.Log($"[Item system]Loaded {allItems.Count} items from {path}.");
 
+    }*/
+
+    private void LoadAllItems()
+    {
+        // Load all ItemScriptableObject assets from the Resources folder
+        allItems.Clear();
+        ItemScriptableObject[] loadedItems = Resources.LoadAll<ItemScriptableObject>("Prefabs/Items");
+        allItems.AddRange(loadedItems);
+
+        if (allItems.Count > 0)
+        {
+            Debug.Log($"[Item system] Loaded {allItems.Count} items from Resources/Prefabs/Items.");
+        }
+        else
+        {
+            Debug.LogError("[Item system] No items found in Resources/Prefabs/Items.");
+        }
     }
 
 
