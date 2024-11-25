@@ -165,8 +165,8 @@ MonoBehaviour:
   DamagedSprite1: {fileID: 0}
   DamagedSprite2: {fileID: 0}
   maxHits: 3
-  hitSound: 0
-  breakSound: 0
+  hitSound: 43
+  breakSound: 44
 --- !u!1 &1884489623886746747
 GameObject:
   m_ObjectHideFlags: 0

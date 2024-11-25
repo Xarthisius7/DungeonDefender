@@ -166,8 +166,8 @@ MonoBehaviour:
   DamagedSprite1: {fileID: 0}
   DamagedSprite2: {fileID: 0}
   maxHits: 2
-  hitSound: 0
-  breakSound: 0
+  hitSound: 43
+  breakSound: 41
 --- !u!114 &-4109104667153246775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
   - {x: 0.11870921, y: -0.119134136, z: 0}
   m_ShapePathHash: -1451727597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 298232
+  m_InstanceId: 250878
   m_LocalBounds:
     m_Center: {x: 0.0017737523, y: -0.0009019673, z: 0}
     m_Extent: {x: 0.116935454, y: 0.12034904, z: 0}

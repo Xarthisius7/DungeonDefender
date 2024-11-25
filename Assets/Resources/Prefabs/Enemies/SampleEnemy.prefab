@@ -194,10 +194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c102a2a82edfdc44afc6c7b183b5301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HurtSFXID: 0
-  DeathSFXID: 0
-  AttackSFXID: 0
-  HurtSFXVolume: 1
+  HurtSFXID: 39
+  DeathSFXID: 2
+  AttackSFXID: 39
+  HurtSFXVolume: 0.6
   DeathSFXVolume: 1
   AttackSFXVolume: 1
   target: {fileID: 0}
@@ -207,6 +207,7 @@ MonoBehaviour:
   levelIncrementHP: 5
   levelIncrementMoveSpeed: 0.16
   levelIncrementAttackDamage: 5
+  IsNormalSpawned: 1
   enemyAttackRange: 1
   attackCooldown: 2
   lockOnDistance: 10

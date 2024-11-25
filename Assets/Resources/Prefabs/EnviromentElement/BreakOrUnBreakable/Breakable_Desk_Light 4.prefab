@@ -164,8 +164,8 @@ MonoBehaviour:
   DamagedSprite1: {fileID: 0}
   DamagedSprite2: {fileID: 0}
   maxHits: 2
-  hitSound: 0
-  breakSound: 0
+  hitSound: 43
+  breakSound: 41
 --- !u!1 &6143294643694434425
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   - {x: 0.0993429, y: -0.10080659, z: 0}
   m_ShapePathHash: 1364118716
   m_Mesh: {fileID: 0}
-  m_InstanceId: 290650
+  m_InstanceId: 257094
   m_LocalBounds:
     m_Center: {x: 0.001524657, y: -0.0006334856, z: 0}
     m_Extent: {x: 0.10057554, y: 0.1001731, z: 0}

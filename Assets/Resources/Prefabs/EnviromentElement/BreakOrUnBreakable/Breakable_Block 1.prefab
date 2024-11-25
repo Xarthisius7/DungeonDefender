@@ -163,5 +163,5 @@ MonoBehaviour:
   DamagedSprite1: {fileID: 21300000, guid: fe14407a45e201b48acf0cfec3db8a89, type: 2}
   DamagedSprite2: {fileID: 0}
   maxHits: 3
-  hitSound: 0
-  breakSound: 0
+  hitSound: 43
+  breakSound: 46

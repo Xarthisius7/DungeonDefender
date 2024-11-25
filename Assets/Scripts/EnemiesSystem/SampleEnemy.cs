@@ -14,9 +14,9 @@ public class SampleEnemy : MonoBehaviour
 
 
     [SerializeField]
-    public int HurtSFXVolume = 1;
-    public int DeathSFXVolume = 1;
-    public int AttackSFXVolume = 1;
+    public float HurtSFXVolume = 1;
+    public float DeathSFXVolume = 1;
+    public float AttackSFXVolume = 1;
     private GameObject HealthBar;
     private float selfDifficulty = 1;
 
