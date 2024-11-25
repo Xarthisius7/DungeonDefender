@@ -17,5 +17,5 @@ MonoBehaviour:
     boostValue: 25%
   isMagic: 0
   id: 33
-  sprite: {fileID: 21300000, guid: 221b122e3f581024c97e536666ada3ae, type: 3}
+  sprite: {fileID: 21300000, guid: d7aa200d03ebe594f89acdafdc2f79d6, type: 3}
   description: Increases your attack by 25%.

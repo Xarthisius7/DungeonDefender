@@ -17,5 +17,5 @@ MonoBehaviour:
     boostValue: 25%
   isMagic: 0
   id: 47
-  sprite: {fileID: 21300000, guid: f3a1db0d5196c7b40b81f2f194940ab3, type: 3}
+  sprite: {fileID: 21300000, guid: 7ef72fd58dd685a4cb506eb1cc921808, type: 3}
   description: Increases max health by 25%.
