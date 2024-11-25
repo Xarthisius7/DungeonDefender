@@ -123,6 +123,7 @@ public class INT_Chest : MonoBehaviour, IInteractable
                     16, 2
                     );
                 //TODO: Trigger the story Event
+                VNSceneManager.Instance.StartStoryScene();
 
 
                 break;

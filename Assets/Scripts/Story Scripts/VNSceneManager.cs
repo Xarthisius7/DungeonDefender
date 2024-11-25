@@ -36,17 +36,18 @@ public class VNSceneManager : MonoBehaviour
     public bool VNLoreInProgess;
     public bool VNSceneInProgress;
     private bool startScene;
+    private bool isRayne;
 
     //Those integers will be used to determine the array of dialogues to use (act as counters)
     private int lineNB;
-    private int SceneNb = 1;
-    private int LoreNb = 1;
-    private int TutorialNB = 1;
+    public int SceneNb = 3;
+    public int LoreNb = 1;
+    public int TutorialNB = 1;
 
     //This will be used to determine how many pieces of knowledge have been adquired
     public int loreLearned = 0;
 
-    public TextMeshProUGUI loreLearnedCounterUI;
+    public TMP_Text loreLearnedCounterUI;
 
     //We will use this variable to store the current dialogue array in use. It can be normal Scenes, tutorials or lore scenes
     private string[,] currentScene;
@@ -71,6 +72,7 @@ public class VNSceneManager : MonoBehaviour
 
         //This value is necessary to automatically start the FIRST dialogue without player input
         startScene = true;
+        isRayne = false;
 
         //We deactivate the visual part of the visual novel
         VNRoot.SetActive(false);
@@ -87,6 +89,8 @@ public class VNSceneManager : MonoBehaviour
         architect = new TextArchitect(ds._dialogueContainer.dialogueText);
         architect.buildMethod = TextArchitect.BuildMethod.typewriter;
         architect.speed = 0.5f;
+
+        loreLearnedCounterUI.text = loreLearned.ToString() + " / " + nbLores;
     }
 
     // Update is called once per frame
@@ -102,12 +106,13 @@ public class VNSceneManager : MonoBehaviour
                 VNRoot.SetActive(true);
                 GameUI.SetActive(false);
                 lineNB = 0;
-                Debug.Log("Scene Lenght is" + currentScene.Length / 4);
-                Debug.Log("Beginning: Scene number is" + SceneNb);
+                Debug.Log("Scene Lenght is " + currentScene.Length / 4);
+                Debug.Log("Beginning: Scene number is " + SceneNb);
 
-                Chloe.GetComponent<Image>().sprite = LineCharacter(currentScene[lineNB, 0]);
-                ds._dialogueContainer.nameText.text = currentScene[lineNB, 1];
-                architect.Build(currentScene[lineNB, 2]);
+                ChangeSpriteChloe(lineNB);
+                ChangeSpriteCharacterTwo(lineNB);
+                ds._dialogueContainer.nameText.text = NameRayneforStory(currentScene[lineNB, 2]);
+                architect.Build(currentScene[lineNB, 3]);
                 lineNB++;
             }
 
@@ -125,9 +130,10 @@ public class VNSceneManager : MonoBehaviour
                 }
                 else
                 {
-                    Chloe.GetComponent<Image>().sprite = LineCharacter(currentScene[lineNB, 0]);
-                    ds._dialogueContainer.nameText.text = currentScene[lineNB, 1];
-                    architect.Build(currentScene[lineNB, 2]);
+                    ChangeSpriteChloe(lineNB);
+                    ChangeSpriteCharacterTwo(lineNB);
+                    ds._dialogueContainer.nameText.text = NameRayneforStory(currentScene[lineNB, 2]);
+                    architect.Build(currentScene[lineNB, 3]);
                     lineNB++;
                 }
             }
@@ -138,7 +144,7 @@ public class VNSceneManager : MonoBehaviour
                 startScene = true;
                 VNRoot.SetActive(false);
                 GameUI.SetActive(true);
-                Debug.Log("End: Scene number is" + SceneNb);
+                Debug.Log("End: Scene number is " + SceneNb);
                 UnPauseGameForScene();
             }
         }
@@ -152,8 +158,8 @@ public class VNSceneManager : MonoBehaviour
                 VNRoot.SetActive(true);
                 GameUI.SetActive(false);
                 lineNB = 0;
-                Debug.Log("Tutorial Lenght is" + currentScene.Length / 4);
-                Debug.Log("Beginning: Tutorial number is" + TutorialNB);
+                Debug.Log("Tutorial Lenght is " + currentScene.Length / 4);
+                Debug.Log("Beginning: Tutorial number is " + TutorialNB);
 
                 ChangeSpriteChloe(lineNB);
                 ChangeSpriteCharacterTwo(lineNB);
@@ -190,7 +196,7 @@ public class VNSceneManager : MonoBehaviour
                 startScene = true;
                 VNRoot.SetActive(false);
                 GameUI.SetActive(true);
-                Debug.Log("End: Tutorial number is" + TutorialNB);
+                Debug.Log("End: Tutorial number is " + TutorialNB);
                 UnPauseGameForScene();
             }
         }
@@ -204,8 +210,8 @@ public class VNSceneManager : MonoBehaviour
                 VNRoot.SetActive(true);
                 GameUI.SetActive(false);
                 lineNB = 0;
-                Debug.Log("Tutorial Lenght is" + currentScene.Length / 4);
-                Debug.Log("Beginning: Tutorial number is" + LoreNb);
+                Debug.Log("Lore Lenght is " + currentScene.Length / 4);
+                Debug.Log("Beginning: Lore number is " + LoreNb);
 
                 ChangeSpriteChloe(lineNB);
                 ChangeSpriteCharacterTwo(lineNB);
@@ -239,11 +245,12 @@ public class VNSceneManager : MonoBehaviour
             {
                 LoreNb++;
                 loreLearned++;
+                loreLearnedCounterUI.text = loreLearned.ToString() + " / " + nbLores;
                 VNLoreInProgess = false;
                 startScene = true;
                 VNRoot.SetActive(false);
                 GameUI.SetActive(true);
-                Debug.Log("End: Lore number is" + LoreNb);
+                Debug.Log("End: Lore number is " + LoreNb);
                 UnPauseGameForScene();
             }
         }
@@ -260,11 +267,12 @@ public class VNSceneManager : MonoBehaviour
             case 3: 
                 return Scene3;
             case 4:
-                return Scene4;
-            case 5:
-                return Scene5;
-            case 6:
-                return Scene6;
+                if (loreLearned < 8)
+                    return Scene4A;
+                else if (loreLearned >= 8 && loreLearned < 19)
+                    return Scene4B;
+                else
+                    return Scene4C;
         }
 
         return null;
@@ -436,6 +444,14 @@ public class VNSceneManager : MonoBehaviour
         }
     }
 
+    private string NameRayneforStory(string nm)
+    {
+        if (nm == "Azure" && isRayne)
+            return "Rayne";
+        else
+            return nm;
+    }
+
     private void EndCurrentScene()
     {
         if (VNSceneInProgress)
@@ -445,7 +461,7 @@ public class VNSceneManager : MonoBehaviour
             startScene = true;
             VNRoot.SetActive(false);
             GameUI.SetActive(true);
-            Debug.Log("End: Scene number is" + SceneNb);
+            Debug.Log("End: Scene number is " + SceneNb);
             UnPauseGameForScene();
         }
         else if (VNTutorialInProgress)
@@ -455,22 +471,27 @@ public class VNSceneManager : MonoBehaviour
             startScene = true;
             VNRoot.SetActive(false);
             GameUI.SetActive(true);
-            Debug.Log("End: Tutorial number is" + TutorialNB);
+            Debug.Log("End: Tutorial number is " + TutorialNB);
             UnPauseGameForScene();
         }
         else if (VNLoreInProgess)
         {
             LoreNb++;
             loreLearned++;
+            loreLearnedCounterUI.text = loreLearned.ToString() + " / " + nbLores;
             VNLoreInProgess = false;
             startScene = true;
             VNRoot.SetActive(false);
             GameUI.SetActive(true);
-            Debug.Log("End: Lore number is" + LoreNb);
+            Debug.Log("End: Lore number is " + LoreNb);
             UnPauseGameForScene();
         }
     }
 
+    public int getSceneNB()
+    { 
+        return SceneNb; 
+    }
     public void PauseGameForScene()
     {
         //Pause the game.
@@ -513,58 +534,128 @@ public class VNSceneManager : MonoBehaviour
     /// Element 2: Determines WHICH character sprite is on the object or IF character object is active for SECOND character
     /// Element 3: The name of the current speaker
     /// Element 4: Dialogue
-    string[,] Scene1 = new string[5, 4]
+    string[,] Scene1 = new string[8, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 1" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 1" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 1" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 1" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 1" }
+        //1
+        {"ChloeIndifferentTalking", "RayneSmirk", "Chloe", "Well... that was exiting for a first one..."},
+        //2
+        {"ChloeIndifferent", "RayneHappyTalking", "Azure", "And it was the easiest one. Don't forget there are still 2 more to go~"},
+        //3
+        {"ChloeAnnoyedTalking", "RayneHappy", "Chloe", "Right... You seem happy, yet I am the one doing the heavy lifting"},
+        //4
+        {"ChloeAnnoyed", "RayneHappyTalking", "Azure", "Hehe... Don't be so grumpy dear~ You might be the one doing most of the fighting, but I am the one purifying the crystals~"},
+        //5
+        {"ChloeIndifferentTalking", "RayneSmirk", "Chloe", "I get that. So? How do we know they are not going to be corrupted again after leaving them alone?"},
+        //6
+        {"ChloeCurious", "RayneHappyTalking", "Azure", "I applied a layer of solid mana around it. It will help to filtrate and keep out the corruption in the air. I will admit, it is not perfect, but it will give us more than the entire day to clean up the others"},
+        //7
+        {"ChloeContentTalking", "RayneHappy", "Chloe", "hmmmm~ That is smart. Well, who would have guessed, you competent after all!" },
+        //8
+        {"ChloeHappy", "RayneAngryTalking", "Azure", "Ooe..." }
     };
 
     string[,] Scene2 = new string[5, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 2" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 2" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 2" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 2" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 2" }
+        //1
+        {"ChloeAnnoyed", "RayneIndifferentTalking", "Azure", "It is getting harder and harder. I think the maze is now actively responding to our threat... Or is simply irritated we are such noisy brats"},
+        //2
+        {"ChloeAnnoyedTalking", "RayneIndifferent", "Chloe", "And guess who is the one that has to bear the consequences...."},
+        //3
+        {"ChloeAnnoyed", "RayneHappyTalking", "Azure", "Well, it cannot be helped, you are the demoness and I am the cute and fagile rock after all~!"},
+        //4
+        {"ChloeContentTalking", "RayneAngry", "Chloe", "Sure... if you replace the cute with the old"},
+        //5
+        {"ChloeContent", "RayneIndifferentTalking", "Chloe", "Brat..."}
     };
 
     string[,] Scene3 = new string[5, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 3" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 3" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 3" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 3" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 3" }
+        //1
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "That was the last one, right?"},
+        //2
+        {"ChloeSad", "RayneIndifferentTalking", "Azure", "Yep. Which means it is now time to get out of here... You ok Chloe?"},
+        //3
+        {"ChloeSadTalking", "RayneIndifferent", "Chloe", "Yeah, I am just... Thinking about the memories that I have of this place... How it seems familiar, yet foreigner now that I am leaving it behind. It was... home for a while"},
+        //4
+        {"ChloeSad", "RayneSadTalking", "Azure", "I see... Ok no, I actually don't. I was trapped inside the Core for so long that my ultimate goal has been always on getting out so... I actually don't know how you feel, but I understand wha you mean"},
+        //5
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Thanks I guess. But yeah, I agree. It is time to leave. Lets go find that Nexus!"}
     };
 
-    string[,] Scene4 = new string[5, 4]
+    string[,] Scene4A = new string[6, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 4" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 4" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 4" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 4" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 4" }
+        //1
+        {"ChloeIndifferent", "RayneSmirkTalking", "Azure", "There is the Nexus!!! Ah... The smell of freedom~ I can already taste it"},
+        //2
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Personally, I am more interested on seen the sun after so long. Although just to get to see the world ... And see how it is like, would be interesting indeed"},
+        //3
+        {"ChloeSadTalking", "RayneIndifferent", "Chloe", "But... I am still wondering... about us, you know? Who we were before ending here. What if we had family? I guess they most have died by now from old age, I am just wondering"},
+        //4
+        {"ChloeSad", "RayneSadTalking", "Azure", "I guess... you are right. In the end, we never discover who we were. But is that such a bad thing? So much time has pass... That regardless if we had lives before this, they are not here anymore. Which means a new start..."},
+        //5
+        {"ChloeContent", "RayneHappyTalking", "Azure", "An adventure, travelling around the world... you and me, together!"},
+        //6
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Yeah... Together!"}
     };
 
-    string[,] Scene5 = new string[5, 4]
+    string[,] Scene4B = new string[8, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 5" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 5" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 5" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 5" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 5" }
+        //1
+        {"ChloeAnnoyed", "RayneSmirkTalking", "Azure", "Fascinating... So this is the spatial disruptor at its full glory! Been as sensitive as I am to magic, I can see the pulses of mana. It is like the professor said! The receptors receive, calculate, and space is swapped!"},
+        //2
+        {"ChloeAnnoyedTalking", "RayneSmirk", "Chloe", "You know... I get it. You are a fan now, and it seems you found a hobby in science. There are a lot of cool stuff here, you can stay will I go up to claim my place under the sun"},
+        //3
+        {"ChloeAnnoyed", "RayneHappyTalking", "Azure", "Hehe, no way I will let you go away and leave me in the dust~ I also have plans in the surface. Like making myself a golem to use as a body! We got a lot of notes from Professor Jones, and there are some interesting ideas he mentions during other entries. Also, I am not sure that our dear homicidal maze will allow me to play with its toys~"},
+        //4
+        {"ChloeIndifferent", "RayneIndifferentTalking", "Azure", "But... Although we learned that there is a world up there, there are also dangers. And considering where we come from... people will not look kind to us... to you Chloe. The fact is that you are not human, and people will not like that, so..."},
+        //5
+        {"ChloeAngryTalking", "RayneIndifferent", "Chloe", "So...?"},
+        //6
+        {"ChloeCurious", "RayneHappyTalking", "Azure", "I will get more reliable and strong... To protect you"},
+        //7
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Hehehehe...! Ironic, since I was the one protecting you all along until now. But... yeah. That makes me happy, to have you at my side"},
+        //8
+        {"ChloeHappy", "RayneHappyTalking", "Azure", "Yes, to your side now and always"}
     };
 
-    string[,] Scene6 = new string[5, 4]
+    string[,] Scene4C = new string[18, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 6" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 6" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 6" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 6" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 6" }
+        //1
+        {"ChloeSad", "RayneSadTalking", "Rayne", "Chloe... darling... We have to go."},
+        //2
+        {"ChloeSadTalking", "RayneSad", "Chloe", "I know. It is just that... even now, I can feel their connection towards me. I can feel some of the more intelligent ones begging in their own way for their queen, for Labyssal to not leave."},
+        //3
+        {"ChloeSadTalking", "RayneSad", "Chloe", "And before you ask, having a connection is not the same as been on synch with the collective. I am still myself, I am still Chloe. But... I know that once I, their queen, am gone, this place will be back as it was before. A collective without ambition nor aim. Only following my last orders on defending this place to the death. Which is why I am sad, yet relieve that our home will continue to exist for the next centuries"},
+        //4
+        {"ChloeSad", "RayneIndifferentTalking", "Rayne", "But that is not the only thing, it is Chloe? You don't really fear leaving because of what you will leave behind.... but for what you might find out"},
+        //5
+        {"ChloeSadTalking", "RayneIndifferent", "Chloe", "You are right mom. Like I told you, part of me was satisfied that I got to destroy the empire, but another recognizes the pain that I brought others in doing so. That makes me wonder if they will look at me like the crusaders did back then? I destroyed what I hated, yet I ended becoming like it, thus bringing ruin to people."},
+        //6
+        {"ChloeSad", "RayneIndifferentTalking", "Rayne", "But those, The Black Wave and the crusades, were centuries ago. History might remember, but humanity as a whole is bad at doing it..."},
+        //7
+        {"ChloeContent", "RayneHappyTalking", "Rayne", "Else, the fools would not have started a Second Continental War."},
+        //8
+        {"ChloeContentTalking", "RayneIndifferent", "Chloe", "Yes, I guess you are right. But... Then what should I do? We don't have a home anymore. Mages might still be discriminated to this day... Why go out?"},
+        //9
+        {"ChloeCurious", "RayneIndifferentTalking", "Rayne", "Honestly... Despite been a cute and baddy maze, my daughter can certainly be clueless...? To answer your question, we will do what YOU wanted to do if you ever had escaped the mines... We will restore the Azulheard clan, and get back what we lost"},
+        //10
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "I guess... that we would both like that. But, mom, what if someone tries to stop us? What will people think about my appearance? What if we get attack?"},
+        //11
+        {"ChloeCurious", "RayneIndifferentTalking", "Rayne", "<i> Sigh </i>... Simple. On my part, I will use my now love for science and professor Jones notes to make myself a body, but you Chloe... You should NOT have any problem at all"},
+        //12
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "What? Why?"},
+        //13
+        {"ChloeCurious", "RayneHappyTalking", "Rayne", "Who strong you think you are right now silly~? Or are you telling me that you lost all your power simply because you got desynchronized from the maze?"},
+        //14
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "Oh... Not actually. As Labyssal, my soul gives my body the ability to interact intimately with mana. If I wanted to, I could... take control of an area and make it my own. But why are you saying that? I though..."},
+        //15
+        {"ChloeCurious", "RayneHappyTalking", "Rayne", "What I would keep a leash on you for eternity? Eheheh... goodness no! Look Chloe... I am your mother. Not a hero that seeks to bring balance to the world."},
+        //16
+        {"ChloeCry", "RayneIndifferentTalking", "Rayne", "I am... disappointed and it makes me sad to think you did what you did. But I don't plan on chaining you nor pushing you in a quest for redemption. I want to set you free... And make sure you are happy"},
+        //17
+        {"ChloeHappy", "RayneHappy", "Chloe", "<i> sniff </i>... Love you mom~!"},
+        //18
+        {"ChloeHappy", "RayneHappyTalking", "Rayne", "Love you too sweetheart. Now... lets go out and reclaim our place under the sun..."}
     };
     #endregion
 
@@ -1068,7 +1159,7 @@ public class VNSceneManager : MonoBehaviour
         //3
         {"ChloeAngry", "RayneAngryTalking", "Rayne", "This is it... At last, there might be some answers to what happen"},
         //4
-        {"ChloeAngry", "RayneAngry", "Note", "<i>The girl has been gone for a day... I am already missing her. If only I know how VALUABLE she was...</i>"},
+        {"ChloeAngry", "RayneAngry", "Note", "<i>The girl has been gone for a day... I am already missing her. If only I knew how VALUABLE she was...</i>"},
         //5
         {"ChloeAngry", "RayneAngry", "Note", "<i>I got news from the capital. There will be replacements, but all of them FAR behind in terms of talent and value that the girl had. Azulheard is her family name. I already know that, what is how I and others call her when addressing her. What I did NOT know, was that Azulhard is the family name of a legendary line of mages. With a lot of talent. They fell out of grace due to the anti-mage policies in the last centuries, but they remained talented nonetheless. Worst...</i>" },
         //6
@@ -1094,7 +1185,7 @@ public class VNSceneManager : MonoBehaviour
         //16
         {"ChloeTearsTalking", "RayneSad", "Chloe", "...mom?" },
         //17
-        {"ChloeTears", "RayneSadTalking", "Rayne", "But I failed... I wanted to... be there with you. I knew you would be alone, so I damn myself to be with you... But I once inside, I could not do anything but watch!!! It is only decades later via trial and error that I found a way to project my voice and interact with the world. But I was too late..." },
+        {"ChloeTears", "RayneSadTalking", "Rayne", "But I failed... I wanted to... be there with you. I knew you would be alone, so I damn myself to be with you... But once inside, I could not do anything but watch!!! It is only decades later via trial and error that I found a way to project my voice and interact with the world. But I was too late..." },
         //18
         {"ChloeTearsTalking", "RayneSad", "Chloe", "Mom..." },
         //19
@@ -1122,9 +1213,9 @@ public class VNSceneManager : MonoBehaviour
         //30
         {"ChloeSmug", "RayneIndifferentTalking", "Rayne", "What?! But that is not-" },
         //31
-        {"ChloeAngryTalking", "RayneIndifferentTalking", "Chloe", "Possible? Perhaps. But I was not lying when I said that I was getting stronger and stronger then. But the most important factor what the state of the hivemind back then. If the hivemind in the caves had a sense of self, I would have lost, overwealm by pure spiritual power. But that was not the case. It was sentience, but lacked coordination, self-preservation and... desire. So I tore it down. I won and came on top" },
+        {"ChloeAngryTalking", "RayneIndifferentTalking", "Chloe", "Possible? Perhaps. But I was not lying when I said that I was getting stronger and stronger then. But the most important factor was the state of the hivemind back then. If the hivemind in the caves had a sense of self, I would have lost, overwealm by pure spiritual power. But that was not the case. It was sentience, but lacked coordination, self-preservation and... desire. So I tore it down. I won and came on top" },
         //32
-        {"ChloeAngry", "RayneAngerTalking", "Rayne", "But.... It does not make any sense!!! The same day, Labyssal, the hivemind, unless death on all the mine, then caused The Black Wave! If you came on top then why-" },
+        {"ChloeAngry", "RayneAngryTalking", "Rayne", "But.... It does not make any sense!!! The same day, Labyssal, the hivemind, unless death on all the mine, then caused The Black Wave! If you came on top then why-" },
         //33
         {"ChloeAnnoyedTalking", "RayneSadTalking", "Chloe", "What.... does not make sense mom? I already told you, I came on top. After that, well... I merged with the hivemind. I created coordination, order, self-preservation and.... Imposed my desires"},
         //34
@@ -1136,7 +1227,7 @@ public class VNSceneManager : MonoBehaviour
         //37
         {"ChloeAnnoyed", "RayneAngryTalking", "Rayne", "... The Black Wave..." },
         //38
-        {"ChloeAnnoyedTalking", "RayneAngry", "Chloe", "Oh that... I will admit that it got out of hand. I was quite angry you know? And all my minions agreeing and encouraging me did not help. Still, only a part of me regrets it, while the other parts is quite satisfied that we will to destroy the Zenon Empire was acomplish. Then I got terrified when the Fifth Crusade happen... Hence why I made a maze, to protect myself"},
+        {"ChloeAnnoyedTalking", "RayneAngry", "Chloe", "Oh that... I will admit that it got out of hand. I was quite angry you know? And all my minions agreeing and encouraging me did not help. Still, only a part of me regrets it, while the other part is quite satisfied that we got to destroy the Zenon Empire. Then I got terrified when the Fifth Crusade happen... Hence why I made a maze, to protect myself"},
         //39
         {"ChloeAnnoyed", "RayneAngryTalking", "Rayne", "After that?" },
         //40
