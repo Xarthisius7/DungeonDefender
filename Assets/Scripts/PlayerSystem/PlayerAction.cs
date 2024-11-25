@@ -27,9 +27,9 @@ public class PlayerAction : MonoBehaviour
     {
         timeBetweenFiring = defaultFireSpeed;
 
-        lineRenderer.startWidth = 0.2f;
-        lineRenderer.endWidth = 0.02f;
-        lineRenderer.positionCount = 2;
+        lineRenderer.startWidth = 0.02f;
+        lineRenderer.endWidth = 0.01f;
+        lineRenderer.textureMode = LineTextureMode.Tile;
 
         lineRenderer.sortingLayerName = "InGameUI"; 
         lineRenderer.sortingOrder = 10; 
@@ -46,9 +46,16 @@ public class PlayerAction : MonoBehaviour
         if (canFire)
         {
             canFire = false;
-            Instantiate(bullet, bulletTransform.position, Quaternion.identity);
+            Instantiate(bullet, bulletTransform.position, Quaternion.Euler(0, 0, 0));
             //create the bullet object
-            EffectsManager.Instance.PlaySFX(3);
+            if (UnityEngine.Random.value <= 0.5f) 
+            {
+                EffectsManager.Instance.PlaySFX(37);
+            }
+            else
+            {
+                EffectsManager.Instance.PlaySFX(3);
+            }
         } else
         {
         }

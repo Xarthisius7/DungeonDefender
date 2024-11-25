@@ -88,8 +88,13 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerTakesDamage(float damage)
     {
-        // player taking damage from enemy - can trigger powerup events in future.
-        currentPlayerHealth -= damage;
+        float defense = PowerupManager.instance.GetAttributeValue("Defense");
+        float damageReductionRate = defense / (defense + 50);
+        float actualDamage = damage * (1 - damageReductionRate);
+        currentPlayerHealth -= actualDamage;
+
+        EffectsManager.Instance.PlaySFX(36,0.8f);
+
         checkDeath();
         UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
@@ -116,6 +121,7 @@ public class PlayerController : MonoBehaviour
         {
             currentPlayerHealth = 0;
             Debug.Log("Player Is Dead!");
+            EffectsManager.Instance.PlaySFX(35, 1.0f);
 
             controller.GameOver();
 

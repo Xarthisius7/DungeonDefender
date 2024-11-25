@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a61de5baf774319b22a985a701c692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HurtSFXID: 0
-  DeathSFXID: 0
-  AttackSFXID: 0
+  HurtSFXID: 23
+  DeathSFXID: 26
+  AttackSFXID: 28
   HurtSFXVolume: 1
   DeathSFXVolume: 1
   AttackSFXVolume: 1

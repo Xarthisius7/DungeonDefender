@@ -189,7 +189,8 @@ public class PlayerMovement : MonoBehaviour
                 case "Spike":
                     if (spikeDamageCooldown <= 0f)
                     {
-                        PlayerController.Instance.PlayerTakesPercentDamage(0.15f);
+                        PlayerController.Instance.PlayerTakesPercentDamage(0.1f);
+                        EffectsManager.Instance.PlaySFX(36, 0.8f);
                         spikeDamageCooldown = 3f; 
                     }
 
@@ -204,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
                 case "Fire":
                     if (fireDamageCooldown <= 0f)
                     {
-                        StartCoroutine(ApplyFireDamage(0.01f, 6f)); // 1% damage for 6 second
+                        StartCoroutine(ApplyFireDamage(0.03f, 6f)); // 3% damage for 6 second
                         fireDamageCooldown = 1f;
                     }
                     break;
@@ -219,6 +220,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator ApplyFireDamage(float damagePerSecond, float duration)
     {
         float timer = 0f;
+        EffectsManager.Instance.PlaySFX(36, 0.8f);
         while (timer < duration)
         {
             PlayerController.Instance.PlayerTakesPercentDamage(damagePerSecond);
@@ -262,8 +264,7 @@ public class PlayerMovement : MonoBehaviour
         dashDirection = movement.normalized; // set the direction of dash to the normalized movement
         rb.velocity = dashDirection * dashDistance / dashDuration; // set the dash speed.
 
-        // TODO: dash animation, dash sound effect
-        EffectsManager.Instance.PlaySFX(4);
+        EffectsManager.Instance.PlaySFX(4,0.7f);
     }
 
     void EndDash()
