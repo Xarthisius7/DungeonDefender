@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4acb851bd3763c746b203b0f8584ea33, type: 3}
-  m_Name: SmallAttackBoost
+  m_Name: RogueBoost
   m_EditorClassIdentifier: 
   boosts:
   - attributeName: Attack
-    boostValue: 20%
+    boostValue: 4
+  - attributeName: Speed
+    boostValue: 0.3
   isMagic: 0
-  id: 31
-  sprite: {fileID: 21300000, guid: 17fc17f3e96821347a9cf86e307cf73f, type: 3}
-  description: Increases your attack by 20%.
+  id: 74
+  sprite: {fileID: 21300000, guid: b6b2ea6414000614ea91104e7c5eae1a, type: 3}
+  description: Increases speed and attack, perfect for hit-and-run tactics.

@@ -18,7 +18,7 @@ public class PowerupManager : MonoBehaviour
         { "AttackSpeed", 1 },
         { "Speed", 1.1f },
         { "Defense", 5 },
-        { "MaxHealth", 100 },
+        { "MaxHealth", 150 },
         { "MaxStamina", 100 },
         { "StaminaRegenSpeed", 15 }
     };

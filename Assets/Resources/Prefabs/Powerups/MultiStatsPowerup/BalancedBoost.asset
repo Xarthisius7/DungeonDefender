@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4acb851bd3763c746b203b0f8584ea33, type: 3}
-  m_Name: SmallAttackBoost
+  m_Name: BalancedBoost
   m_EditorClassIdentifier: 
   boosts:
   - attributeName: Attack
-    boostValue: 20%
+    boostValue: 3
+  - attributeName: Speed
+    boostValue: 0.35
+  - attributeName: Defense
+    boostValue: 3
   isMagic: 0
-  id: 31
-  sprite: {fileID: 21300000, guid: 17fc17f3e96821347a9cf86e307cf73f, type: 3}
-  description: Increases your attack by 20%.
+  id: 58
+  sprite: {fileID: 21300000, guid: 3b00bb8aafb19a24484cab3885d29b4b, type: 3}
+  description: Provides a balanced boost to attack, speed, and defense.

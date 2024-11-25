@@ -241,7 +241,7 @@ MonoBehaviour:
   levelIncrementAttackDamage: 4
   IsNormalSpawned: 1
   enemyAttackRange: 2
-  attackCooldown: 2
+  attackCooldown: 3
   lockOnDistance: 10
   minDistance: 2
   maxDistance: 3

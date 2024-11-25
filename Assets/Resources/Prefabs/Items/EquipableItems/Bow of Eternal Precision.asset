@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
-  m_Name: Gloves of Swift Strikes
+  m_Name: Bow of Eternal Precision
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: f2ac236c1c9e29d43b88595cd2826e1f, type: 3}
-  id: 30
-  itemName: Gloves of Swift Strikes
-  itemDescription: These lightweight gloves allow for rapid, precise movements, making
-    you a blur on the battlefield.
+  sprite: {fileID: 21300000, guid: ca42a7386c49ec74f9d0d9bcf47d3215, type: 3}
+  id: 35
+  itemName: Bow of Eternal Precision
+  itemDescription: A masterpiece of elven craftsmanship, its unerring aim delivers
+    death with every shot.
   consumable: 0
   maxStack: 1
   attributeBoosts:
+  - attributeName: Attack
+    boostValue: 30
   - attributeName: AttackSpeed
-    boostValue: 45%
-  - attributeName: Speed
-    boostValue: 40%
+    boostValue: -15%

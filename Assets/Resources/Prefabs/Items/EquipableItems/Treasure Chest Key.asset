@@ -17,5 +17,5 @@ MonoBehaviour:
   itemName: Golden Key
   itemDescription: Can be used to open chests
   consumable: 0
-  maxStack: 1
+  maxStack: 10
   attributeBoosts: []

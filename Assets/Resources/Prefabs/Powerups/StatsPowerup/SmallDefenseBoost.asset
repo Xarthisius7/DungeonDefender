@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boosts:
   - attributeName: Defense
-    boostValue: 10%
+    boostValue: 10
   isMagic: 0
   id: 43
   sprite: {fileID: 21300000, guid: 1b4d5f3fbd8f3ab45ae58117392d0941, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boosts:
   - attributeName: Speed
-    boostValue: 35%
+    boostValue: 50%
   isMagic: 0
   id: 39
   sprite: {fileID: 21300000, guid: c34df1b37b715e94cba06f1583bcecdf, type: 3}
