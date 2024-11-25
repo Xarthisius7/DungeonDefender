@@ -181,6 +181,7 @@ public class SampleEnemy : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player") && gameObjectType == "Spider")
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             if (attackCooldownTimer <= 0f)
             {
                 animator.SetBool("Walk", false);
