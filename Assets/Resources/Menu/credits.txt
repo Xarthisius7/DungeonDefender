@@ -1,0 +1,26 @@
+General Manager
+
+Jiaqi Gu
+
+Led the creation of the initial prototype, ensuring adherence to development timelines and project milestones.$$$
+UI and Menu Designer
+
+David Perron
+
+Designed and implemented user interface elements, menus, credit scenes, and various in-game items.$$$
+Story and Texture Artist
+
+Tomas Hidalgo
+
+Developed the narrative framework and crafted textures to bring the game's world and characters to life.$$$
+Enemies and AI Developer
+
+Shawn Ostad Abbasi
+
+Designed and programmed enemy behaviors and AI systems, ensuring engaging and dynamic gameplay challenges.$$$
+Level Designer
+
+Marie Giacomel
+
+Created and fine-tuned game levels to deliver immersive and cohesive player experiences.$$$+=
+Thank you for playing!

@@ -52,6 +52,13 @@ public class SettingsPanel : MonoBehaviour
         settingsPanelCanvasGroup.alpha = 1;
         settingsPanelCanvasGroup.interactable = true;
         settingsPanelCanvasGroup.blocksRaycasts = true;
+
+        PauseMenu pause = FindAnyObjectByType<PauseMenu>();
+
+        if (pause != null)
+        {
+            pause.HidePauseScreen(true);
+        }
     }
 
     public void CloseSettingsPanel()
@@ -60,6 +67,13 @@ public class SettingsPanel : MonoBehaviour
         settingsPanelCanvasGroup.alpha = 0;
         settingsPanelCanvasGroup.interactable = false;
         settingsPanelCanvasGroup.blocksRaycasts = false;
+
+        PauseMenu pause = FindAnyObjectByType<PauseMenu>();
+
+        if (pause != null && pause.isHidden)
+        {
+            pause.HidePauseScreen(false);
+        }
     }
 
     private void UpdateFXVolume(float value)

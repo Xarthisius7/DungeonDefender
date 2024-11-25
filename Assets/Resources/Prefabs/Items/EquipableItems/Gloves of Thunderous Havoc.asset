@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1173786debb95f4683b4add43496896, type: 3}
+  m_Name: Gloves of Thunderous Havoc
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: eaa01c89039fb084899b0f7ff00dd1ab, type: 3}
+  id: 47
+  itemName: Gloves of Thunderous Havoc
+  itemDescription: Enchanted with storm energy, these gloves amplify your attacks,
+    delivering a deafening roar with each strike.
+  consumable: 0
+  maxStack: 1
+  attributeBoosts:
+  - attributeName: Attack
+    boostValue: 20
+  - attributeName: AttackSpeed
+    boostValue: 20%
