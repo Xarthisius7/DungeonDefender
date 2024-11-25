@@ -68,7 +68,7 @@ public class VNSceneManager : MonoBehaviour
         lineNB = 0;
 
         //This boolean is used to determine if the player is in the tutorial zone. When that is the case, it will be used to deactivate various functions that normally are checked when player is on the main map
-        isTutorial = false;
+        isTutorial = true;
         //TODO: change it back to true. Also connecting the background stroy'end to the start of the actual game's scene
 
         //Get instance of class where methods StopBackgroundMusic() and ResumeBackgroundMusic() can be found
