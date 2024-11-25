@@ -5959,7 +5959,7 @@ MonoBehaviour:
   sfxClips:
   - {fileID: 8300000, guid: 9260f20e7b2e0d0488b1748c33b4b5c3, type: 3}
   - {fileID: 8300000, guid: 0787ef16153ae944fa9d3675f67c1d79, type: 3}
-  - {fileID: 8300000, guid: d950a1723a7b41e45bc1a52b3f28386c, type: 3}
+  - {fileID: 8300000, guid: 318c938f0037d4220a14fb0e544dd164, type: 3}
   - {fileID: 8300000, guid: 0c0c169069138364494ea41fc3e993be, type: 3}
   - {fileID: 8300000, guid: 1d7ba0761452164488a56bec36e704b8, type: 3}
   - {fileID: 8300000, guid: 31060831a6cbc204d83e8d00b0245bfa, type: 3}
@@ -5980,6 +5980,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bcb789dbc92b8724fab321e4ed607651, type: 3}
   - {fileID: 8300000, guid: 194e5f4141bfcce409ba8c8a601cb570, type: 3}
   - {fileID: 8300000, guid: 0c1b91e5a9c153644b805c8ceb58cea8, type: 3}
+  - {fileID: 8300000, guid: 4733cf904535b44a4bdca34d8bf963d3, type: 3}
+  - {fileID: 8300000, guid: 68a4a84222da149c2bddce9aa092018b, type: 3}
+  - {fileID: 8300000, guid: e3b3a0d75f83e40ea94ce535e4aafa4d, type: 3}
+  - {fileID: 8300000, guid: f921fb3928de34557a5f9c9128d55fac, type: 3}
+  - {fileID: 8300000, guid: cfa565f5a5463489ba178be3cc56aaec, type: 3}
+  - {fileID: 8300000, guid: a5a60bd304b9f4925b9ce775a1bb1606, type: 3}
+  - {fileID: 8300000, guid: 0d313af4222914464a5e7b79e420c50d, type: 3}
+  - {fileID: 8300000, guid: ed03339ebd3c6409a9f2dd889afd0efd, type: 3}
+  - {fileID: 8300000, guid: b0ca07ad60793422faf6fbc7acfff598, type: 3}
+  - {fileID: 8300000, guid: b9b4cfa687dd3465e98efee408d2d201, type: 3}
+  - {fileID: 8300000, guid: 81a3744fbbbc84f419e4b3baec6377d0, type: 3}
+  - {fileID: 8300000, guid: c9b40a405f0d24b999b8758c306bf5ef, type: 3}
+  - {fileID: 8300000, guid: 80c638390b80248ab898eb8ab15d642b, type: 3}
+  - {fileID: 8300000, guid: 5aab8a0a3564d41b8987ff746eb181b9, type: 3}
   globalSFXVolume: 1
   backgroundMusicVolume: 0.8
   fadeDuration: 1
