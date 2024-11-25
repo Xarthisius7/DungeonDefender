@@ -7,7 +7,7 @@ public class INT_FInalEndingTrigger : MonoBehaviour, IInteractable
     public void OnInteraction()
     {
         //TODO: TOM : ADD your code that link to the game ending here
-
+        GameController.Instance.ShowVictory();
 
 
     }

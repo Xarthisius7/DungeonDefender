@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class IntroManager : MonoBehaviour
 {
@@ -157,6 +159,7 @@ public class IntroManager : MonoBehaviour
         {
             Debug.Log("End of Intro");
             //We call function here to load scene
+            SceneManager.LoadScene(3);
         }
         FadeOutSoundtrack(endSoundtrack);
     }
@@ -322,7 +325,7 @@ public class IntroManager : MonoBehaviour
 
     string[,] Intro = new string[25, 4]
     {
-        { "None", "1", "A female demon’s body walks through an obscure cave, its steps echoing around the darkness", "1" },
+        { "None", "1", "A female demon¡¯s body walks through an obscure cave, its steps echoing around the darkness", "1" },
         { "None", "2", "Despite the darkness, the body walks with purpose, aware of its surroundings", "2" },
         { "None", "3", "This is the case for this body and all others in this place, for they are all connect to Labyssal, the hivemind of the maze and caves", "3" },
         { "None", "0", "", "" }, //lineNB 3 
@@ -334,12 +337,12 @@ public class IntroManager : MonoBehaviour
         { "None", "2", "After gaining sentience, their corruption and their hate towards life and individuality have only grown", "8" },
         { "None", "3", "All the adventurers that have tried to claim the vast treasures inside the caves and maze have perish, and have been assimilated by the collective", "9" },
         { "None", "0", "", "" }, //lineNB 11
-        { "None", "1", "Suddenly, the female demon’s body stops as through its eyes, Labyssal, the collective, sees a necklace with a perfect and pure blue gem at its center in the ground", "10" },
+        { "None", "1", "Suddenly, the female demon¡¯s body stops as through its eyes, Labyssal, the collective, sees a necklace with a perfect and pure blue gem at its center in the ground", "10" },
         { "None", "2", "For some reason, the collective is only able to see this artifact through the eyes of this body, and they are not able to detect or feel it by other means", "11" },
         { "None", "3", "Intrigued by this discovery, the body bends down and picks the artifac-", "12" },
         { "None", "0", "", "" }, //lineNB 15
         { "None", "1", "Pain...! Pain? Hurts? Hurts!!", "13" },
-        { "None", "2", "The collective feels as a piece of their being is ripped out of them, Labyssal cries in pain and shock, the world trembles……", "14" },
+        { "None", "2", "The collective feels as a piece of their being is ripped out of them, Labyssal cries in pain and shock, the world trembles¡­¡­", "14" },
         { "None", "3", "then silence", "15" },
         { "None", "0", "", "" }, //lineNB 19
         { "One", "1", "...", "" },

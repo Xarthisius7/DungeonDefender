@@ -68,6 +68,7 @@ public class GameController : MonoBehaviour
     bool hasPaused = false;
 
 
+    private float elapsedTime = 0f; 
 
     public WavesController currentTower;
 
@@ -90,6 +91,16 @@ public class GameController : MonoBehaviour
 
 
     }
+
+
+    private string FormatTime(float timeInSeconds)
+    {
+        int minutes = Mathf.FloorToInt(timeInSeconds / 60);
+        int seconds = Mathf.FloorToInt(timeInSeconds % 60);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+
 
     public void CloseAllMenu()
     {
@@ -162,22 +173,6 @@ public class GameController : MonoBehaviour
     private void GameInitDelayTerms()
     {
         //things that happens after game start. 
-        PowerupManager.instance.GivePowerup(36);
-        PowerupManager.instance.GivePowerup(36);
-        PowerupManager.instance.GivePowerup(36);
-        PowerupManager.instance.GivePowerup(36);
-        PowerupManager.instance.GivePowerup(36);
-
-
-        PowerupManager.instance.GivePowerup(6);
-        PowerupManager.instance.GivePowerup(7);
-        PowerupManager.instance.GivePowerup(10);
-        PowerupManager.instance.GivePowerup(15);
-        PowerupManager.instance.GivePowerup(16);
-        PowerupManager.instance.GivePowerup(17);
-        PowerupManager.instance.GivePowerup(19);
-        PowerupManager.instance.GivePowerup(20);
-        PowerupManager.instance.GivePowerup(21);
     }
 
 
@@ -211,6 +206,8 @@ public class GameController : MonoBehaviour
             //if the game is still running, constanting check the player's position.
             //and trigger the needed events.(e.g. spawning enemies)
             UpdatePlayerRoom();
+
+            elapsedTime += Time.deltaTime; 
         }
 
     }
@@ -474,16 +471,18 @@ public class GameController : MonoBehaviour
 
 
 
-
+    public void ShowVictory()
+    {
+        UIManager.Instance.ShowVictoryUI(FormatTime(elapsedTime));
+    }
 
     // End game when conditions are met
     public void GameOver()
     {
-        //uiManager.ShowGameOverScreen();
         IsGameRunning = false;
         IsPaused = true;
         Debug.Log("Game Over! ");
-        //effectsManager.PlayGameOverSound();
+        UIManager.Instance.ShowLosingUI();
 
 
     }

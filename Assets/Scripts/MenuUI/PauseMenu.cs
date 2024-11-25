@@ -89,7 +89,7 @@ public class PauseMenu : MonoBehaviour
             pauseMenuCanvasGroup.interactable = true;
             pauseMenuCanvasGroup.blocksRaycasts = true;
 
-            UIManager.Instance?.CloseAttrubuteMenu();
+            UIManager.Instance.CloseAttrubuteMenu();
 
             SettingsPanel settings = FindAnyObjectByType<SettingsPanel>();
 
@@ -97,7 +97,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void ReturnToMenu()
+    public void ReturnToMenu()
     {
         Time.timeScale = 1f; // Ensure the game is not paused
         SceneGameManager.Instance?.LoadScene(SceneGameManager.SceneType.Menu);

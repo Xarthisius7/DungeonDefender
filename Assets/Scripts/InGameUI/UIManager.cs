@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] float fillSpeed;
 
 
+    public PauseMenu pauseMenu;
     public List<TextMeshProUGUI> attributeTexts; // Editable in the Unity Inspector, corresponding to 7 attributes
     public Image spellLogo; // Editable in the Unity Inspector for displaying spell logos
 
@@ -41,6 +42,37 @@ public class UIManager : MonoBehaviour
 
     public Image[] crystalImages; // crystal Defense progress 
     public Sprite activeCrystalSprite;
+
+
+    public GameObject victoryUI; 
+    public TextMeshProUGUI timeText;
+
+
+    public GameObject LosingUI;
+
+
+    public void ShowVictoryUI(string formattedTime)
+    {
+        GameController.Instance.CloseAllMenu();
+        if (victoryUI != null)
+        {
+            victoryUI.SetActive(true);
+        }
+
+        if (timeText != null)
+        {
+            timeText.text = formattedTime;
+        }
+
+    }
+    public void ShowLosingUI()
+    {
+
+        GameController.Instance.CloseAllMenu();
+        LosingUI.SetActive(true);
+
+
+    }
 
     public void UpdateCrystalsDisplay(int TowerDefensed)
     {
@@ -226,6 +258,7 @@ public class UIManager : MonoBehaviour
 
     public void OpenAttrubuteMenu()
     {
+        
         GameController.Instance.CloseAllMenu();
         // Update attribute values in the UI
         UpdateAttributesDisplay();
@@ -293,7 +326,6 @@ public class UIManager : MonoBehaviour
 
     public void ShowPauseScreen()
     {
-        PauseMenu pauseMenu = FindAnyObjectByType<PauseMenu>();
 
         if (pauseMenu != null)
         {
@@ -307,7 +339,6 @@ public class UIManager : MonoBehaviour
 
     public void ClosePauseScreen()
     {
-        PauseMenu pauseMenu = FindAnyObjectByType<PauseMenu>();
 
         if (pauseMenu != null)
         {
