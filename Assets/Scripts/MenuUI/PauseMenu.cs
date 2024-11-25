@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
 
         // Set up the click listeners for the buttons
         resumeButton.onClick.AddListener(ClosePauseScreen);
-        //returnToMenuButton.onClick.AddListener(ReturnToMenu);
+        returnToMenuButton.onClick.AddListener(ReturnToMenu);
         statsButton.onClick.AddListener(DisplayStats);
 
         isHidden = false;

@@ -57,13 +57,6 @@ public class SceneGameManager : MonoBehaviour
             yield break;
         }
 
-        blackCanvas = FindFirstObjectByType<CanvasGroup>();
-
-        if (blackCanvas != null && sceneType == SceneType.Intro)
-        {
-            yield return FadeToBlack();
-        }
-
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
         while (!asyncLoad.isDone)
