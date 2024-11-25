@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SmallMaxStaminaBoost
   m_EditorClassIdentifier: 
   boosts:
-  - attributeName: MaxStaminaBoost
+  - attributeName: MaxStamina
     boostValue: 5%
   isMagic: 0
   id: 52
