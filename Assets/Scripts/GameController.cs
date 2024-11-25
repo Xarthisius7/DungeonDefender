@@ -185,7 +185,7 @@ public class GameController : MonoBehaviour
         else
             hasPaused = false;
 
-        if (!IsPaused)
+        if (!IsPaused && !VNSceneManager.Instance.isTutorial)
         {
             //if the game is still running, constanting check the player's position.
             //and trigger the needed events.(e.g. spawning enemies)

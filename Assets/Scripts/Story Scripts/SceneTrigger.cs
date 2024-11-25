@@ -9,8 +9,7 @@ public class SceneTrigger : MonoBehaviour
         Debug.Log("Scene Trigger Trigged!");
         if (other.gameObject.tag == "Player")
         {
-            VNSceneManager.Instance.VNSceneInProgress = true;
-            Debug.Log("Trigger for Scene #" + VNSceneManager.Instance.SceneNb + " as been activated");
+            VNSceneManager.Instance.StartStoryScene();
             Destroy(gameObject);
 
         }
