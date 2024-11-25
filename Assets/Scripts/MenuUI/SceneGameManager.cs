@@ -14,7 +14,20 @@ public class SceneGameManager : MonoBehaviour
     public float GameFXVolume = 1.0f;
     public float GameMusicVolume = 1.0f;
 
+    [SerializeField] string menuScene;
+    [SerializeField] string introScene;
     [SerializeField] string gameScene;
+    [SerializeField] string endingScene;
+    [SerializeField] string creditsScene;
+
+    public enum SceneType
+    {
+        Menu,
+        Intro,
+        Game,
+        Ending,
+        Credits
+    }
 
     private void Awake()
     {
@@ -29,67 +42,57 @@ public class SceneGameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void LoadScene(SceneType sceneType)
     {
+        StartCoroutine(LoadSceneCoroutine(sceneType));
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator LoadSceneCoroutine(SceneType sceneType)
     {
-        
-    }
+        string sceneName = GetSceneName(sceneType);
 
-    public void ReturnToMenu()
-    {
-        StartCoroutine(LoadMenuScene());
-    }
+        if (string.IsNullOrEmpty(sceneName))
+        {
+            Debug.LogError("Invalid scene type or scene name not set!");
+            yield break;
+        }
 
-    private IEnumerator LoadMenuScene()
-    {
         blackCanvas = FindFirstObjectByType<CanvasGroup>();
 
-        if(blackCanvas != null)
+        if (blackCanvas != null && sceneType == SceneType.Intro)
         {
             yield return FadeToBlack();
         }
 
-        // Assuming "BattleScene" is the name of the battle scene
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("GameMenu 1");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
-        // Wait until the scene is fully loaded
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
 
-        MenuEnter?.Invoke(this, EventArgs.Empty);
+        // Trigger specific events for certain scenes if needed
+        if (sceneType == SceneType.Menu)
+        {
+            MenuEnter?.Invoke(this, EventArgs.Empty);
+        }
+        else if (sceneType == SceneType.Game)
+        {
+            LevelStarted?.Invoke(this, EventArgs.Empty);
+        }
     }
 
-    public void TransitionToGame()
+    private string GetSceneName(SceneType sceneType)
     {
-        StartCoroutine(LoadGameScene());
-    }
-
-    private IEnumerator LoadGameScene()
-    {
-        blackCanvas = FindFirstObjectByType<CanvasGroup>();
-
-        if (blackCanvas != null)
+        return sceneType switch
         {
-            yield return FadeToBlack();
-        }
-
-        // Assuming "BattleScene" is the name of the battle scene
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(gameScene);
-
-        // Wait until the scene is fully loaded
-        while (!asyncLoad.isDone)
-        {
-            yield return null;
-        }
-
-        LevelStarted?.Invoke(this, EventArgs.Empty);
+            SceneType.Menu => menuScene,
+            SceneType.Intro => introScene,
+            SceneType.Game => gameScene,
+            SceneType.Ending => endingScene,
+            SceneType.Credits => creditsScene,
+            _ => null,
+        };
     }
 
     private IEnumerator FadeToBlack()
@@ -101,13 +104,11 @@ public class SceneGameManager : MonoBehaviour
 
         while (elapsedTime < fadeDuration)
         {
-            // Incrementally increase the alpha of the canvas group to create a fading effect
             blackCanvas.alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        // Ensure the screen is fully black at the end
         blackCanvas.alpha = 1f;
 
         yield return null;

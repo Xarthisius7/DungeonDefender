@@ -19,7 +19,7 @@ public class PlayButton : MonoBehaviour
             {
                 item.GetComponent<Button>().onClick.RemoveAllListeners();
             };
-            sceneGameManager.TransitionToGame();
+            SceneGameManager.Instance?.LoadScene(SceneGameManager.SceneType.Intro);
         });
     }
 

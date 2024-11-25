@@ -100,6 +100,6 @@ public class PauseMenu : MonoBehaviour
     private void ReturnToMenu()
     {
         Time.timeScale = 1f; // Ensure the game is not paused
-        SceneGameManager.Instance.ReturnToMenu();
+        SceneGameManager.Instance?.LoadScene(SceneGameManager.SceneType.Menu);
     }
 }
