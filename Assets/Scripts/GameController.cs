@@ -64,6 +64,7 @@ public class GameController : MonoBehaviour
 
     bool hasPaused = false;
 
+    public bool FuryBoost = false;
 
     public WavesController currentTower;
 
@@ -157,8 +158,38 @@ public class GameController : MonoBehaviour
 
     private void GameInitDelayTerms()
     {
-        //things that happens after game start. 
+        if (FuryBoost)
+        {
+            PowerupManager.instance.GivePowerup(36);
+            PowerupManager.instance.GivePowerup(36);
+            PowerupManager.instance.GivePowerup(36);
+            PowerupManager.instance.GivePowerup(36);
+            PowerupManager.instance.GivePowerup(36);
 
+            PowerupManager.instance.GivePowerup(39);
+            PowerupManager.instance.GivePowerup(39);
+            PowerupManager.instance.GivePowerup(39);
+            PowerupManager.instance.GivePowerup(39);
+            PowerupManager.instance.GivePowerup(39);
+
+            PowerupManager.instance.GivePowerup(45);
+            PowerupManager.instance.GivePowerup(45);
+            PowerupManager.instance.GivePowerup(45);
+            PowerupManager.instance.GivePowerup(45);
+            PowerupManager.instance.GivePowerup(45);
+
+            PowerupManager.instance.GivePowerup(33);
+            PowerupManager.instance.GivePowerup(33);
+            PowerupManager.instance.GivePowerup(33);
+            PowerupManager.instance.GivePowerup(33);
+            PowerupManager.instance.GivePowerup(33);
+
+            //PowerupManager.instance.GivePowerup(6);
+            //PowerupManager.instance.GivePowerup(7);
+            //PowerupManager.instance.GivePowerup(10);
+        }
+        //things that happens after game start. 
+        
 
 
     }
