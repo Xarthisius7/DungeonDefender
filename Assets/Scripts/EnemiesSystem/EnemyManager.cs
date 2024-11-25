@@ -40,11 +40,11 @@ public class EnemyManager : MonoBehaviour
 
 
 
-    public GameObject SummonEenemy(GameObject inputEnemy, Transform tf, float difficultyLevel,Transform TowerTF)
+    public GameObject SummonEenemy(GameObject inputEnemy, Transform tf, float difficultyLevel, Transform TowerTF)
     {
 
 
-        GameObject enemyObj = Instantiate(inputEnemy,tf.position, Quaternion.identity);
+        GameObject enemyObj = Instantiate(inputEnemy, tf.position, Quaternion.identity);
 
         enemyObj.GetComponent<SampleEnemy>().SetDifficulty(difficultyLevel);
         enemyObj.GetComponent<SampleEnemy>().SetTarget(Player);
@@ -52,6 +52,31 @@ public class EnemyManager : MonoBehaviour
 
         // Check if any child GameObject has a component that is a subclass of ParentClass
         SampleEnemy foundComponent = enemyObj.GetComponentInChildren<SampleEnemy>();
+
+        if (foundComponent is TowerEnemy)
+        {
+            if (TowerTF != null)
+            {
+                foundComponent.SetTower(TowerTF);
+            }
+            foundComponent.SetPlayer(Player);
+        }
+        return enemyObj;
+
+    }
+    public GameObject SummonEenemy(GameObject inputEnemy, Transform tf, float difficultyLevel, Transform TowerTF,bool isNormalSpawned)
+    {
+
+
+        GameObject enemyObj = Instantiate(inputEnemy, tf.position, Quaternion.identity);
+
+        enemyObj.GetComponent<SampleEnemy>().SetDifficulty(difficultyLevel);
+        enemyObj.GetComponent<SampleEnemy>().SetTarget(Player);
+
+
+        // Check if any child GameObject has a component that is a subclass of ParentClass
+        SampleEnemy foundComponent = enemyObj.GetComponentInChildren<SampleEnemy>();
+        foundComponent.IsNormalSpawned = isNormalSpawned;
 
         if (foundComponent is TowerEnemy)
         {

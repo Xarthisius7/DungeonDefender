@@ -1943,7 +1943,7 @@ MonoBehaviour:
   - {x: 1.0175414, y: 5.192025, z: 0}
   m_ShapePathHash: 428654198
   m_Mesh: {fileID: 0}
-  m_InstanceId: 180188
+  m_InstanceId: 234414
   m_LocalBounds:
     m_Center: {x: -0.0021157265, y: 0.47004938, z: 0}
     m_Extent: {x: 4.246769, y: 4.721976, z: 0}
@@ -2187,7 +2187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7104565337111979026, guid: f567142f3e762a147b1e2510662b650f, type: 3}
       propertyPath: m_InstanceId
-      value: -456262
+      value: -2040362
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2333,7 +2333,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2422468073418309855, guid: 3ff93b0488e56044ba8f582dbb569d55, type: 3}
       propertyPath: m_InstanceId
-      value: -456242
+      value: -2040334
       objectReference: {fileID: 0}
     - target: {fileID: 8508959234489600878, guid: 3ff93b0488e56044ba8f582dbb569d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2633,7 +2633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7104565337111979026, guid: f567142f3e762a147b1e2510662b650f, type: 3}
       propertyPath: m_InstanceId
-      value: -456300
+      value: -2040298
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

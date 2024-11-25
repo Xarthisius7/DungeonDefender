@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 
 public class WavesController : MonoBehaviour
 {
@@ -50,14 +52,59 @@ public class WavesController : MonoBehaviour
     private List<GameObject> spawnedEnemyList = new List<GameObject>();
 
 
+    public GameObject HealthBar;
+    private Image healthImage;
+    public Color fullHealthColor = Color.cyan;
+    public Color lowHealthColor = Color.red;
+
+
+    [SerializeField] public float towerHealth; // Tower's health
+    private float towerFullHealth;
+
     void Start()
     {
+        towerFullHealth = towerHealth;
+        GameObject healthBarPrefab = Resources.Load<GameObject>("Prefabs/UI/TowerHealthBar");
+        if (healthBarPrefab != null)
+        {
+            HealthBar = Instantiate(healthBarPrefab, transform.position, Quaternion.identity, transform);
+            Transform amountDisplayTransform = HealthBar.transform.Find("Frame").Find("AmountDisplay");
+            if (amountDisplayTransform != null)
+            {
+                healthImage = amountDisplayTransform.GetComponent<Image>();
+            }
+            HealthBar.SetActive(false);
+        }
+    }
 
+    public void UpdateTowerHealth(float percentage)
+    {
+        HealthBar.SetActive(true);
+        if (healthImage != null)
+        {
+            healthImage.fillAmount = percentage;
+            healthImage.color = Color.Lerp(lowHealthColor, fullHealthColor, percentage);
+        }
+    }
+
+    public void TowerTakeDamage(float damage)
+    {
+        towerHealth -= damage;
+        Debug.Log("Tower Health: " + towerHealth);
+
+        UpdateTowerHealth(towerHealth/towerFullHealth);
+        if (towerHealth <= 0)
+        {
+            //EndGame();
+            GameController.Instance.DefenseFailed();
+
+        }
     }
 
     public void StartDefense()
     {
-
+        towerHealth *= (towerHealth * GameController.Instance.TowerDefensed+1);
+        towerFullHealth = towerHealth;
         InitSpawPoints();
         crystalLight.pointLightOuterRadius = 8f;
         crystalLight.intensity = 0.55f;
@@ -79,6 +126,7 @@ public class WavesController : MonoBehaviour
         }
 
 
+        GameController.Instance.StartDefenceAWave(this);
     }
 
 
@@ -208,7 +256,7 @@ public class WavesController : MonoBehaviour
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
 
         GameObject enemy = EnemyManager.Instance.SummonEenemy(selectedEnemy.enemyPrefab, 
-            spawnPoint, GameController.Instance.CurrentDifficulty, transform);
+            spawnPoint, GameController.Instance.CurrentDifficulty, transform, false);
 
         spawnedEnemyList.Add(enemy);
 
@@ -238,7 +286,16 @@ public class WavesController : MonoBehaviour
 
             if (enemy != null)
             {
-                Destroy(enemy);
+                SampleEnemy sampleEnemy = enemy.GetComponent<SampleEnemy>();
+                if (sampleEnemy != null)
+                {
+                    // 调用SampleEnemy的DeathSlient()方法
+                    sampleEnemy.DeathSlient();
+                }
+                else
+                {
+                    Destroy(enemy);
+                }
             }
 
             //destory all spawned enemy after the defense is finished.

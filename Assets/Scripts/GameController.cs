@@ -52,6 +52,11 @@ public class GameController : MonoBehaviour
     public int TowerDefensed = 0;
     //the count 3 crystal player needs to defend.
 
+    public float Area1BaseDiff = 1;
+    public float Area2BaseDiff = 4;
+    public float Area3BaseDiff = 10;
+    public float Area4BaseDiff = 16;
+    public int roomsEplored= 0;
 
     private int centerX = 0;
     private int centerY = 0;
@@ -59,6 +64,8 @@ public class GameController : MonoBehaviour
 
     bool hasPaused = false;
 
+
+    public WavesController currentTower;
 
     public static GameController Instance { get; private set; }
 
@@ -152,9 +159,6 @@ public class GameController : MonoBehaviour
     {
         //things that happens after game start. 
 
-        ItemManager.Instance.AddItemsById(16, 1);
-        ItemManager.Instance.AddItemsById(19, 3);
-        ItemManager.Instance.AddItemsById(20, 3);
 
 
     }
@@ -194,13 +198,14 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void StartDefenceAWave()
+    public void StartDefenceAWave(WavesController wc)
     {
         //MUST BE CALLED when player start defencing. 
 
         //TODO:
         //change BGM.
-        EffectsManager.Instance.PlayBackgroundMusic(4);
+
+        currentTower = wc;
 
     }
 
@@ -209,6 +214,8 @@ public class GameController : MonoBehaviour
         TowerDefensed++;
         UIManager.Instance.UpdateCrystalsDisplay(TowerDefensed);
         EffectsManager.Instance.PlayBackgroundMusicSmooth(1);
+
+        roomsEplored = 0;
         return TowerDefensed;
     }
 
@@ -261,6 +268,11 @@ public class GameController : MonoBehaviour
         int playerRoomX = centerX + diffX;
         int playerRoomY = centerY + diffY;
 
+        if(grid[playerRoomX, playerRoomY].hasRoom)
+        {
+            updateDifficulty(4-(grid[playerRoomX, playerRoomY].Level));
+        }
+
         if (hasVisited[playerRoomX, playerRoomY].hasVisited == 1)
         {
             hasVisited[playerRoomX, playerRoomY].hasVisited = 2;
@@ -301,11 +313,13 @@ public class GameController : MonoBehaviour
 
                 // switching between type1 and type2 if there's 2 type
                 GameObject enemyToSummon = (enemy2 != null && !useFirstEnemy) ? enemy2 : enemy1;
-                EnemyManager.Instance.SummonEenemy(enemyToSummon, spawnPoint, 1);
+                EnemyManager.Instance.SummonEenemy(enemyToSummon, spawnPoint, CurrentDifficulty);
 
                 useFirstEnemy = !useFirstEnemy;
             }
 
+            // 2. increate the current difficulty
+            roomsEplored += 1;
 
         }
         else if ((hasVisited[playerRoomX, playerRoomY].hasVisited == 2) && !hasVisited[playerRoomX, playerRoomY].hasLightUped)
@@ -349,6 +363,24 @@ public class GameController : MonoBehaviour
         // 1. first enter #2or#3 area: change bgm. 
         // 2. base on the current progress, change the CurrentDifficulty variable.
 
+    }
+
+    private void updateDifficulty(int Area)
+    {
+        int[] maxRoomsPerArea = { 9, 18, 27 };
+
+        if (Area < 1 || Area > 3)
+        {
+            Debug.LogError("Invalid area value. Area must be 1, 2, or 3.");
+            return;
+        }
+
+        float explorationFactor = (float)roomsEplored / maxRoomsPerArea[Area - 1];
+
+        float currentBaseDiff = Area == 1 ? Area1BaseDiff : (Area == 2 ? Area2BaseDiff : Area3BaseDiff);
+        float nextBaseDiff = Area == 1 ? Area2BaseDiff : (Area == 2 ? Area3BaseDiff : Area4BaseDiff);
+
+        CurrentDifficulty = Mathf.RoundToInt(currentBaseDiff + explorationFactor * (nextBaseDiff - currentBaseDiff));
     }
 
     private IEnumerator GraduallyIncreaseIntensity(Light2D light, float targetIntensity, float duration)

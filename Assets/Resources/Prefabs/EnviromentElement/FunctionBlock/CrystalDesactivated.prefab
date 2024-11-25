@@ -236,34 +236,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemyTypes:
-    - enemyPrefab: {fileID: 5266509957464276647, guid: 5fa8a47231b23fa4ab517d07df26957d, type: 3}
-      spawnChance: 50
-    baseEnemyCount: 5
-    spawnInterval: 5
-    waveDuration: 15
-  - enemyTypes:
-    - enemyPrefab: {fileID: 7474017511659532884, guid: b948aa34d7f615549b60407a7ca1fe6e, type: 3}
-      spawnChance: 50
-    - enemyPrefab: {fileID: 5266509957464276647, guid: 5fa8a47231b23fa4ab517d07df26957d, type: 3}
-      spawnChance: 50
-    baseEnemyCount: 8
-    spawnInterval: 4.5
+    - enemyPrefab: {fileID: 4943754997556569435, guid: f156bcdad2e9745cbaf3db1a2af762a3, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 2156204750768754329, guid: b55d90366c80840e99b75123591ac9be, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 6304856005041467488, guid: e7c3d213206e34135995034d7c6e3783, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5870320507734867074, guid: 20dc704f4d301394fa2bcd5fc5ff3b98, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5743179359757298611, guid: 4effa9c11fe3e469c96d9b1557e41b28, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5877386783653430646, guid: c91dd3d3a6079465c83e249500b2e6a2, type: 3}
+      spawnChance: 16
+    baseEnemyCount: 20
+    spawnInterval: 4
     waveDuration: 20
   - enemyTypes:
-    - enemyPrefab: {fileID: 7474017511659532884, guid: b948aa34d7f615549b60407a7ca1fe6e, type: 3}
-      spawnChance: 50
-    - enemyPrefab: {fileID: 5266509957464276647, guid: 5fa8a47231b23fa4ab517d07df26957d, type: 3}
-      spawnChance: 50
-    baseEnemyCount: 10
-    spawnInterval: 4
+    - enemyPrefab: {fileID: 4943754997556569435, guid: f156bcdad2e9745cbaf3db1a2af762a3, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 2156204750768754329, guid: b55d90366c80840e99b75123591ac9be, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 6304856005041467488, guid: e7c3d213206e34135995034d7c6e3783, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5870320507734867074, guid: 20dc704f4d301394fa2bcd5fc5ff3b98, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5743179359757298611, guid: 4effa9c11fe3e469c96d9b1557e41b28, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5877386783653430646, guid: c91dd3d3a6079465c83e249500b2e6a2, type: 3}
+      spawnChance: 16
+    baseEnemyCount: 25
+    spawnInterval: 3.75
     waveDuration: 25
-  timeBetweenWaves: 10
+  - enemyTypes:
+    - enemyPrefab: {fileID: 4943754997556569435, guid: f156bcdad2e9745cbaf3db1a2af762a3, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 2156204750768754329, guid: b55d90366c80840e99b75123591ac9be, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 6304856005041467488, guid: e7c3d213206e34135995034d7c6e3783, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5870320507734867074, guid: 20dc704f4d301394fa2bcd5fc5ff3b98, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5743179359757298611, guid: 4effa9c11fe3e469c96d9b1557e41b28, type: 3}
+      spawnChance: 16
+    - enemyPrefab: {fileID: 5877386783653430646, guid: c91dd3d3a6079465c83e249500b2e6a2, type: 3}
+      spawnChance: 16
+    baseEnemyCount: 30
+    spawnInterval: 3.5
+    waveDuration: 30
+  timeBetweenWaves: 5
   defenseCompleteSprite: {fileID: 21300000, guid: f30139b199c6bef41a52712691323c37, type: 2}
   abilityChestToSpawn: {fileID: 9005557077595870252, guid: 9ed301f901f24ba41a88af6953df1da6, type: 3}
   StoryChestSpawnToSpawn: {fileID: 9005557077595870252, guid: 737a12ae9e6823f47b877fbbb652b912, type: 3}
   animator: {fileID: 2923909001661211242}
   spriteRenderer: {fileID: 5558768918538619475}
   crystalLight: {fileID: 6174277162017480286}
+  HealthBar: {fileID: 0}
+  fullHealthColor: {r: 0, g: 1, b: 1, a: 1}
+  lowHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  towerHealth: 200
 --- !u!1 &7830598213823812720
 GameObject:
   m_ObjectHideFlags: 0

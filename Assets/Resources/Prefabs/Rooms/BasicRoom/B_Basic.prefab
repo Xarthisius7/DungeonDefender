@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6480257124709106734}
   - component: {fileID: 7314278719176956587}
   - component: {fileID: 2739770693865743476}
-  - component: {fileID: 8201439293463920127}
+  - component: {fileID: 2817641281558700620}
   m_Layer: 0
   m_Name: ObstaclesLayer
   m_TagString: Obstacle
@@ -826,7 +826,7 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &8201439293463920127
+--- !u!114 &2817641281558700620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 2668953115823141763}
   - component: {fileID: 6884983072245837687}
   - component: {fileID: 3747248083025446959}
-  - component: {fileID: 8581208082909879155}
+  - component: {fileID: 740385054172990242}
   m_Layer: 0
   m_Name: FloorLayer
   m_TagString: Untagged
@@ -1891,7 +1891,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &8581208082909879155
+--- !u!114 &740385054172990242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1973,7 +1973,7 @@ MonoBehaviour:
   - {x: -1.0217243, y: -4.2380385, z: 0}
   m_ShapePathHash: -250053826
   m_Mesh: {fileID: 0}
-  m_InstanceId: 168880
+  m_InstanceId: 138218
   m_LocalBounds:
     m_Center: {x: -0.0012569427, y: 0.46490097, z: 0}
     m_Extent: {x: 4.2459106, y: 4.7168274, z: 0}
@@ -2269,7 +2269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725724045773727166, guid: 19032844daf95024cb4fc9ec06b1c735, type: 3}
       propertyPath: m_InstanceId
-      value: -476922
+      value: -47158
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

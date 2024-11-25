@@ -13,7 +13,7 @@ public class INT_CrystalBase : MonoBehaviour, IInteractable
 
         EffectsManager.Instance.PlaySFX(17);
         EffectsManager.Instance.PlaySFX(18);
-        GameController.Instance.StartDefenceAWave();
+        EffectsManager.Instance.PlayBackgroundMusic(4);
 
         InteractionTrigger interactionTrigger = GetComponent<InteractionTrigger>();
         interactionTrigger.DisableButton();

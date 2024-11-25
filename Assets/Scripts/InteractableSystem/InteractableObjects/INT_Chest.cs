@@ -154,9 +154,9 @@ public class INT_Chest : MonoBehaviour, IInteractable
     private void smallChestUnlocked()
     {
 
-        float prob1 = 90f; // for common item
+        float prob1 = 82f; // for common item
         float prob2 = 5f; // for equipment
-        float prob3 = 5f;  // for key - just a notice. can be ignored.
+        float prob3 = 12f;  // for key - just a notice. can be ignored.
         float randomValue = Random.Range(0f, 100f);
 
         if (randomValue < prob1)

@@ -83,6 +83,14 @@ public class MapManager : MonoBehaviour
         return grid;
     }
 
+
+
+
+
+
+
+
+
     public void UpdateNavMesh()
     {
         NavMesh.BuildNavMesh();
@@ -255,8 +263,66 @@ public class MapManager : MonoBehaviour
             GenerateSingleRoom(area3Start.x, area3Start.y, directions[i]);
         }
 
-
+        FixMainRoom(centerX, centerY);
+        FixMainRoom(area2Start.x, area2Start.y);
+        FixMainRoom(area3Start.x, area3Start.y);
+        Debug.Log("Fixing main room dir!!!!!!!!!!");
     }
+
+    public void FixMainRoom(int x, int y)
+    {
+        if (grid == null || grid[x, y] == null)
+        {
+            return;
+        }
+
+        if (!grid[x, y].hasRoom)
+        {
+            return;
+        }
+
+        List<dir> tempList = new List<dir>();
+
+        if (y + 1 < grid.GetLength(1) && grid[x, y + 1] != null && grid[x, y + 1].hasRoom)
+        {
+            if (grid[x, y + 1].connectedDir.Contains(dir.B))
+            {
+                tempList.Add(dir.U);
+            }
+        }
+
+        if (y - 1 >= 0 && grid[x, y - 1] != null && grid[x, y - 1].hasRoom)
+        {
+            if (grid[x, y - 1].connectedDir.Contains(dir.U))
+            {
+                tempList.Add(dir.B);
+            }
+        }
+
+        if (x - 1 >= 0 && grid[x - 1, y] != null && grid[x - 1, y].hasRoom)
+        {
+            if (grid[x - 1, y].connectedDir.Contains(dir.R))
+            {
+                tempList.Add(dir.L);
+            }
+        }
+
+        if (x + 1 < grid.GetLength(0) && grid[x + 1, y] != null && grid[x + 1, y].hasRoom)
+        {
+            if (grid[x + 1, y].connectedDir.Contains(dir.L))
+            {
+                tempList.Add(dir.R);
+            }
+        }
+
+        grid[x, y].connectedDir.Clear();
+        grid[x, y].connectedDir.AddRange(tempList);
+        Debug.Log("Fixing main room dir!!!!!!!!!!");
+    }
+
+
+
+
 
 
 

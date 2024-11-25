@@ -83,7 +83,6 @@ public class PlayerController : MonoBehaviour
         checkDeath();
         UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
-        Debug.Log("Player health changed: the new health is " + currentPlayerHealth);
 
     }
 
