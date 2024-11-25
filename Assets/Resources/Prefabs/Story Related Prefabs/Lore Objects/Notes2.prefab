@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1089150729366505329}
   m_Layer: 0
   m_Name: Notes2
-  m_TagString: Untagged
+  m_TagString: LoreNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

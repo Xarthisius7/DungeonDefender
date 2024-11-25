@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8556047088960995594}
   m_Layer: 0
   m_Name: Tutorial Trigger
-  m_TagString: SceneTrigger
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
