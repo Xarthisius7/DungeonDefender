@@ -5727,8 +5727,8 @@ RectTransform:
   - {fileID: 6416802049722615716}
   - {fileID: 7937949384308480952}
   - {fileID: 7016268974018404410}
-  - {fileID: 98092410763519934}
   - {fileID: 6337917339725273954}
+  - {fileID: 98092410763519934}
   - {fileID: 2714855925101582230}
   - {fileID: 3647948133948038020}
   - {fileID: 1533950170799069446}
@@ -6110,6 +6110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resumeButton: {fileID: 2919390362880502383}
   returnToMenuButton: {fileID: 6464196193587818023}
+  statsButton: {fileID: 0}
 --- !u!1001 &2397918011921196729
 PrefabInstance:
   m_ObjectHideFlags: 0
