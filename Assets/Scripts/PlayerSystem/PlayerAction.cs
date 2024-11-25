@@ -45,7 +45,12 @@ public class PlayerAction : MonoBehaviour
 
         if (canFire)
         {
+            float currentStatsShotSpeed = (PowerupManager.instance.GetAttributeValue("AttackSpeed") * 0.7f);
+            
+            timeBetweenFiring = Mathf.Max(0.05f, 1f / (currentStatsShotSpeed + 1f));
+
             canFire = false;
+
             Instantiate(bullet, bulletTransform.position, Quaternion.Euler(0, 0, 0));
             //create the bullet object
             if (UnityEngine.Random.value <= 0.5f) 
@@ -56,8 +61,30 @@ public class PlayerAction : MonoBehaviour
             {
                 EffectsManager.Instance.PlaySFX(3);
             }
+
+
+            if (PowerupManager.instance.IsMagicActive(15))
+            {
+                Invoke("ExtraShoot", 0.1f);
+            }
+
         } else
         {
+        }
+    }
+
+    private void ExtraShoot()
+    {
+
+        Instantiate(bullet, bulletTransform.position, Quaternion.Euler(0, 0, 0));
+        //create the bullet object
+        if (UnityEngine.Random.value <= 0.5f)
+        {
+            EffectsManager.Instance.PlaySFX(37);
+        }
+        else
+        {
+            EffectsManager.Instance.PlaySFX(3);
         }
     }
 

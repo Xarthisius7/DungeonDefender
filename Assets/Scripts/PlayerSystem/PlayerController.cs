@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
 
     private float currentDashStaminaCost;
 
+    private bool secondChanceTriggered = false;
+
+    private float selfHealTimer = 0f; 
 
 
     void Start()
@@ -50,7 +53,17 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        selfHealTimer += Time.deltaTime; 
 
+        if (selfHealTimer >= 1f) 
+        {
+            selfHealTimer = 0f;
+
+            if (PowerupManager.instance.IsMagicActive(10))
+            {
+                PlayerTakesPercentDamage(-0.02f);
+            }
+        }
 
     }
 
@@ -59,7 +72,16 @@ public class PlayerController : MonoBehaviour
         if(currentPlayerStamina > currentDashStaminaCost)
         {
             // if player have enough stamina, allows to dash & consume the stamina
-            UpdateCurrentPlayerStamina(-currentDashStaminaCost);
+
+            if (PowerupManager.instance.IsMagicActive(7))
+            {
+
+                UpdateCurrentPlayerStamina(-(currentDashStaminaCost/2));
+            }
+            else
+            {
+                UpdateCurrentPlayerStamina(-currentDashStaminaCost);
+            }
             return true;
         }
         return false;
@@ -80,6 +102,10 @@ public class PlayerController : MonoBehaviour
     {
         // changing player's health - can be triggerd by events, healing, etc.
         currentPlayerHealth += change;
+        if(currentPlayerHealth> PowerupManager.instance.GetAttributeValue("MaxHealth"))
+        {
+            currentPlayerHealth = PowerupManager.instance.GetAttributeValue("MaxHealth");
+        }
         checkDeath();
         UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
@@ -88,6 +114,17 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerTakesDamage(float damage)
     {
+        if (PowerupManager.instance.IsMagicActive(20))
+        {
+            float randomValue = Random.Range(0f, 100f);
+            if (randomValue < 50f)
+            {
+
+                EffectsManager.Instance.PlaySFX(38, 0.8f);
+                return;
+            }
+        }
+
         float defense = PowerupManager.instance.GetAttributeValue("Defense");
         float damageReductionRate = defense / (defense + 50);
         float actualDamage = damage * (1 - damageReductionRate);
@@ -98,7 +135,6 @@ public class PlayerController : MonoBehaviour
         checkDeath();
         UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
-        UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
     }
 
@@ -107,10 +143,13 @@ public class PlayerController : MonoBehaviour
     {
         // player taking damage from enemy - can trigger powerup events in future.
         currentPlayerHealth -= PowerupManager.instance.GetAttributeValue("MaxHealth")*Percent;
+        if (currentPlayerHealth > PowerupManager.instance.GetAttributeValue("MaxHealth"))
+        {
+            currentPlayerHealth = PowerupManager.instance.GetAttributeValue("MaxHealth");
+        }
         checkDeath();
         UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
-        UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
 
     }
 
@@ -123,7 +162,22 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player Is Dead!");
             EffectsManager.Instance.PlaySFX(35, 1.0f);
 
-            controller.GameOver();
+            if (!secondChanceTriggered && PowerupManager.instance.IsMagicActive(19))
+            {
+                //revive player from powerup
+                secondChanceTriggered = true;
+                currentPlayerHealth = 0.5f* PowerupManager.instance.GetAttributeValue("MaxHealth");
+
+                UIManager.Instance.UpdateHealth(currentPlayerHealth / PowerupManager.instance.GetAttributeValue("MaxHealth"));
+                UIManager.Instance.BroadcastMessage("Second chance revived you from death... ");
+                EffectsManager.Instance.PlaySFX(6, 1.0f);
+            }
+            else
+            {
+
+                controller.GameOver();
+            }
+
 
             // GameOver.Setup("You Died");
             // GameOverScript.Instance.Setup("You Died");

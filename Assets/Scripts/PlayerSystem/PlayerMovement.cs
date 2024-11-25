@@ -260,7 +260,15 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat(animatorIsDashing, 1f);
 
         dashTime = dashDuration;
-        dashCooldownTimer = dashDefaultCooldown;  // set the dash cooldown
+        if (PowerupManager.instance.IsMagicActive(7))
+        {
+
+            dashCooldownTimer = dashDefaultCooldown/2;  // set the dash cooldown
+        }
+        else{
+
+            dashCooldownTimer = dashDefaultCooldown;  // set the dash cooldown
+        }
         dashDirection = movement.normalized; // set the direction of dash to the normalized movement
         rb.velocity = dashDirection * dashDistance / dashDuration; // set the dash speed.
 

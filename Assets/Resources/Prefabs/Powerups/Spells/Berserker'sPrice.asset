@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4acb851bd3763c746b203b0f8584ea33, type: 3}
-  m_Name: Knockback
+  m_Name: Berserker'sPrice
   m_EditorClassIdentifier: 
-  boosts: []
+  boosts:
+  - attributeName: Attack
+    boostValue: 100%
+  - attributeName: MaxHealth
+    boostValue: -50%
   isMagic: 1
-  id: 8
-  sprite: {fileID: 21300000, guid: 12b759f9402a5634895b197a4db9c3f3, type: 3}
-  description: "Your weapon can now knockback your enemny by a distance.\t\t\t"
+  id: 21
+  sprite: {fileID: 0}
+  description: "Deal 100% more damage. Reduce your maxhealth by 50%.\t\t\t"

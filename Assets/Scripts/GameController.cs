@@ -35,10 +35,13 @@ public class GameController : MonoBehaviour
     //default set to 1.  it can be changed from game Setting.
 
     public int CurrentDifficulty = 1;
+    public int CurrentArea = 1;
+    public int PreviousArea = 1;
     private float innerDifficuities = 1;
     private float roomDifficuitiesIncrease = 0.02f;
     private float areaDifficuitiesIncrase = 2;
 
+    public bool isDefencing = false;
 
     public bool IsGameRunning = true;
     //Is game still running - game over will effect this.
@@ -54,8 +57,8 @@ public class GameController : MonoBehaviour
 
     public float Area1BaseDiff = 1;
     public float Area2BaseDiff = 4;
-    public float Area3BaseDiff = 10;
-    public float Area4BaseDiff = 16;
+    public float Area3BaseDiff = 9;
+    public float Area4BaseDiff = 15;
     public int roomsEplored= 0;
 
     private int centerX = 0;
@@ -63,6 +66,7 @@ public class GameController : MonoBehaviour
     private Transform mapCenter;
 
     bool hasPaused = false;
+
 
 
     public WavesController currentTower;
@@ -158,9 +162,22 @@ public class GameController : MonoBehaviour
     private void GameInitDelayTerms()
     {
         //things that happens after game start. 
+        PowerupManager.instance.GivePowerup(36);
+        PowerupManager.instance.GivePowerup(36);
+        PowerupManager.instance.GivePowerup(36);
+        PowerupManager.instance.GivePowerup(36);
+        PowerupManager.instance.GivePowerup(36);
 
 
-
+        PowerupManager.instance.GivePowerup(6);
+        PowerupManager.instance.GivePowerup(7);
+        PowerupManager.instance.GivePowerup(10);
+        PowerupManager.instance.GivePowerup(15);
+        PowerupManager.instance.GivePowerup(16);
+        PowerupManager.instance.GivePowerup(17);
+        PowerupManager.instance.GivePowerup(19);
+        PowerupManager.instance.GivePowerup(20);
+        PowerupManager.instance.GivePowerup(21);
     }
 
 
@@ -202,9 +219,8 @@ public class GameController : MonoBehaviour
     {
         //MUST BE CALLED when player start defencing. 
 
-        //TODO:
-        //change BGM.
 
+        isDefencing = true;
         currentTower = wc;
 
     }
@@ -212,8 +228,9 @@ public class GameController : MonoBehaviour
     public int PlayerFinishedDefense()
     {
         TowerDefensed++;
+        isDefencing = false;
         UIManager.Instance.UpdateCrystalsDisplay(TowerDefensed);
-        EffectsManager.Instance.PlayBackgroundMusicSmooth(1);
+        ChangeBGMBaseOnArea();
 
         roomsEplored = 0;
         return TowerDefensed;
@@ -240,7 +257,7 @@ public class GameController : MonoBehaviour
         // player failed to defense. trigger GameOver.
 
         //TODO : change bgm, etc..
-
+        isDefencing = false;
         GameOver();
     }
     public void PlayerDeath()
@@ -359,9 +376,6 @@ public class GameController : MonoBehaviour
 
         }
 
-        //TODO: 
-        // 1. first enter #2or#3 area: change bgm. 
-        // 2. base on the current progress, change the CurrentDifficulty variable.
 
     }
 
@@ -379,8 +393,35 @@ public class GameController : MonoBehaviour
 
         float currentBaseDiff = Area == 1 ? Area1BaseDiff : (Area == 2 ? Area2BaseDiff : Area3BaseDiff);
         float nextBaseDiff = Area == 1 ? Area2BaseDiff : (Area == 2 ? Area3BaseDiff : Area4BaseDiff);
-
+        CurrentArea = Area;
         CurrentDifficulty = Mathf.RoundToInt(currentBaseDiff + explorationFactor * (nextBaseDiff - currentBaseDiff));
+
+        if(CurrentArea != PreviousArea && !isDefencing)
+        {
+            PreviousArea = CurrentArea;
+            ChangeBGMBaseOnArea();
+        }
+    }
+
+    public void ChangeBGMBaseOnArea()
+    {
+        switch (CurrentArea)
+        {
+            case 1:
+                EffectsManager.Instance.PlayBackgroundMusicSmooth(1);
+                break;
+
+            case 2:
+                EffectsManager.Instance.PlayBackgroundMusicSmooth(2);
+                break;
+
+            case 3:
+                EffectsManager.Instance.PlayBackgroundMusicSmooth(3);
+                break;
+
+            default:
+                break;
+        }
     }
 
     private IEnumerator GraduallyIncreaseIntensity(Light2D light, float targetIntensity, float duration)

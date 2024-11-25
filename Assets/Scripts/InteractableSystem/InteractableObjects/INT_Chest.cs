@@ -285,7 +285,7 @@ public class INT_Chest : MonoBehaviour, IInteractable
     private void OpenChest()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = openedSprite;
-
+        Invoke("PowerupExtra", 1.0f);
 
         InteractionTrigger interactionTrigger = GetComponent<InteractionTrigger>();
         if (interactionTrigger != null)
@@ -304,6 +304,55 @@ public class INT_Chest : MonoBehaviour, IInteractable
         if (shadowBorder != null)
         {
             shadowBorder2.gameObject.SetActive(true);
+        }
+    }
+
+
+    public void PowerupExtra()
+    {
+        if (PowerupManager.instance.IsMagicActive(16))
+        {
+            UIManager.Instance.ShowMessage("You find 1 Extra items Dropped to groudn from the Lucky Loot Powerup!");
+            float prob1 = 82f; // for common item
+            float prob2 = 5f;  // for equipment
+            float prob3 = 12f; // for key - just a notice. can be ignored.
+            float randomValue = Random.Range(0f, 100f);
+
+            if (randomValue < prob1)
+            {
+                // common item
+                ItemManager.Instance.CreateDroppedItem(
+                    ItemManager.Instance.GetRandomConsumeableID(),
+                    1
+                );
+            }
+            else if (randomValue < prob1 + prob2)
+            {
+                // equipment
+                ItemManager.Instance.CreateDroppedItem(
+                    ItemManager.Instance.GetRandomEquipmentID(),
+                    1
+                );
+            }
+            else
+            {
+                // key
+                ItemManager.Instance.CreateDroppedItem(16, 1);
+            }
+            
+
+        }
+        if (PowerupManager.instance.IsMagicActive(17))
+        {
+
+            float randomValue = Random.Range(0f, 100f);
+            if (randomValue < 50f)
+            {
+                UIManager.Instance.ShowMessage("You Obtained a random powerup from the Treasure Hunter Powerup!");
+                // 50% give a random powerup
+                PowerupManager.instance.GivePowerup(PowerupManager.instance.LoadRandomPowerups().id);
+
+            }
         }
     }
 }

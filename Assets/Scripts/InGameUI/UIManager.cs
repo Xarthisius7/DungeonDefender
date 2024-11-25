@@ -126,7 +126,7 @@ public class UIManager : MonoBehaviour
     }
     public void ClickButton1()
     {
-        ChooseOption(1);
+        ChooseOption(0);
     }
     public void ClickButton2()
     {
@@ -134,7 +134,7 @@ public class UIManager : MonoBehaviour
     }
     public void ClickButton3()
     {
-        ChooseOption(1);
+        ChooseOption(2);
     }
 
     public void ChooseOption(int i)

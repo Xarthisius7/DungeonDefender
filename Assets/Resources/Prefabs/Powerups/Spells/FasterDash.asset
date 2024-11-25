@@ -15,5 +15,5 @@ MonoBehaviour:
   boosts: []
   isMagic: 1
   id: 7
-  sprite: {fileID: 21300000, guid: 801ee782e7ad97143b846413fd26f754, type: 3}
-  description: "Decrease your dash cooldown by 50%.\t\t\t"
+  sprite: {fileID: 21300000, guid: 8ea9cff54a79ea3468501e60e44f45e0, type: 3}
+  description: "Decrease your dash cooldown by 50%, Dash cost by 50%.\t\t\t"

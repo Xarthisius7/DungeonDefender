@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acb851bd3763c746b203b0f8584ea33, type: 3}
   m_Name: MultiShot
   m_EditorClassIdentifier: 
-  boosts: []
+  boosts:
+  - attributeName: Attack
+    boostValue: -30%
   isMagic: 1
   id: 15
-  sprite: {fileID: 21300000, guid: 6eaa252c6e7675c49b2fc9cac26b0a02, type: 3}
-  description: "Shot 1 more projectiles. your attack is reduced by 30%. \t\t\t"
+  sprite: {fileID: 21300000, guid: 5f57641bc871d97419e5c3796a5aaf36, type: 3}
+  description: 'Shot 1 more projectiles. your attack is reduced by 30%. '

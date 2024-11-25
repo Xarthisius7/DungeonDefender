@@ -108,7 +108,7 @@ public class WavesController : MonoBehaviour
         InitSpawPoints();
         crystalLight.pointLightOuterRadius = 8f;
         crystalLight.intensity = 0.55f;
-        crystalLight.pointLightOuterRadius = 2.25f;
+        crystalLight.pointLightInnerRadius = 2.25f;
 
         startedSpawning = true;
 
@@ -255,8 +255,11 @@ public class WavesController : MonoBehaviour
 
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
 
+
+        int[] AreaDifficulty = { 3, 6, 10 };
+
         GameObject enemy = EnemyManager.Instance.SummonEenemy(selectedEnemy.enemyPrefab, 
-            spawnPoint, GameController.Instance.CurrentDifficulty, transform, false);
+            spawnPoint, AreaDifficulty[GameController.Instance.CurrentArea-1], transform, false);
 
         spawnedEnemyList.Add(enemy);
 
@@ -322,7 +325,7 @@ public class WavesController : MonoBehaviour
 
             crystalLight.intensity = 0.8f;
             crystalLight.pointLightOuterRadius = 10f;
-            crystalLight.pointLightOuterRadius = 3f;
+            crystalLight.pointLightInnerRadius = 3f;
         }
 
 
@@ -345,7 +348,7 @@ public class WavesController : MonoBehaviour
             animator.enabled = false;
             spriteRenderer.sprite = defenseCompleteSprite;
             crystalLight.pointLightOuterRadius = 15f;
-            crystalLight.pointLightOuterRadius = 6f;
+            crystalLight.pointLightInnerRadius = 6f;
         }
 
         Invoke("DefenseCompleteSpawningChest", 0.95f);

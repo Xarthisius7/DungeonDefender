@@ -266,7 +266,6 @@ public class MapManager : MonoBehaviour
         FixMainRoom(centerX, centerY);
         FixMainRoom(area2Start.x, area2Start.y);
         FixMainRoom(area3Start.x, area3Start.y);
-        Debug.Log("Fixing main room dir!!!!!!!!!!");
     }
 
     public void FixMainRoom(int x, int y)

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [System.Serializable]
 public class AttributeBoost
@@ -27,6 +28,8 @@ public class PowerupManager : MonoBehaviour
     private List<Powerup> allPowerups = new List<Powerup>();
     public List<Powerup> ownedPowerups = new List<Powerup>();
 
+    public Light2D crystalLight;
+
     private void Awake()
     {
         if (instance == null)
@@ -35,11 +38,7 @@ public class PowerupManager : MonoBehaviour
             InitializeAttributes();
             LoadAllPowerups();
 
-
-            //Invoke("tempOpenStatMenu", 1f);
-            //Invoke("tempOpenCHooseMenu", 1.5f);
-
-
+            
         }
         else
         {
@@ -52,17 +51,6 @@ public class PowerupManager : MonoBehaviour
     }
     
 
-    //TODO: To be deleted. only for testing.
-    public void tempOpenStatMenu()
-    {
-        GivePowerup(6);
-        GivePowerup(7);
-        UIManager.Instance.OpenAttrubuteMenu();
-    }
-    public void tempOpenCHooseMenu()
-    {
-        UIManager.Instance.OpenItemMenuFunc(LoadPowerup(6), LoadPowerup(7), LoadPowerup(8));
-    }
 
 
 
@@ -106,7 +94,7 @@ public class PowerupManager : MonoBehaviour
                 ownedPowerups.Add(powerup);
             }
             UIManager.Instance.ShowMessage("} - You obtained a Powerup: " + powerup.name+" - {");
-            //TODO: Add sfx for obtaining Powerup
+
             UpdatePowerups();
         }
     }
@@ -178,12 +166,39 @@ public class PowerupManager : MonoBehaviour
             }
         }
 
+        UpdateSpellPowerupSpecialEffects();
+
         // Update current attributes based on additive and multiplicative boosts
         foreach (string attribute in baseAttributes.Keys)
         {
             currentAttributes[attribute] = (baseAttributes[attribute] + additiveBoosts[attribute]) * (1 + multiplicativeBoosts[attribute]);
         }
+
+
     }
+
+    private void UpdateSpellPowerupSpecialEffects()
+    {
+        if (IsMagicActive(6))
+        {
+            ChangeLightRadius();
+        }
+
+    }
+
+
+    public void ChangeLightRadius()
+    {
+
+        crystalLight.pointLightOuterRadius = 12f;
+        crystalLight.pointLightInnerRadius = 4f;
+        crystalLight.intensity = 1f;
+    }
+    
+
+
+
+
     // Check if a specific Magic Powerup is active
     public bool IsMagicActive(int id)
     {

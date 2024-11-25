@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 713f7497b46716748a8a2c2c4f5ed113, type: 3}
-  m_Name: stamina potion
+  m_Script: {fileID: 11500000, guid: 4acb851bd3763c746b203b0f8584ea33, type: 3}
+  m_Name: Self-healing
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 48e4e56d01df9284a91764d2c737432a, type: 3}
-  id: 2
-  itemName: stamina
-  itemDescription: regenerate a small amount of stamina
-  consumable: 1
-  maxStack: 10
+  boosts: []
+  isMagic: 1
+  id: 10
+  sprite: {fileID: 21300000, guid: 0e8aeb1286431e94abcfa6099eb0ee8e, type: 3}
+  description: "For every second, healing 2% of your maxhealth.\t\t\t"

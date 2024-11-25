@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: statsButton
       value: 
       objectReference: {fileID: 5535959790323973199}
+    - target: {fileID: 1272328012320584609, guid: dc750537c176b0f42a5224116314b481, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton1
+      objectReference: {fileID: 0}
     - target: {fileID: 1419584776839594846, guid: dc750537c176b0f42a5224116314b481, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 404
@@ -291,6 +295,10 @@ PrefabInstance:
     - target: {fileID: 2389680271229745893, guid: dc750537c176b0f42a5224116314b481, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -404
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948994254055958471, guid: dc750537c176b0f42a5224116314b481, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClickButton3
       objectReference: {fileID: 0}
     - target: {fileID: 3254006709323586761, guid: dc750537c176b0f42a5224116314b481, type: 3}
       propertyPath: m_AnchorMax.y
@@ -394,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8050240749778552244, guid: dc750537c176b0f42a5224116314b481, type: 3}
       propertyPath: m_Name
-      value: IngameUI Variant
+      value: IngameUI Variant D
       objectReference: {fileID: 0}
     - target: {fileID: 8498037108556992179, guid: dc750537c176b0f42a5224116314b481, type: 3}
       propertyPath: m_AnchorMax.y
