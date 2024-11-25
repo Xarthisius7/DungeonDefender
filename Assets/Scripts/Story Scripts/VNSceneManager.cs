@@ -36,17 +36,18 @@ public class VNSceneManager : MonoBehaviour
     public bool VNLoreInProgess;
     public bool VNSceneInProgress;
     private bool startScene;
+    private bool isRayne;
 
     //Those integers will be used to determine the array of dialogues to use (act as counters)
     private int lineNB;
-    private int SceneNb = 1;
-    private int LoreNb = 1;
-    private int TutorialNB = 1;
+    public int SceneNb = 3;
+    public int LoreNb = 1;
+    public int TutorialNB = 1;
 
     //This will be used to determine how many pieces of knowledge have been adquired
     public int loreLearned = 0;
 
-    public TextMeshProUGUI loreLearnedCounterUI;
+    public TMP_Text loreLearnedCounterUI;
 
     //We will use this variable to store the current dialogue array in use. It can be normal Scenes, tutorials or lore scenes
     private string[,] currentScene;
@@ -71,14 +72,14 @@ public class VNSceneManager : MonoBehaviour
 
         //This value is necessary to automatically start the FIRST dialogue without player input
         startScene = true;
+        isRayne = false;
 
         //We deactivate the visual part of the visual novel
         VNRoot.SetActive(false);
         lineNB = 0;
 
         //This boolean is used to determine if the player is in the tutorial zone. When that is the case, it will be used to deactivate various functions that normally are checked when player is on the main map
-        isTutorial = false;
-        //TODO: change it back to true. Also connecting the background stroy'end to the start of the actual game's scene
+        isTutorial = true;
 
         //Get instance of class where methods StopBackgroundMusic() and ResumeBackgroundMusic() can be found
         GameMusic = EffectsManager.Instance;
@@ -88,6 +89,8 @@ public class VNSceneManager : MonoBehaviour
         architect = new TextArchitect(ds._dialogueContainer.dialogueText);
         architect.buildMethod = TextArchitect.BuildMethod.typewriter;
         architect.speed = 0.5f;
+
+        loreLearnedCounterUI.text = loreLearned.ToString() + " / " + nbLores;
     }
 
     // Update is called once per frame
@@ -103,12 +106,13 @@ public class VNSceneManager : MonoBehaviour
                 VNRoot.SetActive(true);
                 GameUI.SetActive(false);
                 lineNB = 0;
-                Debug.Log("Scene Lenght is" + currentScene.Length / 4);
-                Debug.Log("Beginning: Scene number is" + SceneNb);
+                Debug.Log("Scene Lenght is " + currentScene.Length / 4);
+                Debug.Log("Beginning: Scene number is " + SceneNb);
 
-                Chloe.GetComponent<Image>().sprite = LineCharacter(currentScene[lineNB, 0]);
-                ds._dialogueContainer.nameText.text = currentScene[lineNB, 1];
-                architect.Build(currentScene[lineNB, 2]);
+                ChangeSpriteChloe(lineNB);
+                ChangeSpriteCharacterTwo(lineNB);
+                ds._dialogueContainer.nameText.text = NameRayneforStory(currentScene[lineNB, 2]);
+                architect.Build(currentScene[lineNB, 3]);
                 lineNB++;
             }
 
@@ -126,20 +130,21 @@ public class VNSceneManager : MonoBehaviour
                 }
                 else
                 {
-                    Chloe.GetComponent<Image>().sprite = LineCharacter(currentScene[lineNB, 0]);
-                    ds._dialogueContainer.nameText.text = currentScene[lineNB, 1];
-                    architect.Build(currentScene[lineNB, 2]);
+                    ChangeSpriteChloe(lineNB);
+                    ChangeSpriteCharacterTwo(lineNB);
+                    ds._dialogueContainer.nameText.text = NameRayneforStory(currentScene[lineNB, 2]);
+                    architect.Build(currentScene[lineNB, 3]);
                     lineNB++;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Space) && lineNB >= currentScene.Length / 4)
-            { 
+            {
                 SceneNb++;
                 VNSceneInProgress = false;
                 startScene = true;
                 VNRoot.SetActive(false);
                 GameUI.SetActive(true);
-                Debug.Log("End: Scene number is" + SceneNb);
+                Debug.Log("End: Scene number is " + SceneNb);
                 UnPauseGameForScene();
             }
         }
@@ -153,8 +158,8 @@ public class VNSceneManager : MonoBehaviour
                 VNRoot.SetActive(true);
                 GameUI.SetActive(false);
                 lineNB = 0;
-                Debug.Log("Tutorial Lenght is" + currentScene.Length / 4);
-                Debug.Log("Beginning: Tutorial number is" + TutorialNB);
+                Debug.Log("Tutorial Lenght is " + currentScene.Length / 4);
+                Debug.Log("Beginning: Tutorial number is " + TutorialNB);
 
                 ChangeSpriteChloe(lineNB);
                 ChangeSpriteCharacterTwo(lineNB);
@@ -191,7 +196,7 @@ public class VNSceneManager : MonoBehaviour
                 startScene = true;
                 VNRoot.SetActive(false);
                 GameUI.SetActive(true);
-                Debug.Log("End: Tutorial number is" + TutorialNB);
+                Debug.Log("End: Tutorial number is " + TutorialNB);
                 UnPauseGameForScene();
             }
         }
@@ -205,8 +210,8 @@ public class VNSceneManager : MonoBehaviour
                 VNRoot.SetActive(true);
                 GameUI.SetActive(false);
                 lineNB = 0;
-                Debug.Log("Tutorial Lenght is" + currentScene.Length / 4);
-                Debug.Log("Beginning: Tutorial number is" + LoreNb);
+                Debug.Log("Lore Lenght is " + currentScene.Length / 4);
+                Debug.Log("Beginning: Lore number is " + LoreNb);
 
                 ChangeSpriteChloe(lineNB);
                 ChangeSpriteCharacterTwo(lineNB);
@@ -240,11 +245,12 @@ public class VNSceneManager : MonoBehaviour
             {
                 LoreNb++;
                 loreLearned++;
+                loreLearnedCounterUI.text = loreLearned.ToString() + " / " + nbLores;
                 VNLoreInProgess = false;
                 startScene = true;
                 VNRoot.SetActive(false);
                 GameUI.SetActive(true);
-                Debug.Log("End: Lore number is" + LoreNb);
+                Debug.Log("End: Lore number is " + LoreNb);
                 UnPauseGameForScene();
             }
         }
@@ -252,20 +258,21 @@ public class VNSceneManager : MonoBehaviour
 
     private string[,] loadScene(int SC)
     {
-        switch(SC)
+        switch (SC)
         {
             case 1:
                 return Scene1;
-            case 2: 
+            case 2:
                 return Scene2;
-            case 3: 
+            case 3:
                 return Scene3;
             case 4:
-                return Scene4;
-            case 5:
-                return Scene5;
-            case 6:
-                return Scene6;
+                if (loreLearned < 8)
+                    return Scene4A;
+                else if (loreLearned >= 8 && loreLearned < 19)
+                    return Scene4B;
+                else
+                    return Scene4C;
         }
 
         return null;
@@ -347,7 +354,7 @@ public class VNSceneManager : MonoBehaviour
 
     private Sprite LineCharacter(string ch)
     {
-        switch(ch)
+        switch (ch)
         {
             case "ChloeAngry":
                 return ChloeSprites[0];
@@ -437,6 +444,14 @@ public class VNSceneManager : MonoBehaviour
         }
     }
 
+    private string NameRayneforStory(string nm)
+    {
+        if (nm == "Azure" && isRayne)
+            return "Rayne";
+        else
+            return nm;
+    }
+
     private void EndCurrentScene()
     {
         if (VNSceneInProgress)
@@ -446,7 +461,7 @@ public class VNSceneManager : MonoBehaviour
             startScene = true;
             VNRoot.SetActive(false);
             GameUI.SetActive(true);
-            Debug.Log("End: Scene number is" + SceneNb);
+            Debug.Log("End: Scene number is " + SceneNb);
             UnPauseGameForScene();
         }
         else if (VNTutorialInProgress)
@@ -456,22 +471,27 @@ public class VNSceneManager : MonoBehaviour
             startScene = true;
             VNRoot.SetActive(false);
             GameUI.SetActive(true);
-            Debug.Log("End: Tutorial number is" + TutorialNB);
+            Debug.Log("End: Tutorial number is " + TutorialNB);
             UnPauseGameForScene();
         }
         else if (VNLoreInProgess)
         {
             LoreNb++;
             loreLearned++;
+            loreLearnedCounterUI.text = loreLearned.ToString() + " / " + nbLores;
             VNLoreInProgess = false;
             startScene = true;
             VNRoot.SetActive(false);
             GameUI.SetActive(true);
-            Debug.Log("End: Lore number is" + LoreNb);
+            Debug.Log("End: Lore number is " + LoreNb);
             UnPauseGameForScene();
         }
     }
 
+    public int getSceneNB()
+    {
+        return SceneNb;
+    }
     public void PauseGameForScene()
     {
         //Pause the game.
@@ -514,58 +534,128 @@ public class VNSceneManager : MonoBehaviour
     /// Element 2: Determines WHICH character sprite is on the object or IF character object is active for SECOND character
     /// Element 3: The name of the current speaker
     /// Element 4: Dialogue
-    string[,] Scene1 = new string[5, 4]
+    string[,] Scene1 = new string[8, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 1" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 1" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 1" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 1" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 1" }
+        //1
+        {"ChloeIndifferentTalking", "RayneSmirk", "Chloe", "Well... that was exiting for a first one..."},
+        //2
+        {"ChloeIndifferent", "RayneHappyTalking", "Azure", "And it was the easiest one. Don't forget there are still 2 more to go~"},
+        //3
+        {"ChloeAnnoyedTalking", "RayneHappy", "Chloe", "Right... You seem happy, yet I am the one doing the heavy lifting"},
+        //4
+        {"ChloeAnnoyed", "RayneHappyTalking", "Azure", "Hehe... Don't be so grumpy dear~ You might be the one doing most of the fighting, but I am the one purifying the crystals~"},
+        //5
+        {"ChloeIndifferentTalking", "RayneSmirk", "Chloe", "I get that. So? How do we know they are not going to be corrupted again after leaving them alone?"},
+        //6
+        {"ChloeCurious", "RayneHappyTalking", "Azure", "I applied a layer of solid mana around it. It will help to filtrate and keep out the corruption in the air. I will admit, it is not perfect, but it will give us more than the entire day to clean up the others"},
+        //7
+        {"ChloeContentTalking", "RayneHappy", "Chloe", "hmmmm~ That is smart. Well, who would have guessed, you competent after all!" },
+        //8
+        {"ChloeHappy", "RayneAngryTalking", "Azure", "Ooe..." }
     };
 
     string[,] Scene2 = new string[5, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 2" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 2" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 2" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 2" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 2" }
+        //1
+        {"ChloeAnnoyed", "RayneIndifferentTalking", "Azure", "It is getting harder and harder. I think the maze is now actively responding to our threat... Or is simply irritated we are such noisy brats"},
+        //2
+        {"ChloeAnnoyedTalking", "RayneIndifferent", "Chloe", "And guess who is the one that has to bear the consequences...."},
+        //3
+        {"ChloeAnnoyed", "RayneHappyTalking", "Azure", "Well, it cannot be helped, you are the demoness and I am the cute and fagile rock after all~!"},
+        //4
+        {"ChloeContentTalking", "RayneAngry", "Chloe", "Sure... if you replace the cute with the old"},
+        //5
+        {"ChloeContent", "RayneIndifferentTalking", "Chloe", "Brat..."}
     };
 
     string[,] Scene3 = new string[5, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 3" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 3" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 3" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 3" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 3" }
+        //1
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "That was the last one, right?"},
+        //2
+        {"ChloeSad", "RayneIndifferentTalking", "Azure", "Yep. Which means it is now time to get out of here... You ok Chloe?"},
+        //3
+        {"ChloeSadTalking", "RayneIndifferent", "Chloe", "Yeah, I am just... Thinking about the memories that I have of this place... How it seems familiar, yet foreigner now that I am leaving it behind. It was... home for a while"},
+        //4
+        {"ChloeSad", "RayneSadTalking", "Azure", "I see... Ok no, I actually don't. I was trapped inside the Core for so long that my ultimate goal has been always on getting out so... I actually don't know how you feel, but I understand wha you mean"},
+        //5
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Thanks I guess. But yeah, I agree. It is time to leave. Lets go find that Nexus!"}
     };
 
-    string[,] Scene4 = new string[5, 4]
+    string[,] Scene4A = new string[6, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 4" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 4" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 4" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 4" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 4" }
+        //1
+        {"ChloeIndifferent", "RayneSmirkTalking", "Azure", "There is the Nexus!!! Ah... The smell of freedom~ I can already taste it"},
+        //2
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Personally, I am more interested on seen the sun after so long. Although just to get to see the world ... And see how it is like, would be interesting indeed"},
+        //3
+        {"ChloeSadTalking", "RayneIndifferent", "Chloe", "But... I am still wondering... about us, you know? Who we were before ending here. What if we had family? I guess they most have died by now from old age, I am just wondering"},
+        //4
+        {"ChloeSad", "RayneSadTalking", "Azure", "I guess... you are right. In the end, we never discover who we were. But is that such a bad thing? So much time has pass... That regardless if we had lives before this, they are not here anymore. Which means a new start..."},
+        //5
+        {"ChloeContent", "RayneHappyTalking", "Azure", "An adventure, travelling around the world... you and me, together!"},
+        //6
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Yeah... Together!"}
     };
 
-    string[,] Scene5 = new string[5, 4]
+    string[,] Scene4B = new string[8, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 5" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 5" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 5" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 5" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 5" }
+        //1
+        {"ChloeAnnoyed", "RayneSmirkTalking", "Azure", "Fascinating... So this is the spatial disruptor at its full glory! Been as sensitive as I am to magic, I can see the pulses of mana. It is like the professor said! The receptors receive, calculate, and space is swapped!"},
+        //2
+        {"ChloeAnnoyedTalking", "RayneSmirk", "Chloe", "You know... I get it. You are a fan now, and it seems you found a hobby in science. There are a lot of cool stuff here, you can stay will I go up to claim my place under the sun"},
+        //3
+        {"ChloeAnnoyed", "RayneHappyTalking", "Azure", "Hehe, no way I will let you go away and leave me in the dust~ I also have plans in the surface. Like making myself a golem to use as a body! We got a lot of notes from Professor Jones, and there are some interesting ideas he mentions during other entries. Also, I am not sure that our dear homicidal maze will allow me to play with its toys~"},
+        //4
+        {"ChloeIndifferent", "RayneIndifferentTalking", "Azure", "But... Although we learned that there is a world up there, there are also dangers. And considering where we come from... people will not look kind to us... to you Chloe. The fact is that you are not human, and people will not like that, so..."},
+        //5
+        {"ChloeAngryTalking", "RayneIndifferent", "Chloe", "So...?"},
+        //6
+        {"ChloeCurious", "RayneHappyTalking", "Azure", "I will get more reliable and strong... To protect you"},
+        //7
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "Hehehehe...! Ironic, since I was the one protecting you all along until now. But... yeah. That makes me happy, to have you at my side"},
+        //8
+        {"ChloeHappy", "RayneHappyTalking", "Azure", "Yes, to your side now and always"}
     };
 
-    string[,] Scene6 = new string[5, 4]
+    string[,] Scene4C = new string[18, 4]
     {
-        { "ChloeContent", "", "Chloe", "Dialogue 1 of Scene 6" } ,
-        { "ChloeContent", "", "Chloe", "Dialogue 2 of Scene 6" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 3 of Scene 6" },
-        { "ChloeContent", "", "Chloe", "Dialogue 4 of Scene 6" },
-        { "ChloeCurious", "", "Chloe", "Dialogue 5 of Scene 6" }
+        //1
+        {"ChloeSad", "RayneSadTalking", "Rayne", "Chloe... darling... We have to go."},
+        //2
+        {"ChloeSadTalking", "RayneSad", "Chloe", "I know. It is just that... even now, I can feel their connection towards me. I can feel some of the more intelligent ones begging in their own way for their queen, for Labyssal to not leave."},
+        //3
+        {"ChloeSadTalking", "RayneSad", "Chloe", "And before you ask, having a connection is not the same as been on synch with the collective. I am still myself, I am still Chloe. But... I know that once I, their queen, am gone, this place will be back as it was before. A collective without ambition nor aim. Only following my last orders on defending this place to the death. Which is why I am sad, yet relieve that our home will continue to exist for the next centuries"},
+        //4
+        {"ChloeSad", "RayneIndifferentTalking", "Rayne", "But that is not the only thing, it is Chloe? You don't really fear leaving because of what you will leave behind.... but for what you might find out"},
+        //5
+        {"ChloeSadTalking", "RayneIndifferent", "Chloe", "You are right mom. Like I told you, part of me was satisfied that I got to destroy the empire, but another recognizes the pain that I brought others in doing so. That makes me wonder if they will look at me like the crusaders did back then? I destroyed what I hated, yet I ended becoming like it, thus bringing ruin to people."},
+        //6
+        {"ChloeSad", "RayneIndifferentTalking", "Rayne", "But those, The Black Wave and the crusades, were centuries ago. History might remember, but humanity as a whole is bad at doing it..."},
+        //7
+        {"ChloeContent", "RayneHappyTalking", "Rayne", "Else, the fools would not have started a Second Continental War."},
+        //8
+        {"ChloeContentTalking", "RayneIndifferent", "Chloe", "Yes, I guess you are right. But... Then what should I do? We don't have a home anymore. Mages might still be discriminated to this day... Why go out?"},
+        //9
+        {"ChloeCurious", "RayneIndifferentTalking", "Rayne", "Honestly... Despite been a cute and baddy maze, my daughter can certainly be clueless...? To answer your question, we will do what YOU wanted to do if you ever had escaped the mines... We will restore the Azulheard clan, and get back what we lost"},
+        //10
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "I guess... that we would both like that. But, mom, what if someone tries to stop us? What will people think about my appearance? What if we get attack?"},
+        //11
+        {"ChloeCurious", "RayneIndifferentTalking", "Rayne", "<i> Sigh </i>... Simple. On my part, I will use my now love for science and professor Jones notes to make myself a body, but you Chloe... You should NOT have any problem at all"},
+        //12
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "What? Why?"},
+        //13
+        {"ChloeCurious", "RayneHappyTalking", "Rayne", "Who strong you think you are right now silly~? Or are you telling me that you lost all your power simply because you got desynchronized from the maze?"},
+        //14
+        {"ChloeIndifferentTalking", "RayneIndifferent", "Chloe", "Oh... Not actually. As Labyssal, my soul gives my body the ability to interact intimately with mana. If I wanted to, I could... take control of an area and make it my own. But why are you saying that? I though..."},
+        //15
+        {"ChloeCurious", "RayneHappyTalking", "Rayne", "What I would keep a leash on you for eternity? Eheheh... goodness no! Look Chloe... I am your mother. Not a hero that seeks to bring balance to the world."},
+        //16
+        {"ChloeCry", "RayneIndifferentTalking", "Rayne", "I am... disappointed and it makes me sad to think you did what you did. But I don't plan on chaining you nor pushing you in a quest for redemption. I want to set you free... And make sure you are happy"},
+        //17
+        {"ChloeHappy", "RayneHappy", "Chloe", "<i> sniff </i>... Love you mom~!"},
+        //18
+        {"ChloeHappy", "RayneHappyTalking", "Rayne", "Love you too sweetheart. Now... lets go out and reclaim our place under the sun..."}
     };
     #endregion
 
@@ -575,69 +665,69 @@ public class VNSceneManager : MonoBehaviour
 
     string[,] Tutorial1 = new string[11, 4]
     {
-    {"ChloeAngry", "", "Chloe", "Ugh... What? Where am I?"},
-    {"ChloeAngry", "", "????", "About time you woke up, dear~"},
-    {"ChloeCurious", "", "Chloe", "!!!"},
-    {"ChloeIndifferentTalking", "", "Chloe", "W-Who's there?! I may be small and just a girl, but I know how to use magic!"},
-    {"ChloeIndifferent", "", "????", "Relax, relax, Chloe~ I mean no harm. You just woke up, so don¡¯t overexert yourself, even though you're not such a little girl anymore. As for who I am..."},
-    {"ChloeCurious", "RayneGemForm", "????", "Good morning~!"},
-    {"ChloeCurious", "RayneGemForm", "Chloe", "....."},
-    {"ChloeCurious", "RayneGemForm", "????", "....."},
-    {"ChloeIndifferentTalking", "RayneGemForm", "Chloe", "Maybe if I go back to sleep, I'll wake up in a better place?"},
-    {"ChloeFocus", "RayneGemForm", "????", "Wait, wait, wait, dear! I know it's weird waking up in a creepy place like this with a floating, perfectly blue, gorgeous gem like me talking~ BUT you need to listen to me, Chloe. You might not understand what's happening right now, but know that you're in danger."},
-    {"ChloeCurious", "RayneGemForm", "Tutorial", "(To move the character, use WASD. W to move up, A to move left, S to move down, and D to move right. Move and navigate through the pillar to the next room)"}
+        {"ChloeAngry", "", "Chloe", "Ugghhhh……… What…. Where…."},
+        { "ChloeAngry", "", "????", "About time you woke up dear~"},
+        {"ChloeCurious", "", "Chloe", "!!!"},
+        {"ChloeIndifferentTalking", "", "Chloe", "H-How is there?! I might be a little and a girl, but I know how to shoot magic!"},
+        {"ChloeIndifferent", "", "????", "Relax, relax Chloe~ I mean no harm. You just woke up, so don’t over do yourself despite not been a little girl anymore. As for who I am...."},
+        {"ChloeCurious", "RayneGemForm", "????", "Morning~!"},
+        {"ChloeCurious", "RayneGemForm", "Chloe", "....."},
+        {"ChloeCurious", "RayneGemForm", "????", "....."},
+        {"ChloeIndifferentTalking", "RayneGemForm", "Chloe", "Maybe if I go back to sleep, I should wake up soon…."},
+        {"ChloeFocus", "RayneGemForm", "????", "Waitwaitwait dear! I know it is weird waking up in a creepy place like this with a floating perfect blue gorgeous gem like me that talks~ BUT…. You need to listen to me Chloe. You might not understand what is happening right now, but know that you are in danger"},
+        {"ChloeCurious", "RayneGemForm", "Tutorial", "(To move the character, use WASD. W to go up, A to go left, S to go down, and D to go right. Move and navigate through the pillar to the next room)"}
     };
 
     string[,] Tutorial2 = new string[14, 4]
     {
-    { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "Stop! I will not continue to follow you until you tell me more. What do you mean by 'being in danger'? And if this is not a dream, where am I, how do you know me, and how is it possible that I got taller?" },
-    { "ChloeIndifferent", "RayneGemForm", "????", "Well... It's complicated. But let's begin by telling you about your new status as a WOMAN and... anatomy. Here, check your reflection on me." },
-    { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "What do you mea- AAHH, monster!! Wait... Is that me?! I'm... an adult? And I'm blue?!! W-What? Is that a tail??!" },
-    { "ChloeIndifferentTalking", "RayneGemForm", "????", "Chloe, tell me, what do you remember?" },
-    { "ChloeAngryTalking", "RayneGemForm", "Chloe", "I... uh. This is weird. I DO remember my name and that I was a human girl, not... this. But I can't think of anything else. It's just... blurry when I try to remember." },
-    { "ChloeCurious", "RayneGemForm", "????", "So, amnesia? No, I think it's simply your memories being buried under the surface of your mind. This might be a consequence of being trapped and connected to the hivemind." },
-    { "ChloeCurious", "RayneGemForm", "Chloe", "Hivemind?" },
-    { "ChloeCurious", "RayneGemForm", "????", "Yes. A collective of minds, consciousnesses, life essences, or souls all connected into one. All the beings and objects inside this place are connected to it by the natural and corrupted mana in the air. You were trapped there for a long time. Your body¡ªthe one you're using now¡ªhas slowly aged over time and changed with the corruption." },
-    { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "I... I see. Yeah, I can feel it now that I'm focusing on it. The air is saturated with magic. It feels... dirty. I shouldn't be able to breathe or even think right now, considering how corrupted it is, but... is it because of my body? And how did I get out?" },
-    { "ChloeIndifferent", "RayneGemForm", "????", "Thanks to the Azure Core. It's a necklace with a blue gem, basically. You found it, and it acted as an anchor to pull you away from the hive. The necklace was destroyed in the process, but the gem remains... which is me~!" },
-    { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "And you know my name because..." },
-    { "ChloeIndifferent", "RayneGemForm", "????", "Because after I pulled you out of the hivemind, I got a few of your memories... or at least the ones you remember right now. That's how you still know your name and about your situation." },
-    { "ChloeIndifferent", "RayneGemForm", "????", "Anyway... although you're no longer human, you still have access to your magic, and you're stronger and faster than before! See those big pots blocking the way? Try to destroy them." },
-    { "ChloeIndifferent", "RayneGemForm", "Tutorial", "(To fire your weapon, point the mouse in the direction you want to shoot and press Left Click to fire a bullet.)" }
+        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "Stop! I will not continue to follow you until you tell me more. What do you mean by being in danger? And if this is not a dream, where I am, how do you know me, and how it is possible that I got taller?" },
+        { "ChloeIndifferent", "RayneGemForm", "????", "Well…. It is complicated. But lets beginning by telling you about your new status as a WOMAN and… anatomy. Here, check your reflection on me" },
+        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "What do you mea- AAHH monster!! Wait…. Is that me?! I am…. An adult? And I am blue?!! E-Eh…? Is that a tail….?!" },
+        { "ChloeIndifferentTalking", "RayneGemForm", "????", "Chloe, tell me, what do you remember?" },
+        { "ChloeAngryTalking", "RayneGemForm", "Chloe", "I ahh…. Uh. This is weird. I DO remember my name and the fact that I was a human girl and not…. This. But I cannot think of anything else. It is just…. Blurry when I think about it" },
+        { "ChloeCurious", "RayneGemForm", "????", "So amnesia…. No. I think it is simply your memories been back under the surface of your mind. This might be a consequence of been trapped and connected to the hivemind" },
+        { "ChloeCurious", "RayneGemForm", "Chloe", "Hivemind?" },
+        { "ChloeCurious", "RayneGemForm", "????", "Yes. A collective of minds, consciences, life essences or souls all connected into one. All the beings and objects inside this place are connected to it by the natural and corrupted mana in the air. You were trapped there for a long time. Your body, the one you are using right now, has slowly age overtime and changed with the corruption" },
+        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "I… I see. Yeah, I can feel it now that I am thinking and focusing about it. The air is saturated with magic. It feels…. Dirty. I should not be able to breath or even thinking right now due to how corrupted it is but… Is it because of my body? And how did I get out?" },
+        { "ChloeIndifferent", "RayneGemForm", "????", "Thanks to the Azur Core. It is a necklace with a blue gem basically. You found it and it acted as an anchor to pull you away from the hive. The necklace was destroyed in the process, but the gem remains… which is me~!" },
+        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "And you know my name because..." },
+        { "ChloeIndifferent", "RayneGemForm", "????", "Because after I pull you out of the hivemind, I got a few of your memories... Or at least the ones you remember right now. And that is how you know your name and about your situation" },
+        { "ChloeIndifferent", "RayneGemForm", "????", "Anyway… although you are not longer human, you still have access to your magic, and you are stronger and faster than before! See those big pots blocking the way? Try to destroy them" },
+        { "ChloeIndifferent", "RayneGemForm", "Tutorial", "(To fire your weapon, point the mouse in the direction where you want to shoot and press Left Click to fire a bullet)" }
     };
 
     string[,] Tutorial3 = new string[12, 4]
     {
-        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "So?Basically, you are a gem that is gained sentience after pulling me out?" },
-        { "ChloeCurious", "RayneGemForm", "????", "Nonono?I am a living being! Or? I was long ago, but my soul is intact and inside the Azur Core. I was inside the Core for a long time. Somewhat aware of my surroundings, but unable to do anything... AND BORED OUT OF MY MIND! That is, until you pick me. Soooo?I am technically alive~!" },
+        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "So… Basically, you are a gem that is gained sentience after pulling me out?" },
+        { "ChloeCurious", "RayneGemForm", "????", "Nonono… I am a living being! Or…. I was long ago, but my soul is intact and inside the Azur Core. I was inside the Core for a long time. Somewhat aware of my surroundings, but unable to do anything... AND BORED OUT OF MY MIND! That is, until you pick me. Soooo… I am technically alive~!" },
         { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "And then you decided to pull me out when my body touch you" },
         { "ChloeAnnoyed", "RayneGemForm", "????", "uuuuhhhh... not...exactly. I actually tried to take control of your body since it was basically empty of a soul. But, to my surprise, this had the effect of pulling... Oooh don't look at me like that! I confese, it was an accident and did not do it out of the goodness of my heart, but it is a win-win at the end~" },
         { "ChloeAnnoyedTalking", "RayneGemForm", "Chloe", "I see. Good to know my return was an accident. So... who are you anyway, oh my selfless savior?" },
         { "ChloeAnnoyed", "RayneGemForm", "????", "Geeh... You are not going to let that go, don't you? Anyway, it is funny, but like you, I don't really know who I am. I have been traped here so long that both time and erosion by corruption has made most of my memories fade" },
         {"ChloeCurious", "RayneGemForm", "????", "But... contrary to you, I do not even remember my name. Maybe I will with time..."},
-        { "ChloeSadTalking", "RayneGemForm", "Chloe", "Uhhh? Sorry, for asking then. I guess we are in the same situation then. Maybe both our memories will come as time goes. Also, how come I am the first of everybody to touch you and interact with you" },
+        { "ChloeSadTalking", "RayneGemForm", "Chloe", "Uhhh…. Sorry, for asking then. I guess we are in the same situation then. Maybe both our memories will come as time goes. Also, how come I am the first of everybody to touch you and interact with you" },
         { "ChloeCurious", "RayneGemForm", "????", "Well, that is the thing. I don't know how YOU got to see me. You see, the Azur Core has an enchantment. A powerful one. It basically not only makes invisible to everybody, but it also creates a zone around it where sentient beings will unconciously avoid it. That is why the hivemind was unable to see me. Which makes it more surprising that you did." },
-        { "ChloeCurious", "RayneGemForm", "????", "Maybe your body was naturally more sensible to magic, or the enchantment's effects were starting to fade... I am not sure?OH! A chest~! Go and open it, we might find something useful that can help us. This place is certainly full of fancy stuff~" },
+        { "ChloeCurious", "RayneGemForm", "????", "Maybe your body was naturally more sensible to magic, or the enchantment's effects were starting to fade... I am not sure… OH! A chest~! Go and open it, we might find something useful that can help us. This place is certainly full of fancy stuff~" },
         { "ChloeIndifferent", "RayneGemForm", "Tutorial", "(To interact with chests and other interactable objects, you need to approach them until an icon appears. Using your mouse, Left Click to start the interaction)" },
         { "ChloeIndifferent", "RayneGemForm", "Tutorial", "(There are five types of chests. From those, copper and iron chests can be open without the need of a key. Small and large gold chests as well as blue-platinum chests require an unequiped key in the inventory to open)" }
     };
 
     string[,] Tutorial4 = new string[6, 4]
     {
-        { "ChloeAnnoyed", "RayneGemForm", "????", "Nothing eh? Well, it can’t be helped~! Until you start getting your memories back, it is what it is" },
-        { "ChloeAnnoyedTalking", "RayneGemForm", "Chloe", "Well, is not that wonderful?I guess my puppet master could not leave me alone. Anyway? If I cannot get your true name, then how should I call you" },
+        { "ChloeAnnoyed", "RayneGemForm", "????", "Nothing eh…? Well, it can’t be helped~! Until you start getting your memories back, it is what it is" },
+        { "ChloeAnnoyedTalking", "RayneGemForm", "Chloe", "Well, is not that wonderful… I guess my puppet master could not leave me alone. Anyway…. If I cannot get your true name, then how should I call you" },
         { "ChloeIndifferent", "RayneGemForm", "Azure", "Well dear, you can call me Azure~!" },
         { "ChloeContentTalking", "RayneGemForm", "Chloe", "Fitting. Nice to meet you, Azure. So, what now? How do we get out of here? Do you know the way?" },
-        { "ChloeIndifferent", "RayneGemForm", "Azure", "I DO know the way~ Our objective is to react the Crystal Nexus in this floor. What is a Crystal Nexus you ask? Well?You will see. It is very eye-catching, so you will recognize it at first glance~. But before we continue, we must surpass any obstacle in our way?Starting with that pillar!" },
+        { "ChloeIndifferent", "RayneGemForm", "Azure", "I DO know the way~ Our objective is to react the Crystal Nexus in this floor. What is a Crystal Nexus you ask? Well… You will see. It is very eye-catching, so you will recognize it at first glance~. But before we continue, we must surpass any obstacle in our way… Starting with that pillar!" },
         { "ChloeIndifferent", "RayneGemForm", "Tutorial", "(Some breakable objects might take multiple attacks to destroy. Attack and destroy the pillar blocking the way)" }
     };
 
     string[,] Tutorial5 = new string[5, 4]
     {
         { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "Look, there is a note there! Maybe somebody left it here" },
-        { "ChloeCurious", "RayneGemForm", "Azure", "Perhaps?But I am quite sure that person is already dead?Maybe he or she have been dead for a long time. This place is very old, and it has a lot of history. History that I don’t know. I don’t even know how this place came to be. The only important matter is to survive and get out of here" },
-        { "ChloeContentTalking", "RayneGemForm", "Chloe", "I see?Maybe there is nobody alive down here that is not part of the hive to tell us?But things like notes, documents and records might have remained intact! They tell a story?So, I might be able to recover my or your memories if we learn more about this place!" },
-        { "ChloeHappy", "RayneGemForm", "Azure", "That is?Actually, a good idea! Yeah, it might work. By gaining enough information and knowledge, we might be able to get our missing memories back! Go on, lets see what it says~" },
+        { "ChloeCurious", "RayneGemForm", "Azure", "Perhaps… But I am quite sure that person is already dead… Maybe he or she have been dead for a long time. This place is very old, and it has a lot of history. History that I don’t know. I don’t even know how this place came to be. The only important matter is to survive and get out of here" },
+        { "ChloeContentTalking", "RayneGemForm", "Chloe", "I see… Maybe there is nobody alive down here that is not part of the hive to tell us… But things like notes, documents and records might have remained intact! They tell a story… So, I might be able to recover my or your memories if we learn more about this place!" },
+        { "ChloeHappy", "RayneGemForm", "Azure", "That is… Actually, a good idea! Yeah, it might work. By gaining enough information and knowledge, we might be able to get our missing memories back! Go on, lets see what it says~" },
         { "ChloeHappy", "RayneGemForm", "Tutorial", "(Approach and interact with the paper. There multiple paper record around the map like this one. To help Chloe and Azure regain more of their memories, try to explore the map in search of them as a secondary objective)" }
     };
 
@@ -645,7 +735,7 @@ public class VNSceneManager : MonoBehaviour
     {
         { "ChloeCurious", "RayneGemForm", "Azure", "Stop!" },
         { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "What? What is it?" },
-        { "ChloeIndifferent", "RayneGemForm", "Azure", "There are traps ahead. It seems the hive?Labyssal is starting to recover its senses. Don’t worry those ones are harmless, but I fear there might be others ahead less adventure friendly" },
+        { "ChloeIndifferent", "RayneGemForm", "Azure", "There are traps ahead. It seems the hive… Labyssal is starting to recover its senses. Don’t worry those ones are harmless, but I fear there might be others ahead less adventure friendly" },
         { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "Got it" },
         { "ChloeIndifferent", "RayneGemForm", "Tutorial", "(There are multiple traps in the maze, but they normally fall in 3 categories: Traps that give a stat penalty, traps that do instant damage, and traps that do continuous damage. The one in front of Chloe reduces her speed when walking through it)" }
     };
@@ -658,30 +748,30 @@ public class VNSceneManager : MonoBehaviour
 
     string[,] Tutorial8 = new string[2, 4]
     {
-        { "ChloeAnnoyed", "RayneGemForm", "Azure", "Lava?Be careful Chloe. Try to not stay long close to it or you might burn" },
+        { "ChloeAnnoyed", "RayneGemForm", "Azure", "Lava… Be careful Chloe. Try to not stay long close to it or you might burn" },
         { "ChloeAnnoyed", "RayneGemForm", "Tutorial", "(If Chloe stays too long on top of lava tiles, she will start receiving continuous damage and receive the burning status that will temporarily continue to damage her even after exiting the tile)" }
     };
 
     string[,] Tutorial9 = new string[19, 4]
     {
-        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "So that is the Nexus?It is beautiful" },//1
+        { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "So that is the Nexus… It is beautiful" },//1
         { "ChloeIndifferent", "RayneGemForm", "Azure", "It is. But it was not the case a few minutes ago. The crystals you see were purified after pulling you out of the hivemind. Before that, they were corrupted, thus making the Nexus unable to work. But now it does, and it is the key to getting out of here!" },//2
         { "ChloeIndifferentTalking", "RayneGemForm", "Chloe", "But WHAT does the nexus do? You have not told me, except that it can help us getting out of here. Also, how do you know about it in the first place?" },//3
-        { "ChloeIndifferent", "RayneGemForm", "Azure", "Right! So?The nexus is basically a device to manipulate space. It will send the user towards another location. In this case, this Nexus will send us up closer to the surface. I was trapped inside the Core for a looooonnggg.... time. So I did some scouting~! However..." },//4
+        { "ChloeIndifferent", "RayneGemForm", "Azure", "Right! So… The nexus is basically a device to manipulate space. It will send the user towards another location. In this case, this Nexus will send us up closer to the surface. I was trapped inside the Core for a looooonnggg.... time. So I did some scouting~! However..." },//4
         { "ChloeAnnoyedTalking", "RayneGemForm", "Chloe", "I am not going to like the next part, do I...?" },//5
-        { "ChloeIndifferent", "RayneGemForm", "Azure", "Nop. This baby here will send us up?Inside the maze made by Labyssal if that note is to be believed. In order to get out completely, we need to find the OTHER Nexus on the next floor and activate it. " },//6
-        { "ChloeAnnoyedTalking", "RayneGemForm", "Chloe", "And to do that, we need to purify the Energy Crystals that feed power to the Nexus?Crystals that might be far one from the other? Wonderful" },//7
+        { "ChloeIndifferent", "RayneGemForm", "Azure", "Nop. This baby here will send us up… Inside the maze made by Labyssal if that note is to be believed. In order to get out completely, we need to find the OTHER Nexus on the next floor and activate it. " },//6
+        { "ChloeAnnoyedTalking", "RayneGemForm", "Chloe", "And to do that, we need to purify the Energy Crystals that feed power to the Nexus… Crystals that might be far one from the other…. Wonderful" },//7
         { "ChloeAnnoyed", "RayneGemForm", "Azure", "Don’t be grumpy dear~ I will be there with you all the way!" },//8
         { "ChloeAnnoyedTalking", "RayneGemForm", "Chloe", "You are a floating rock, what can you do?!" },//9
-        { "ChloeAnnoyed", "RayneGemForm", "Azure", "You underestimate me hehe? I was not able to do this due to the lack of magical energy, but now with a nexus to give it to me? Watch!" },//10
+        { "ChloeAnnoyed", "RayneGemForm", "Azure", "You underestimate me hehe…. I was not able to do this due to the lack of magical energy, but now with a nexus to give it to me…. Watch!" },//10
         { "ChloeCurious", "", "Azure", "Transfooooormmmm…… AAH!!! " },//11
         { "ChloeIndifferentTalking", "", "Chloe", "Wh…What the heck?!" },//12
         { "ChloeCurious", "RayneHappyTalking", "Azure", "TADA~!! Back and good as new~!" },//13
-        { "ChloeIndifferentTalking", "RayneSmirk", "Chloe", "You? You were a rock!! How did you get back your body?! Which begs the question of why try to steal mine if you can do this!" },//14
-        { "ChloeIndifferent", "RayneHappyTalking", "Azure", "I didn’t get back my body. This is a body made of hard light using mana. I am just a projection so?I am technically still a rock~! But I will more comfortable like this. And just nte that the only way I was able to float and talk with you before is because your body gave me mana, energy, when we touch, but not enough to do this" },//15
-        { "ChloeIndifferentTalking", "RayneSmirk", "Chloe", "I see?And your clothes?" },//16
+        { "ChloeIndifferentTalking", "RayneSmirk", "Chloe", "You…. You were a rock!! How did you get back your body?! Which begs the question of why try to steal mine if you can do this!" },//14
+        { "ChloeIndifferent", "RayneHappyTalking", "Azure", "I didn’t get back my body. This is a body made of hard light using mana. I am just a projection so… I am technically still a rock~! But I will more comfortable like this. And just nte that the only way I was able to float and talk with you before is because your body gave me mana, energy, when we touch, but not enough to do this" },//15
+        { "ChloeIndifferentTalking", "RayneSmirk", "Chloe", "I see… And your clothes?" },//16
         { "ChloeCurious", "RayneIndifferentTalking", "Azure", "Still working on it. Anyway, that is not important! Are you ready or not?" },//17
-        { "ChloeIndifferentTalking", "RayneSmirk", "Chloe", "Yeah yeah?There is not other choice, but sure I am" },//18
+        { "ChloeIndifferentTalking", "RayneSmirk", "Chloe", "Yeah yeah… There is not other choice, but sure I am" },//18
         { "ChloeIndifferent", "RayneSmirk", "Tutorial", "(When you are ready, approach the Nexus and interact with it. You will be teleported towards the main area, where you must find and purify the energy crystals in the maze. Once that is done you can exit the maze via the local Nexus. As a secondary objective, you can try to collect all the collectable record notes in the map. They will influence the ending of the game)" }//19
     };
 
@@ -693,36 +783,35 @@ public class VNSceneManager : MonoBehaviour
 
     string[,] Lore1 = new string[14, 4]
     {
-    //1
-    {"ChloeCurious", "RayneGemForm", "Note", "<i><b>The note is a torn page of what might have been a diary. It is dirty and degraded due to time and humidity. There are traces of blood and dirt on it, yet the text is legible and organized. Clearly the writer was in no rush nor danger when they wrote this</b></i>"},
-    //2
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>To the lucky or unlucky ones that find this, this is a record of my final thoughts since I will die soon. We were five when we entered Labyssal. People say that Labyssal is a maze full of treasures and opportunity. That it is possible to become one of the richest men in the kingdom with a single visit</i>"},
-    //3
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>I curse them now. All of those that told us how rich we would become, how adventurous it would be, how heroic we would be</i>"},
-    //4
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>The stories about riches were true, without a doubt. What they did not tell us was that once inside, there is no coming back. Things were easy at the beginning, we found some valuables and got excited, so we continued. It was a trap.</i>"},
-    //5
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>This place is alive, and it can think. I always felt watched. Some rooms or entrances disappear sometimes or change shape to confuse people. We got lost in no time. Monsters and demons appear at the most unfortunate times, as if they always know where and when to attack</i>" },
-    //6
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>I lost my friends one by one. All of them from sudden and shocking deaths to the horrible and slow ones. I should be dead, but something tells me that <s>this place</s> Labyssal enjoys my despair. I am only alive for its entertainment.</i>"},
-    //7
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>This place is big. VERY big. Which is why most of the people that come here use the ancient teleporters built by the Zenon Empire to move around. It is lost technology, but basically, each teleporter is connected to three crystals that serve as sources of energy. Then you touch it and think about a destination or a general direction where another teleporter might be</i>"},
-    //8
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>I used the one on the top floor to try to escape to the surface. It teleported me here, a level lower, instead. Probably the maze influenced it with its corruption to change the destination. The one on this floor is not working, due to the corruption, again. Curse this place. No doubt Labyssal is responsible for it. To give me hope and pull me deeper</i>"},
-    //9
-    {"ChloeCurious", "RayneGemForm", "Note", "<i>Now I am hunted. Like a beast playing with its prey. I will miss my friends. I mourn for them. I will miss my wife and my-</i>"},
-    //10
-    {"ChloeSadTalking", "RayneGemForm", "Chloe", "It ends here... I wonder if I was-"},
-    //11
-    {"ChloeSad", "RayneGemForm", "Azure", "Don't finish that sentence, Chloe. You were not yourself, and it might not have been you but another of the countless creatures down here"},
-    //12
-    {"ChloeSadTalking", "RayneGemForm", "Chloe", "Right?"},
-    //13
-    {"ChloeIndifferent", "RayneGemForm", "Chloe", "Most importantly, we now know that there might be a way out using another crystal Nexus... Those teleporters, as this guy calls them, on the top floor. So, we better get going before the hive, Labyssal, now that we have a name, gets a grip of the one here!"},
-    //14
-    {"ChloeAngryTalking", "RayneGemForm", "Chloe", "Got it!"}
+        //1
+        {"ChloeCurious", "RayneGemForm", "Note", "<i><b>The note is a torn page of what might have been a diary. It is dirty and degraded due to time and humidity. There are traces of blood and dirt on it, yet the text is legible and organized. Clearly the writer was in no rush nor danger when they wrote this</b></i>"},
+        //2
+        {"ChloeCurious", "RayneGemForm", " Note ", "<i>To the lucky or unlucky ones that find this, this a record of my final thoughs… since I will die soon. We were five when we entered Labyssal. People say that Labyssal is a maze full of treasures and opportunity. That it is possible to become one of the richest men in the kingdom with a single visit</i>"},
+        //3
+        {"ChloeCurious", "RayneGemForm", " Note ", "<i>I curse them now. All of those that told us how rich we would become, how adventurous would it be, how heroic we would be</i>"},
+        //4
+        {"ChloeCurious", "RayneGemForm", " Note ", "<i>The stories about richesses were true, without a doubt. What they did not told us was that once inside, there is no coming back. Things were easy at the beginning, we found some values and got excited, so we continued. It was a trap. </i>"},
+        //5
+        {"ChloeCurious", "RayneGemForm", " Note", "<i> This place is alive, and it can think. I always felt watch. Some rooms or entrances disappear sometimes or change shape to confuse people. We got lost in no time. Monsters and demons appear at the most unfortunate times, as if they always know where and when to attack</i>" },
+        //6
+        {"ChloeCurious", "RayneGemForm", " Note", "<i>I lost my friends one by one. All of them from suddenly and shocking deaths to the horrible and slow ones. I should be dead, but something tells me that <s>this place</s> Labyssal enjoys my despair. I am only alive for its entertainment. </i>" },
+        //7
+        {"ChloeCurious", "RayneGemForm", " Note", "<i>This place is big. VERY big. Which is why most of the people that come here use the ancient teleporters build by the Zenon Empire to move around. It is lost technology, but basically, each teleporter is connected to three crystals that serve as sources of energy. Then you touch it and think about a destination or a general direction where another teleporter might be</i>" },
+        //8
+        {"ChloeCurious", "RayneGemForm", " Note", "<i>I used the one on the top floor to try to escape to the surface. It teleported me here, a level lower, instead. Probably the maze influenced it with its corruption to change the destination. The one on this floor is not working, due to the corruption, again. Curse this place. Not doubt Labyssal is responsible for it. Do give me hope… and to pull me deeper</i>"},
+        //9
+        {"ChloeCurious", "RayneGemForm", " Note", "<i>Now I am hunted. Like a beast playing with their prey. I will miss my friends. I mourn for them. I will miss my wife and my-</i>"},
+        //10
+        {"ChloeSadTalking", "RayneGemForm", " Chloe", "It ends here… I wonder if I was-"},
+        //11
+        {"ChloeSad", "RayneGemForm", " Azure", "Don’t finish that sentence, Chloe. You were not yourself, and it might not have been you but another of the countless creatures down here"},
+        //12
+        {"ChloeSadTalking", "RayneGemForm", " Chloe", "Right…"},
+        //13
+        {"ChloeIndifferent", "RayneGemForm", " Chloe", "Most importantly, we now know that there might be a way out using another crystal Nexus… Those teleporters as this guy calls them, on the top floor. So, we better get going before the hive, Labyssal now that we have a name, gets a grip of the one here!"},
+        //14
+        {"ChloeAngryTalking", "RayneGemForm", " Chloe", "Got it!"}
     };
-
 
     string[,] Lore2 = new string[9, 4]
     {
@@ -739,34 +828,34 @@ public class VNSceneManager : MonoBehaviour
         //6
         {"ChloeCurious", "RayneIndifferent", "Note", "<i>Labyssal is a gigantic complex of caves connected to multiple major natural ley lines. This fact might be the reason the environment and air is always supercharged with mana. This might be also why the place might have been able to develop a sense of intelligence or sentient, although there is not enough proof that this is the case</i>" },
         //7
-        {"ChloeCurious", "RayneIndifferent", "Note", "<i>Theories and stories aside, the fact remains that this place shows a lot of promise. And the minerals down here might allow civilization to rediscover the ancient technologies of the Zenoans. Now, if there was a way to clean the corrupt mana in the crystals?/i>" },
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i>Theories and stories aside, the fact remains that this place shows a lot of promise. And the minerals down here might allow civilization to rediscover the ancient technologies of the Zenoans. Now, if there was a way to clean the corrupt mana in the crystals…</i>" },
         //8
-        {"ChloeCurious", "RayneHappyTalking", "Azure", "Fascinating, it always surprised me how potent the crystals in the ground were and on the devices here, now I know it is the norm when it comes tot his place. And thinking that people used to mine here?I wonder what happened?"},
+        {"ChloeCurious", "RayneHappyTalking", "Azure", "Fascinating, it always surprised me how potent the crystals in the ground were and on the devices here, now I know it is the norm when it comes tot his place. And thinking that people used to mine here… I wonder what happened?"},
         //9
         {"ChloeIndifferentTalking", "RayneThinking", "Choe", "I wonder about some of the thinks he mentioned. Like that Zenon Empire or the other events like that dark wave or crusades. Perhaps we might find more information from other records or diaries"}
     };
+
     string[,] Lore3 = new string[9, 4]
     {
-    //1
-    {"ChloeCurious", "RayneIndifferent", "Note", "<i><b>A diary that seems to have been torn apart. However, compared to other objects found, this one seems to be relatively newer. The pages appear to be enchanted to resist erosion and liquids. And while most of the pages were torn out, a few remain</b></i>"},
-    //2
-    {"ChloeCurious", "RayneIndifferent", "Note", "<i>Day 4 of expedition, 1318 AZE - Entry 17 by Professor Jones</i>"},
-    //3
-    {"ChloeCurious", "RayneIndifferent", "Note", "<i>Today was a productive day. Thanks to special gems made to absorb mana, I was able to clean up one of the power crystal stations in the maze. This allowed me, in turn, to see more clearly the connection that the station created with the nearby spatial disrupter and see how the circulation of mana works</i>"},
-    //4
-    {"ChloeCurious", "RayneIndifferent", "Note", "<i>It is quite fascinating to see and investigate the ancient technology made by the Zenon Empire. Basically, the power stations are large crystals able to collect the natural mana in the air like a sponge. Then, once they are charged, they will create a remote connection with the crystal receptors on the spatial disrupters and send all that mana to them</i>"},
-    //5
-    {"ChloeCurious", "RayneIndifferent", "Note", "<i>Each spatial disrupter has three receptors, and each of them is not only used to receive energy, but also to calculate a coordinate! Then the central crystal creates a spatial void in a set of coordinates X, Y, and Z given respectively by each receptor, and fills that void, that vacuum, with the user.</i>"},
-    //6
-    {"ChloeCurious", "RayneIndifferent", "Note", "<i>Which means that the so-called teleporter does not transport things or people from a place to another, but instead swaps the space between two places. Brilliant!</i>"},
-    //7
-    {"ChloeCurious", "RayneIndifferent", "Note", "<i>But it is a complex and delicate operation. The air is naturally corrupted, and the power stations absorb it. This, in turn, leads to the power stations being unable to create a connection due to the chaotic nature of corruption. Moreover, it can also lead to bad calculations from the receptors, or worse, having the results manipulated by the maze.</i>"},
-    //8
-    {"ChloeCurious", "RayneHappyTalking", "Azure", "You know? You have to love the people that do research. I learned more from this paper than years of scouting gave me~!"},
-    //9
-    {"ChloeContentTalking", "RayneSmirk", "Chloe", "I agree. This was quite informative. I wonder if he made it out?"}
+        //1
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i><b>A diary that seems to have been torn apart. However, compared to other objects found, this one seems to have relatively newer. The pages appear to be enchanted to resist erosion and liquids. And while most of the pages were torn out, a few remain</b></i>"},
+        //2
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i>Day 4 of expedition, 1318 AZE – Entry 17 by Professor Jones</i>"},
+        //3
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i>Today was a productive day. Thanks to special gems made to absorb mana, I was able to clean up one of the power crystal stations in the maze. This allow me in turn, to see more clearly the connection that the station created with the nearby spatial disrupter and see how the circulation of mana works</i>"},
+        //4
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i>It is quite fascinating to see and investigate the ancient technology made by the Zenon Empire. Basically, the power stations are large crystals able to collect the natural mana in the air like a sponge. Then, once they are charged, they will create a remote connection with the crystal receptors on the spatial disrupters and send all that mana to them</i>"},
+        //5
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i>Each spatial disrupter has three receptors, and each of them is not only use receive energy, but also to calculate a coordinate! Then the central crystal creates a spatial void in a set of coordinates X, Y and Z given respectively by each receptor, and fills that void, that vacuum with the user.</i>" },
+        //6
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i>Which means that the so called teleported does not transport things or people from a place to another, but instead swaps the space between two places, brilliant!</i>" },
+        //7
+        {"ChloeCurious", "RayneIndifferent", "Note", "<i>But it is a complex and delicate operation. The air is naturally corrupted, and the power stations absorb it. This in turn leads to the power stations been unable to create a connection due to the chaotic nature of corruption. Moreover, it can also lead to bad calculations from the receptors, or worst, having the results been manipulated by the maze…</i>" },
+        //8
+        {"ChloeCurious", "RayneHappyTalking", "Azure", "You know… You have to love the people that do research. I learned more from this paper that years of scouting gave me~!"},
+        //9
+        {"ChloeContentTalking", "RayneSmirk", "Chloe", "I agree. This was quite informative. I wonder he made it out…"}
     };
-
 
     string[,] Lore4 = new string[8, 4]
     {
@@ -775,7 +864,7 @@ public class VNSceneManager : MonoBehaviour
         //2
         {"ChloeHappy", "RayneHappyTalking", "Azure", "Professor Jones~! I see you grace us with your presence again. Tell us your wise words~!"},
         //3
-        {"ChloeContent", "RayneHappy", "Note", "<i>Day 5 of expedition, 1318 AZE ?Entry 20 by Professor Jones</i>"},
+        {"ChloeContent", "RayneHappy", "Note", "<i>Day 5 of expedition, 1318 AZE – Entry 20 by Professor Jones</i>"},
         //4
         {"ChloeContent", "RayneHappy", "Note", "<i>Now, since I am planning to make a book out of this diary, I realized that some history lessons would be useful for future readers. Since the most recent entries cover ancient technology, lets talk about the Zenon Empire</i>"},
         //5
@@ -896,7 +985,7 @@ public class VNSceneManager : MonoBehaviour
         //1
         {"ChloeHappy", "RayneHappyTalking", "Azure", "Yay~! Our favorite professor is back! At this point I am a fan...~"},
         //2
-        {"ChloeContent", "RayneHappy", "Note", "<i>Day 6 of expedition, 1318 AZE ?Entry 23 by Professor Jones</i>"},
+        {"ChloeContent", "RayneHappy", "Note", "<i>Day 6 of expedition, 1318 AZE – Entry 23 by Professor Jones</i>"},
         //3
         {"ChloeContent", "RayneHappy", "Note", "<i>It has recently come to my attention that while I talked a lot about the Zenon Empire, I have yet to go much into detail about the Kingdom of Zenori. This shall be rectified immediately!</i>"},
         //4
@@ -974,7 +1063,7 @@ public class VNSceneManager : MonoBehaviour
         //1
         {"ChloeContent", "RayneHappy", "Note", "<i><b>A paper a bit dirty, but in good condition </b></i>"},
         //2
-        {"ChloeContent", "RayneHappy", "Note", "<i>Day 7 of expedition, 1318 AZE ?Entry 28 by Professor Jones</i>"},
+        {"ChloeContent", "RayneHappy", "Note", "<i>Day 7 of expedition, 1318 AZE – Entry 28 by Professor Jones</i>"},
         //3
         {"ChloeContent", "RayneHappy", "Note", "<i>There is a rumor that the burning of Prisma was the cause to the beginning in the grown of corruption. I disagree with the notion. However, I do agree that the burning of Prisma had indirect consequences that let to a grown of corruption. Basically, the burning of Prisma let to the dead of many of the miners... Which in turn let the door open to the use of slaves as miners.</i>"},
         //4
@@ -1070,7 +1159,7 @@ public class VNSceneManager : MonoBehaviour
         //3
         {"ChloeAngry", "RayneAngryTalking", "Rayne", "This is it... At last, there might be some answers to what happen"},
         //4
-        {"ChloeAngry", "RayneAngry", "Note", "<i>The girl has been gone for a day... I am already missing her. If only I know how VALUABLE she was...</i>"},
+        {"ChloeAngry", "RayneAngry", "Note", "<i>The girl has been gone for a day... I am already missing her. If only I knew how VALUABLE she was...</i>"},
         //5
         {"ChloeAngry", "RayneAngry", "Note", "<i>I got news from the capital. There will be replacements, but all of them FAR behind in terms of talent and value that the girl had. Azulheard is her family name. I already know that, what is how I and others call her when addressing her. What I did NOT know, was that Azulhard is the family name of a legendary line of mages. With a lot of talent. They fell out of grace due to the anti-mage policies in the last centuries, but they remained talented nonetheless. Worst...</i>" },
         //6
@@ -1096,7 +1185,7 @@ public class VNSceneManager : MonoBehaviour
         //16
         {"ChloeTearsTalking", "RayneSad", "Chloe", "...mom?" },
         //17
-        {"ChloeTears", "RayneSadTalking", "Rayne", "But I failed... I wanted to... be there with you. I knew you would be alone, so I damn myself to be with you... But I once inside, I could not do anything but watch!!! It is only decades later via trial and error that I found a way to project my voice and interact with the world. But I was too late..." },
+        {"ChloeTears", "RayneSadTalking", "Rayne", "But I failed... I wanted to... be there with you. I knew you would be alone, so I damn myself to be with you... But once inside, I could not do anything but watch!!! It is only decades later via trial and error that I found a way to project my voice and interact with the world. But I was too late..." },
         //18
         {"ChloeTearsTalking", "RayneSad", "Chloe", "Mom..." },
         //19
@@ -1124,9 +1213,9 @@ public class VNSceneManager : MonoBehaviour
         //30
         {"ChloeSmug", "RayneIndifferentTalking", "Rayne", "What?! But that is not-" },
         //31
-        {"ChloeAngryTalking", "RayneIndifferentTalking", "Chloe", "Possible? Perhaps. But I was not lying when I said that I was getting stronger and stronger then. But the most important factor what the state of the hivemind back then. If the hivemind in the caves had a sense of self, I would have lost, overwealm by pure spiritual power. But that was not the case. It was sentience, but lacked coordination, self-preservation and... desire. So I tore it down. I won and came on top" },
+        {"ChloeAngryTalking", "RayneIndifferentTalking", "Chloe", "Possible? Perhaps. But I was not lying when I said that I was getting stronger and stronger then. But the most important factor was the state of the hivemind back then. If the hivemind in the caves had a sense of self, I would have lost, overwealm by pure spiritual power. But that was not the case. It was sentience, but lacked coordination, self-preservation and... desire. So I tore it down. I won and came on top" },
         //32
-        {"ChloeAngry", "RayneAngerTalking", "Rayne", "But.... It does not make any sense!!! The same day, Labyssal, the hivemind, unless death on all the mine, then caused The Black Wave! If you came on top then why-" },
+        {"ChloeAngry", "RayneAngryTalking", "Rayne", "But.... It does not make any sense!!! The same day, Labyssal, the hivemind, unless death on all the mine, then caused The Black Wave! If you came on top then why-" },
         //33
         {"ChloeAnnoyedTalking", "RayneSadTalking", "Chloe", "What.... does not make sense mom? I already told you, I came on top. After that, well... I merged with the hivemind. I created coordination, order, self-preservation and.... Imposed my desires"},
         //34
@@ -1138,7 +1227,7 @@ public class VNSceneManager : MonoBehaviour
         //37
         {"ChloeAnnoyed", "RayneAngryTalking", "Rayne", "... The Black Wave..." },
         //38
-        {"ChloeAnnoyedTalking", "RayneAngry", "Chloe", "Oh that... I will admit that it got out of hand. I was quite angry you know? And all my minions agreeing and encouraging me did not help. Still, only a part of me regrets it, while the other parts is quite satisfied that we will to destroy the Zenon Empire was acomplish. Then I got terrified when the Fifth Crusade happen... Hence why I made a maze, to protect myself"},
+        {"ChloeAnnoyedTalking", "RayneAngry", "Chloe", "Oh that... I will admit that it got out of hand. I was quite angry you know? And all my minions agreeing and encouraging me did not help. Still, only a part of me regrets it, while the other part is quite satisfied that we got to destroy the Zenon Empire. Then I got terrified when the Fifth Crusade happen... Hence why I made a maze, to protect myself"},
         //39
         {"ChloeAnnoyed", "RayneAngryTalking", "Rayne", "After that?" },
         //40
