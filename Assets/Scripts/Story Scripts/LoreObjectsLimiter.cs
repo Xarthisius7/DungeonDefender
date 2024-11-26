@@ -6,10 +6,11 @@ public class LoreObjectsLimiter : MonoBehaviour
 {
     public GameObject[] LoreNotes;
     public int LimitNbNotes; //Sets the max number of Notes in the map except for the one in the tutorial (The one in the tutorial will remain untagged to avoid been removed by accident)
-    
-    
+
+
     private int[] listRandomIndexes;
     private int ObjectIndex;
+    private int finalNbNotes;
 
     private bool toDestroy;
 
@@ -53,8 +54,15 @@ public class LoreObjectsLimiter : MonoBehaviour
             ObjectIndex++;
         }
 
-        LoreNotes = GameObject.FindGameObjectsWithTag("LoreNote");
-        Debug.Log("There are " + LoreNotes.Length + " in the map after Limit");
+        finalNbNotes = 0;
+        foreach (GameObject note in LoreNotes)
+        {
+            if (note != null)
+                finalNbNotes++;
+        }
+
+
+        Debug.Log("There are " + finalNbNotes + " in the map after Limit");
     }
 
     private int[] GetListofRandomIndexes(int maxIndexValue)
